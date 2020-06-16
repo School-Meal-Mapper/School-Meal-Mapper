@@ -26,8 +26,19 @@ The mapping tool is built for school districts that are managing free meal sites
 ## Project Authors
 Created by [Code for Chapel Hill](http://www.codeforchapelhill.com/), a local chapter of [Code for America](https://www.codeforamerica.org/)
 
-### How can I help?
-Please view our [How to Contribute](contributing.md) page for more details.
+## How can I help?
+This project and everyone participating in it, is governed by our [Code of Conduct](code_of_conduct.md). By cloning the project and working with us, you are expected to uphold this code. Please report unacceptable behavior to [contact@nccovidsupport.org](mailto:contact@nccovidsupport.org).
+
+## Data source - Google Sheet
+
+Google Sheets template for the data: <coming soon>
+
+## Code base
+- VueJS - The Progressive JavaScript Framework - https://vuejs.org/
+- Vue I18n - Internationalization Plugin - https://kazupon.github.io/vue-i18n/
+- Vue Leaflet - Mapping - ( Version of Leaflet that works with VueJS ) - https://vue2-leaflet.netlify.com/
+- BootstrapVue - Responsive Layout - ( Version of Bootstrap that works well with VueJS ) - https://bootstrap-vue.js.org/
+
 
 ## Contributors ✨
 
