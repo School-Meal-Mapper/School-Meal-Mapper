@@ -6,10 +6,9 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 ![GitHub issues](https://img.shields.io/github/issues-raw/code-for-chapel-hill/School-Meal-Mapper?style=flat)
-![Continuous Integration](https://github.com/code-for-chapel-hill/School-Meal-Mapper/workflows/Continuous%20Integration/badge.svg)
 
 # School-Meal-Mapper
-A user-friendly map of school meal sites, with data stored on a Google sheet.
+A user-friendly map of school meal sites, with data, translations, and branding options stored on a simple Google sheet.
 
 ## What does this code build? 
 
@@ -27,11 +26,11 @@ The mapping tool is built for school districts that are managing free meal sites
 Created by [Code for Chapel Hill](http://www.codeforchapelhill.com/), a local chapter of [Code for America](https://www.codeforamerica.org/)
 
 ## How can I help?
-This project and everyone participating in it, is governed by our [Code of Conduct](code_of_conduct.md). By cloning the project and working with us, you are expected to uphold this code. Please report unacceptable behavior to [contact@nccovidsupport.org](mailto:contact@nccovidsupport.org).
+This project is governed by our [Code of Conduct](https://github.com/codeforamerica/codeofconduct). By cloning the project and working with us, you are expected to uphold this code. Please report unacceptable behavior to [contact@nccovidsupport.org](mailto:contact@nccovidsupport.org).
 
 ## Data source - Google Sheet
 
-Google Sheets template for the data: <coming soon>
+Google Sheets template for the data: (coming soon)
 
 ## Code base
 - VueJS - The Progressive JavaScript Framework - https://vuejs.org/
