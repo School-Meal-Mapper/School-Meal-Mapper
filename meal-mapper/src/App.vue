@@ -220,7 +220,7 @@ export default {
       if (this.entries == null) return null;
 
       var markers;
-
+      //markers = this.entries;
       if (this.need == "family") {
         markers = this.entries.filter(
           (c) => c.gsx$familymeal.$t == 1 && c.gsx$status.$t == "1"
@@ -230,7 +230,7 @@ export default {
           (c) => c.gsx$resource.$t === this.need && c.gsx$status.$t == "1"
         );
       }
-
+      //markers = this.entries;
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {
