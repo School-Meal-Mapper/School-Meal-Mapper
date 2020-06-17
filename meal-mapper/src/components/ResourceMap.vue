@@ -353,12 +353,12 @@ export default {
 }
 
 .bv-example-row {
-  height: calc(100% - 124px);
+  height: 100%;
 }
 
 @include media-breakpoint-up(sm) {
   .bv-example-row {
-    height: calc(100% - 116px);
+    height: 100%;
   }
 }
 

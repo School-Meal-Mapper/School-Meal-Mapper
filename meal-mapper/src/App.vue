@@ -29,14 +29,6 @@
       />
 
       <div id="page-content-wrapper">
-        <highlights
-          :need="need"
-          :class="{ toggled: isFilterOpen }"
-          :filteredMarkers="highlightFilteredMarkers"
-          :highlightFilters="highlightFilters"
-          @box-selected="boxSelected"
-        />
-
         <resource-map
           :filteredMarkers="filteredMarkers"
           :class="{ noselection: need == 'none' }"
@@ -56,7 +48,6 @@
 <script>
 import AppHeader from "./components/Header.vue";
 import SearchFilter from "./components/SearchFilter.vue";
-import Highlights from "./components/Highlights.vue";
 import ResourceMap from "./components/ResourceMap.vue";
 import AboutUsModal from "./components/AboutUs.vue";
 import { latLng } from "leaflet";
@@ -102,7 +93,6 @@ export default {
   components: {
     AboutUsModal,
     AppHeader,
-    Highlights,
     ResourceMap,
     SearchFilter,
     ThemeHeader,
