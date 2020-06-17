@@ -15,7 +15,7 @@ export const theme = {
   ],
   data: {
     spreadsheetUrl:
-      "https://spreadsheets.google.com/feeds/cells/1wdW0piXpOlL1REibmqeuM86HayW9smBIaS3FsitpquE/1/public/full?alt=json",
+      "https://spreadsheets.google.com/feeds/list/1NNo23idWdFofp5LbBS_3S6EQfzgbe1sVgr2GRAjucA0/1/public/values?alt=json",
   },
   maps: {
     normal: {
