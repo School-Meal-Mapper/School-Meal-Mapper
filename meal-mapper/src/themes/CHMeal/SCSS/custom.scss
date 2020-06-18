@@ -35,11 +35,11 @@ $danger: $red;
 // 46c4d7
 $theme-colors: (
   "primary": $teal,
-  "secondary": $blue,
+  "secondary": $gray-100,
   "tertiary": $white,
   "quaternary": $red,
   "quinary": $light-orange,
-  "buttons": $white,
+  "buttons": $gray-400,
   "success": $green,
   "warning": $warning,
   "danger": $danger,
@@ -89,7 +89,7 @@ $navbar-padding-y: 0;
 // );
 $bv-enable-table-stacked: false;
 
-@include list-group-item-variant("sideNav", theme-color("secondary"), $white);
+@include list-group-item-variant("sideNav", theme-color("secondary"), $black);
 @media (prefers-color-scheme: dark) {
   @include list-group-item-variant(
     "sideNav",
