@@ -28,7 +28,11 @@
         }"
         :ref="'result' + index"
         @click="
-          $emit('location-selected', { locValue: index, isSetByMap: false })
+          $emit('location-selected', {
+            locValue: index,
+            isSetByMap: false,
+            showListing: false,
+          })
         "
       >
         <h5 class="resultTitle">{{ item.marker.gsx$providername.$t }}</h5>
@@ -93,6 +97,8 @@ export default {
     return {
       selected: false,
       today: new Date().getDay(),
+      locationData: location,
+      showListing: this.showList,
     };
   },
   components: {
@@ -114,6 +120,7 @@ export default {
           this.$refs["result" + locationVal.locValue][0].offsetTop - 330;
         this.$refs["results"].scrollTo(0, top);
       }
+      this.showListing = false;
     },
   },
   methods: {
@@ -125,6 +132,9 @@ export default {
       return `${this.$t("label.closed-on")} ${this.$t(
         `dayofweek.${weekdaysJs[this.selectedDay].day}`
       )}`;
+    },
+    closeDetails: function () {
+      this.showListing = true;
     },
   },
 };
