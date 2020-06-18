@@ -14,20 +14,6 @@
       :class="{ toggled: isFilterOpen }"
       v-if="!!entries"
     >
-      <search-filter
-        :isFilterOpen="isFilterOpen"
-        :need="need"
-        :day="day"
-        :filteredMarkers="filteredMarkers"
-        :highlightFilteredMarkers="highlightFilteredMarkers"
-        :location="locationData"
-        :show-list="showList"
-        @location-selected="passLocation"
-        @toggle="isFilterOpen = !isFilterOpen"
-        @need-selected="needSelected"
-        @day-selected="daySelected"
-      />
-
       <div id="page-content-wrapper">
         <resource-map
           :filteredMarkers="filteredMarkers"
@@ -47,7 +33,6 @@
 
 <script>
 import AppHeader from "./components/Header.vue";
-import SearchFilter from "./components/SearchFilter.vue";
 import ResourceMap from "./components/ResourceMap.vue";
 import AboutUsModal from "./components/AboutUs.vue";
 import { latLng } from "leaflet";
@@ -94,7 +79,6 @@ export default {
     AboutUsModal,
     AppHeader,
     ResourceMap,
-    SearchFilter,
     ThemeHeader,
   },
   data() {
@@ -220,17 +204,7 @@ export default {
       if (this.entries == null) return null;
 
       var markers;
-      //markers = this.entries;
-      if (this.need == "family") {
-        markers = this.entries.filter(
-          (c) => c.gsx$familymeal.$t == 1 && c.gsx$status.$t == "1"
-        );
-      } else {
-        markers = this.entries.filter(
-          (c) => c.gsx$resource.$t === this.need && c.gsx$status.$t == "1"
-        );
-      }
-      //markers = this.entries;
+      markers = this.entries;
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {
