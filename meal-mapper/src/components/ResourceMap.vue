@@ -399,6 +399,7 @@ div.markeropen svg path {
     font-size: 2rem;
     opacity: 0.4;
     color: #000;
+    padding-top: 30px;
     cursor: pointer;
     vertical-align: middle;
     @media (prefers-color-scheme: dark) {
