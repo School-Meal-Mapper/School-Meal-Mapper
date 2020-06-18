@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "theme-header",
-};
+  name: 'theme-header'
+}
 </script>
 <style lang="sass"></style>

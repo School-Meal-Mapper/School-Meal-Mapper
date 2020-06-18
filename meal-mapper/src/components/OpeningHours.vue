@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import { dayFilters, seniorDayFilters, weekdayHours } from "../constants";
+import { dayFilters, seniorDayFilters, weekdayHours } from '../constants'
 export default {
-  name: "OpeningHours",
+  name: 'OpeningHours',
   data() {
-    return {};
+    return {}
   },
   props: {
     title: { type: String },
@@ -26,21 +26,21 @@ export default {
     icon: { type: String },
     senior: { type: Boolean },
     business: { type: Object },
-    day: { type: String },
+    day: { type: String }
   },
   computed: {
     days() {
-      var myDays = [];
-      var cnt = 0;
+      var myDays = []
+      var cnt = 0
 
       if (this.senior) {
         seniorDayFilters.forEach((attr, index) => {
-          var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`);
+          var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`)
           switch (this.business[attr].$t.length) {
             case 0:
               // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
               // cnt++
-              break;
+              break
             case 1:
               // if (this.business[attr].$t == '0') {
               //   myDays.push({ name: dayName, val: this.$t('label.closed') })
@@ -48,59 +48,59 @@ export default {
               //   // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
               //   // cnt++
               // }
-              break;
+              break
             default:
               myDays.push({
                 name: dayName,
-                val: this.business[attr].$t.replace(",", "<br/>"),
-              });
-              cnt++;
-              break;
+                val: this.business[attr].$t.replace(',', '<br/>')
+              })
+              cnt++
+              break
           }
-        });
+        })
       } else {
         dayFilters.forEach((attr, index) => {
-          var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`);
+          var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`)
           switch (this.business[attr].$t.length) {
             case 0:
               // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
               // cnt++
-              break;
+              break
             case 1:
               if (this.business[attr].$t == 0) {
                 myDays.push({
                   name: dayName,
-                  val: this.$t("label.closed"),
-                  class: "closed",
-                });
+                  val: this.$t('label.closed'),
+                  class: 'closed'
+                })
               } else {
                 // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
                 // cnt++
               }
-              cnt++;
-              break;
+              cnt++
+              break
             default:
               myDays.push({
                 name: dayName,
-                val: this.business[attr].$t.replace(",", "<br/>"),
-              });
-              cnt++;
-              break;
+                val: this.business[attr].$t.replace(',', '<br/>')
+              })
+              cnt++
+              break
           }
-        });
+        })
       }
 
       if (cnt == 0) {
         return myDays.push({
-          name: this.$t("label.allweek"),
-          val: this.$t("label.closed"),
-        });
+          name: this.$t('label.allweek'),
+          val: this.$t('label.closed')
+        })
       }
 
-      return myDays;
-    },
-  },
-};
+      return myDays
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -112,9 +112,9 @@ export default {
   vertical-align: top;
 }
 .closed {
-  color: theme-color("danger");
+  color: theme-color('danger');
   @media (prefers-color-scheme: dark) {
-    color: theme-color-level("danger", 2);
+    color: theme-color-level('danger', 2);
   }
 }
 </style>

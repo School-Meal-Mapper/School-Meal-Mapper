@@ -1,54 +1,32 @@
 <template>
   <div class="border-right" id="search-filter-wrapper">
-    <div
-      class="tab bg-dialogs border-right border-top border-bottom"
-      @click="$emit('toggle')"
-    >
+    <div class="tab bg-dialogs border-right border-top border-bottom" @click="$emit('toggle')">
       <i class="fas fa-caret-down" />
     </div>
 
     <b-list-group class="need-day-group">
       <b-list-group-item variant="sideNav" class="need-type">
-        <h6>{{ $t("sidebar.what-do-you-need") }}</h6>
-        <b-form-select
-          class="custom-select"
-          :value="need"
-          :options="needOptionGroups"
-          @change="(opt) => $emit('need-selected', opt)"
-        />
+        <h6>{{ $t('sidebar.what-do-you-need') }}</h6>
+        <b-form-select class="custom-select" :value="need" :options="needOptionGroups" @change="(opt) => $emit('need-selected', opt)" />
       </b-list-group-item>
       <b-list-group-item variant="sideNav">
-        <h6>{{ $t("sidebar.when-do-you-need-it") }}</h6>
-        <b-form-select
-          :value="day"
-          :options="dayOptions"
-          @change="(opt) => $emit('day-selected', opt)"
-        />
+        <h6>{{ $t('sidebar.when-do-you-need-it') }}</h6>
+        <b-form-select :value="day" :options="dayOptions" @change="(opt) => $emit('day-selected', opt)" />
       </b-list-group-item>
     </b-list-group>
 
-    <InfoPanel
-      :infotype="'note'"
-      :icon="'fa-info-circle'"
-      v-if="location.currentBusiness == null || showListing"
-    >
-      {{ $t("sidebar.info-about-us") }}
-      <a href="#" @click="$bvModal.show('about-us')">{{
-        $t("sidebar.info-link-text")
-      }}</a
-      >{{ $t("sidebar.info-end-text") }}
+    <InfoPanel :infotype="'note'" :icon="'fa-info-circle'" v-if="location.currentBusiness == null || showListing">
+      {{ $t('sidebar.info-about-us') }}
+      <a href="#" @click="$bvModal.show('about-us')">{{ $t('sidebar.info-link-text') }}</a
+      >{{ $t('sidebar.info-end-text') }}
     </InfoPanel>
 
-    <InfoPanel
-      :infotype="'handwash'"
-      :icon="'fa-hands-wash'"
-      v-if="filteredMarkers.length == 0"
-    >
-      <b class="themeFont">{{ $t("sidebar.shopsafe") }}</b>
+    <InfoPanel :infotype="'handwash'" :icon="'fa-hands-wash'" v-if="filteredMarkers.length == 0">
+      <b class="themeFont">{{ $t('sidebar.shopsafe') }}</b>
       <br />
-      (1) {{ $t("sidebar.stayhome") }}<br />
-      (2) {{ $t("sidebar.sixfeet") }}<br />
-      (3) {{ $t("sidebar.washhands") }}<br />
+      (1) {{ $t('sidebar.stayhome') }}<br />
+      (2) {{ $t('sidebar.sixfeet') }}<br />
+      (3) {{ $t('sidebar.washhands') }}<br />
     </InfoPanel>
 
     <BusinessDetails
@@ -70,23 +48,23 @@
 </template>
 
 <script>
-import { weekdays } from "../constants";
-import BusinessDetails from "./BusinessDetails.vue";
-import InfoPanel from "./InfoPanel.vue";
-import ResultsList from "./ResultsList.vue";
+import { weekdays } from '../constants'
+import BusinessDetails from './BusinessDetails.vue'
+import InfoPanel from './InfoPanel.vue'
+import ResultsList from './ResultsList.vue'
 
 export default {
-  name: "search-filter",
+  name: 'search-filter',
   components: {
     BusinessDetails,
     InfoPanel,
-    ResultsList,
+    ResultsList
   },
   data() {
     return {
       locationData: location,
-      showListing: this.showList,
-    };
+      showListing: this.showList
+    }
   },
   props: {
     isFilterOpen: Boolean,
@@ -98,9 +76,9 @@ export default {
       locValue: Number,
       locId: String,
       isSetByMap: Boolean,
-      currentBusiness: Object,
+      currentBusiness: Object
     },
-    showList: Boolean,
+    showList: Boolean
   },
   computed: {
     // currentBusiness() {
@@ -110,145 +88,141 @@ export default {
     //   return 0 + this.filteredMarkers.length > 0 && this.location.locValue > -1 ? this.filteredMarkers[this.location.locValue] : null
     // },
     needOptionGroups() {
-      const categories = this.getNeedCategories().categories;
-      const needOptions = [
-        { value: "none", text: this.$tc("label.selectacategory", 1) },
-      ];
+      const categories = this.getNeedCategories().categories
+      const needOptions = [{ value: 'none', text: this.$tc('label.selectacategory', 1) }]
       categories.forEach((category) => {
         if (category.subcategories != undefined) {
-          const label = category.name;
-          const myOptions = [];
+          const label = category.name
+          const myOptions = []
           category.subcategories.forEach((subcategory) => {
-            const text = "category." + subcategory.code;
+            const text = 'category.' + subcategory.code
             myOptions.push({
               text: this.$t(text),
-              value: subcategory.code,
-            });
-          });
+              value: subcategory.code
+            })
+          })
           needOptions.push({
             label: label,
-            options: myOptions,
-          });
+            options: myOptions
+          })
         } else {
-          const text = "category." + category.code;
+          const text = 'category.' + category.code
           needOptions.push({
             text: this.$t(text),
-            value: category.code,
-          });
+            value: category.code
+          })
         }
-      });
-      return needOptions;
+      })
+      return needOptions
     },
     needOptions() {
       return [
         {
-          value: "selectacategory",
-          text: this.$tc("label.selectacategory", 1),
+          value: 'selectacategory',
+          text: this.$tc('label.selectacategory', 1)
         },
-        { value: "restaurant", text: this.$tc("category.restaurant", 2) },
-        { value: "meal", text: this.$tc("category.meal", 2) },
-        { value: "family", text: this.$tc("category.family", 2) },
-        { value: "farm", text: this.$tc("category.farm", 2) },
-        { value: "grocery", text: this.$tc("category.grocery", 2) },
-        { value: "pharmacy", text: this.$tc("category.pharmacy", 1) },
-        { value: "food_bev", text: this.$tc("category.food_bev", 2) },
-        { value: "pet", text: this.$t("category.pet") },
-      ];
+        { value: 'restaurant', text: this.$tc('category.restaurant', 2) },
+        { value: 'meal', text: this.$tc('category.meal', 2) },
+        { value: 'family', text: this.$tc('category.family', 2) },
+        { value: 'farm', text: this.$tc('category.farm', 2) },
+        { value: 'grocery', text: this.$tc('category.grocery', 2) },
+        { value: 'pharmacy', text: this.$tc('category.pharmacy', 1) },
+        { value: 'food_bev', text: this.$tc('category.food_bev', 2) },
+        { value: 'pet', text: this.$t('category.pet') }
+      ]
     },
     dayOptions() {
       return weekdays.map((i) => ({
         value: i.pos,
-        text: this.$t(`dayofweek.${i.day}`),
-      }));
+        text: this.$t(`dayofweek.${i.day}`)
+      }))
     },
     tabtitle() {
-      return this.isFilterOpen
-        ? this.$t("sidebar.close-panel")
-        : this.$t("sidebar.open-panel");
-    },
+      return this.isFilterOpen ? this.$t('sidebar.close-panel') : this.$t('sidebar.open-panel')
+    }
   },
   methods: {
     getNeedCategories() {
       return {
         categories: [
           {
-            code: "food",
+            code: 'food',
             id: 1001,
-            name: "Food Resources",
+            name: 'Food Resources',
             subcategories: [
               {
-                code: "restaurant",
+                code: 'restaurant',
                 id: 1002,
-                name: "Restaurants",
+                name: 'Restaurants'
               },
               {
-                code: "meal",
+                code: 'meal',
                 id: 1004,
-                name: "Free meals",
+                name: 'Free meals'
               },
               {
-                code: "family",
+                code: 'family',
                 id: 1006,
-                name: "Prepared family meals",
+                name: 'Prepared family meals'
               },
               {
-                code: "food_bev",
+                code: 'food_bev',
                 id: 1003,
-                name: "Specialty food & beverage",
+                name: 'Specialty food & beverage'
               },
               {
-                code: "grocery",
+                code: 'grocery',
                 id: 1005,
-                name: "Groceries",
-              },
-            ],
+                name: 'Groceries'
+              }
+            ]
           },
           {
-            code: "farm",
+            code: 'farm',
             id: 1007,
-            name: "Farms & farmers markets",
+            name: 'Farms & farmers markets'
           },
           {
-            code: "pharmacy",
+            code: 'pharmacy',
             id: 1008,
-            name: "Pharmacy",
+            name: 'Pharmacy'
           },
           {
-            code: "pet",
+            code: 'pet',
             id: 1009,
-            name: "Pet supplies",
-          },
+            name: 'Pet supplies'
+          }
         ],
-        regions: ["Orange"],
-      };
+        regions: ['Orange']
+      }
     },
     closeDetails: function () {
-      this.showListing = true;
+      this.showListing = true
     },
     passLocation: function (val) {
-      this.locationData = val;
-      this.showListing = false;
-      this.$emit("location-selected", val);
-    },
+      this.locationData = val
+      this.showListing = false
+      this.$emit('location-selected', val)
+    }
   },
   watch: {
     day: function () {
-      this.locationData = null;
-      this.showListing = true;
+      this.locationData = null
+      this.showListing = true
     },
     need: function (val) {
-      this.locationData = null;
-      if (val == "none") {
-        this.showListing = false;
+      this.locationData = null
+      if (val == 'none') {
+        this.showListing = false
       } else {
-        this.showListing = true;
+        this.showListing = true
       }
     },
     location: function () {
-      this.showListing = false;
-    },
-  },
-};
+      this.showListing = false
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -266,9 +240,9 @@ export default {
   z-index: 1035;
   max-height: 100vh;
   max-width: 294px;
-  background: theme-color("secondary");
+  background: theme-color('secondary');
   @media (prefers-color-scheme: dark) {
-    background: theme-color("secondaryDark");
+    background: theme-color('secondaryDark');
   }
 }
 
@@ -317,9 +291,9 @@ export default {
 }
 
 .side-nav {
-  background: theme-color("secondary");
+  background: theme-color('secondary');
   @media (prefers-color-scheme: dark) {
-    background: theme-color("secondaryDark");
+    background: theme-color('secondaryDark');
   }
 }
 
@@ -331,9 +305,9 @@ export default {
   top: 169px;
   z-index: 500;
   left: 0;
-  background: theme-color("secondary");
+  background: theme-color('secondary');
   @media (prefers-color-scheme: dark) {
-    background: theme-color("secondaryDark");
+    background: theme-color('secondaryDark');
   }
   transition: left 0.25s ease-out;
   cursor: pointer;
@@ -348,7 +322,7 @@ export default {
 }
 .tab i {
   font-size: 1.5rem;
-  color: theme-color("buttons");
+  color: theme-color('buttons');
   transform: rotate(-90deg);
   margin-top: 18px;
   margin-left: 7px;

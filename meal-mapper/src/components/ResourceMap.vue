@@ -15,20 +15,11 @@
         <l-control position="topright">
           <div class="mapkey" :class="{ 'show-key': showKey }">
             <div class="title-block">
-              <h6 class="title">{{ $t("label.mapkey") }}</h6>
+              <h6 class="title">{{ $t('label.mapkey') }}</h6>
               <i @click="showKey = !showKey" class="fas fa-info-circle" />
             </div>
-            <div
-              class="keys"
-              :class="{ 'show-key': showKey }"
-              v-for="item in mapKey"
-              v-bind:key="item.title"
-            >
-              <icon-list-item
-                :leaflet-icon="item.icon"
-                :title="item.title"
-                link=""
-              />
+            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
+              <icon-list-item :leaflet-icon="item.icon" :title="item.title" link="" />
             </div>
           </div>
         </l-control>
@@ -53,42 +44,24 @@
           <!-- @clusterclick="click()" @ready="ready" -->
           <l-marker
             :lat-lng="latLng(item.marker.gsx$lat.$t, item.marker.gsx$lon.$t)"
-            :icon="
-              selectedIcon(
-                location.currentBusiness !== null &&
-                  item.marker.id.$t === location.currentBusiness.marker.id.$t,
-                item
-              )
-            "
+            :icon="selectedIcon(location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t, item)"
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
             @click="
               $emit('location-selected', {
                 locValue: index,
                 locId: item.marker.id.$t,
-                isSetByMap: true,
+                isSetByMap: true
               })
             "
           ></l-marker>
         </v-marker-cluster>
         <l-control position="bottomright" class="user-location-button">
-          <a
-            href="#"
-            @click="getUserLocation"
-            class="user-location-link"
-            ref="useLocation"
-          >
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
-        <b-alert
-          variant="warning"
-          class="location-alert"
-          :show="showError"
-          dismissible
-          @dismissed="resetError"
-          fade
-        >
+        <b-alert variant="warning" class="location-alert" :show="showError" dismissible @dismissed="resetError" fade>
           {{ errorMessage }}
         </b-alert>
       </l-map>
@@ -97,29 +70,22 @@
 </template>
 
 <script>
-import { BAlert } from "bootstrap-vue";
-import {
-  LMap,
-  LTileLayer,
-  LMarker,
-  LControl,
-  LCircle,
-  LCircleMarker,
-} from "vue2-leaflet";
-import { latLng, Icon, ExtraMarkers } from "leaflet";
-import Vue2LeafletMarkerCluster from "vue2-leaflet-markercluster";
-import IconListItem from "./IconListItem.vue";
-import { businessIcon } from "../utilities";
+import { BAlert } from 'bootstrap-vue'
+import { LMap, LTileLayer, LMarker, LControl, LCircle, LCircleMarker } from 'vue2-leaflet'
+import { latLng, Icon, ExtraMarkers } from 'leaflet'
+import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
+import IconListItem from './IconListItem.vue'
+import { businessIcon } from '../utilities'
 
-delete Icon.Default.prototype._getIconUrl;
+delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
-});
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+})
 
 export default {
-  name: "ResourceMap",
+  name: 'ResourceMap',
   components: {
     BAlert,
     LMap,
@@ -128,19 +94,19 @@ export default {
     LControl,
     LCircle,
     LCircleMarker,
-    "v-marker-cluster": Vue2LeafletMarkerCluster,
-    IconListItem,
+    'v-marker-cluster': Vue2LeafletMarkerCluster,
+    IconListItem
   },
   props: {
     filteredMarkers: Array,
     location: {
       locValue: Number,
       currentBusiness: Object,
-      isSetByMap: Boolean,
+      isSetByMap: Boolean
     },
     mapUrl: String,
     attribution: String,
-    centroid: { lat: Number, lng: Number },
+    centroid: { lat: Number, lng: Number }
   },
   data() {
     return {
@@ -148,148 +114,144 @@ export default {
       zoom: this.centroid.zoom,
       showParagraph: true,
       showError: false,
-      errorMessage: "",
+      errorMessage: '',
       userLocationData: false,
       mapOptions: { zoomSnap: 0.5, setView: true },
       showMap: true,
       locationData: location,
       accuracy: 0,
       circle: {
-        border: "white",
-        fill: "#f00",
+        border: 'white',
+        fill: '#f00'
       },
       clusterOptions: {
         spiderfyOnMaxZoom: true,
         maxClusterRadius: 40,
-        disableClusteringAtZoom: 16,
+        disableClusteringAtZoom: 16
       },
-      showKey: false,
-    };
+      showKey: false
+    }
   },
   mounted() {
-    this.editZoomControl();
+    this.editZoomControl()
     this.$nextTick(() => {
-      this.$emit("bounds", this.$refs.covidMap.mapObject.getBounds());
-    });
+      this.$emit('bounds', this.$refs.covidMap.mapObject.getBounds())
+    })
   },
   computed: {
     mapKey() {
       return [
         {
-          title: this.$t("label.open"),
+          title: this.$t('label.open'),
           icon: ExtraMarkers.icon({
-            className: "markeropen",
-            icon: "na",
-            prefix: "fa",
-            svg: true,
-          }),
+            className: 'markeropen',
+            icon: 'na',
+            prefix: 'fa',
+            svg: true
+          })
         },
         {
-          title: this.$t("label.closedonday"),
+          title: this.$t('label.closedonday'),
           icon: ExtraMarkers.icon({
-            className: "markerclosed",
-            icon: "na",
-            prefix: "fa",
-            svg: true,
-          }),
+            className: 'markerclosed',
+            icon: 'na',
+            prefix: 'fa',
+            svg: true
+          })
         },
         {
-          title: this.$t("label.selected"),
+          title: this.$t('label.selected'),
           icon: ExtraMarkers.icon({
-            className: "markerselected",
-            icon: "na",
-            prefix: "fa",
-            svg: true,
-          }),
-        },
-      ];
-    },
+            className: 'markerselected',
+            icon: 'na',
+            prefix: 'fa',
+            svg: true
+          })
+        }
+      ]
+    }
   },
   methods: {
     centerUpdated(center) {
-      this.center = center;
-      this.$emit("center", center);
+      this.center = center
+      this.$emit('center', center)
     },
     boundsUpdated(bounds) {
-      this.$emit("bounds", bounds);
+      this.$emit('bounds', bounds)
     },
     resetError() {
-      this.showError = false;
-      this.errorMessage = "";
+      this.showError = false
+      this.errorMessage = ''
     },
     userIcon() {
       const icon = ExtraMarkers.icon({
-        markerColor: "usermarker",
-        icon: "fas fa-home",
-        prefix: "fa",
-        svg: true,
-      });
-      return icon;
+        markerColor: 'usermarker',
+        icon: 'fas fa-home',
+        prefix: 'fa',
+        svg: true
+      })
+      return icon
     },
     getUserLocation() {
-      var map = this.$refs.covidMap.mapObject;
+      var map = this.$refs.covidMap.mapObject
       map.locate({
         setView: true,
         enableHighAccuracy: true,
         watch: true,
-        maximumAge: 60000,
-      });
-      map.on("locationfound", (locationEvent) => {
+        maximumAge: 60000
+      })
+      map.on('locationfound', (locationEvent) => {
         if (locationEvent.latitude && locationEvent.longitude) {
-          this.userLocationData = latLng(
-            locationEvent.latitude,
-            locationEvent.longitude
-          );
+          this.userLocationData = latLng(locationEvent.latitude, locationEvent.longitude)
           // this.centerUpdated(this.userLocationData)
-          this.accuracy = locationEvent.accuracy;
-          this.$refs.useLocation.classList.add("active");
+          this.accuracy = locationEvent.accuracy
+          this.$refs.useLocation.classList.add('active')
         }
-      });
-      map.on("locationerror", (err) => {
+      })
+      map.on('locationerror', (err) => {
         if (err.message && err.code != err.TIMEOUT) {
-          this.showError = true;
-          this.errorMessage = err.message;
-          this.errorMessage +=
-            " Please check your browser settings and ensure you have given our site permission to view your location.";
-          this.$refs.useLocation.classList.add("disabled");
+          this.showError = true
+          this.errorMessage = err.message
+          this.errorMessage += ' Please check your browser settings and ensure you have given our site permission to view your location.'
+          this.$refs.useLocation.classList.add('disabled')
         }
-      });
+      })
     },
     editZoomControl() {
-      const zoomControl = this.$el.querySelector(".leaflet-top.leaflet-left");
-      zoomControl.className = "leaflet-bottom leaflet-right";
+      const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
+      zoomControl.className = 'leaflet-bottom leaflet-right'
     },
     circleRadius() {
-      var radius = 8;
+      var radius = 8
       if (radius <= 5) {
-        radius = 5;
+        radius = 5
       }
-      return radius;
+      return radius
     },
     accuracyRadius() {
-      var radius = this.accuracy;
-      return radius;
+      var radius = this.accuracy
+      return radius
     },
     latLng,
     selectedIcon(selected, item) {
-      const isOpen = item.oc;
-      let markerColor = isOpen ? "markeropen" : "markerclosed";
-      const iconClasses = businessIcon(item.marker);
+      const isOpen = item.oc
+      let markerColor = isOpen ? 'markeropen' : 'markerclosed'
+      const iconClasses = businessIcon(item.marker)
       if (selected) {
-        markerColor = "markerselected";
+        markerColor = 'markerselected'
       }
       var markerIcon = ExtraMarkers.icon({
         className: markerColor,
         icon: iconClasses,
-        prefix: "fa",
-        svg: true,
+        prefix: 'fa',
+        svg: true
         // ,
         // name: item.marker.gsx$providername.$t,
         // nameClasses: 'markerName'
-      });
+      })
 
-      return markerIcon;
-    },
+      return markerIcon
+    }
     // eslint-disable-next-line no-console
     // click: (e) => console.log('clusterclick', e),
     // eslint-disable-next-line no-console
@@ -299,25 +261,19 @@ export default {
     // https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
     location: function (locationVal) {
       if (locationVal.isSetByMap) {
-        return;
+        return
       }
       // var item = this.filteredMarkers[locationVal.locValue]
-      if (
-        locationVal.currentBusiness !== null &&
-        this.$refs.covidMap.mapObject.getZoom() < 17
-      ) {
+      if (locationVal.currentBusiness !== null && this.$refs.covidMap.mapObject.getZoom() < 17) {
         this.$refs.covidMap.mapObject.setView(
-          latLng(
-            locationVal.currentBusiness.marker.gsx$lat.$t,
-            locationVal.currentBusiness.marker.gsx$lon.$t
-          ),
+          latLng(locationVal.currentBusiness.marker.gsx$lat.$t, locationVal.currentBusiness.marker.gsx$lon.$t),
           17,
           { duration: 1 }
-        );
+        )
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -346,9 +302,9 @@ export default {
 
 .alert-warning {
   @media (prefers-color-scheme: dark) {
-    background-color: theme-color-level("warning", 2) !important;
-    color: theme-color-level("warning", 8) !important;
-    border-color: theme-color-level("warning", 2) !important;
+    background-color: theme-color-level('warning', 2) !important;
+    color: theme-color-level('warning', 8) !important;
+    border-color: theme-color-level('warning', 2) !important;
   }
 }
 
@@ -486,10 +442,10 @@ div.markeropen svg path {
     }
   }
   &.active {
-    color: theme-color("primary") !important;
+    color: theme-color('primary') !important;
   }
   &.disabled {
-    color: theme-color("#bbb") !important;
+    color: theme-color('#bbb') !important;
   }
 }
 </style>

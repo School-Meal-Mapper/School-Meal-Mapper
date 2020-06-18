@@ -11,15 +11,15 @@
 
 <script>
 export default {
-  name: "InfoPanel",
+  name: 'InfoPanel',
   data() {
-    return {};
+    return {}
   },
   props: {
     infotype: { type: String },
-    icon: { type: String },
-  },
-};
+    icon: { type: String }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -31,7 +31,7 @@ export default {
 .note i,
 .handwash i {
   font-size: 3rem;
-  color: theme-color("warning");
+  color: theme-color('warning');
   @media (prefers-color-scheme: dark) {
     color: theme-color-level(warning, 5);
   }
@@ -40,9 +40,9 @@ export default {
 }
 
 .handwash i {
-  color: theme-color("danger");
+  color: theme-color('danger');
   @media (prefers-color-scheme: dark) {
-    color: theme-color-level("danger", 5);
+    color: theme-color-level('danger', 5);
   }
 }
 

@@ -1,16 +1,12 @@
 <template>
-  <div
-    class="valuebox themeFont"
-    :class="{ selected: content.selected }"
-    @click="$emit('box-selected', { need: content.need })"
-  >
+  <div class="valuebox themeFont" :class="{ selected: content.selected }" @click="$emit('box-selected', { need: content.need })">
     <div class="number">{{ content.value }}</div>
     <div
       class="title"
       :class="{
         ten: content.value > 9,
         hundred: content.value > 99,
-        thousand: content.value > 999,
+        thousand: content.value > 999
       }"
     >
       {{ content.title }}
@@ -21,17 +17,17 @@
 
 <script>
 export default {
-  name: "ValueBox",
+  name: 'ValueBox',
   props: {
     content: {
       title: String,
       value: Number,
       icon: String,
       need: String,
-      selected: Boolean,
-    },
-  },
-};
+      selected: Boolean
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -134,7 +130,7 @@ export default {
   }
 
   &.selected {
-    background: theme-color("success") !important;
+    background: theme-color('success') !important;
     i {
       opacity: 0.5;
     }
