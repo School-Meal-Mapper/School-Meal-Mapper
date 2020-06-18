@@ -14,6 +14,14 @@
       :class="{ toggled: isFilterOpen }"
       v-if="!!entries"
     >
+      <results-list
+        :filteredMarkers="highlightFilteredMarkers"
+        :location="locationData"
+        @location-selected="passLocation"
+        v-if="showList"
+        :selected-day="day"
+      />
+
       <div id="page-content-wrapper">
         <resource-map
           :filteredMarkers="filteredMarkers"
@@ -35,6 +43,7 @@
 import AppHeader from "./components/Header.vue";
 import ResourceMap from "./components/ResourceMap.vue";
 import AboutUsModal from "./components/AboutUs.vue";
+import ResultsList from "./components/ResultsList.vue";
 import { latLng } from "leaflet";
 import { haversineDistance, sortByDistance } from "./utilities";
 
@@ -80,6 +89,7 @@ export default {
     AppHeader,
     ResourceMap,
     ThemeHeader,
+    ResultsList,
   },
   data() {
     const darkModeMediaQuery = window.matchMedia(
@@ -131,6 +141,7 @@ export default {
     },
     boundsUpdated: function (bounds) {
       this.bounds = bounds;
+      this.showList = true;
     },
     getDay: function (day) {
       if (day == 0) {
