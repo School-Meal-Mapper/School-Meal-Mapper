@@ -29,18 +29,18 @@ jobs:
 
     # Install all the packages
     - run: npm install
-      working-directory: covid-19-support
+      working-directory: meal-mapper
     
     # Run the production build
     - run: npm run build
       env:
         VUE_APP_THEME: ${{ secrets.VUE_APP_THEME }}
-      working-directory: covid-19-support
+      working-directory: meal-mapper
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: covid-19-support/dist # The folder the action should deploy.
+        FOLDER: meal-mapper/dist # The folder the action should deploy.
         CLEAN: true
