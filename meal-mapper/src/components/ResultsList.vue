@@ -180,7 +180,7 @@ export default {
   margin-bottom: 8px;
 }
 .resultList {
-  max-height: 100vh;
+  max-height: calc(100vh - 70px);
   overflow-y: overlay;
   padding-top: 20px;
 }
