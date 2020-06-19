@@ -33,9 +33,11 @@
 
 <script>
 import AppHeader from './components/Header.vue'
+
 import ResourceMap from './components/ResourceMap.vue'
 import AboutUsModal from './components/AboutUs.vue'
 import ResultsList from './components/ResultsList.vue'
+
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
@@ -79,9 +81,11 @@ export default {
   components: {
     AboutUsModal,
     AppHeader,
+
     ResourceMap,
     ThemeHeader,
     ResultsList
+
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -202,6 +206,7 @@ export default {
 
       var markers
       markers = this.entries
+
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {

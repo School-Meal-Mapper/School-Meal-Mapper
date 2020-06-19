@@ -24,6 +24,7 @@
           closedOne: item.oc == false
         }"
         :ref="'result' + index"
+
         @click="
           $emit('location-selected', {
             locValue: index,
@@ -74,6 +75,7 @@
 
 <script>
 import { weekdaysJs } from '../constants'
+
 import BusinessDetails from './BusinessDetails.vue'
 
 export default {
