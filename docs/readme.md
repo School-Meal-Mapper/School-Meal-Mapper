@@ -25,7 +25,7 @@ The mapping tool is built for school districts that are managing free meal sites
 
 ## Project Authors
 
-Created by [Code for Chapel Hill](http://www.codeforchapelhill.com/), a local chapter of [Code for America](https://www.codeforamerica.org/). Code based on work by [NC COVID Support](nccovidsupport.org) and their [code](https://github.com/code-for-chapel-hill/NC-COVID-Support) and [Bay Area Community Resource Map](www.bayareacommunity.org) and their [code](https://github.com/dcl-covid-19/mega-map-dev). Thanks!
+Created by Maps for People. Code based on work by [NC COVID Support](nccovidsupport.org) and their [code](https://github.com/code-for-chapel-hill/NC-COVID-Support) and [Bay Area Community Resource Map](www.bayareacommunity.org) and their [code](https://github.com/dcl-covid-19/mega-map-dev). 
 
 ## How can I help?
 
