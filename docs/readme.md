@@ -25,11 +25,11 @@ The mapping tool is built for school districts that are managing free meal sites
 
 ## Project Authors
 
-Created by [Code for Chapel Hill](http://www.codeforchapelhill.com/), a local chapter of [Code for America](https://www.codeforamerica.org/)
+Created by [Code for Chapel Hill](http://www.codeforchapelhill.com/), a local chapter of [Code for America](https://www.codeforamerica.org/). Code based on work by [NC COVID Support](nccovidsupport.org) and their [code](https://github.com/code-for-chapel-hill/NC-COVID-Support) and [Bay Area Community Resource Map](www.bayareacommunity.org) and thier [code](https://github.com/dcl-covid-19/mega-map-dev). 
 
 ## How can I help?
 
-This project is governed by our [Code of Conduct](https://github.com/codeforamerica/codeofconduct). By cloning the project and working with us, you are expected to uphold this code. Please report unacceptable behavior to [contact@nccovidsupport.org](mailto:contact@nccovidsupport.org).
+This project is governed by our [Code of Conduct](https://github.com/codeforamerica/codeofconduct). By cloning the project and working with us, you are expected to uphold this code. Please report unacceptable behavior to [codeforchapelhill@gmail.com](mailto:codeforchapelhill@gmail.com).
 
 ## Data source - Google Sheet
 
