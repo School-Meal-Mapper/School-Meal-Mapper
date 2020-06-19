@@ -1,8 +1,8 @@
 export const theme = {
   settings: {
     initialMapCenter: {
-      lat: 35.923068,
-      lng: -79.087216
+      lat: 36.023068,
+      lng: -79.197216
     },
     initialMapZoom: 10
   },
