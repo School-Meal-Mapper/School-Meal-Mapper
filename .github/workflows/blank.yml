@@ -1,4 +1,4 @@
-# This is a workflow to build the COVID project for production
+# This is a workflow to build the Meal Mapper project for production
 
 name: Deployment
 
