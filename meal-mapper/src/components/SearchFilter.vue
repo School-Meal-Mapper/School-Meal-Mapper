@@ -4,17 +4,6 @@
       <i class="fas fa-caret-down" />
     </div>
 
-    <b-list-group class="need-day-group">
-      <b-list-group-item variant="sideNav" class="need-type">
-        <h6>{{ $t('sidebar.what-do-you-need') }}</h6>
-        <b-form-select class="custom-select" :value="need" :options="needOptionGroups" @change="(opt) => $emit('need-selected', opt)" />
-      </b-list-group-item>
-      <b-list-group-item variant="sideNav">
-        <h6>{{ $t('sidebar.when-do-you-need-it') }}</h6>
-        <b-form-select :value="day" :options="dayOptions" @change="(opt) => $emit('day-selected', opt)" />
-      </b-list-group-item>
-    </b-list-group>
-
     <InfoPanel :infotype="'note'" :icon="'fa-info-circle'" v-if="location.currentBusiness == null || showListing">
       {{ $t('sidebar.info-about-us') }}
       <a href="#" @click="$bvModal.show('about-us')">{{ $t('sidebar.info-link-text') }}</a
@@ -63,7 +52,8 @@ export default {
   data() {
     return {
       locationData: location,
-      showListing: this.showList
+      showListing: this.showList,
+      showResults: this.showRes
     }
   },
   props: {
@@ -240,6 +230,7 @@ export default {
   z-index: 1035;
   max-height: 100vh;
   max-width: 294px;
+  padding-top: 80px;
   background: theme-color('secondary');
   @media (prefers-color-scheme: dark) {
     background: theme-color('secondaryDark');

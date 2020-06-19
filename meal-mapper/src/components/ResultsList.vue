@@ -1,6 +1,18 @@
 <template>
-  <div class="resultWrapper">
-    <b-list-group ref="results" class="resultList list-group-flush">
+  <div class="resultWrapper" id="search-filter-wrapper">
+    <div class="tab bg-dialogs border-right border-top border-bottom" @click="$emit('toggle')">
+      <i class="fas fa-caret-down" />
+    </div>
+
+    <BusinessDetails
+      :infotype="'green'"
+      :icon="'fa-tractor'"
+      :business="location.currentBusiness"
+      v-if="location.currentBusiness != null && showResults != true"
+      @close-details="closeDetails"
+    ></BusinessDetails>
+
+    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults">
       <b-list-group-item
         action
         variant="sideNav"
@@ -12,7 +24,12 @@
           closedOne: item.oc == false
         }"
         :ref="'result' + index"
-        @click="$emit('location-selected', { locValue: index, isSetByMap: false })"
+        @click="
+          $emit('location-selected', {
+            locValue: index,
+            isSetByMap: false
+          })
+        "
       >
         <h5 class="resultTitle">{{ item.marker.gsx$providername.$t }}</h5>
         <template v-if="!!item.marker.gsx$provideraddloc.$t"
@@ -58,18 +75,29 @@
 <script>
 import { weekdaysJs } from '../constants'
 
+import BusinessDetails from './BusinessDetails.vue'
+
 export default {
   name: 'ResultsList',
   data() {
     return {
       selected: false,
-      today: new Date().getDay()
+      today: new Date().getDay(),
+      locationData: location,
+      showListing: this.showList
     }
   },
-  components: {},
+  components: {
+    BusinessDetails
+  },
   props: {
     filteredMarkers: Array,
-    location: { locValue: Number, isSetByMap: Boolean },
+    location: {
+      locValue: Number,
+      isSetByMap: Boolean,
+      currentBusiness: Object
+    },
+    showResults: Boolean,
     selectedDay: Number
   },
   watch: {
@@ -78,6 +106,8 @@ export default {
         var top = this.$refs['result' + locationVal.locValue][0].offsetTop - 330
         this.$refs['results'].scrollTo(0, top)
       }
+      this.showResults = false
+      this.showList = true
     }
   },
   methods: {
@@ -87,6 +117,10 @@ export default {
       }
 
       return `${this.$t('label.closed-on')} ${this.$t(`dayofweek.${weekdaysJs[this.selectedDay].day}`)}`
+    },
+    closeDetails: function () {
+      this.showResults = true
+      this.location.currentBusiness = null
     }
   }
 }
@@ -97,12 +131,44 @@ export default {
   scrollbar-color: $gray-900 $gray-700;
 }
 
+#search-filter-wrapper {
+  margin-left: -290px;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  z-index: 1035;
+  max-height: 100vh;
+  max-width: 294px;
+  background: theme-color('secondary');
+  @media (prefers-color-scheme: dark) {
+    background: theme-color('secondaryDark');
+  }
+}
+
+#wrapper.toggled #search-filter-wrapper {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.tab,
+#wrapper.toggled .tab {
+  z-index: 0;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.5);
+  }
+}
+
 .addloc {
   margin-bottom: 8px;
 }
 .resultList {
-  max-height: calc(100vh - 286px);
+  max-height: calc(100vh - 70px);
   overflow-y: overlay;
+  padding-top: 20px;
 }
 .resultItem {
   padding: 10px;

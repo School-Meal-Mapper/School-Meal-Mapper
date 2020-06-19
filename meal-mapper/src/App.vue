@@ -5,29 +5,16 @@
     </app-header>
     <about-us-modal />
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
-      <search-filter
-        :isFilterOpen="isFilterOpen"
-        :need="need"
-        :day="day"
-        :filteredMarkers="filteredMarkers"
-        :highlightFilteredMarkers="highlightFilteredMarkers"
+      <results-list
+        :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
-        :show-list="showList"
         @location-selected="passLocation"
-        @toggle="isFilterOpen = !isFilterOpen"
-        @need-selected="needSelected"
-        @day-selected="daySelected"
+        v-if="showList"
+        :showResults="showResults"
+        :selected-day="day"
       />
 
       <div id="page-content-wrapper">
-        <highlights
-          :need="need"
-          :class="{ toggled: isFilterOpen }"
-          :filteredMarkers="highlightFilteredMarkers"
-          :highlightFilters="highlightFilters"
-          @box-selected="boxSelected"
-        />
-
         <resource-map
           :filteredMarkers="filteredMarkers"
           :class="{ noselection: need == 'none' }"
@@ -46,10 +33,11 @@
 
 <script>
 import AppHeader from './components/Header.vue'
-import SearchFilter from './components/SearchFilter.vue'
-import Highlights from './components/Highlights.vue'
+
 import ResourceMap from './components/ResourceMap.vue'
 import AboutUsModal from './components/AboutUs.vue'
+import ResultsList from './components/ResultsList.vue'
+
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
@@ -93,10 +81,10 @@ export default {
   components: {
     AboutUsModal,
     AppHeader,
-    Highlights,
+
     ResourceMap,
-    SearchFilter,
-    ThemeHeader
+    ThemeHeader,
+    ResultsList
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -113,6 +101,7 @@ export default {
         isSetByMap: false
       },
       showList: false,
+      showResults: false,
       highlightFilters: [],
       bounds: null,
       centroid: {
@@ -144,6 +133,10 @@ export default {
     },
     boundsUpdated: function (bounds) {
       this.bounds = bounds
+      this.showList = true
+      if (this.locationData.currentBusiness == null) {
+        this.showResults = true
+      }
     },
     getDay: function (day) {
       if (day == 0) {
@@ -193,7 +186,8 @@ export default {
     passLocation: function (val) {
       val.currentBusiness = this.filteredMarkers[val.locValue]
       this.locationData = val
-      this.showList = false
+      this.showList = true
+      this.showResults = false
       this.isFilterOpen = true
       var proName = this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
         ? ', ' + this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
@@ -210,12 +204,7 @@ export default {
       if (this.entries == null) return null
 
       var markers
-
-      if (this.need == 'family') {
-        markers = this.entries.filter((c) => c.gsx$familymeal.$t == 1 && c.gsx$status.$t == '1')
-      } else {
-        markers = this.entries.filter((c) => c.gsx$resource.$t === this.need && c.gsx$status.$t == '1')
-      }
+      markers = this.entries
 
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {

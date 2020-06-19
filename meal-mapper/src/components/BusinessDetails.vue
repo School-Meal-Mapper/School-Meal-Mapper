@@ -157,12 +157,13 @@ export default {
 
 <style scoped lang="scss">
 .business-details {
-  max-height: calc(100vh - 237px);
+  max-height: calc(100vh - 86px - 62px);
   overflow-y: auto;
   overflow-x: hidden;
 }
 .backtolist {
   font-size: 0.8rem;
+  padding-top: 30px;
 
   i {
     margin-right: 0.375rem;

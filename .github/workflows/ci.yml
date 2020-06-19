@@ -1,4 +1,4 @@
-# This is a workflow to for CI testing the COVID project
+# This is a workflow to for CI testing the meal-mapper project
 
 name: Continuous Integration
 
@@ -33,19 +33,19 @@ jobs:
       # Install all the packages
       - name: install
         run: npm install
-        working-directory: covid-19-support
+        working-directory: meal-mapper
 
       # Runs the unit tests
       - name: Unit tests
         run: npm run test:unit
-        working-directory: covid-19-support
+        working-directory: meal-mapper
 
       # Runs the linter
       - name: lint
         run: npm run lint
-        working-directory: covid-19-support
+        working-directory: meal-mapper
 
       # Runs the build "smoke test"
       - name: Smoke test
         run: npm run build
-        working-directory: covid-19-support
+        working-directory: meal-mapper

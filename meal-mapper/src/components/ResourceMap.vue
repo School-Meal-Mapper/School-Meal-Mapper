@@ -309,12 +309,12 @@ export default {
 }
 
 .bv-example-row {
-  height: calc(100% - 124px);
+  height: 100%;
 }
 
 @include media-breakpoint-up(sm) {
   .bv-example-row {
-    height: calc(100% - 116px);
+    height: 100%;
   }
 }
 
@@ -355,6 +355,7 @@ div.markeropen svg path {
     font-size: 2rem;
     opacity: 0.4;
     color: #000;
+    padding-top: 30px;
     cursor: pointer;
     vertical-align: middle;
     @media (prefers-color-scheme: dark) {
