@@ -1,21 +1,21 @@
 module.exports = {
-  title: 'Code for America Demo Resources',
+  title: 'Meal Mapper Demo Site',
   keywords: 'CfA, Code for America,Demo,Resources,Map',
-  description: 'Demo site using a list of Code for America Brigades and associated Organizations',
+  description: 'Site mapping school meal locations in NC',
 
   // Open Graph
   // optional
   og: {
     type: 'website',
-    url: 'https://readingdancer.github.io/NC-COVID-Support/',
-    title: 'Code for America Demo Resources',
-    site_name: 'NC COVID Support',
-    description: 'Demo site using a list of Code for America Brigades and associated Organizations',
+    url: 'https://code-for-chapel-hill.github.io/School-Meal-Mapper/',
+    title: 'Meal Mapper Demo Site',
+    site_name: 'Meal Mapper',
+    description: 'Site mapping school meal locations in NC',
     locale: 'en_US',
     localeAlt: 'es_US',
     image: {
-      url: 'https://readingdancer.github.io/NC-COVID-Support/images/Share-Twitter.png',
-      secure_url: 'https://readingdancer.github.io/NC-COVID-Support/images/Share-Twitter.png',
+      url: 'https://code-for-chapel-hill.github.io/School-Meal-Mapper/images/Share-Twitter.png',
+      secure_url: 'https://code-for-chapel-hill.github.io/School-Meal-Mapper/images/Share-Twitter.png',
       width: 1200,
       height: 670,
       type: 'image/png'
@@ -25,8 +25,8 @@ module.exports = {
   // Twitter Card
   // optional
   twitterCard: {
-    title: 'Code for America Demo Resources',
-    description: 'Demo site using a list of Code for America Brigades and associated Organizations',
+    title: 'Meal Mapper Demo Site',
+    description: 'Site mapping school meal locations in NC',
 
     // optional
     site: '@nccovidsupport',
@@ -34,11 +34,11 @@ module.exports = {
     // optional
     creator: '@readingdancer',
 
-    domain: 'https://readingdancer.github.io/NC-COVID-Support/',
-    url: 'https://readingdancer.github.io/NC-COVID-Support/',
+    domain: 'https://code-for-chapel-hill.github.io/School-Meal-Mapper/',
+    url: 'https://code-for-chapel-hill.github.io/School-Meal-Mapper/',
     image: {
-      url: 'https://readingdancer.github.io/NC-COVID-Support/images/Share-Twitter.png',
-      alt: 'Code for America Demo Resources',
+      url: 'https://code-for-chapel-hill.github.io/School-Meal-Mapper/images/Share-Twitter.png',
+      alt: 'Meal Mapper Demo Site',
       width: 1200,
       height: 670
     }
