@@ -19,6 +19,7 @@
         :location="locationData"
         @location-selected="passLocation"
         v-if="showList"
+        :showResults="showResults"
         :selected-day="day"
       />
 
@@ -108,6 +109,7 @@ export default {
         isSetByMap: false,
       },
       showList: false,
+      showResults: false,
       highlightFilters: [],
       bounds: null,
       centroid: {
@@ -142,6 +144,9 @@ export default {
     boundsUpdated: function (bounds) {
       this.bounds = bounds;
       this.showList = true;
+      if (this.locationData.currentBusiness == null) {
+        this.showResults = true;
+      }
     },
     getDay: function (day) {
       if (day == 0) {
@@ -191,7 +196,8 @@ export default {
     passLocation: function (val) {
       val.currentBusiness = this.filteredMarkers[val.locValue];
       this.locationData = val;
-      this.showList = false;
+      this.showList = true;
+      this.showResults = false;
       this.isFilterOpen = true;
       var proName = this.filteredMarkers[val.locValue].marker.gsx$provideraddloc
         .$t

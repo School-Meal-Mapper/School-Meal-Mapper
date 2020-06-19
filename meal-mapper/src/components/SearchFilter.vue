@@ -66,6 +66,7 @@ export default {
     return {
       locationData: location,
       showListing: this.showList,
+      showResults: this.showRes,
     };
   },
   props: {

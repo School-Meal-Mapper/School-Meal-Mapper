@@ -11,11 +11,15 @@
       :infotype="'green'"
       :icon="'fa-tractor'"
       :business="location.currentBusiness"
-      v-if="location.currentBusiness != null && showListing != true"
+      v-if="location.currentBusiness != null && showResults != true"
       @close-details="closeDetails"
     ></BusinessDetails>
 
-    <b-list-group ref="results" class="resultList list-group-flush">
+    <b-list-group
+      ref="results"
+      class="resultList list-group-flush"
+      v-if="showResults"
+    >
       <b-list-group-item
         action
         variant="sideNav"
@@ -31,7 +35,6 @@
           $emit('location-selected', {
             locValue: index,
             isSetByMap: false,
-            showListing: false,
           })
         "
       >
@@ -111,6 +114,7 @@ export default {
       isSetByMap: Boolean,
       currentBusiness: Object,
     },
+    showResults: Boolean,
     selectedDay: Number,
   },
   watch: {
@@ -120,7 +124,8 @@ export default {
           this.$refs["result" + locationVal.locValue][0].offsetTop - 330;
         this.$refs["results"].scrollTo(0, top);
       }
-      this.showListing = false;
+      this.showResults = false;
+      this.showList = true;
     },
   },
   methods: {
@@ -134,7 +139,8 @@ export default {
       )}`;
     },
     closeDetails: function () {
-      this.showListing = true;
+      this.showResults = true;
+      this.location.currentBusiness = null;
     },
   },
 };

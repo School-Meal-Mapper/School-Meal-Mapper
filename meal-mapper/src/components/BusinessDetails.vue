@@ -268,8 +268,8 @@ export default {
 
 <style scoped lang="scss">
 .business-details {
-  //max-height: calc(100vh - 86px - 62px);
-  height: 100vh;
+  max-height: calc(100vh - 86px - 62px);
+  //height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
