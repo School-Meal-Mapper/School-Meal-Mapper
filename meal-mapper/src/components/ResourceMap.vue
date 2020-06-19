@@ -236,7 +236,7 @@ export default {
     selectedIcon(selected, item) {
       const isOpen = item.oc
       let markerColor = isOpen ? 'markeropen' : 'markerclosed'
-      const iconClasses = businessIcon(item.marker)
+      const iconClasses = businessIcon()
       if (selected) {
         markerColor = 'markerselected'
       }
