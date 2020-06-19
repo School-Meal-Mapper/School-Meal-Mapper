@@ -1,19 +1,10 @@
 <template>
   <div class="home">
-    <app-header
-      :language="language.name"
-      @language-selected="changeLanguage"
-      :socialMedia="socialMediaico"
-    >
+    <app-header :language="language.name" @language-selected="changeLanguage" :socialMedia="socialMediaico">
       <theme-header></theme-header>
     </app-header>
     <about-us-modal />
-    <div
-      class="d-flex"
-      id="wrapper"
-      :class="{ toggled: isFilterOpen }"
-      v-if="!!entries"
-    >
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -41,72 +32,70 @@
 </template>
 
 <script>
-import AppHeader from "./components/Header.vue";
-import ResourceMap from "./components/ResourceMap.vue";
-import AboutUsModal from "./components/AboutUs.vue";
-import ResultsList from "./components/ResultsList.vue";
-import { latLng } from "leaflet";
-import { haversineDistance, sortByDistance } from "./utilities";
+import AppHeader from './components/Header.vue'
+import ResourceMap from './components/ResourceMap.vue'
+import AboutUsModal from './components/AboutUs.vue'
+import ResultsList from './components/ResultsList.vue'
+import { latLng } from 'leaflet'
+import { haversineDistance, sortByDistance } from './utilities'
 
-import { weekdays, dayFilters, booleanFilters, dayAny } from "./constants";
+import { weekdays, dayFilters, booleanFilters, dayAny } from './constants'
 
-import { theme } from "theme.config";
-import ThemeHeader from "theme.header";
+import { theme } from 'theme.config'
+import ThemeHeader from 'theme.header'
 
 function extend(obj, src) {
   for (var key in src) {
-    obj.push(src[key]);
+    obj.push(src[key])
   }
-  return obj;
+  return obj
 }
 
 function addOrRemove(array, item) {
-  const exists = array.includes(item);
+  const exists = array.includes(item)
 
   if (exists) {
     return array.filter((c) => {
-      return c !== item;
-    });
+      return c !== item
+    })
   } else {
-    const result = array;
-    result.push(item);
-    return result;
+    const result = array
+    result.push(item)
+    return result
   }
 }
 
 export default {
-  name: "app",
+  name: 'app',
   props: {
-    msg: String,
+    msg: String
   },
   watch: {
-    currentPage: "fetchData",
+    currentPage: 'fetchData'
   },
   created() {
-    this.fetchData();
+    this.fetchData()
   },
   components: {
     AboutUsModal,
     AppHeader,
     ResourceMap,
     ThemeHeader,
-    ResultsList,
+    ResultsList
   },
   data() {
-    const darkModeMediaQuery = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    );
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     return {
       entries: null,
-      need: "none",
+      need: 'none',
       day: dayAny,
       isFilterOpen: true,
-      language: { name: "English", iso: "en" },
+      language: { name: 'English', iso: 'en' },
       locationData: {
         locValue: null,
         locId: null,
         currentBusiness: null,
-        isSetByMap: false,
+        isSetByMap: false
       },
       showList: false,
       showResults: false,
@@ -115,75 +104,73 @@ export default {
       centroid: {
         lat: theme.settings.initialMapCenter.lat,
         lng: theme.settings.initialMapCenter.lng,
-        zoom: theme.settings.initialMapZoom,
+        zoom: theme.settings.initialMapZoom
       },
       darkModeMediaQuery: darkModeMediaQuery,
       darkMode: darkModeMediaQuery.matches,
-      mapUrl: "",
+      mapUrl: '',
       attribution: null,
-      socialMediaico: theme.socialMedia,
-    };
+      socialMediaico: theme.socialMedia
+    }
   },
   mounted() {
-    this.setDarkMode(this.darkMode);
+    this.setDarkMode(this.darkMode)
     this.darkModeMediaQuery.addListener((e) => {
-      this.darkMode = e.matches;
-      this.setDarkMode(this.darkMode);
-    });
+      this.darkMode = e.matches
+      this.setDarkMode(this.darkMode)
+    })
   },
   methods: {
     setDarkMode(darkMode) {
-      this.mapUrl = darkMode ? theme.maps.dark.url : theme.maps.normal.url;
-      this.attribution = darkMode
-        ? theme.maps.dark.attribution
-        : theme.maps.normal.attribution;
+      this.mapUrl = darkMode ? theme.maps.dark.url : theme.maps.normal.url
+      this.attribution = darkMode ? theme.maps.dark.attribution : theme.maps.normal.attribution
     },
     centerUpdated(center) {
-      this.centroid = { lat: center.lat, lng: center.lng };
+      this.centroid = { lat: center.lat, lng: center.lng }
     },
     boundsUpdated: function (bounds) {
-      this.bounds = bounds;
-      this.showList = true;
+      this.bounds = bounds
+      this.showList = true
       if (this.locationData.currentBusiness == null) {
-        this.showResults = true;
+        this.showResults = true
       }
     },
     getDay: function (day) {
       if (day == 0) {
-        return 6;
+        return 6
       } else {
-        return day - 1;
+        return day - 1
       }
     },
     boxSelected: function (content) {
-      this.highlightFilters = addOrRemove(this.highlightFilters, content.need);
+      this.highlightFilters = addOrRemove(this.highlightFilters, content.need)
     },
     isAnyDaySelected(day) {
-      return day >= dayAny;
+      return day >= dayAny
     },
     needSelected: function (val) {
-      this.need = val;
-      this.highlightFilters = [];
-      window.gtag("event", "What do you need?", {
-        event_category: "Search - (" + this.language.name + ")",
-        event_label: val,
-      });
+      this.need = val
+      this.highlightFilters = []
+      window.gtag('event', 'What do you need?', {
+        event_category: 'Search - (' + this.language.name + ')',
+        event_label: val
+      })
     },
     daySelected: function (val) {
-      this.day = val;
-      this.highlightFilters = [];
-      window.gtag("event", "When do you need it?", {
-        event_category: "Search - (" + this.language.name + ")",
-        event_label: weekdays[this.getDay(val)].day,
-      });
+      this.day = val
+      this.highlightFilters = []
+      window.gtag('event', 'When do you need it?', {
+        event_category: 'Search - (' + this.language.name + ')',
+        event_label: weekdays[this.getDay(val)].day
+      })
     },
     changeLanguage: function (item) {
-      this.language = item;
-      this.$root.updateLang(item.iso);
+      this.language = item
+      this.$root.updateLang(item.iso)
     },
     async fetchData() {
-      const res = await fetch(theme.data.spreadsheetUrl);
-      const entries = await res.json();
+      const res = await fetch(theme.data.spreadsheetUrl)
+      const entries = await res.json()
 
       // if (entries !== null) {
       //   entries.forEach(c => {
@@ -191,98 +178,80 @@ export default {
       //   });
       // }
 
-      this.entries = entries.feed.entry;
+      this.entries = entries.feed.entry
     },
     passLocation: function (val) {
-      val.currentBusiness = this.filteredMarkers[val.locValue];
-      this.locationData = val;
-      this.showList = true;
-      this.showResults = false;
-      this.isFilterOpen = true;
-      var proName = this.filteredMarkers[val.locValue].marker.gsx$provideraddloc
-        .$t
-        ? ", " + this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
-        : "";
+      val.currentBusiness = this.filteredMarkers[val.locValue]
+      this.locationData = val
+      this.showList = true
+      this.showResults = false
+      this.isFilterOpen = true
+      var proName = this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
+        ? ', ' + this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
+        : ''
 
-      window.gtag(
-        "event",
-        val.isSetByMap ? "Marker clicked" : "List item clicked",
-        {
-          event_category: "View details - (" + this.language.name + ")",
-          event_label:
-            this.filteredMarkers[val.locValue].marker.gsx$providername.$t +
-            proName,
-        }
-      );
-    },
+      window.gtag('event', val.isSetByMap ? 'Marker clicked' : 'List item clicked', {
+        event_category: 'View details - (' + this.language.name + ')',
+        event_label: this.filteredMarkers[val.locValue].marker.gsx$providername.$t + proName
+      })
+    }
   },
   computed: {
     filteredMarkers() {
-      if (this.entries == null) return null;
+      if (this.entries == null) return null
 
-      var markers;
-      markers = this.entries;
+      var markers
+      markers = this.entries
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {
-          markers = markers.filter((c) => c["gsx$" + element].$t == "1");
+          markers = markers.filter((c) => c['gsx$' + element].$t == '1')
         }
-      });
+      })
 
-      var today = new Date().getDay();
-      var selectedDay = today;
+      var today = new Date().getDay()
+      var selectedDay = today
       if (!this.isAnyDaySelected(this.day)) {
-        selectedDay = this.day;
+        selectedDay = this.day
       }
 
-      const dayFilter = dayFilters[this.getDay(selectedDay)];
-      var open = markers.filter((c) => c[dayFilter].$t !== "0");
-      var closed = markers.filter((c) => c[dayFilter].$t == "0");
+      const dayFilter = dayFilters[this.getDay(selectedDay)]
+      var open = markers.filter((c) => c[dayFilter].$t !== '0')
+      var closed = markers.filter((c) => c[dayFilter].$t == '0')
 
       var retList = extend(
         open.map((marker) => ({
           marker,
           oc: true,
-          distance: haversineDistance(
-            [this.centroid.lat, this.centroid.lng],
-            [marker.gsx$lat.$t, marker.gsx$lon.$t],
-            true
-          ),
+          distance: haversineDistance([this.centroid.lat, this.centroid.lng], [marker.gsx$lat.$t, marker.gsx$lon.$t], true)
         })),
         closed.map((marker) => ({
           marker,
           oc: false,
-          distance: haversineDistance(
-            [this.centroid.lat, this.centroid.lng],
-            [marker.gsx$lat.$t, marker.gsx$lon.$t],
-            true
-          ),
+          distance: haversineDistance([this.centroid.lat, this.centroid.lng], [marker.gsx$lat.$t, marker.gsx$lon.$t], true)
         }))
-      ).sort(sortByDistance);
+      ).sort(sortByDistance)
 
-      return retList;
+      return retList
     },
     highlightFilteredMarkers() {
-      var contained = []; //makers in map boundingbox
+      var contained = [] //makers in map boundingbox
       this.filteredMarkers.forEach((m) => {
-        if (
-          this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))
-        )
-          contained.push(m);
-      });
+        if (this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))) contained.push(m)
+      })
 
       if (!this.isAnyDaySelected(this.day)) {
-        return contained;
+        return contained
       }
 
       return contained.map((m) => {
-        let obj = Object.assign({}, m);
-        obj.oc = true;
-        return obj;
-      });
-    },
-  },
-};
+        let obj = Object.assign({}, m)
+        obj.oc = true
+        return obj
+      })
+    }
+  }
+}
 </script>
 
 <style></style>

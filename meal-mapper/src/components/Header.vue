@@ -16,19 +16,14 @@
             variant="buttons"
             type="button"
             onclick="window.open('https://forms.gle/fWiCg2z5CRx9ukGu7','_blank')"
-            ><i class="fas fa-plus-square" aria-hidden="true" />
-            {{ $t("about.devhelp.addbusiness") }}</b-button
+            ><i class="fas fa-plus-square" aria-hidden="true" /> {{ $t('about.devhelp.addbusiness') }}</b-button
           >
         </b-nav-item>
 
         <b-nav-item right @click="$bvModal.show('about-us')">
-          {{ $t("about.linktext") }}
+          {{ $t('about.linktext') }}
         </b-nav-item>
-        <b-nav-item
-          :href="item.url"
-          v-for="(item, index) in socialMedia"
-          v-bind:key="index"
-        >
+        <b-nav-item :href="item.url" v-for="(item, index) in socialMedia" v-bind:key="index">
           <i :class="'fab fa-' + item.icon"></i>
           <span class="sm-name">{{ item.name }}</span>
         </b-nav-item>
@@ -38,17 +33,9 @@
             <i class="fas fa-globe-americas" aria-hidden="true" />
             <span v-html="language" class="language" />
           </template>
-          <b-dropdown-item
-            href="#"
-            v-for="item in languages"
-            v-bind:key="item.iso"
-          >
+          <b-dropdown-item href="#" v-for="item in languages" v-bind:key="item.iso">
             <span :title="$t('languages.' + item.iso)"
-              ><div
-                v-html="item.name"
-                :lang="item.iso"
-                @click="$emit('language-selected', item)"
-              ></div
+              ><div v-html="item.name" :lang="item.iso" @click="$emit('language-selected', item)"></div
             ></span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
@@ -59,26 +46,26 @@
 
 <script>
 export default {
-  name: "app-header",
+  name: 'app-header',
   props: {
     language: String,
-    socialMedia: Array,
+    socialMedia: Array
   },
   data() {
     return {
       languages: [
-        { iso: "en", name: "English" },
-        { iso: "es", name: "Espa&#241;ol" },
-        { iso: "fr", name: "Fran&#231;ais" },
-        { iso: "ko", name: "한국어" },
-        { iso: "ar", name: "عربى" },
-        { iso: "ja", name: "日本人" },
-        { iso: "zh", name: "中文" },
-        { iso: "ms", name: "ဗမာ" },
-      ],
-    };
-  },
-};
+        { iso: 'en', name: 'English' },
+        { iso: 'es', name: 'Espa&#241;ol' },
+        { iso: 'fr', name: 'Fran&#231;ais' },
+        { iso: 'ko', name: '한국어' },
+        { iso: 'ar', name: 'عربى' },
+        { iso: 'ja', name: '日本人' },
+        { iso: 'zh', name: '中文' },
+        { iso: 'ms', name: 'ဗမာ' }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss">

@@ -1,9 +1,6 @@
 <template>
   <div class="resultWrapper" id="search-filter-wrapper">
-    <div
-      class="tab bg-dialogs border-right border-top border-bottom"
-      @click="$emit('toggle')"
-    >
+    <div class="tab bg-dialogs border-right border-top border-bottom" @click="$emit('toggle')">
       <i class="fas fa-caret-down" />
     </div>
 
@@ -15,11 +12,7 @@
       @close-details="closeDetails"
     ></BusinessDetails>
 
-    <b-list-group
-      ref="results"
-      class="resultList list-group-flush"
-      v-if="showResults"
-    >
+    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults">
       <b-list-group-item
         action
         variant="sideNav"
@@ -28,13 +21,13 @@
         class="resultItem"
         :class="{
           selected: index == location.locValue,
-          closedOne: item.oc == false,
+          closedOne: item.oc == false
         }"
         :ref="'result' + index"
         @click="
           $emit('location-selected', {
             locValue: index,
-            isSetByMap: false,
+            isSetByMap: false
           })
         "
       >
@@ -46,44 +39,33 @@
         >
         <div v-if="!item.oc" class="closed">{{ getClosedMessage() }}</div>
         <span class="resultAddress">
-          <span v-if="!!item.marker.gsx$cuisine.$t"
-            >{{ item.marker.gsx$cuisine.$t }}<br
-          /></span>
-          {{ item.marker.gsx$address.$t
-          }}{{ item.marker.gsx$address.$t !== "" ? "," : "" }}
+          <span v-if="!!item.marker.gsx$cuisine.$t">{{ item.marker.gsx$cuisine.$t }}<br /></span>
+          {{ item.marker.gsx$address.$t }}{{ item.marker.gsx$address.$t !== '' ? ',' : '' }}
           {{ item.marker.gsx$city.$t }}
         </span>
         <template v-if="item.marker.gsx$discountmedical.$t == 1"
-          ><span :title="$tc('label.discountmedical', 1)"
-            ><i class="fas fa-user-md" /></span
+          ><span :title="$tc('label.discountmedical', 1)"><i class="fas fa-user-md" /></span
         ></template>
         <template v-if="item.marker.gsx$familymeal.$t == 1"
-          ><span :title="$tc('category.family', 2)"
-            ><i class="fas fa-user-friends" /></span
+          ><span :title="$tc('category.family', 2)"><i class="fas fa-user-friends" /></span
         ></template>
         <template v-if="item.marker.gsx$mealstudent.$t == 1"
-          ><span :title="$tc('label.mealstudent', 1)"
-            ><i class="fas fa-school" /></span
+          ><span :title="$tc('label.mealstudent', 1)"><i class="fas fa-school" /></span
         ></template>
         <template v-if="item.marker.gsx$mealstudent.$t == 1"
-          ><span :title="$tc('label.mealpublic', 1)"
-            ><i class="fas fa-users" /></span
+          ><span :title="$tc('label.mealpublic', 1)"><i class="fas fa-users" /></span
         ></template>
         <template v-if="item.marker.gsx$drivethru.$t == 1"
-          ><span :title="$t('label.drivethru')"
-            ><i class="fas fa-car-side" /></span
+          ><span :title="$t('label.drivethru')"><i class="fas fa-car-side" /></span
         ></template>
         <template v-if="item.marker.gsx$curbside.$t == 1"
-          ><span :title="$tc('label.curbside', 1)"
-            ><i class="fas fa-car" /></span
+          ><span :title="$tc('label.curbside', 1)"><i class="fas fa-car" /></span
         ></template>
         <template v-if="item.marker.gsx$orderonline.$t == 1"
-          ><span :title="$t('label.orderonline')"
-            ><i class="fas fa-mouse" /></span
+          ><span :title="$t('label.orderonline')"><i class="fas fa-mouse" /></span
         ></template>
         <template v-if="item.marker.gsx$delivery.$t == 1"
-          ><span :title="$t('label.delivery')"
-            ><i class="fas fa-shipping-fast" /></span
+          ><span :title="$t('label.delivery')"><i class="fas fa-shipping-fast" /></span
         ></template>
       </b-list-group-item>
     </b-list-group>
@@ -91,59 +73,56 @@
 </template>
 
 <script>
-import { weekdaysJs } from "../constants";
-import BusinessDetails from "./BusinessDetails.vue";
+import { weekdaysJs } from '../constants'
+import BusinessDetails from './BusinessDetails.vue'
 
 export default {
-  name: "ResultsList",
+  name: 'ResultsList',
   data() {
     return {
       selected: false,
       today: new Date().getDay(),
       locationData: location,
-      showListing: this.showList,
-    };
+      showListing: this.showList
+    }
   },
   components: {
-    BusinessDetails,
+    BusinessDetails
   },
   props: {
     filteredMarkers: Array,
     location: {
       locValue: Number,
       isSetByMap: Boolean,
-      currentBusiness: Object,
+      currentBusiness: Object
     },
     showResults: Boolean,
-    selectedDay: Number,
+    selectedDay: Number
   },
   watch: {
     location: function (locationVal) {
       if (locationVal.isSetByMap) {
-        var top =
-          this.$refs["result" + locationVal.locValue][0].offsetTop - 330;
-        this.$refs["results"].scrollTo(0, top);
+        var top = this.$refs['result' + locationVal.locValue][0].offsetTop - 330
+        this.$refs['results'].scrollTo(0, top)
       }
-      this.showResults = false;
-      this.showList = true;
-    },
+      this.showResults = false
+      this.showList = true
+    }
   },
   methods: {
     getClosedMessage: function () {
       if (this.selectedDay > 6) {
-        return this.$t(`label.closed-today`);
+        return this.$t(`label.closed-today`)
       }
 
-      return `${this.$t("label.closed-on")} ${this.$t(
-        `dayofweek.${weekdaysJs[this.selectedDay].day}`
-      )}`;
+      return `${this.$t('label.closed-on')} ${this.$t(`dayofweek.${weekdaysJs[this.selectedDay].day}`)}`
     },
     closeDetails: function () {
-      this.showResults = true;
-      this.location.currentBusiness = null;
-    },
-  },
-};
+      this.showResults = true
+      this.location.currentBusiness = null
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -160,9 +139,9 @@ export default {
   z-index: 1035;
   max-height: 100vh;
   max-width: 294px;
-  background: theme-color("secondary");
+  background: theme-color('secondary');
   @media (prefers-color-scheme: dark) {
-    background: theme-color("secondaryDark");
+    background: theme-color('secondaryDark');
   }
 }
 
@@ -210,7 +189,7 @@ export default {
 
   & > span > i {
     margin-right: 8px;
-    color: theme-color("tertiary");
+    color: theme-color('tertiary');
     font-size: 1rem;
     margin-top: 6px;
   }

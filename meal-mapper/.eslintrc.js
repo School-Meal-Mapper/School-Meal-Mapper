@@ -1,39 +1,32 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: require.resolve("babel-eslint"),
+    parser: require.resolve('babel-eslint'),
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module'
   },
-  extends: [
-    "plugin:vue/essential",
-    "plugin:prettier/recommended",
-    "eslint:recommended",
-  ],
+  extends: ['plugin:vue/essential', 'plugin:prettier/recommended', 'eslint:recommended'],
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es6: true
   },
   rules: {
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        endOfLine: "auto",
-        excludeFiles: ["**/src/ExtraMarkers/**/*.*"],
-      },
-    ],
+        endOfLine: 'auto',
+        excludeFiles: ['**/src/ExtraMarkers/**/*.*']
+      }
+    ]
   },
-  ignorePatterns: ["**/src/ExtraMarkers/"],
+  ignorePatterns: ['**/src/ExtraMarkers/'],
   overrides: [
     {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
+      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
       env: {
-        jest: true,
-      },
-    },
-  ],
-};
+        jest: true
+      }
+    }
+  ]
+}

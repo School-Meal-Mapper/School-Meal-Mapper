@@ -1,53 +1,53 @@
-import * as L from "leaflet";
+import * as L from 'leaflet'
 
-declare module "leaflet" {
+declare module 'leaflet' {
   export namespace ExtraMarkers {
     export interface IconOptions extends L.BaseIconOptions {
       /** Additional classes in the created <i> tag. */
-      extraClasses?: string;
+      extraClasses?: string
       /** Name of the icon with prefix. */
-      icon?: string;
+      icon?: string
       /** Color of the icon. Default value 'white'. */
-      iconColor?: string;
+      iconColor?: string
       /** Rotates the icon with css transformations. Default value 0. */
-      iconRotation?: number;
+      iconRotation?: number
       /** Custom HTML code. */
-      innerHTML?: string;
+      innerHTML?: string
       /** Color of the marker (css class). Default value 'blue'. */
       markerColor?:
-        | "red"
-        | "orange-dark"
-        | "orange"
-        | "yellow"
-        | "blue"
-        | "blue-dark"
-        | "cyan"
-        | "purple"
-        | "violet"
-        | "pink"
-        | "green-dark"
-        | "green"
-        | "green-light"
-        | "black"
-        | "white";
+        | 'red'
+        | 'orange-dark'
+        | 'orange'
+        | 'yellow'
+        | 'blue'
+        | 'blue-dark'
+        | 'cyan'
+        | 'purple'
+        | 'violet'
+        | 'pink'
+        | 'green-dark'
+        | 'green'
+        | 'green-light'
+        | 'black'
+        | 'white'
       /** Instead of an icon, define a plain text. */
-      number?: string;
+      number?: string
       /** The icon library's base class. Default value 'glyphicon'. */
-      prefix?: string;
+      prefix?: string
       /** Shape of the marker (css class). Default value 'circle'. */
-      shape?: "circle" | "square" | "star" | "penta";
+      shape?: 'circle' | 'square' | 'star' | 'penta'
       /** Use SVG version of marker. Default value false. */
-      svg?: boolean;
+      svg?: boolean
       /** DEPRECATED No Effect. Default value '#fff'. */
-      svgBorderColor?: string;
+      svgBorderColor?: string
       /** DEPRECATED: No effect. Default value 1. */
-      svgOpacity?: number;
+      svgOpacity?: number
     }
 
     export class Icon extends L.Icon {
-      constructor(options: IconOptions);
+      constructor(options: IconOptions)
     }
 
-    export function icon(options: IconOptions): Icon;
+    export function icon(options: IconOptions): Icon
   }
 }

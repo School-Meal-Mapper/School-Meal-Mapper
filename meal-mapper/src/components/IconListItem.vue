@@ -3,11 +3,7 @@
     <template v-if="link != ''">
       <div class="iconListItem">
         <div class="ilIcon">
-          <div
-            class="leafletIcon"
-            v-if="leafletIcon"
-            v-html="generateIcon"
-          ></div>
+          <div class="leafletIcon" v-if="leafletIcon" v-html="generateIcon"></div>
           <i class="fas" v-bind:class="icon" v-if="icon != ''"></i>
           <img :src="image" v-if="icon == null || icon == ''" />
         </div>
@@ -15,20 +11,14 @@
           <a :href="link" v-if="link != null && link != ''">
             <span class="title">{{ title }}</span>
           </a>
-          <span class="title" v-if="link == null || link == ''">{{
-            title
-          }}</span>
+          <span class="title" v-if="link == null || link == ''">{{ title }}</span>
         </div>
       </div>
     </template>
     <template v-else>
       <div class="iconListItem">
         <div class="ilIcon">
-          <div
-            class="leafletIcon"
-            v-if="leafletIcon"
-            v-html="generateIcon"
-          ></div>
+          <div class="leafletIcon" v-if="leafletIcon" v-html="generateIcon"></div>
           <i class="fas" v-bind:class="icon" v-if="icon != ''"></i>
           <img :src="image" v-if="icon == null || icon == ''" />
         </div>
@@ -42,25 +32,25 @@
 
 <script>
 export default {
-  name: "IconListItem",
+  name: 'IconListItem',
   data() {
     return {
-      selected: false,
-    };
+      selected: false
+    }
   },
   props: {
     leafletIcon: {},
     title: { type: String },
     link: { type: String },
     icon: { type: String },
-    image: { type: String },
+    image: { type: String }
   },
   computed: {
     generateIcon() {
-      return this.leafletIcon.createIcon().outerHTML;
-    },
-  },
-};
+      return this.leafletIcon.createIcon().outerHTML
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -72,7 +62,7 @@ export default {
     margin: 0.25rem 0;
   }
   a {
-    color: theme-color("warning");
+    color: theme-color('warning');
     @media (prefers-color-scheme: dark) {
       color: theme-color-level(warning, 5);
     }
