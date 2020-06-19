@@ -3,7 +3,7 @@ export function businessIcon() {
 }
 
 export function getAddress(marker) {
-  var address = marker.gsx$address !== undefined && marker.gsx$address.$t !== '' ? marker.gsx$address.$t + ', ' : ''
+  var address = marker.gsx$mealsiteaddress !== undefined && marker.gsx$mealsiteaddress.$t !== '' ? marker.gsx$mealsiteaddress.$t + ', ' : ''
   address = address + (marker.gsx$city !== undefined && marker.gsx$city.$t !== '' ? marker.gsx$city.$t + ', ' : '')
   address = address + (marker.gsx$state !== undefined && marker.gsx$state.$t !== '' ? marker.gsx$state.$t + ' ' : '')
   return address + (marker.gsx$zip !== undefined && marker.gsx$zip.$t !== '' ? marker.gsx$zip.$t : '')
