@@ -85,7 +85,6 @@ export default {
     ResourceMap,
     ThemeHeader,
     ResultsList
-
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')

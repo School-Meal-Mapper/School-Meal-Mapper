@@ -24,7 +24,6 @@
           closedOne: item.oc == false
         }"
         :ref="'result' + index"
-
         @click="
           $emit('location-selected', {
             locValue: index,
