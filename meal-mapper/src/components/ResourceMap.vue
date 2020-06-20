@@ -291,24 +291,24 @@ export default {
 }
 
 .marker-cluster-small {
-  background-color: $cluster-outer !important;
+  background-color: #7eb0e6 !important;
 }
 .marker-cluster-small div {
-  background-color: $cluster-inner !important;
+  background-color: #4196f2 !important;
 }
 
 .marker-cluster-medium {
-  background-color: $cluster-outer !important;
+  background-color: #7eb0e6 !important;
 }
 .marker-cluster-medium div {
-  background-color: $cluster-inner !important;
+  background-color: #4196f2 !important;
 }
 
 .marker-cluster-large {
-  background-color: $cluster-outer !important;
+  background-color: #7eb0e6 !important;
 }
 .marker-cluster-large div {
-  background-color: $cluster-inner !important;
+  background-color: #4196f2 !important;
 }
 
 .locAccuracy {
