@@ -370,7 +370,6 @@ div.markeropen svg path {
 .title-block {
   width: 100%;
   text-align: right;
-  padding-top: 30px;
 }
 
 .mapkey .title {
@@ -388,6 +387,9 @@ div.markeropen svg path {
 }
 .mapkey.show-key .title {
   display: inline;
+}
+.mapkey {
+  margin-top: 40px;
 }
 .location-alert {
   position: absolute;
