@@ -151,7 +151,7 @@ export default {
           })
         },
         {
-          title: this.$t('label.closedonday'),
+          title: this.$t('label.closed-today'),
           icon: ExtraMarkers.icon({
             className: 'markerclosed',
             icon: 'na',
