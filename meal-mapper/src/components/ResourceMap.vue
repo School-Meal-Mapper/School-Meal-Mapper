@@ -291,10 +291,10 @@ export default {
 }
 
 .marker-cluster-small {
-  background-color: $gray-300 !important;
+  background-color: $cluster-outer !important;
 }
 .marker-cluster-small div {
-  background-color: $gray-400 !important;
+  background-color: $cluster-inner !important;
 }
 
 .marker-cluster-medium {
