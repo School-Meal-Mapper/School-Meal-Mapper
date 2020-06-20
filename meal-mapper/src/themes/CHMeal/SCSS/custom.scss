@@ -28,8 +28,6 @@ $marker-open: #566ca9 !default;
 $marker-closed: #999 !default;
 $marker-selected: #ff3d3d !default;
 $user-marker: $pink;
-$cluster-inner: #4196f2;
-$cluster-outer: #7eb0e6;
 
 $warning: $yellow;
 $danger: $red;
@@ -67,6 +65,9 @@ $map-key-bg: #f8f9fa;
 $map-key-bg-dark: #222;
 $map-key: color-yiq($map-key-bg);
 $map-key-dark: color-yiq($map-key);
+
+$cluster-inner: #4196f2;
+$cluster-outer: #7eb0e6;
 
 // Used for the location of the user
 $map-location: $blue;
