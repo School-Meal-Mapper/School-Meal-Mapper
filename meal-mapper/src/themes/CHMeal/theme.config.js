@@ -1,14 +1,14 @@
 export const theme = {
   settings: {
     initialMapCenter: {
-      lat: 39.8283,
-      lng: -98.5795
+      lat: 35.943068,
+      lng: -79.097216
     },
-    initialMapZoom: 5
+    initialMapZoom: 12
   },
   socialMedia: [{}],
   data: {
-    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1NNo23idWdFofp5LbBS_3S6EQfzgbe1sVgr2GRAjucA0/1/public/values?alt=json'
+    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1wdW0piXpOlL1REibmqeuM86HayW9smBIaS3FsitpquE/1/public/values?alt=json'
   },
   maps: {
     normal: {

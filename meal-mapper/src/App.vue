@@ -189,13 +189,13 @@ export default {
       this.showList = true
       this.showResults = false
       this.isFilterOpen = true
-      var proName = this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
-        ? ', ' + this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
+      var proName = this.filteredMarkers[val.locValue].marker.gsx$mealsitename.$t
+        ? ', ' + this.filteredMarkers[val.locValue].marker.gsx$mealsitename.$t
         : ''
 
       window.gtag('event', val.isSetByMap ? 'Marker clicked' : 'List item clicked', {
         event_category: 'View details - (' + this.language.name + ')',
-        event_label: this.filteredMarkers[val.locValue].marker.gsx$providername.$t + proName
+        event_label: this.filteredMarkers[val.locValue].marker.gsx$mealsitename.$t + proName
       })
     }
   },

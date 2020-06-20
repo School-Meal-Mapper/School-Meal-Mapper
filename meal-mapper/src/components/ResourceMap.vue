@@ -7,6 +7,8 @@
         :zoom="zoom"
         :center="center"
         :options="mapOptions"
+        :maxZoom="max"
+        :minZoom="min"
         style="height: 100%; width: 100%;"
         @update:center="centerUpdated"
         @update:zoom="(val) => (zoom = val)"
@@ -112,6 +114,8 @@ export default {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
       zoom: this.centroid.zoom,
+      max: 17,
+      min: 12,
       showParagraph: true,
       showError: false,
       errorMessage: '',
@@ -236,7 +240,7 @@ export default {
     selectedIcon(selected, item) {
       const isOpen = item.oc
       let markerColor = isOpen ? 'markeropen' : 'markerclosed'
-      const iconClasses = businessIcon(item.marker)
+      const iconClasses = businessIcon()
       if (selected) {
         markerColor = 'markerselected'
       }
