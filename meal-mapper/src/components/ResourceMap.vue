@@ -298,17 +298,17 @@ export default {
 }
 
 .marker-cluster-medium {
-  background-color: $gray-300 !important;
+  background-color: $cluster-outer !important;
 }
 .marker-cluster-medium div {
-  background-color: $gray-400 !important;
+  background-color: $cluster-inner !important;
 }
 
 .marker-cluster-large {
-  background-color: $gray-300 !important;
+  background-color: $cluster-outer !important;
 }
 .marker-cluster-large div {
-  background-color: $gray-400 !important;
+  background-color: $cluster-inner !important;
 }
 
 .locAccuracy {
