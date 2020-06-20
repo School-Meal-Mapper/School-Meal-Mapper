@@ -1,10 +1,10 @@
 export const theme = {
   settings: {
     initialMapCenter: {
-      lat: 36.023068,
-      lng: -79.197216
+      lat: 35.943068,
+      lng: -79.097216
     },
-    initialMapZoom: 10
+    initialMapZoom: 12
   },
   socialMedia: [
     {
