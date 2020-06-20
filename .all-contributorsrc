@@ -42,20 +42,11 @@
         "question",
         "ideas"
       ]
-    },
-    {
-      "login": "tbenning",
-      "name": "Tyler Benning",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/7265547?v=4",
-      "profile": "http://www.tylerbenning.com",
-      "contributions": [
-        "test"
-      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "School-Meal-Mapper",
-  "projectOwner": "code-for-chapel-hill",
+  "projectOwner": "School-Meal-Mapper",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true

@@ -6,13 +6,7 @@ export const theme = {
     },
     initialMapZoom: 12
   },
-  socialMedia: [
-    {
-      name: 'GitHub',
-      icon: 'github',
-      url: 'https://github.com/code-for-chapel-hill/School-Meal-Mapper'
-    }
-  ],
+  socialMedia: [{}],
   data: {
     spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1wdW0piXpOlL1REibmqeuM86HayW9smBIaS3FsitpquE/1/public/values?alt=json'
   },
