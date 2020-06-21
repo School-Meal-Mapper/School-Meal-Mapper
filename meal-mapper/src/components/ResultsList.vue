@@ -39,7 +39,7 @@
         </span>
         <template v-if="!!item.marker.gsx$mon.$t"
           ><div class="addloc">
-            {{ item.marker.gsx$mon.$t }}
+            {{ hours(item) }}
           </div></template
         >
       </b-list-group-item>
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import { weekdaysJs } from '../constants'
+import { weekdaysJs, dayFilters } from '../constants'
 
 import BusinessDetails from './BusinessDetails.vue'
 
@@ -96,6 +96,13 @@ export default {
     closeDetails: function () {
       this.showResults = true
       this.location.currentBusiness = null
+    },
+    hours: function (item) {
+      var today = new Date().getDay()
+      const day = dayFilters[today]
+      if (item.marker[day].$t == 0) {
+        return 'Closed today'
+      } else return item.marker[day].$t
     }
   }
 }
