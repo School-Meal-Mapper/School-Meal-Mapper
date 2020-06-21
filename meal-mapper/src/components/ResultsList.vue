@@ -32,23 +32,25 @@
         "
       >
         <h5 class="resultTitle">{{ item.marker.gsx$mealsitename.$t }}</h5>
-        <div v-if="!item.oc" class="closed">{{ getClosedMessage() }}</div>
         <span class="resultAddress">
           {{ item.marker.gsx$mealsiteaddress.$t }}{{ item.marker.gsx$mealsiteaddress.$t !== '' ? ',' : '' }}
           {{ item.marker.gsx$city.$t }}
         </span>
-        <template>
-          <div class="addloc">
+        <div>
+          <span class="closed-badge" v-if="closed(item)">
+            {{ getClosedMessage() }}
+          </span>
+          <span class="hours-badge" v-if="!closed(item)">
             {{ hours(item) }}
-          </div></template
-        >
+          </span>
+        </div>
       </b-list-group-item>
     </b-list-group>
   </div>
 </template>
 
 <script>
-import { weekdaysJs, dayFilters } from '../constants'
+import { days } from '../constants'
 
 import BusinessDetails from './BusinessDetails.vue'
 
@@ -87,22 +89,23 @@ export default {
   },
   methods: {
     getClosedMessage: function () {
-      if (this.selectedDay > 6) {
-        return this.$t(`label.closed-today`)
-      }
-
-      return `${this.$t('label.closed-on')} ${this.$t(`dayofweek.${weekdaysJs[this.selectedDay].day}`)}`
+      return this.$t(`label.closed-today`)
     },
     closeDetails: function () {
       this.showResults = true
       this.location.currentBusiness = null
     },
+    closed: function (item) {
+      var todayNum = new Date().getDay()
+      var todayDay = days[todayNum]
+      if (item.marker[todayDay].$t == 0) {
+        return true
+      } else return false
+    },
     hours: function (item) {
       var today = new Date().getDay()
-      const day = dayFilters[today]
-      if (item.marker[day].$t == 0) {
-        return 'Closed today'
-      } else return item.marker[day].$t
+      var day = days[today]
+      return item.marker[day].$t
     }
   }
 }
@@ -144,8 +147,27 @@ export default {
   }
 }
 
-.addloc {
+.closed-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-closed;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
   margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.hours-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-open;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
 }
 .resultList {
   max-height: calc(100vh - 70px);
