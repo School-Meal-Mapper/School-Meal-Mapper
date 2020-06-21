@@ -37,8 +37,8 @@
           {{ item.marker.gsx$mealsiteaddress.$t }}{{ item.marker.gsx$mealsiteaddress.$t !== '' ? ',' : '' }}
           {{ item.marker.gsx$city.$t }}
         </span>
-        <template v-if="!!item.marker.gsx$mon.$t"
-          ><div class="addloc">
+        <template>
+          <div class="addloc">
             {{ hours(item) }}
           </div></template
         >
