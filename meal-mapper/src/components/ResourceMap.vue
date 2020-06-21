@@ -290,6 +290,27 @@ export default {
     margin-right: 8px; */
 }
 
+.marker-cluster-small {
+  background-color: #7eb0e6 !important;
+}
+.marker-cluster-small div {
+  background-color: #4196f2 !important;
+}
+
+.marker-cluster-medium {
+  background-color: #7eb0e6 !important;
+}
+.marker-cluster-medium div {
+  background-color: #4196f2 !important;
+}
+
+.marker-cluster-large {
+  background-color: #7eb0e6 !important;
+}
+.marker-cluster-large div {
+  background-color: #4196f2 !important;
+}
+
 .locAccuracy {
   color: $map-accuracy-outline;
   fill: $map-accuracy;
