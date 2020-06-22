@@ -3,7 +3,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
-![GitHub issues](https://img.shields.io/github/issues-raw/code-for-chapel-hill/School-Meal-Mapper?style=flat)
+![GitHub issues](https://img.shields.io/github/issues-raw/School-Meal-Mapper/School-Meal-Mapper?style=flat)
 
 # School-Meal-Mapper
 
