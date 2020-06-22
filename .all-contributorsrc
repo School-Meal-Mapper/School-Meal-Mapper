@@ -45,7 +45,8 @@
         "code",
         "design",
         "question",
-        "ideas"
+        "ideas",
+        "review"
       ]
     },
     {
@@ -60,7 +61,7 @@
   ],
   "contributorsPerLine": 7,
   "projectName": "School-Meal-Mapper",
-  "projectOwner": "code-for-chapel-hill",
+  "projectOwner": "School-Meal-Mapper",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true
