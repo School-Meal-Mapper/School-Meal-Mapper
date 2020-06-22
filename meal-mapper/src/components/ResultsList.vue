@@ -31,49 +31,26 @@
           })
         "
       >
-        <h5 class="resultTitle">{{ item.marker.gsx$providername.$t }}</h5>
-        <template v-if="!!item.marker.gsx$provideraddloc.$t"
-          ><div class="addloc">
-            {{ item.marker.gsx$provideraddloc.$t }}
-          </div></template
-        >
-        <div v-if="!item.oc" class="closed">{{ getClosedMessage() }}</div>
+        <h5 class="resultTitle">{{ item.marker.gsx$mealsitename.$t }}</h5>
         <span class="resultAddress">
-          <span v-if="!!item.marker.gsx$cuisine.$t">{{ item.marker.gsx$cuisine.$t }}<br /></span>
-          {{ item.marker.gsx$address.$t }}{{ item.marker.gsx$address.$t !== '' ? ',' : '' }}
+          {{ item.marker.gsx$mealsiteaddress.$t }}{{ item.marker.gsx$mealsiteaddress.$t !== '' ? ',' : '' }}
           {{ item.marker.gsx$city.$t }}
         </span>
-        <template v-if="item.marker.gsx$discountmedical.$t == 1"
-          ><span :title="$tc('label.discountmedical', 1)"><i class="fas fa-user-md" /></span
-        ></template>
-        <template v-if="item.marker.gsx$familymeal.$t == 1"
-          ><span :title="$tc('category.family', 2)"><i class="fas fa-user-friends" /></span
-        ></template>
-        <template v-if="item.marker.gsx$mealstudent.$t == 1"
-          ><span :title="$tc('label.mealstudent', 1)"><i class="fas fa-school" /></span
-        ></template>
-        <template v-if="item.marker.gsx$mealstudent.$t == 1"
-          ><span :title="$tc('label.mealpublic', 1)"><i class="fas fa-users" /></span
-        ></template>
-        <template v-if="item.marker.gsx$drivethru.$t == 1"
-          ><span :title="$t('label.drivethru')"><i class="fas fa-car-side" /></span
-        ></template>
-        <template v-if="item.marker.gsx$curbside.$t == 1"
-          ><span :title="$tc('label.curbside', 1)"><i class="fas fa-car" /></span
-        ></template>
-        <template v-if="item.marker.gsx$orderonline.$t == 1"
-          ><span :title="$t('label.orderonline')"><i class="fas fa-mouse" /></span
-        ></template>
-        <template v-if="item.marker.gsx$delivery.$t == 1"
-          ><span :title="$t('label.delivery')"><i class="fas fa-shipping-fast" /></span
-        ></template>
+        <div>
+          <span class="closed-badge" v-if="closed(item)">
+            {{ getClosedMessage() }}
+          </span>
+          <span class="hours-badge" v-if="!closed(item)">
+            {{ hours(item) }}
+          </span>
+        </div>
       </b-list-group-item>
     </b-list-group>
   </div>
 </template>
 
 <script>
-import { weekdaysJs } from '../constants'
+import { days } from '../constants'
 
 import BusinessDetails from './BusinessDetails.vue'
 
@@ -112,15 +89,23 @@ export default {
   },
   methods: {
     getClosedMessage: function () {
-      if (this.selectedDay > 6) {
-        return this.$t(`label.closed-today`)
-      }
-
-      return `${this.$t('label.closed-on')} ${this.$t(`dayofweek.${weekdaysJs[this.selectedDay].day}`)}`
+      return this.$t(`label.closed-today`)
     },
     closeDetails: function () {
       this.showResults = true
       this.location.currentBusiness = null
+    },
+    closed: function (item) {
+      var todayNum = new Date().getDay()
+      var todayDay = days[todayNum]
+      if (item.marker[todayDay].$t == 0) {
+        return true
+      } else return false
+    },
+    hours: function (item) {
+      var today = new Date().getDay()
+      var day = days[today]
+      return item.marker[day].$t
     }
   }
 }
@@ -162,8 +147,27 @@ export default {
   }
 }
 
-.addloc {
+.closed-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-closed;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
   margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.hours-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-open;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
 }
 .resultList {
   max-height: calc(100vh - 70px);

@@ -7,6 +7,8 @@
         :zoom="zoom"
         :center="center"
         :options="mapOptions"
+        :maxZoom="max"
+        :minZoom="min"
         style="height: 100%; width: 100%;"
         @update:center="centerUpdated"
         @update:zoom="(val) => (zoom = val)"
@@ -112,6 +114,8 @@ export default {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
       zoom: this.centroid.zoom,
+      max: 17,
+      min: 12,
       showParagraph: true,
       showError: false,
       errorMessage: '',
@@ -151,7 +155,7 @@ export default {
           })
         },
         {
-          title: this.$t('label.closedonday'),
+          title: this.$t('label.closed-today'),
           icon: ExtraMarkers.icon({
             className: 'markerclosed',
             icon: 'na',
@@ -236,7 +240,7 @@ export default {
     selectedIcon(selected, item) {
       const isOpen = item.oc
       let markerColor = isOpen ? 'markeropen' : 'markerclosed'
-      const iconClasses = businessIcon(item.marker)
+      const iconClasses = businessIcon()
       if (selected) {
         markerColor = 'markerselected'
       }
@@ -284,6 +288,27 @@ export default {
   padding: 0;
   /* margin-left: 8px;
     margin-right: 8px; */
+}
+
+.marker-cluster-small {
+  background-color: #7eb0e6 !important;
+}
+.marker-cluster-small div {
+  background-color: #4196f2 !important;
+}
+
+.marker-cluster-medium {
+  background-color: #7eb0e6 !important;
+}
+.marker-cluster-medium div {
+  background-color: #4196f2 !important;
+}
+
+.marker-cluster-large {
+  background-color: #7eb0e6 !important;
+}
+.marker-cluster-large div {
+  background-color: #4196f2 !important;
 }
 
 .locAccuracy {
@@ -355,7 +380,6 @@ div.markeropen svg path {
     font-size: 2rem;
     opacity: 0.4;
     color: #000;
-    padding-top: 30px;
     cursor: pointer;
     vertical-align: middle;
     @media (prefers-color-scheme: dark) {
@@ -388,6 +412,9 @@ div.markeropen svg path {
 }
 .mapkey.show-key .title {
   display: inline;
+}
+.mapkey {
+  margin-top: 40px;
 }
 .location-alert {
   position: absolute;
