@@ -68,6 +68,9 @@
           <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
+          <p>
+            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(business.marker)" />
+          </p>
         </div>
       </b-list-group-item>
     </b-list-group>
@@ -96,6 +99,12 @@ export default {
     getDomain: function (url) {
       var urlParts = url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)
       return urlParts[0]
+    },
+    directionsLink: function (marker) {
+      var address = marker.gsx$mealsiteaddress.$t
+      address = address.replace(' ', '%20')
+      address = address + '%2C%20' + marker.gsx$city.$t + '%2C%20' + marker.gsx$state.$t + '%20' + marker.gsx$zip.$t
+      return 'https://www.google.com/maps/dir/?api=1&destination=' + address
     },
     businessIcon: businessIcon,
     getAddress: getAddress
