@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Code for America Demo Resources',
+  title: 'Meal Mapper',
   keywords: 'CfA, Code for America,Demo,Resources,Map',
   description: 'Demo site using a list of Code for America Brigades and associated Organizations',
 
@@ -8,7 +8,7 @@ module.exports = {
   og: {
     type: 'website',
     url: 'https://youneedtofix.github.io/NC-COVID-Support/',
-    title: 'Code for America Demo Resources',
+    title: 'Meal Mapper',
     site_name: 'Meal Mapper',
     description: 'Demo site using a list of Code for America Brigades and associated Organizations',
     locale: 'en_US',
@@ -25,7 +25,7 @@ module.exports = {
   // Twitter Card
   // optional
   twitterCard: {
-    title: 'Code for America Demo Resources',
+    title: 'Meal Mapper',
     description: 'Demo site using a list of Code for America Brigades and associated Organizations',
 
     // optional
@@ -38,7 +38,7 @@ module.exports = {
     url: 'https://youneedtofix.github.io/NC-COVID-Support/',
     image: {
       url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
-      alt: 'Code for America Demo Resources',
+      alt: 'Meal Mapper',
       width: 1200,
       height: 670
     }
