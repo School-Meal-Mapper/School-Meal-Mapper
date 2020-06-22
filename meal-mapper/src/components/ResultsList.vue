@@ -12,7 +12,7 @@
       @close-details="closeDetails"
     ></BusinessDetails>
 
-    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults">
+    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults" id="results-list-nav">
       <b-list-group-item
         action
         variant="sideNav"
@@ -208,6 +208,12 @@ export default {
   font-size: 0.8rem;
   display: block;
   max-width: 262px;
+}
+
+@media only screen and (max-width: 768px) {
+  #results-list-nav {
+    display: none;
+  }
 }
 // .closedOne {
 //   /* background: #f9f9f9 !important; */
