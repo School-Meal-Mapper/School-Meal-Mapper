@@ -24,6 +24,7 @@ The following is a set of guidelines, to help you contribute to the Meal Mapper 
 [How to get started with our code](#How-to-get-started-with-our-code)
 
 - [Frontend packages used](#frontend-packages-used)
+- [Open source repositories used](#open-source-repositories-used)
 - [Development machine requirements](#development-machine-requirements)
 - [Visual Studio Setup (Optional)](#visual-studio-setup-optional)
 - [VS Code Setup (Optional)](#vs-code-setup-optional)
@@ -113,6 +114,10 @@ Vue I18n - Internationalization Plugin - https://kazupon.github.io/vue-i18n/
 Vue Leaflet - Mapping - ( Version of Leaflet that works with VueJS ) - https://vue2-leaflet.netlify.com/
 
 BootstrapVue - Responsive Layout - ( Version of Bootstrap that works well with VueJS ) - https://bootstrap-vue.js.org/
+
+### Open source repositories used
+
+Our code was adapted from [NC Covid Support] (https://github.com/code-for-chapel-hill/NC-COVID-Support), created by [Code for Chapel Hill ](http://www.codeforchapelhill.com/). In addition, some features were informed by [Bay Area Community Resources] (https://github.com/dcl-covid-19/mega-map-dev). You may find that these repositories are useful to look to as you develop!
 
 ### Development machine requirements
 
