@@ -117,7 +117,7 @@ BootstrapVue - Responsive Layout - ( Version of Bootstrap that works well with V
 
 ### Open source repositories used
 
-Our code was adapted from [NC Covid Support] (https://github.com/code-for-chapel-hill/NC-COVID-Support), created by [Code for Chapel Hill ](http://www.codeforchapelhill.com/). In addition, some features were informed by [Bay Area Community Resources] (https://github.com/dcl-covid-19/mega-map-dev). You may find that these repositories are useful to look to as you develop!
+Our code was adapted from [NC Covid Support] (https://github.com/code-for-chapel-hill/NC-COVID-Support), created by [Code for Chapel Hill ](http://www.codeforchapelhill.com/). In addition, some features were informed by [Bay Area Community Resource Map] (https://github.com/dcl-covid-19/mega-map-dev). You may find that these repositories are useful to look to as you develop!
 
 ### Development machine requirements
 
