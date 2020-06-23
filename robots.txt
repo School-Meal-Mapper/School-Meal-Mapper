@@ -1,4 +1,4 @@
-# NC COVID Support Robots txt file
+# Meal Mapper Robots txt file
 
 User-agent: *
 Sitemap: 
