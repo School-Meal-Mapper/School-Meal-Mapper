@@ -6,15 +6,17 @@
   "commit": false,
   "contributors": [
     {
-      "login": "readingdancer",
-      "name": "Chris Houston",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/4398217?v=4",
-      "profile": "https://www.vizioz.com",
+      "login": "eparadise",
+      "name": "Eliza Paradise",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43389857?v=4",
+      "profile": "https://github.com/eparadise",
       "contributions": [
-        "test",
         "code",
+        "design",
+        "question",
+        "ideas",
         "review",
-        "translation"
+        "doc"
       ]
     },
     {
@@ -32,17 +34,15 @@
       ]
     },
     {
-      "login": "eparadise",
-      "name": "Eliza Paradise",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/43389857?v=4",
-      "profile": "https://github.com/eparadise",
+      "login": "readingdancer",
+      "name": "Chris Houston",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4398217?v=4",
+      "profile": "https://www.vizioz.com",
       "contributions": [
+        "test",
         "code",
-        "design",
-        "question",
-        "ideas",
         "review",
-        "doc"
+        "translation"
       ]
     }
   ],
