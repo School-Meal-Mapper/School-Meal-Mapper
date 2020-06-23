@@ -116,14 +116,18 @@ export default {
     },
     addressURL: function (marker) {
       var address = marker.gsx$mealsiteaddress.$t
-      address = address.replace(' ', '%20')
-      address = address + '%2C%20' + marker.gsx$city.$t + '%2C%20' + marker.gsx$state.$t + '%20' + marker.gsx$zip.$t
+      address = address.replace(/\s/g, '%20')
+      var city = marker.gsx$city.$t.replace(/\s/g, '%20')
+      var state = marker.gsx$state.$t.replace(/\s/g, '%20')
+      address = address + '%2C%20' + city + '%2C%20' + state + '%20' + marker.gsx$zip.$t
       return address
     },
     directionsLink: function (address) {
+      console.log(address)
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
     },
     shareLink: function (address) {
+      console.log(address)
       return 'https://www.google.com/maps/search/?api=1&query=' + address
     },
     copyShareLink: function () {
