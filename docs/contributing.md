@@ -18,7 +18,7 @@ The following is a set of guidelines, to help you contribute to the Meal Mapper 
 [Reviews](#reviews)
 
 - [Making changes after the PR is open](#making-changes-after-the-pr-is-open)
-- [Keeping your NC COVID Support fork in sync with the main repository](#keeping-your-nc-covid-support-fork-in-sync-with-the-main-repository)
+- [Keeping your local repository in sync with the main repository](#keeping-your-local-repository-in-sync-with-the-main-repository)
 - [Style guidelines](#style-guidelines)
 
 [How to get started with our code](#How-to-get-started-with-our-code)
