@@ -66,7 +66,7 @@ The short version goes like this:
 
 - **Create a pull request** - you're ready to send us your changes. GitHub will have picked up on the new branch you've just pushed and will offer to create a [Pull Request](#pull-requests). Click that green button and away you go.
 
-![Create a pull request](/covid-19-support/src/images/createpullrequest.png)
+![Create a pull request](/meal-mapper/src/images/createpullrequest.png)
 
     Note: If you just need some feedback to progress - you can make use of GitHub's draft pull request status, detailed [here](https://github.blog/2019-02-14-introducing-draft-pull-requests/))
 
