@@ -55,6 +55,7 @@
               :title="'Facebook'"
               :link="business.marker.gsx$facebook.$t"
             />
+            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(business.marker)" />
           </p>
 
           <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
@@ -67,9 +68,6 @@
 
           <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
-          </p>
-          <p>
-            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(business.marker)" />
           </p>
         </div>
       </b-list-group-item>
