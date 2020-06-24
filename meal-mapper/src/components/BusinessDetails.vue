@@ -18,6 +18,9 @@
           <p v-if="getAddress(business.marker) !== ''">
             <b>{{ $t('label.address') }}:</b><br />
             {{ getAddress(business.marker) }}
+            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(addressURL(business.marker))" />
+            <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
+            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
           </p>
 
           <p>
@@ -55,9 +58,6 @@
               :title="'Facebook'"
               :link="business.marker.gsx$facebook.$t"
             />
-            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(addressURL(business.marker))" />
-            <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
           </p>
           <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
             <template v-slot:modal-title>
