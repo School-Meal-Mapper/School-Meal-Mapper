@@ -28,7 +28,7 @@ Created by Maps for People. Code based on work by [NC COVID Support](nccovidsupp
 
 ## How can I help?
 
-This project is governed by our [Code of Conduct](https://github.com/codeforamerica/codeofconduct). By cloning the project and working with us, you are expected to uphold this code. Please report unacceptable behavior to [codeforchapelhill@gmail.com](mailto:codeforchapelhill@gmail.com).
+This project is governed by our [Code of Conduct](https://github.com/codeforamerica/codeofconduct). By cloning the project and working with us, you are expected to uphold this code. 
 
 ## Data source - Google Sheet
 
