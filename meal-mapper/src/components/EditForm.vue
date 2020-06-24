@@ -13,7 +13,7 @@
     </div>
     <template v-slot:modal-footer>
       <div class="w-100">
-        <b-button variant="primary" class="float-right" @click="submitForm()">Submit</b-button>
+        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">Submit</b-button>
         <b-button variant="danger" class="float-left" @click="reset()">Reset</b-button>
       </div>
     </template>
@@ -42,12 +42,21 @@ export default {
     reset: function () {
       this.selected = []
     },
-    submitForm: function () {
-      alert('The form has been submitted.')
-      this.selected = []
+    submitForm: function (business) {
+      if (this.selected.length == 0) {
+        alert('Please select at least one checkbox')
+      } else {
+        alert('The form has been submitted. Thank you for your help updating the entry for ' + business.marker.gsx$mealsitename.$t + '!')
+        this.selected = []
+      }
     }
   }
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.error {
+  color: theme-color(danger);
+  size: 0.75rem;
+}
+</style>
