@@ -4,7 +4,8 @@ export const theme = {
       lat: 35.943068,
       lng: -79.097216
     },
-    initialMapZoom: 12
+    initialMapZoom: 12,
+    clusterZoom: 12
   },
   socialMedia: [{}],
   data: {
