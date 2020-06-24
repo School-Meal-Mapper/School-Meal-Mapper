@@ -132,11 +132,9 @@ export default {
       return address
     },
     directionsLink: function (address) {
-      console.log(address)
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
     },
     shareLink: function (address) {
-      console.log(address)
       return 'https://www.google.com/maps/search/?api=1&query=' + address
     },
     copyShareLink: function () {
