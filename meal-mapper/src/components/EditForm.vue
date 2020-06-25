@@ -1,22 +1,22 @@
 <template>
   <b-modal id="suggest-edit" size="lg" dialog-class="m-0 m-md-auto" centered scrollable>
     <template v-slot:modal-title>
-      Suggest an edit
+      {{ $t('suggest-edit.edit') }}
     </template>
     <p>
-      Please use this form to let us know what is incorrect about the listing for <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}.</b>
+      {{ $t('suggest-edit.instructions') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}.</b>
     </p>
     <div>
       <b-form-group>
         <b-form-checkbox-group id="checkbox-group-1" v-model="selected" :options="options" name="flavour-1"></b-form-checkbox-group>
       </b-form-group>
-      Additional comments:
-      <b-form-input v-model="text" placeholder="Enter comments"></b-form-input>
+      {{ $t('suggest-edit.additional-comments') }}
+      <b-form-input v-model="text" :placeholder="$t('suggest-edit.enter-comments')"></b-form-input>
     </div>
     <template v-slot:modal-footer>
       <div class="w-100">
-        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">Submit</b-button>
-        <b-button variant="danger" class="float-left" @click="reset()">Reset</b-button>
+        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">{{ $t('suggest-edit.submit') }}</b-button>
+        <b-button variant="danger" class="float-left" @click="reset()">{{ $t('suggest-edit.reset') }}</b-button>
       </div>
     </template>
   </b-modal>
@@ -32,11 +32,11 @@ export default {
     return {
       selected: [],
       options: [
-        { text: 'Site name', value: 'name' },
-        { text: 'Address', value: 'address' },
-        { text: 'Contact information', value: 'contact' },
-        { text: 'Social media', value: 'social' },
-        { text: 'Hours', value: 'hours' }
+        { text: this.$tc('suggest-edit.name'), value: 'name' },
+        { text: this.$tc('suggest-edit.address'), value: 'address' },
+        { text: this.$tc('suggest-edit.contact'), value: 'contact' },
+        { text: this.$tc('suggest-edit.social'), value: 'social' },
+        { text: this.$tc('suggest-edit.hours'), value: 'hours' }
       ],
       text: ''
     }
@@ -47,9 +47,9 @@ export default {
     },
     submitForm: function (business) {
       if (this.selected.length == 0) {
-        alert('Please select at least one checkbox')
+        alert(this.$tc('suggest-edit.select-checkbox'))
       } else {
-        alert('The form has been submitted. Thank you for your help updating the entry for ' + business.marker.gsx$mealsitename.$t + '!')
+        alert(this.$tc('suggest-edit.form-submitted') + business.marker.gsx$mealsitename.$t + '!')
         this.selected = []
       }
     }

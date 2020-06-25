@@ -87,9 +87,9 @@
           </p>
 
           <p>
-            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')"
-              >Suggest an edit</b-button
-            >
+            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
+              {{ $t('suggest-edit.edit') }}
+            </b-button>
           </p>
         </div>
       </b-list-group-item>
