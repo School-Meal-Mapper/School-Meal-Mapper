@@ -10,6 +10,8 @@
       <b-form-group>
         <b-form-checkbox-group id="checkbox-group-1" v-model="selected" :options="options" name="flavour-1"></b-form-checkbox-group>
       </b-form-group>
+      Additional comments:
+      <b-form-input v-model="text" placeholder="Enter comments"></b-form-input>
     </div>
     <template v-slot:modal-footer>
       <div class="w-100">
@@ -35,7 +37,8 @@ export default {
         { text: 'Contact information', value: 'contact' },
         { text: 'Social media', value: 'social' },
         { text: 'Hours', value: 'hours' }
-      ]
+      ],
+      text: ''
     }
   },
   methods: {
