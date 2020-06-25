@@ -16,7 +16,6 @@
       :infotype="'green'"
       :icon="'fa-tractor'"
       :business="location.currentBusiness"
-      :hours="hours(item)"
       :closedMessage="getClosedMessage()"
       v-if="location.currentBusiness != null && showResults != true"
       @close-details="closeDetails"

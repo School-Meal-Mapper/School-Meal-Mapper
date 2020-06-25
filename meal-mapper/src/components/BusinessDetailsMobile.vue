@@ -87,11 +87,11 @@
           </p>
 
           <div>
-            <span class="closed-badge">
+            <span class="closed-badge" v-if="closed(business)">
               {{ closedMessage }}
             </span>
-            <span class="hours-badge">
-              {{ hours }}
+            <span class="hours-badge" v-if="!closed(business)">
+              {{ hours(business) }}
             </span>
           </div>
           <b-button button class="details" v-if="!maximizeDetails" @click="showMaximizeDetails()">
@@ -110,6 +110,7 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { businessIcon, getAddress } from '../utilities'
+import { days } from '../constants'
 export default {
   name: 'BusinessDetailsMobile',
   components: {
@@ -124,7 +125,6 @@ export default {
     icon: { type: String },
     business: Object,
     closedMessage: { type: String },
-    hours: { type: String },
     maximizeDetails: Boolean
   },
   methods: {
@@ -160,6 +160,18 @@ export default {
     },
     showMinimizeDetails: function () {
       this.maximizeDetails = false
+    },
+    closed: function (business) {
+      var todayNum = new Date().getDay()
+      var todayDay = days[todayNum]
+      if (business.marker[todayDay].$t == 0) {
+        return true
+      } else return false
+    },
+    hours: function (business) {
+      var today = new Date().getDay()
+      var day = days[today]
+      return business.marker[day].$t
     },
     businessIcon: businessIcon,
     getAddress: getAddress
