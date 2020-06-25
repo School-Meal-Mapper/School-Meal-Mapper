@@ -70,7 +70,7 @@
               <br />
               Link to share:
               <br />
-              <input readonly type="text" :value="shareLink(addressURL(business.marker))" size="75" id="share-link" />
+              <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-75" id="share-link" />
               <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
             </p>
           </b-modal>
@@ -206,6 +206,12 @@ export default {
 
 .updated {
   color: #aaa;
+}
+
+#share-link {
+  @media only screen and (max-width: 768px) {
+    width: 345px !important;
+  }
 }
 
 .share-button {
