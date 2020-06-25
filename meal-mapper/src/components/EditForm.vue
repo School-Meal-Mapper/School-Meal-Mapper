@@ -62,4 +62,10 @@ export default {
   color: theme-color(danger);
   size: 0.75rem;
 }
+.close {
+  color: #000 !important;
+  @media (prefers-color-scheme: dark) {
+    color: #eee !important;
+  }
+}
 </style>
