@@ -18,6 +18,9 @@
           <p v-if="getAddress(business.marker) !== ''">
             <b>{{ $t('label.address') }}:</b><br />
             {{ getAddress(business.marker) }}
+            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(addressURL(business.marker))" />
+            <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
+            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
           </p>
 
           <p>
@@ -55,9 +58,22 @@
               :title="'Facebook'"
               :link="business.marker.gsx$facebook.$t"
             />
-            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(business.marker)" />
           </p>
-
+          <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
+            <template v-slot:modal-title>
+              Share
+            </template>
+            <p>
+              <b> {{ business.marker.gsx$mealsitename.$t }} </b>
+              <br />
+              {{ getAddress(business.marker) }} <br />
+              <br />
+              Link to share:
+              <br />
+              <input readonly type="text" :value="shareLink(addressURL(business.marker))" size="75" id="share-link" />
+              <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
+            </p>
+          </b-modal>
           <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
@@ -69,9 +85,16 @@
           <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
+
+          <p>
+            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')"
+              >Suggest an edit</b-button
+            >
+          </p>
         </div>
       </b-list-group-item>
     </b-list-group>
+    <suggest-edit-modal :currentBusiness="business" />
   </span>
 </template>
 
@@ -79,11 +102,13 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { businessIcon, getAddress } from '../utilities'
+import SuggestEditModal from './EditForm.vue'
 export default {
   name: 'BusinessDetails',
   components: {
     OpeningHours,
-    IconListItem
+    IconListItem,
+    SuggestEditModal
   },
   data() {
     return {}
@@ -98,11 +123,26 @@ export default {
       var urlParts = url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)
       return urlParts[0]
     },
-    directionsLink: function (marker) {
+    addressURL: function (marker) {
       var address = marker.gsx$mealsiteaddress.$t
-      address = address.replace(' ', '%20')
-      address = address + '%2C%20' + marker.gsx$city.$t + '%2C%20' + marker.gsx$state.$t + '%20' + marker.gsx$zip.$t
+      address = address.replace(/\s/g, '%20')
+      var city = marker.gsx$city.$t.replace(/\s/g, '%20')
+      var state = marker.gsx$state.$t.replace(/\s/g, '%20')
+      address = address + '%2C%20' + city + '%2C%20' + state + '%20' + marker.gsx$zip.$t
+      return address
+    },
+    directionsLink: function (address) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
+    },
+    shareLink: function (address) {
+      return 'https://www.google.com/maps/search/?api=1&query=' + address
+    },
+    copyShareLink: function () {
+      var copyText = document.getElementById('share-link')
+      copyText.select()
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+      alert('Link copied')
     },
     businessIcon: businessIcon,
     getAddress: getAddress
@@ -166,5 +206,14 @@ export default {
 
 .updated {
   color: #aaa;
+}
+
+.share-button {
+  font-size: 0.8rem;
+  padding: 0.375rem 1rem;
+  color: theme-color('warning');
+  @media (prefers-color-scheme: dark) {
+    color: theme-color-level(warning, 5);
+  }
 }
 </style>

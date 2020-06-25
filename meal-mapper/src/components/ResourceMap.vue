@@ -78,6 +78,7 @@ import { latLng, Icon, ExtraMarkers } from 'leaflet'
 import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import IconListItem from './IconListItem.vue'
 import { businessIcon } from '../utilities'
+import { theme } from 'theme.config'
 
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
@@ -131,7 +132,7 @@ export default {
       clusterOptions: {
         spiderfyOnMaxZoom: true,
         maxClusterRadius: 40,
-        disableClusteringAtZoom: 16
+        disableClusteringAtZoom: theme.settings.clusterZoom
       },
       showKey: false
     }
