@@ -12,6 +12,14 @@
       @close-details="closeDetails"
     ></BusinessDetails>
 
+    <BusinessDetailsMobile
+      :infotype="'green'"
+      :icon="'fa-tractor'"
+      :business="location.currentBusiness"
+      v-if="location.currentBusiness != null && showResults != true"
+      @close-details="closeDetails"
+    ></BusinessDetailsMobile>
+
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults" id="results-list-nav">
       <b-list-group-item
         action
@@ -53,6 +61,7 @@
 import { days } from '../constants'
 
 import BusinessDetails from './BusinessDetails.vue'
+import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
 
 export default {
   name: 'ResultsList',
@@ -65,7 +74,8 @@ export default {
     }
   },
   components: {
-    BusinessDetails
+    BusinessDetails,
+    BusinessDetailsMobile
   },
   props: {
     filteredMarkers: Array,
@@ -210,7 +220,7 @@ export default {
   max-width: 262px;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #results-list-nav {
     display: none;
   }

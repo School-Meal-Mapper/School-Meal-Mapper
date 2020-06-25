@@ -1,12 +1,12 @@
 <template>
   <span>
     <b-list-group class="list-group-flush">
-      <b-list-group-item variant="sideNav" button class="backtolist" id="back-to-list-nav" @click="$emit('close-details')">
+      <b-list-group-item variant="sideNav" button class="backtomap" id="back-to-list-mobile-nav" @click="$emit('close-details')">
         <i class="fas fa-arrow-left" />
-        {{ $t('label.backtolist') }}
+        {{ $t('label.backtolistmobile') }}
       </b-list-group-item>
     </b-list-group>
-    <b-list-group class="list-group-flush business-details" id="business-details-nav">
+    <b-list-group class="list-group-flush business-details-mobile" id="business-details-mobile-nav">
       <b-list-group-item variant="sideNav" :class="infotype">
         <div>
           <div class="title">
@@ -23,7 +23,7 @@
             <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
           </p>
 
-          <p>
+          <p id="icon-list-mobile" v-if="maximizeDetails">
             <icon-list-item
               v-if="business.marker.gsx$contact !== undefined && !!business.marker.gsx$contact.$t"
               icon="fas fa-phone-alt"
@@ -74,7 +74,7 @@
               <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
             </p>
           </b-modal>
-          <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maximizeDetails"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
@@ -82,9 +82,24 @@
             </p>
           </template>
 
-          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
+          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && maximizeDetails">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
+
+          <div>
+            <span class="closed-badge">
+              {{ closedMessage }}
+            </span>
+            <span class="hours-badge">
+              {{ hours }}
+            </span>
+          </div>
+          <b-button button class="details" v-if="!maximizeDetails" @click="showMaximizeDetails()">
+            {{ $t('label.maxdetails') }}
+          </b-button>
+          <b-button button class="details" v-if="maximizeDetails" @click="showMinimizeDetails()">
+            {{ $t('label.mindetails') }}
+          </b-button>
         </div>
       </b-list-group-item>
     </b-list-group>
@@ -96,7 +111,7 @@ import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { businessIcon, getAddress } from '../utilities'
 export default {
-  name: 'BusinessDetails',
+  name: 'BusinessDetailsMobile',
   components: {
     OpeningHours,
     IconListItem
@@ -107,7 +122,10 @@ export default {
   props: {
     infotype: { type: String },
     icon: { type: String },
-    business: Object
+    business: Object,
+    closedMessage: { type: String },
+    hours: { type: String },
+    maximizeDetails: Boolean
   },
   methods: {
     getDomain: function (url) {
@@ -137,6 +155,12 @@ export default {
       document.execCommand('copy')
       alert('Link copied')
     },
+    showMaximizeDetails: function () {
+      this.maximizeDetails = true
+    },
+    showMinimizeDetails: function () {
+      this.maximizeDetails = false
+    },
     businessIcon: businessIcon,
     getAddress: getAddress
   },
@@ -149,14 +173,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.business-details {
+.business-details-mobile {
   max-height: calc(100vh - 86px - 62px);
+  position: fixed;
+  bottom: 0;
+  text-align: auto;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
-.backtolist {
+.backtomap {
   font-size: 0.8rem;
   padding-top: 30px;
+
+  i {
+    margin-right: 0.375rem;
+  }
+
+  // &:hover {
+  //   background: rgba(0, 0, 0, 0.05) !important;
+  //   cursor: pointer;
+  // }
+}
+.details {
+  font-size: 0.8rem;
 
   i {
     margin-right: 0.375rem;
@@ -173,7 +213,7 @@ export default {
   display: inline-block;
 
   i {
-    font-size: 3rem;
+    font-size: 2rem;
     color: theme-color('quinary');
     margin: 7px 10px 7px 0;
     float: left;
@@ -185,7 +225,7 @@ export default {
 
 .busName {
   margin-left: 54px;
-  width: 208px;
+  width: 100%;
 }
 
 .green {
@@ -193,7 +233,7 @@ export default {
   // color: #666;
 
   & > div {
-    width: 243px;
+    width: 100%;
   }
 }
 
@@ -210,11 +250,38 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
-  #business-details-nav {
+.closed-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-closed;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.hours-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-open;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+
+// #icon-list-mobile {
+//   display: none;
+// }
+
+@media (min-width: 768px) {
+  #business-details-mobile-nav {
     display: none;
   }
-  #back-to-list-nav {
+  #back-to-list-mobile-nav {
     display: none;
   }
 }
