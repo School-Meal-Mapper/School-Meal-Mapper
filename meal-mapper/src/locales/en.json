@@ -109,6 +109,7 @@
     "zh": "Simplified Chinese"
   },
   "locationhelp": "Please make sure your device location is enabled",
+  "getdirections": "Get directions",
   "sidebar": {
     "close-panel": "Close search panel",
     "info-about-us": "Currently, this site supports Chatham County and Orange County, NC. With",
@@ -121,6 +122,28 @@
     "washhands": "Wash your hands often.",
     "what-do-you-need": "What do you need?",
     "when-do-you-need-it": "When do you need it?"
+  },
+  "sharelocation": {
+    "shareloc": "Share location",
+    "share": "Share",
+    "link": "Link to share:",
+    "copy": "COPY LINK",
+    "copied": "Link copied"
+  },
+  "suggest-edit": {
+    "edit": "Suggest an edit",
+    "instructions": "Please use this form to let us know what is incorrect about the listing for ",
+    "name": "Site name",
+    "address": "Address",
+    "contact": "Contact information",
+    "social": "Social media",
+    "hours": "Hours",
+    "additional-comments": "Additional comments",
+    "enter-comments": "Enter comments",
+    "reset": "Reset",
+    "submit": "Submit",
+    "form-submitted": "The form has been submitted. Thank you for your help updating the entry for ",
+    "select-checkbox": "Please select at least one checkbox"
   },
   "title": "{0} COVID Support"
 }

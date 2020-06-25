@@ -18,9 +18,11 @@
           <p v-if="getAddress(business.marker) !== ''">
             <b>{{ $t('label.address') }}:</b><br />
             {{ getAddress(business.marker) }}
-            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(addressURL(business.marker))" />
+            <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
             <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
+            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
+              $t('sharelocation.shareloc')
+            }}</b-button>
           </p>
 
           <p>
@@ -61,17 +63,17 @@
           </p>
           <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
             <template v-slot:modal-title>
-              Share
+              {{ $t('sharelocation.share') }}
             </template>
             <p>
               <b> {{ business.marker.gsx$mealsitename.$t }} </b>
               <br />
               {{ getAddress(business.marker) }} <br />
               <br />
-              Link to share:
+              {{ $t('sharelocation.link') }}
               <br />
               <input readonly type="text" :value="shareLink(addressURL(business.marker))" size="75" id="share-link" />
-              <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
+              <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
             </p>
           </b-modal>
           <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
@@ -87,9 +89,9 @@
           </p>
 
           <p>
-            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')"
-              >Suggest an edit</b-button
-            >
+            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
+              {{ $t('suggest-edit.edit') }}
+            </b-button>
           </p>
         </div>
       </b-list-group-item>
@@ -142,7 +144,7 @@ export default {
       copyText.select()
       copyText.setSelectionRange(0, 99999)
       document.execCommand('copy')
-      alert('Link copied')
+      alert(this.$tc('sharelocation.copied'))
     },
     businessIcon: businessIcon,
     getAddress: getAddress
