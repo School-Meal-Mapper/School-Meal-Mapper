@@ -4,12 +4,21 @@
       {{ $t('faq.title') }}
     </template>
     <template v-slot:default>
-      <b>{{ $t('faq.whatWeDoQuestion') }}</b>
+      <h4>{{ $t('faq.whatWeDoQuestion') }}</h4>
       <p>{{ $t('faq.whatWeDoAnswer') }}</p>
-      <b>{{ $t('faq.freeMealsQuestion') }}</b>
-      <p>{{ $t('faq.freeMealsAnswer') }}</p>
-      <b>{{ $t('faq.helpQuestion') }}</b>
-      <p>{{ $t('faq.helpAnswer') }}</p>
+      <h4>{{ $t('faq.freeMealsQuestion') }}</h4>
+      <p>
+        {{ $t('faq.freeMealsAnswer') }}
+        <strong>{{ $t('faq.staySafeReminder') }}</strong>
+      </p>
+      <h4>{{ $t('faq.helpQuestion') }}</h4>
+      <p>
+        {{ $t('faq.helpAnswer-start') }}
+        <a href="https://portal.icheckgateway.com/publicschoolfoundation/AnnualAppeal.aspx">
+          {{ $t('faq.helpAnswer-organization') }}
+        </a>
+        {{ $t('faq.helpAnswer-end') }}
+      </p>
     </template>
     <template v-slot:modal-footer>
       <b-button @click="$bvModal.hide('faq')" right>{{ $t('label.close') }}</b-button>
