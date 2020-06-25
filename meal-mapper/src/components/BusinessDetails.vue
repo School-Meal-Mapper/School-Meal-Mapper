@@ -85,9 +85,16 @@
           <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
+
+          <p>
+            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')"
+              >Suggest an edit</b-button
+            >
+          </p>
         </div>
       </b-list-group-item>
     </b-list-group>
+    <suggest-edit-modal :currentBusiness="business" />
   </span>
 </template>
 
@@ -95,11 +102,13 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { businessIcon, getAddress } from '../utilities'
+import SuggestEditModal from './EditForm.vue'
 export default {
   name: 'BusinessDetails',
   components: {
     OpeningHours,
-    IconListItem
+    IconListItem,
+    SuggestEditModal
   },
   data() {
     return {}
@@ -123,11 +132,9 @@ export default {
       return address
     },
     directionsLink: function (address) {
-      console.log(address)
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
     },
     shareLink: function (address) {
-      console.log(address)
       return 'https://www.google.com/maps/search/?api=1&query=' + address
     },
     copyShareLink: function () {
