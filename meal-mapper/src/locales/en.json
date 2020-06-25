@@ -127,7 +127,8 @@
     "shareloc": "Share location",
     "share": "Share",
     "link": "Link to share:",
-    "copy": "COPY LINK"
+    "copy": "COPY LINK",
+    "copied": "Link copied"
   },
   "suggest-edit": {
     "edit": "Suggest an edit",

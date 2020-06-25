@@ -144,7 +144,7 @@ export default {
       copyText.select()
       copyText.setSelectionRange(0, 99999)
       document.execCommand('copy')
-      alert('Link copied')
+      alert(this.$tc('sharelocation.copied'))
     },
     businessIcon: businessIcon,
     getAddress: getAddress
