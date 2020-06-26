@@ -4,6 +4,7 @@
       <theme-header></theme-header>
     </app-header>
     <about-us-modal />
+    <faq-modal />
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
@@ -36,6 +37,7 @@ import AppHeader from './components/Header.vue'
 
 import ResourceMap from './components/ResourceMap.vue'
 import AboutUsModal from './components/AboutUs.vue'
+import FaqModal from './components/FAQ.vue'
 import ResultsList from './components/ResultsList.vue'
 
 import { latLng } from 'leaflet'
@@ -81,7 +83,7 @@ export default {
   components: {
     AboutUsModal,
     AppHeader,
-
+    FaqModal,
     ResourceMap,
     ThemeHeader,
     ResultsList

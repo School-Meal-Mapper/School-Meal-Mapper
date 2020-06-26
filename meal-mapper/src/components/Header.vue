@@ -10,13 +10,8 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item right>
-          <b-button
-            size="sm"
-            class="my-2 my-sm-0"
-            variant="buttons"
-            type="button"
-            onclick="window.open('https://forms.gle/fWiCg2z5CRx9ukGu7','_blank')"
-            ><i class="fas fa-plus-square" aria-hidden="true" /> {{ $t('about.devhelp.addbusiness') }}</b-button
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')"
+            ><i class="fas info-plus-circle" aria-hidden="true"></i> {{ $t('faq.linktext') }}</b-button
           >
         </b-nav-item>
 
