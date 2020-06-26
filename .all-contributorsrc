@@ -40,6 +40,15 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "no40",
+      "name": "Nathan Ostrowski",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37667134?v=4",
+      "profile": "https://github.com/no40",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "projectName": "School-Meal-Mapper",
