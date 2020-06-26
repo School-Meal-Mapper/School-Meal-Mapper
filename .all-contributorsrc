@@ -1,0 +1,10 @@
+{
+  "files": [
+    "docs/readme.md"
+  ],
+  "projectName": "School-Meal-Mapper",
+  "projectOwner": "mapsforpeople",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
