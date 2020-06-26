@@ -3,8 +3,20 @@
     "docs/readme.md"
   ],
   "projectName": "School-Meal-Mapper",
-  "projectOwner": "mapsforpeople",
+  "projectOwner": "School-Meal-Mapper",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "no40",
+      "name": "Nathan Ostrowski",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37667134?v=4",
+      "profile": "https://github.com/no40",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
 }
