@@ -15,6 +15,14 @@
               <h5>{{ business.marker.gsx$mealsitename.$t }}</h5>
             </div>
           </div>
+          <div>
+            <span class="closed-badge" v-if="closed(business)">
+              {{ closedMessage }}
+            </span>
+            <span class="hours-badge" v-if="!closed(business)">
+              {{ hours(business) }}
+            </span>
+          </div>
           <p v-if="getAddress(business.marker) !== ''">
             <b>{{ $t('label.address') }}:</b><br />
             {{ getAddress(business.marker) }}
@@ -74,7 +82,7 @@
               <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
             </p>
           </b-modal>
-          <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maximizeDetails"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('label.openinghours')" id="opening-hours-mobile"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
@@ -86,14 +94,6 @@
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
 
-          <div>
-            <span class="closed-badge" v-if="closed(business)">
-              {{ closedMessage }}
-            </span>
-            <span class="hours-badge" v-if="!closed(business)">
-              {{ hours(business) }}
-            </span>
-          </div>
           <b-button button class="details" v-if="!maximizeDetails" @click="showMaximizeDetails()">
             {{ $t('label.maxdetails') }}
           </b-button>
@@ -225,7 +225,7 @@ export default {
   display: inline-block;
 
   i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: theme-color('quinary');
     margin: 7px 10px 7px 0;
     float: left;
@@ -255,7 +255,7 @@ export default {
 
 .share-button {
   font-size: 0.8rem;
-  padding: 0.375rem 1rem;
+  padding: 0.175rem 1rem;
   color: theme-color('warning');
   @media (prefers-color-scheme: dark) {
     color: theme-color-level(warning, 5);
@@ -283,6 +283,10 @@ export default {
   margin-bottom: 8px;
   margin-right: 5px;
   font-size: 0.7rem;
+}
+
+#opening-hours-mobile {
+  display: none;
 }
 
 // #icon-list-mobile {
