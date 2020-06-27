@@ -20,8 +20,13 @@
               <h6 class="title">{{ $t('label.mapkey') }}</h6>
               <i @click="showKey = !showKey" class="fas fa-info-circle" />
             </div>
-            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
-              <icon-list-item :leaflet-icon="item.icon" :title="item.title" link="" />
+            <div
+              class="keys"
+              :class="{ 'show-key': showKey }"
+              v-for="item in mapKey"
+              v-bind:key="item.title"
+            >
+              <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
             </div>
           </div>
         </l-control>
@@ -63,9 +68,14 @@
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
-        <b-alert variant="warning" class="location-alert" :show="showError" dismissible @dismissed="resetError" fade>
-          {{ errorMessage }}
-        </b-alert>
+        <b-alert
+          variant="warning"
+          class="location-alert"
+          :show="showError"
+          dismissible
+          @dismissed="resetError"
+          fade
+        >{{ errorMessage }}</b-alert>
       </l-map>
     </div>
   </b-container>
