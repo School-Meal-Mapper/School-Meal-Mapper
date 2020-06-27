@@ -3,7 +3,7 @@
     "docs/readme.md"
   ],
   "contributors": [
-  {
+    {
       "login": "eparadise",
       "name": "Eliza Paradise",
       "avatar_url": "https://avatars2.githubusercontent.com/u/43389857?v=4",
@@ -49,11 +49,21 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "helenx15",
+      "name": "Helen Xiao",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49924616?v=4",
+      "profile": "https://github.com/helenx15",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "projectName": "School-Meal-Mapper",
   "projectOwner": "School-Meal-Mapper",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "contributorsPerLine": 7
 }
