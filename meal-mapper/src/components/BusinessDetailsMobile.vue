@@ -15,7 +15,7 @@
               <h5>{{ business.marker.gsx$mealsitename.$t }}</h5>
             </div>
           </div>
-          <div>
+          <div v-if="!maximizeDetails">
             <span class="closed-badge" v-if="closed(business)">
               {{ closedMessage }}
             </span>
@@ -82,7 +82,7 @@
               <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
             </p>
           </b-modal>
-          <opening-hours :business="business.marker" :title="$t('label.openinghours')" id="opening-hours-mobile"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maximizeDetails"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
@@ -193,7 +193,11 @@ export default {
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  @media (max-height: 550px) {
+    max-height: 400px;
+  }
 }
+
 .backtomap {
   font-size: 0.8rem;
   padding-top: 30px;
@@ -283,10 +287,6 @@ export default {
   margin-bottom: 8px;
   margin-right: 5px;
   font-size: 0.7rem;
-}
-
-#opening-hours-mobile {
-  display: none;
 }
 
 // #icon-list-mobile {
