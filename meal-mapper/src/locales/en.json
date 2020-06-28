@@ -159,5 +159,9 @@
     "form-submitted": "The form has been submitted. Thank you for your help updating the entry for ",
     "select-checkbox": "Please select at least one checkbox"
   },
+  "zoom": {
+    "noresults": "No results in this area.",
+    "zoomout": "Zoom out for more results."
+  },
   "title": "{0} COVID Support"
 }

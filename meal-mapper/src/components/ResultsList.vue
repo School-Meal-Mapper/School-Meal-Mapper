@@ -3,23 +3,7 @@
     <div class="tab bg-dialogs border-right border-top border-bottom" @click="$emit('toggle')">
       <i class="fas fa-caret-down" />
     </div>
-    <!-- <div v-if="fetchDataState === StatusEnum.loading" class="no-result">{{ $tc('message.loading') }}</div>
-    <div
-      v-if="fetchDataState === StatusEnum.error"
-      class="no-result"
-    >{{ $tc('message.error_loading_results') }}</div>
-    <div v-if="isEmpty && displayMap" class="no-result">
-      {{ $tc('message.no_location_in_this_area') }}
-      <a
-        class="more-result"
-        @click="zoomOut"
-        v-if="displayMap"
-      >{{ $tc('label.zoom_out_for_more_results') }}</a>
-    </div>
-    <div
-      v-if="isEmpty && !displayMap"
-      class="no-result"
-    >{{ $tc('message.no_location_meet_these_criteria') }}</div>-->
+
     <BusinessDetails
       :infotype="'green'"
       :icon="'fa-tractor'"
@@ -29,8 +13,8 @@
     ></BusinessDetails>
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults">
-      <b-alert v-if="!filteredMarkers.length" show style="color: red;">
-        <strong>No results in this area. Zoom out for more results.</strong>
+      <b-alert v-if="!filteredMarkers.length" show class="noresults">
+        <strong>{{ this.$t('zoom.noresults') + ' ' + this.$t('zoom.zoomout') }}</strong>
       </b-alert>
       <b-list-group-item
         action
@@ -60,8 +44,8 @@
           <span class="hours-badge" v-if="!closed(item)">{{ hours(item) }}</span>
         </div>
       </b-list-group-item>
-      <v-card hover height="100%" class="card-outter" style="position: absolute;" v-if="filteredMarkers.length"
-        >Zooom out for more results.</v-card
+      <v-card hover height="100%" class="card-outter" style="position: absolute;" v-if="filteredMarkers.length">
+        {{ this.$t('zoom.zoomout') }}</v-card
       >
     </b-list-group>
   </div>
@@ -230,6 +214,13 @@ export default {
     color: theme-color('tertiary');
     font-size: 1rem;
     margin-top: 6px;
+  }
+}
+
+.noresults {
+  color: theme-color('danger');
+  @media (prefers-color-scheme: dark) {
+    color: theme-color-level('danger', 2);
   }
 }
 
