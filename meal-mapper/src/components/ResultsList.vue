@@ -46,10 +46,10 @@
       </b-list-group-item>
     </b-list-group>
     <div>
-      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length && this.zoom > this.minZoom">
+      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length && this.zoom > this.minZoom" @click="setZoom">
         {{ this.$t('zoom.zoomout') }}</b-card
       >
-      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
+      <b-card hover height="100%" class="no-zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
         {{ this.$t('zoom.no-more-results') }}</b-card
       >
     </div>
@@ -124,6 +124,9 @@ export default {
       var today = new Date().getDay()
       var day = days[today]
       return item.marker[day].$t
+    },
+    setZoom: function () {
+      eventManager.$emit('zoomIn', 0.5)
     }
   }
 }
@@ -203,7 +206,31 @@ export default {
     background-color: theme-color-level('secondaryDark', 4);
     color: theme-color-level('primary', 3);
   }
+  cursor: pointer;
 }
+
+.zoom-card:hover {
+  text-decoration: underline !important;
+}
+
+.no-zoom-card {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 294px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.125);
+  z-index: 99997;
+  padding: 8px 0;
+  text-align: center;
+  background-color: theme-color-level('secondary', 3);
+  color: theme-color('primary');
+  @media (prefers-color-scheme: dark) {
+    background-color: theme-color-level('secondaryDark', 4);
+    color: theme-color-level('primary', 3);
+  }
+}
+
 .resultList {
   max-height: calc(100vh - 105px);
   overflow-y: overlay;

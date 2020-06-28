@@ -112,6 +112,11 @@ export default {
     attribution: String,
     centroid: { lat: Number, lng: Number }
   },
+  created() {
+    eventManager.$on('zoomIn', (zoomAmount) => {
+      this.zoom -= zoomAmount
+    })
+  },
   data() {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
