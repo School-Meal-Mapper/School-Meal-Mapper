@@ -203,7 +203,7 @@ export default {
   background-color: theme-color-level('secondary', 3);
   color: theme-color('primary');
   @media (prefers-color-scheme: dark) {
-    background-color: theme-color-level('secondaryDark', 4);
+    background-color: theme-color-level('secondaryDark', 5);
     color: theme-color-level('primary', 3);
   }
   cursor: pointer;
@@ -226,7 +226,7 @@ export default {
   background-color: theme-color-level('secondary', 3);
   color: theme-color('primary');
   @media (prefers-color-scheme: dark) {
-    background-color: theme-color-level('secondaryDark', 4);
+    background-color: theme-color-level('secondaryDark', 5);
     color: theme-color-level('primary', 3);
   }
 }
