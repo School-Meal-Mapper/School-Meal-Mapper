@@ -12,7 +12,16 @@
       @close-details="closeDetails"
     ></BusinessDetails>
 
-    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults">
+    <BusinessDetailsMobile
+      :infotype="'green'"
+      :icon="'fa-tractor'"
+      :business="location.currentBusiness"
+      :closedMessage="getClosedMessage()"
+      v-if="location.currentBusiness != null && showResults != true"
+      @close-details="closeDetails"
+    ></BusinessDetailsMobile>
+
+    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
         <strong>{{ this.$t('zoom.noresults') + ' ' + this.$t('zoom.zoomout') }}</strong>
       </b-alert>
@@ -61,6 +70,7 @@ import { days } from '../constants'
 import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
 import { theme } from 'theme.config'
+import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
 
 export default {
   name: 'ResultsList',
@@ -75,7 +85,8 @@ export default {
     }
   },
   components: {
-    BusinessDetails
+    BusinessDetails,
+    BusinessDetailsMobile
   },
   props: {
     filteredMarkers: Array,
@@ -277,6 +288,12 @@ export default {
   font-size: 0.8rem;
   display: block;
   max-width: 262px;
+}
+
+@media (max-width: 768px) {
+  #results-list-nav {
+    display: none;
+  }
 }
 // .closedOne {
 //   /* background: #f9f9f9 !important; */

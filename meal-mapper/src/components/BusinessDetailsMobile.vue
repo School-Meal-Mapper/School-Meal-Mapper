@@ -1,12 +1,12 @@
 <template>
   <span>
     <b-list-group class="list-group-flush">
-      <b-list-group-item variant="sideNav" button class="backtolist" id="back-to-list-nav" @click="$emit('close-details')">
+      <b-list-group-item variant="sideNav" button class="backtomap" id="back-to-list-mobile-nav" @click="$emit('close-details')">
         <i class="fas fa-arrow-left" />
-        {{ $t('label.backtolist') }}
+        {{ $t('label.backtolistmobile') }}
       </b-list-group-item>
     </b-list-group>
-    <b-list-group class="list-group-flush business-details" id="business-details-nav">
+    <b-list-group class="list-group-flush business-details-mobile" id="business-details-mobile-nav">
       <b-list-group-item variant="sideNav" :class="infotype">
         <div>
           <div class="title">
@@ -15,17 +15,23 @@
               <h5>{{ business.marker.gsx$mealsitename.$t }}</h5>
             </div>
           </div>
+          <div v-if="!maximizeDetails">
+            <span class="closed-badge" v-if="closed(business)">
+              {{ closedMessage }}
+            </span>
+            <span class="hours-badge" v-if="!closed(business)">
+              {{ hours(business) }}
+            </span>
+          </div>
           <p v-if="getAddress(business.marker) !== ''">
             <b>{{ $t('label.address') }}:</b><br />
             {{ getAddress(business.marker) }}
-            <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
+            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(addressURL(business.marker))" />
             <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
-              $t('sharelocation.shareloc')
-            }}</b-button>
+            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
           </p>
 
-          <p>
+          <p id="icon-list-mobile" v-if="maximizeDetails">
             <icon-list-item
               v-if="business.marker.gsx$contact !== undefined && !!business.marker.gsx$contact.$t"
               icon="fas fa-phone-alt"
@@ -63,20 +69,20 @@
           </p>
           <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
             <template v-slot:modal-title>
-              {{ $t('sharelocation.share') }}
+              Share
             </template>
             <p>
               <b> {{ business.marker.gsx$mealsitename.$t }} </b>
               <br />
               {{ getAddress(business.marker) }} <br />
               <br />
-              {{ $t('sharelocation.link') }}
+              Link to share:
               <br />
-              <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-75" id="share-link" />
-              <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
+              <input readonly type="text" :value="shareLink(addressURL(business.marker))" size="75" id="share-link" />
+              <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
             </p>
           </b-modal>
-          <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maximizeDetails"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
@@ -84,19 +90,19 @@
             </p>
           </template>
 
-          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
+          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && maximizeDetails">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
 
-          <p>
-            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
-              {{ $t('suggest-edit.edit') }}
-            </b-button>
-          </p>
+          <b-button button class="details" v-if="!maximizeDetails" @click="showMaximizeDetails()">
+            {{ $t('label.maxdetails') }}
+          </b-button>
+          <b-button button class="details" v-if="maximizeDetails" @click="showMinimizeDetails()">
+            {{ $t('label.mindetails') }}
+          </b-button>
         </div>
       </b-list-group-item>
     </b-list-group>
-    <suggest-edit-modal :currentBusiness="business" />
   </span>
 </template>
 
@@ -104,13 +110,12 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { businessIcon, getAddress } from '../utilities'
-import SuggestEditModal from './EditForm.vue'
+import { days } from '../constants'
 export default {
-  name: 'BusinessDetails',
+  name: 'BusinessDetailsMobile',
   components: {
     OpeningHours,
-    IconListItem,
-    SuggestEditModal
+    IconListItem
   },
   data() {
     return {}
@@ -118,7 +123,9 @@ export default {
   props: {
     infotype: { type: String },
     icon: { type: String },
-    business: Object
+    business: Object,
+    closedMessage: { type: String },
+    maximizeDetails: Boolean
   },
   methods: {
     getDomain: function (url) {
@@ -134,9 +141,11 @@ export default {
       return address
     },
     directionsLink: function (address) {
+      console.log(address)
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
     },
     shareLink: function (address) {
+      console.log(address)
       return 'https://www.google.com/maps/search/?api=1&query=' + address
     },
     copyShareLink: function () {
@@ -144,7 +153,25 @@ export default {
       copyText.select()
       copyText.setSelectionRange(0, 99999)
       document.execCommand('copy')
-      alert(this.$tc('sharelocation.copied'))
+      alert('Link copied')
+    },
+    showMaximizeDetails: function () {
+      this.maximizeDetails = true
+    },
+    showMinimizeDetails: function () {
+      this.maximizeDetails = false
+    },
+    closed: function (business) {
+      var todayNum = new Date().getDay()
+      var todayDay = days[todayNum]
+      if (business.marker[todayDay].$t == 0) {
+        return true
+      } else return false
+    },
+    hours: function (business) {
+      var today = new Date().getDay()
+      var day = days[today]
+      return business.marker[day].$t
     },
     businessIcon: businessIcon,
     getAddress: getAddress
@@ -158,14 +185,34 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.business-details {
+.business-details-mobile {
   max-height: calc(100vh - 86px - 62px);
+  position: fixed;
+  bottom: 0;
+  text-align: auto;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  @media (max-height: 550px) {
+    max-height: 400px;
+  }
 }
-.backtolist {
+
+.backtomap {
   font-size: 0.8rem;
   padding-top: 30px;
+
+  i {
+    margin-right: 0.375rem;
+  }
+
+  // &:hover {
+  //   background: rgba(0, 0, 0, 0.05) !important;
+  //   cursor: pointer;
+  // }
+}
+.details {
+  font-size: 0.8rem;
 
   i {
     margin-right: 0.375rem;
@@ -182,7 +229,7 @@ export default {
   display: inline-block;
 
   i {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: theme-color('quinary');
     margin: 7px 10px 7px 0;
     float: left;
@@ -194,7 +241,7 @@ export default {
 
 .busName {
   margin-left: 54px;
-  width: 208px;
+  width: 100%;
 }
 
 .green {
@@ -202,7 +249,7 @@ export default {
   // color: #666;
 
   & > div {
-    width: 243px;
+    width: 100%;
   }
 }
 
@@ -210,26 +257,47 @@ export default {
   color: #aaa;
 }
 
-#share-link {
-  @media only screen and (max-width: 768px) {
-    width: 345px !important;
-  }
-}
-
 .share-button {
   font-size: 0.8rem;
-  padding: 0.375rem 1rem;
+  padding: 0.175rem 1rem;
   color: theme-color('warning');
   @media (prefers-color-scheme: dark) {
     color: theme-color-level(warning, 5);
   }
 }
 
-@media (max-width: 768px) {
-  #business-details-nav {
+.closed-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-closed;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.hours-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-open;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+
+// #icon-list-mobile {
+//   display: none;
+// }
+
+@media (min-width: 768px) {
+  #business-details-mobile-nav {
     display: none;
   }
-  #back-to-list-nav {
+  #back-to-list-mobile-nav {
     display: none;
   }
 }
