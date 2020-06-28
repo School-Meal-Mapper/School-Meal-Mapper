@@ -60,13 +60,9 @@
           <span class="hours-badge" v-if="!closed(item)">{{ hours(item) }}</span>
         </div>
       </b-list-group-item>
-      <v-card
-        hover
-        height="100%"
-        class="card-outter"
-        style="position :absolute;"
-        v-if="filteredMarkers.length"
-      >Zooom out for more results.</v-card>
+      <v-card hover height="100%" class="card-outter" style="position: absolute;" v-if="filteredMarkers.length"
+        >Zooom out for more results.</v-card
+      >
     </b-list-group>
   </div>
 </template>
