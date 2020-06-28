@@ -25,6 +25,7 @@ import './scss/bootstrap.scss'
 // REQUIRED - Importing our Main CSS file
 import './scss/Main.scss'
 
+export const eventManager = new Vue()
 // General style overrides and custom classes
 
 // Install BootstrapVue

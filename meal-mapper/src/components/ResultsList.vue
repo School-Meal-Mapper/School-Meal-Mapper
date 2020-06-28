@@ -46,15 +46,21 @@
       </b-list-group-item>
     </b-list-group>
     <div>
-      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length"> {{ this.$t('zoom.zoomout') }}</b-card>
+      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length && this.zoom > this.minZoom">
+        {{ this.$t('zoom.zoomout') }}</b-card
+      >
+      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
+        {{ this.$t('zoom.no-more-results') }}</b-card
+      >
     </div>
   </div>
 </template>
 
 <script>
 import { days } from '../constants'
-
+import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
+import { theme } from 'theme.config'
 
 export default {
   name: 'ResultsList',
@@ -63,7 +69,9 @@ export default {
       selected: false,
       today: new Date().getDay(),
       locationData: location,
-      showListing: this.showList
+      showListing: this.showList,
+      zoom: theme.settings.initialMapZoom,
+      minZoom: theme.settings.minZoom
     }
   },
   components: {
@@ -88,6 +96,11 @@ export default {
       this.showResults = false
       this.showList = true
     }
+  },
+  created() {
+    eventManager.$on('zoomChanged', (zoom) => {
+      this.zoom = zoom
+    })
   },
   methods: {
     // isEmpty() {

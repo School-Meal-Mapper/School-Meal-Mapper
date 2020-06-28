@@ -5,7 +5,9 @@ export const theme = {
       lng: -79.097216
     },
     initialMapZoom: 12,
-    clusterZoom: 12
+    clusterZoom: 12,
+    maxZoom: 17,
+    minZoom: 12
   },
   socialMedia: [{}],
   data: {

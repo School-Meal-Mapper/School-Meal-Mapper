@@ -11,7 +11,7 @@
         :minZoom="min"
         style="height: 100%; width: 100%;"
         @update:center="centerUpdated"
-        @update:zoom="(val) => (zoom = val)"
+        @update:zoom="zoomUpdated"
         @update:bounds="boundsUpdated"
       >
         <l-control position="topright">
@@ -79,6 +79,7 @@ import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import IconListItem from './IconListItem.vue'
 import { businessIcon } from '../utilities'
 import { theme } from 'theme.config'
+import { eventManager } from '../main'
 
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
@@ -115,8 +116,8 @@ export default {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
       zoom: this.centroid.zoom,
-      max: 17,
-      min: 12,
+      max: theme.settings.maxZoom,
+      min: theme.settings.minZoom,
       showParagraph: true,
       showError: false,
       errorMessage: '',
@@ -196,6 +197,11 @@ export default {
         svg: true
       })
       return icon
+    },
+    zoomUpdated(zoom) {
+      this.zoom = zoom
+      this.$emit('zoom', zoom)
+      eventManager.$emit('zoomChanged', zoom)
     },
     getUserLocation() {
       var map = this.$refs.covidMap.mapObject
