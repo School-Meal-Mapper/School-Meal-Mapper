@@ -44,10 +44,10 @@
           <span class="hours-badge" v-if="!closed(item)">{{ hours(item) }}</span>
         </div>
       </b-list-group-item>
-      <b-card hover height="100%" class="zoom-card" style="position: absolute;" v-if="filteredMarkers.length">
-        {{ this.$t('zoom.zoomout') }}</b-card
-      >
     </b-list-group>
+    <div>
+      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length"> {{ this.$t('zoom.zoomout') }}</b-card>
+    </div>
   </div>
 </template>
 
@@ -184,10 +184,15 @@ export default {
   z-index: 99997;
   padding: 8px 0;
   text-align: center;
-  background-color: white;
+  background-color: theme-color-level('secondary', 3);
+  color: theme-color('primary');
+  @media (prefers-color-scheme: dark) {
+    background-color: theme-color-level('secondaryDark', 4);
+    color: theme-color-level('primary', 3);
+  }
 }
 .resultList {
-  max-height: calc(100vh - 70px);
+  max-height: calc(100vh - 105px);
   overflow-y: overlay;
   padding-top: 20px;
 }
