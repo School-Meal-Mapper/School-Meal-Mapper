@@ -160,7 +160,8 @@
     "reset": "Reset",
     "submit": "Submit",
     "form-submitted": "The form has been submitted. Thank you for your help updating the entry for ",
-    "select-checkbox": "Please select at least one checkbox"
+    "select-checkbox": "Please select at least one checkbox",
+    "submission-error": "There is an error with the submission"
   },
   "zoom": {
     "noresults": "No results in this area.",
