@@ -55,7 +55,14 @@
       </b-list-group-item>
     </b-list-group>
     <div>
-      <b-card hover height="100%" class="zoom-card bottom" v-if="filteredMarkers.length && this.zoom > this.minZoom" @click="setZoom">
+      <b-card
+        hover
+        height="100%"
+        class="zoom-card bottom"
+        v-if="filteredMarkers.length && this.zoom > this.minZoom"
+        @click="setZoom"
+        id="resultslistnav"
+      >
         {{ this.$t('zoom.zoomout') }}</b-card
       >
       <b-card hover height="100%" class="no-zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
@@ -217,6 +224,9 @@ export default {
     background-color: theme-color-level('secondaryDark', 5);
     color: theme-color-level('primary', 3);
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
   cursor: pointer;
 }
 
@@ -239,6 +249,9 @@ export default {
   @media (prefers-color-scheme: dark) {
     background-color: theme-color-level('secondaryDark', 5);
     color: theme-color-level('primary', 3);
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
