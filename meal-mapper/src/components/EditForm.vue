@@ -4,7 +4,7 @@
       {{ $t('suggest-edit.edit') }}
     </template>
     <p>
-      {{ $t('suggest-edit.instructions') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}.</b>
+      {{ $t('suggest-edit.instructions') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b> listing?
     </p>
     <div>
       <b-form-group>
