@@ -149,7 +149,7 @@
   },
   "suggest-edit": {
     "edit": "Suggest an edit",
-    "instructions": "Please use this form to let us know what is incorrect about the listing for ",
+    "instructions": "What needs to be corrected for the ",
     "name": "Site name",
     "address": "Address",
     "contact": "Contact information",
