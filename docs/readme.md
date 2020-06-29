@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
@@ -55,6 +55,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.vizioz.com"><img src="https://avatars0.githubusercontent.com/u/4398217?v=4" width="100px;" alt=""/><br /><sub><b>Chris Houston</b></sub></a><br /><a href="https://github.com/School-Meal-Mapper/School-Meal-Mapper/commits?author=readingdancer" title="Tests">⚠️</a> <a href="https://github.com/School-Meal-Mapper/School-Meal-Mapper/commits?author=readingdancer" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/no40"><img src="https://avatars1.githubusercontent.com/u/37667134?v=4" width="100px;" alt=""/><br /><sub><b>Nathan Ostrowski</b></sub></a><br /><a href="https://github.com/School-Meal-Mapper/School-Meal-Mapper/commits?author=no40" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/helenx15"><img src="https://avatars3.githubusercontent.com/u/49924616?v=4" width="100px;" alt=""/><br /><sub><b>Helen Xiao</b></sub></a><br /><a href="https://github.com/School-Meal-Mapper/School-Meal-Mapper/commits?author=helenx15" title="Code">💻</a></td>
+    <td align="center"><a href="http://himanshukj.me"><img src="https://avatars1.githubusercontent.com/u/42729494?v=4" width="100px;" alt=""/><br /><sub><b>himanshukj17122000</b></sub></a><br /><a href="https://github.com/School-Meal-Mapper/School-Meal-Mapper/commits?author=himanshukj17122000" title="Code">💻</a></td>
   </tr>
 </table>
 
