@@ -45,10 +45,43 @@ export default {
     reset: function () {
       this.selected = []
     },
+    async postForm(arr) {
+      const urlbase = 'https://docs.google.com/forms/d/e/1FAIpQLSeHMzatGVcqUcFdyxJMNtaDUApJaE_-enb3yFdWXlkOc84mXA/formResponse'
+      const form_entries = [
+        'entry.1322101299',
+        'entry.963360749',
+        'entry.1587815264',
+        'entry.91941245',
+        'entry.383547902',
+        'entry.351688335',
+        'entry.729350868',
+        'entry.117758355'
+      ]
+      const query = form_entries.reduce((u, e, i) => {
+        return u + e + '=' + encodeURI(arr[i]) + '&'
+      }, '?')
+      // POST to google form
+      try {
+        await fetch(urlbase + query.slice(0, -1), {
+          method: 'post',
+          mode: 'no-cors'
+        })
+      } catch (e) {
+        alert(this.$t('suggest-edit.submission-error'))
+      }
+    },
     submitForm: function (business) {
       if (this.selected.length == 0) {
         alert(this.$tc('suggest-edit.select-checkbox'))
       } else {
+        let data = [business.marker.gsx$mealsitename.$t, business.marker.gsx$contact.$t]
+        this.options.forEach((option) => {
+          if (this.selected.includes(option.value)) {
+            data.push(1)
+          } else data.push(0)
+        })
+        data.push(this.text)
+        this.postForm(data)
         alert(this.$tc('suggest-edit.form-submitted') + business.marker.gsx$mealsitename.$t + '!')
         this.selected = []
       }
