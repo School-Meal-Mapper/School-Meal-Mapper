@@ -11,17 +11,18 @@
         :minZoom="min"
         style="height: 100%; width: 100%;"
         @update:center="centerUpdated"
-        @update:zoom="(val) => (zoom = val)"
+        @update:zoom="zoomUpdated"
         @update:bounds="boundsUpdated"
       >
         <l-control position="topright">
           <div class="mapkey" :class="{ 'show-key': showKey }">
             <div class="title-block">
               <h6 class="title">{{ $t('label.mapkey') }}</h6>
-              <i @click="showKey = !showKey" class="fas fa-info-circle" />
+              <i @click="showKey = !showKey" class="fas fa-info-circle" v-if="!showKey" />
+              <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
             <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
-              <icon-list-item :leaflet-icon="item.icon" :title="item.title" link="" />
+              <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
             </div>
           </div>
         </l-control>
@@ -63,9 +64,9 @@
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
-        <b-alert variant="warning" class="location-alert" :show="showError" dismissible @dismissed="resetError" fade>
-          {{ errorMessage }}
-        </b-alert>
+        <b-alert variant="warning" class="location-alert" :show="showError" dismissible @dismissed="resetError" fade>{{
+          errorMessage
+        }}</b-alert>
       </l-map>
     </div>
   </b-container>
@@ -79,6 +80,7 @@ import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import IconListItem from './IconListItem.vue'
 import { businessIcon } from '../utilities'
 import { theme } from 'theme.config'
+import { eventManager } from '../main'
 
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
@@ -111,12 +113,17 @@ export default {
     attribution: String,
     centroid: { lat: Number, lng: Number }
   },
+  created() {
+    eventManager.$on('zoomIn', (zoomAmount) => {
+      this.zoom -= zoomAmount
+    })
+  },
   data() {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
       zoom: this.centroid.zoom,
-      max: 17,
-      min: 12,
+      max: theme.settings.maxZoom,
+      min: theme.settings.minZoom,
       showParagraph: true,
       showError: false,
       errorMessage: '',
@@ -134,7 +141,7 @@ export default {
         maxClusterRadius: 40,
         disableClusteringAtZoom: theme.settings.clusterZoom
       },
-      showKey: false
+      showKey: true
     }
   },
   mounted() {
@@ -196,6 +203,11 @@ export default {
         svg: true
       })
       return icon
+    },
+    zoomUpdated(zoom) {
+      this.zoom = zoom
+      this.$emit('zoom', zoom)
+      eventManager.$emit('zoomChanged', zoom)
     },
     getUserLocation() {
       var map = this.$refs.covidMap.mapObject
@@ -390,12 +402,18 @@ div.markeropen svg path {
 
   &.show-key i {
     opacity: 1;
+    color: theme-color('danger');
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
   }
 }
 
 .title-block {
   width: 100%;
   text-align: right;
+  padding-bottom: 6px;
 }
 
 .mapkey .title {
@@ -406,6 +424,7 @@ div.markeropen svg path {
 
 .keys {
   display: none;
+  margin-right: -125px;
 }
 
 .show-key {

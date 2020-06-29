@@ -22,6 +22,9 @@
     ></BusinessDetailsMobile>
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults" id="results-list-nav">
+      <b-alert v-if="!filteredMarkers.length" show class="noresults">
+        <strong>{{ this.$t('zoom.noresults') + ' ' + this.$t('zoom.zoomout') }}</strong>
+      </b-alert>
       <b-list-group-item
         action
         variant="sideNav"
@@ -46,22 +49,34 @@
           {{ item.marker.gsx$city.$t }}
         </span>
         <div>
-          <span class="closed-badge" v-if="closed(item)">
-            {{ getClosedMessage() }}
-          </span>
-          <span class="hours-badge" v-if="!closed(item)">
-            {{ hours(item) }}
-          </span>
+          <span class="closed-badge" v-if="closed(item)">{{ getClosedMessage() }}</span>
+          <span class="hours-badge" v-if="!closed(item)">{{ hours(item) }}</span>
         </div>
       </b-list-group-item>
     </b-list-group>
+    <div>
+      <b-card
+        hover
+        height="100%"
+        class="zoom-card bottom"
+        v-if="filteredMarkers.length && this.zoom > this.minZoom"
+        @click="setZoom"
+        id="resultslistnav"
+      >
+        {{ this.$t('zoom.zoomout') }}</b-card
+      >
+      <b-card hover height="100%" class="no-zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
+        {{ this.$t('zoom.no-more-results') }}</b-card
+      >
+    </div>
   </div>
 </template>
 
 <script>
 import { days } from '../constants'
-
+import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
+import { theme } from 'theme.config'
 import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
 
 export default {
@@ -71,7 +86,9 @@ export default {
       selected: false,
       today: new Date().getDay(),
       locationData: location,
-      showListing: this.showList
+      showListing: this.showList,
+      zoom: theme.settings.initialMapZoom,
+      minZoom: theme.settings.minZoom
     }
   },
   components: {
@@ -98,7 +115,15 @@ export default {
       this.showList = true
     }
   },
+  created() {
+    eventManager.$on('zoomChanged', (zoom) => {
+      this.zoom = zoom
+    })
+  },
   methods: {
+    // isEmpty() {
+    //   return this.filteredMarkers === emp&& this.markers.length == 0
+    // },
     getClosedMessage: function () {
       return this.$t(`label.closed-today`)
     },
@@ -117,6 +142,9 @@ export default {
       var today = new Date().getDay()
       var day = days[today]
       return item.marker[day].$t
+    },
+    setZoom: function () {
+      eventManager.$emit('zoomIn', 0.5)
     }
   }
 }
@@ -135,7 +163,7 @@ export default {
   transition: margin 0.25s ease-out;
   z-index: 1035;
   max-height: 100vh;
-  max-width: 294px;
+  width: 294px;
   background: theme-color('secondary');
   @media (prefers-color-scheme: dark) {
     background: theme-color('secondaryDark');
@@ -180,8 +208,55 @@ export default {
   margin-right: 5px;
   font-size: 0.7rem;
 }
+.zoom-card {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 294px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.125);
+  z-index: 99997;
+  padding: 8px 0;
+  text-align: center;
+  background-color: theme-color-level('secondary', 3);
+  color: theme-color('primary');
+  @media (prefers-color-scheme: dark) {
+    background-color: theme-color-level('secondaryDark', 5);
+    color: theme-color-level('primary', 3);
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+  cursor: pointer;
+}
+
+.zoom-card:hover {
+  text-decoration: underline !important;
+}
+
+.no-zoom-card {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 294px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.125);
+  z-index: 99997;
+  padding: 8px 0;
+  text-align: center;
+  background-color: theme-color-level('secondary', 3);
+  color: theme-color('primary');
+  @media (prefers-color-scheme: dark) {
+    background-color: theme-color-level('secondaryDark', 5);
+    color: theme-color-level('primary', 3);
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .resultList {
-  max-height: calc(100vh - 70px);
+  max-height: calc(100vh - 105px);
   overflow-y: overlay;
   padding-top: 20px;
 }
@@ -208,6 +283,13 @@ export default {
     color: theme-color('tertiary');
     font-size: 1rem;
     margin-top: 6px;
+  }
+}
+
+.noresults {
+  color: theme-color('danger');
+  @media (prefers-color-scheme: dark) {
+    color: theme-color-level('danger', 2);
   }
 }
 
