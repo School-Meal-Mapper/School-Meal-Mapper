@@ -8,7 +8,7 @@
       :infotype="'green'"
       :icon="'fa-tractor'"
       :business="location.currentBusiness"
-      v-if="location.currentBusiness != null && showResults != true"
+      v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
     ></BusinessDetails>
 
@@ -17,11 +17,11 @@
       :icon="'fa-tractor'"
       :business="location.currentBusiness"
       :closedMessage="getClosedMessage()"
-      v-if="location.currentBusiness != null && showResults != true"
+      v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
     ></BusinessDetailsMobile>
 
-    <b-list-group ref="results" class="resultList list-group-flush" v-if="showResults" id="results-list-nav">
+    <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
         <strong>{{ this.$t('zoom.noresults') + ' ' + this.$t('zoom.zoomout') }}</strong>
       </b-alert>
@@ -88,7 +88,8 @@ export default {
       locationData: location,
       showListing: this.showList,
       zoom: theme.settings.initialMapZoom,
-      minZoom: theme.settings.minZoom
+      minZoom: theme.settings.minZoom,
+      showRes: this.showResults
     }
   },
   components: {
@@ -107,11 +108,11 @@ export default {
   },
   watch: {
     location: function (locationVal) {
-      if (locationVal.isSetByMap) {
+      if (locationVal.isSetByMap && this.showResults) {
         var top = this.$refs['result' + locationVal.locValue][0].offsetTop - 330
         this.$refs['results'].scrollTo(0, top)
       }
-      this.showResults = false
+      this.showRes = false
       this.showList = true
     }
   },
@@ -128,7 +129,7 @@ export default {
       return this.$t(`label.closed-today`)
     },
     closeDetails: function () {
-      this.showResults = true
+      this.showRes = true
       this.location.currentBusiness = null
     },
     closed: function (item) {
