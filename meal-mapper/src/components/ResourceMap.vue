@@ -18,7 +18,8 @@
           <div class="mapkey" :class="{ 'show-key': showKey }">
             <div class="title-block">
               <h6 class="title">{{ $t('label.mapkey') }}</h6>
-              <i @click="showKey = !showKey" class="fas fa-info-circle" />
+              <i @click="showKey = !showKey" class="fas fa-info-circle" v-if="!showKey" />
+              <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
             <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
@@ -140,7 +141,7 @@ export default {
         maxClusterRadius: 40,
         disableClusteringAtZoom: theme.settings.clusterZoom
       },
-      showKey: false
+      showKey: true
     }
   },
   mounted() {
@@ -401,12 +402,18 @@ div.markeropen svg path {
 
   &.show-key i {
     opacity: 1;
+    color: theme-color('danger');
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
   }
 }
 
 .title-block {
   width: 100%;
   text-align: right;
+  padding-bottom: 6px;
 }
 
 .mapkey .title {
@@ -417,6 +424,7 @@ div.markeropen svg path {
 
 .keys {
   display: none;
+  margin-right: -125px;
 }
 
 .show-key {
