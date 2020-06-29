@@ -14,7 +14,7 @@
               <h5>{{ business.marker.gsx$mealsitename.$t }}</h5>
             </div>
           </div>
-          <div v-if="!maximizeDetails">
+          <div v-if="!maxDetails">
             <span class="closed-badge" v-if="closed(business)">
               {{ closedMessage }}
             </span>
@@ -30,7 +30,7 @@
             <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
           </p>
 
-          <p id="icon-list-mobile" v-if="maximizeDetails">
+          <p id="icon-list-mobile" v-if="maxDetails">
             <icon-list-item
               v-if="business.marker.gsx$contact !== undefined && !!business.marker.gsx$contact.$t"
               icon="fas fa-phone-alt"
@@ -81,7 +81,7 @@
               <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
             </p>
           </b-modal>
-          <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maximizeDetails"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maxDetails"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
@@ -89,14 +89,14 @@
             </p>
           </template>
 
-          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && maximizeDetails">
+          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && maxDetails">
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
 
-          <b-button button class="details" v-if="!maximizeDetails" @click="showMaximizeDetails()">
+          <b-button button class="details" v-if="!maxDetails" @click="showMaximizeDetails()">
             {{ $t('label.maxdetails') }}
           </b-button>
-          <b-button button class="details" v-if="maximizeDetails" @click="showMinimizeDetails()">
+          <b-button button class="details" v-if="maxDetails" @click="showMinimizeDetails()">
             {{ $t('label.mindetails') }}
           </b-button>
         </div>
@@ -117,7 +117,9 @@ export default {
     IconListItem
   },
   data() {
-    return {}
+    return {
+      maxDetails: this.maximizeDetails
+    }
   },
   props: {
     infotype: { type: String },
@@ -153,10 +155,10 @@ export default {
       alert('Link copied')
     },
     showMaximizeDetails: function () {
-      this.maximizeDetails = true
+      this.maxDetails = true
     },
     showMinimizeDetails: function () {
-      this.maximizeDetails = false
+      this.maxDetails = false
     },
     closed: function (business) {
       var todayNum = new Date().getDay()

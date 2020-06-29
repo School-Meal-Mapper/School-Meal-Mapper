@@ -107,7 +107,7 @@ export default {
   },
   watch: {
     location: function (locationVal) {
-      if (locationVal.isSetByMap) {
+      if (locationVal.isSetByMap && this.showResults) {
         var top = this.$refs['result' + locationVal.locValue][0].offsetTop - 330
         this.$refs['results'].scrollTo(0, top)
       }
