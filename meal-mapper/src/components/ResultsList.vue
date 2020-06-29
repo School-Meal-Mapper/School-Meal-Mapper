@@ -8,7 +8,7 @@
       :infotype="'green'"
       :icon="'fa-tractor'"
       :business="location.currentBusiness"
-      v-if="location.currentBusiness != null && swResults != true"
+      v-if="location.currentBusiness != null && showResults != true"
       @close-details="closeDetails"
     ></BusinessDetails>
 
