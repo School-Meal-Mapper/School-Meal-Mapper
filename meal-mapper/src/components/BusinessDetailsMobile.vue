@@ -10,7 +10,6 @@
       <b-list-group-item variant="sideNav" :class="infotype">
         <div>
           <div class="title">
-            <i :class="businessIcon(business.marker)"></i>
             <div class="busName">
               <h5>{{ business.marker.gsx$mealsitename.$t }}</h5>
             </div>
@@ -109,7 +108,7 @@
 <script>
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
-import { businessIcon, getAddress } from '../utilities'
+import { getAddress } from '../utilities'
 import { days } from '../constants'
 export default {
   name: 'BusinessDetailsMobile',
@@ -173,7 +172,6 @@ export default {
       var day = days[today]
       return business.marker[day].$t
     },
-    businessIcon: businessIcon,
     getAddress: getAddress
   },
   computed: {
@@ -240,7 +238,7 @@ export default {
 }
 
 .busName {
-  margin-left: 54px;
+  margin-left: 0px;
   width: 100%;
 }
 
