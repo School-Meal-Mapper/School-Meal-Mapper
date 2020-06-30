@@ -47,7 +47,13 @@
           <!-- @clusterclick="click()" @ready="ready" -->
           <l-marker
             :lat-lng="latLng(item.marker.gsx$lat.$t, item.marker.gsx$lon.$t)"
-            :icon="selectedIcon(location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t, item)"
+            :icon="
+              selectedIcon(
+                location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t,
+                hoverIt !== null && hoverIt.marker.id.$t === item.marker.id.$t,
+                item
+              )
+            "
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
             @click="
@@ -111,27 +117,13 @@ export default {
     },
     mapUrl: String,
     attribution: String,
-    centroid: { lat: Number, lng: Number }
+    centroid: { lat: Number, lng: Number },
+    hoverIt: Object
   },
   created() {
     eventManager.$on('zoomIn', (zoomAmount) => {
       this.zoom -= zoomAmount
-    }),
-      eventManager.$on('hover', (item) => {
-        var newIcon = ExtraMarkers.icon({
-          className: 'markerselected',
-          icon: businessIcon(),
-          prefix: 'fa',
-          svg: true
-        })
-        item.marker.setIcon(newIcon)
-      }),
-      eventManager.$on('stop-hover', (item) => {
-        item.marker.icon = this.selectedIcon(
-          location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t,
-          item
-        )
-      })
+    })
   },
   data() {
     return {
@@ -265,11 +257,14 @@ export default {
       return radius
     },
     latLng,
-    selectedIcon(selected, item) {
+    selectedIcon(selected, hovered, item) {
       const isOpen = item.oc
       let markerColor = isOpen ? 'markeropen' : 'markerclosed'
       const iconClasses = businessIcon()
       if (selected) {
+        markerColor = 'markerselected'
+      }
+      if (hovered) {
         markerColor = 'markerselected'
       }
       var markerIcon = ExtraMarkers.icon({
