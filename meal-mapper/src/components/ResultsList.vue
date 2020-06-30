@@ -36,6 +36,8 @@
           closedOne: item.oc == false
         }"
         :ref="'result' + index"
+        @mouseover="mouseOver(item)"
+        @mouseleave="mouseLeave(item)"
         @click="
           $emit('location-selected', {
             locValue: index,
@@ -146,6 +148,12 @@ export default {
     },
     setZoom: function () {
       eventManager.$emit('zoomIn', 0.5)
+    },
+    mouseOver: function (item) {
+      eventManager.$emit('hover', item)
+    },
+    mouseLeave: function (item) {
+      eventManager.$emit('stop-hover', item)
     }
   }
 }

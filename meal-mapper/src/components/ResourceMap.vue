@@ -116,7 +116,22 @@ export default {
   created() {
     eventManager.$on('zoomIn', (zoomAmount) => {
       this.zoom -= zoomAmount
-    })
+    }),
+      eventManager.$on('hover', (item) => {
+        var newIcon = ExtraMarkers.icon({
+          className: 'markerselected',
+          icon: businessIcon(),
+          prefix: 'fa',
+          svg: true
+        })
+        item.marker.setIcon(newIcon)
+      }),
+      eventManager.$on('stop-hover', (item) => {
+        item.marker.icon = this.selectedIcon(
+          location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t,
+          item
+        )
+      })
   },
   data() {
     return {
