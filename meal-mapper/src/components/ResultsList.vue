@@ -145,7 +145,7 @@ export default {
       return item.marker[day].$t
     },
     setZoom: function () {
-      eventManager.$emit('zoomIn', 0.5)
+      eventManager.$emit('zoomOut', 3.0)
     }
   }
 }

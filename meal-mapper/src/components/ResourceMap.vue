@@ -114,7 +114,7 @@ export default {
     centroid: { lat: Number, lng: Number }
   },
   created() {
-    eventManager.$on('zoomIn', (zoomAmount) => {
+    eventManager.$on('zoomOut', (zoomAmount) => {
       this.zoom -= zoomAmount
     })
   },
