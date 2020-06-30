@@ -11,6 +11,7 @@
         :location="locationData"
         @location-selected="passLocation"
         @hoverOver="passHover"
+        @hoverLeave="passNoHover"
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
@@ -204,6 +205,9 @@ export default {
     },
     passHover: function (item) {
       this.hoverItem = item
+    },
+    passNoHover: function () {
+      this.hoverItem = null
     }
   },
   computed: {
