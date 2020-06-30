@@ -263,9 +263,8 @@ export default {
       const iconClasses = businessIcon()
       if (selected) {
         markerColor = 'markerselected'
-      }
-      if (hovered) {
-        markerColor = 'markerselected'
+      } else if (hovered) {
+        markerColor = 'markerhover'
       }
       var markerIcon = ExtraMarkers.icon({
         className: markerColor,
@@ -376,6 +375,10 @@ div.markeropen svg path {
 
 .markerclosed svg path {
   fill: $marker-closed;
+}
+
+.markerhover svg path {
+  fill: $marker-selected;
 }
 
 .usermarker {
