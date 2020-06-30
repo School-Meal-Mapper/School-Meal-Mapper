@@ -47,7 +47,13 @@
           <!-- @clusterclick="click()" @ready="ready" -->
           <l-marker
             :lat-lng="latLng(item.marker.gsx$lat.$t, item.marker.gsx$lon.$t)"
-            :icon="selectedIcon(location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t, item)"
+            :icon="
+              selectedIcon(
+                location.currentBusiness !== null && item.marker.id.$t === location.currentBusiness.marker.id.$t,
+                hoverIt !== null && hoverIt.marker.id.$t === item.marker.id.$t,
+                item
+              )
+            "
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
             @click="
@@ -111,7 +117,8 @@ export default {
     },
     mapUrl: String,
     attribution: String,
-    centroid: { lat: Number, lng: Number }
+    centroid: { lat: Number, lng: Number },
+    hoverIt: Object
   },
   created() {
     eventManager.$on('zoomOut', (zoomAmount) => {
@@ -250,12 +257,14 @@ export default {
       return radius
     },
     latLng,
-    selectedIcon(selected, item) {
+    selectedIcon(selected, hovered, item) {
       const isOpen = item.oc
       let markerColor = isOpen ? 'markeropen' : 'markerclosed'
       const iconClasses = businessIcon()
       if (selected) {
         markerColor = 'markerselected'
+      } else if (hovered) {
+        markerColor = 'markerhover'
       }
       var markerIcon = ExtraMarkers.icon({
         className: markerColor,
@@ -366,6 +375,10 @@ div.markeropen svg path {
 
 .markerclosed svg path {
   fill: $marker-closed;
+}
+
+.markerhover svg path {
+  fill: $marker-selected;
 }
 
 .usermarker {

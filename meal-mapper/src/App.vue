@@ -10,6 +10,8 @@
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
         @location-selected="passLocation"
+        @hoverOver="passHover"
+        @hoverLeave="passNoHover"
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
@@ -21,6 +23,7 @@
           :class="{ noselection: need == 'none' }"
           :location="locationData"
           :attribution="attribution"
+          :hoverIt="hoverItem"
           @location-selected="passLocation"
           @bounds="boundsUpdated"
           @center="centerUpdated"
@@ -115,7 +118,8 @@ export default {
       darkMode: darkModeMediaQuery.matches,
       mapUrl: '',
       attribution: null,
-      socialMediaico: theme.socialMedia
+      socialMediaico: theme.socialMedia,
+      hoverItem: null
     }
   },
   mounted() {
@@ -194,11 +198,16 @@ export default {
       var proName = this.filteredMarkers[val.locValue].marker.gsx$mealsitename.$t
         ? ', ' + this.filteredMarkers[val.locValue].marker.gsx$mealsitename.$t
         : ''
-
       window.gtag('event', val.isSetByMap ? 'Marker clicked' : 'List item clicked', {
         event_category: 'View details - (' + this.language.name + ')',
         event_label: this.filteredMarkers[val.locValue].marker.gsx$mealsitename.$t + proName
       })
+    },
+    passHover: function (item) {
+      this.hoverItem = item
+    },
+    passNoHover: function () {
+      this.hoverItem = null
     }
   },
   computed: {

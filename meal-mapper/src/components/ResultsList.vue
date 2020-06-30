@@ -36,6 +36,8 @@
           closedOne: item.oc == false
         }"
         :ref="'result' + index"
+        @mouseover="$emit('hoverOver', item)"
+        @mouseleave="$emit('hoverLeave')"
         @click="
           $emit('location-selected', {
             locValue: index,
