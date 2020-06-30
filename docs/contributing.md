@@ -184,7 +184,7 @@ A simple way to do this is to run the command line command:
 
 ### Download the source code
 
-Follow the instructions above for setting up your environment, cloning the project, then from a command or terminal window, navigate to the 'src' folder and run **`npm install`** to download the dependencies.
+Follow the instructions above for setting up your environment, cloning the project, then from a command or terminal window, navigate to the 'src' folder (meal-mapper/src) and run **`npm install`** to download the dependencies.
 
 ### Build the client side project using the Development Mode
 
