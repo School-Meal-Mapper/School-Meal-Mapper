@@ -48,7 +48,7 @@ import ResultsList from './components/ResultsList.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
-import { weekdays, dayFilters, booleanFilters, dayAny } from './constants'
+import { dayFilters, booleanFilters, dayAny } from './constants'
 
 import { theme } from 'theme.config'
 import ThemeHeader from 'theme.header'
