@@ -133,6 +133,9 @@ export default {
     closeDetails: function () {
       this.showRes = true
       this.location.currentBusiness = null
+      if (!this.location.isSetByMap) {
+        eventManager.$emit('zoomOut', 3.0)
+      }
     },
     closed: function (item) {
       var todayNum = new Date().getDay()
