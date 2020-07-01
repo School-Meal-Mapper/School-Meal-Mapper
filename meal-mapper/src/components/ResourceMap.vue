@@ -56,6 +56,8 @@
             "
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
+            @mouseover="$emit('hoverOver', item)"
+            @mouseleave="$emit('hoverLeave')"
             @click="
               $emit('location-selected', {
                 locValue: index,
