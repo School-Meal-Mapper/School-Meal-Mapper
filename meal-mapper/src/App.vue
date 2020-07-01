@@ -5,6 +5,7 @@
     </app-header>
     <about-us-modal />
     <faq-modal />
+
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
@@ -16,7 +17,7 @@
         :showResults="showResults"
         :selected-day="day"
       />
-
+      <share-modal :business="locationData.currentBusiness" />
       <div id="page-content-wrapper">
         <resource-map
           :filteredMarkers="filteredMarkers"
@@ -42,6 +43,7 @@ import AppHeader from './components/Header.vue'
 
 import ResourceMap from './components/ResourceMap.vue'
 import AboutUsModal from './components/AboutUs.vue'
+import ShareModal from './components/ShareModal.vue'
 import FaqModal from './components/FAQ.vue'
 import ResultsList from './components/ResultsList.vue'
 
@@ -87,6 +89,7 @@ export default {
   },
   components: {
     AboutUsModal,
+    ShareModal,
     AppHeader,
     FaqModal,
     ResourceMap,

@@ -60,21 +60,6 @@
               :link="business.marker.gsx$facebook.$t"
             />
           </p>
-          <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
-            <template v-slot:modal-title>
-              {{ $t('sharelocation.share') }}
-            </template>
-            <p>
-              <b> {{ business.marker.gsx$mealsitename.$t }} </b>
-              <br />
-              {{ getAddress(business.marker) }} <br />
-              <br />
-              {{ $t('sharelocation.link') }}
-              <br />
-              <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-75" id="share-link" />
-              <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
-            </p>
-          </b-modal>
           <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
@@ -134,16 +119,6 @@ export default {
     },
     directionsLink: function (address) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
-    },
-    shareLink: function (address) {
-      return 'https://www.google.com/maps/search/?api=1&query=' + address
-    },
-    copyShareLink: function () {
-      var copyText = document.getElementById('share-link')
-      copyText.select()
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand('copy')
-      alert(this.$tc('sharelocation.copied'))
     },
     getAddress: getAddress
   },
@@ -206,12 +181,6 @@ export default {
 
 .updated {
   color: #aaa;
-}
-
-#share-link {
-  @media only screen and (max-width: 768px) {
-    width: 345px !important;
-  }
 }
 
 .share-button {
