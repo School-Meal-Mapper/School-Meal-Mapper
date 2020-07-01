@@ -24,6 +24,8 @@
           :location="locationData"
           :attribution="attribution"
           :hoverIt="hoverItem"
+          @hoverOver="passHover"
+          @hoverLeave="passNoHover"
           @location-selected="passLocation"
           @bounds="boundsUpdated"
           @center="centerUpdated"
