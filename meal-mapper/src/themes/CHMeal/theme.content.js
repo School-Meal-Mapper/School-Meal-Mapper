@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Meal Mapper',
-  keywords: 'CfA, Code for America,Demo,Resources,Map',
+  keywords: 'Map, School Meals, Free Meals, Chapel Hill, Carrboro',
   description: 'Map depicting summer school meal sites for the Chapel Hill-Carrboro School District',
 
   // Open Graph
@@ -29,13 +29,13 @@ module.exports = {
     description: 'Map depicting summer school meal sites for the Chapel Hill-Carrboro School District',
 
     // optional
-    site: '@youneedtofix',
+    site: '@schoolmealmapper',
 
     // optional
-    creator: '@youneedtofix',
+    creator: '@mapsforpeople',
 
-    domain: 'https://youneedtofix.github.io/NC-COVID-Support/',
-    url: 'https://youneedtofix.github.io/NC-COVID-Support/',
+    domain: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
+    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
     image: {
       url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
       alt: 'Meal Mapper',
