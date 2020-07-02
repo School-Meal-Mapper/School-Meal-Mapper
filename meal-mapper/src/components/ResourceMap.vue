@@ -417,7 +417,7 @@ div.markeropen svg path {
 
   &.show-key i {
     opacity: 1;
-    color: theme-color('danger');
+    color: theme-color('secondaryDark');
   }
 
   @media (max-width: 768px) {
