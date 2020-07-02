@@ -67,6 +67,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "caleb-watson",
+      "name": "Caleb Watson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/63649838?v=4",
+      "profile": "https://github.com/caleb-watson",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "projectName": "School-Meal-Mapper",

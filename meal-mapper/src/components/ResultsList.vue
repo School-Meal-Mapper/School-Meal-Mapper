@@ -133,6 +133,9 @@ export default {
     closeDetails: function () {
       this.showRes = true
       this.location.currentBusiness = null
+      if (!this.location.isSetByMap) {
+        eventManager.$emit('zoomOut', 3.0)
+      }
     },
     closed: function (item) {
       var todayNum = new Date().getDay()
@@ -222,10 +225,10 @@ export default {
   padding: 8px 0;
   text-align: center;
   background-color: theme-color-level('secondary', 3);
-  color: theme-color('primary');
+  color: theme-color('quaternary');
   @media (prefers-color-scheme: dark) {
     background-color: theme-color-level('secondaryDark', 5);
-    color: theme-color-level('primary', 3);
+    color: theme-color-level('quaternary', 3);
   }
   @media (max-width: 768px) {
     display: none;
@@ -248,10 +251,10 @@ export default {
   padding: 8px 0;
   text-align: center;
   background-color: theme-color-level('secondary', 3);
-  color: theme-color('primary');
+  color: theme-color('quaternary');
   @media (prefers-color-scheme: dark) {
     background-color: theme-color-level('secondaryDark', 5);
-    color: theme-color-level('primary', 3);
+    color: theme-color-level('quaternary', 3);
   }
   @media (max-width: 768px) {
     display: none;
