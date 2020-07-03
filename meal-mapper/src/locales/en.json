@@ -171,5 +171,9 @@
     "zoomout": "Zoom out for more results.",
     "no-more-results": "You can not zoom out more."
   },
+  "search": {
+    "address": "Address",
+    "find": "Find the meal site closest to..."
+  },
   "title": "{0} COVID Support"
 }

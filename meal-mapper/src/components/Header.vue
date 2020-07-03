@@ -3,7 +3,10 @@
     <b-navbar-brand href="#">
       <slot></slot>
     </b-navbar-brand>
-
+    <form class="form-group w-25 center-content">
+      <h>{{ $t('search.find') }}</h>
+      <b-form-input v-model="text" :placeholder="$t('search.address')"></b-form-input>
+    </form>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
@@ -140,5 +143,13 @@ export default {
   @include media-breakpoint-up(lg) {
     display: none;
   }
+}
+
+.center-content {
+  @media (max-width: 768px) {
+    display: none;
+  }
+  position: fixed;
+  left: 35%;
 }
 </style>
