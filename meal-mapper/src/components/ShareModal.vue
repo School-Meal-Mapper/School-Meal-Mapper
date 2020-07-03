@@ -1,5 +1,5 @@
 <template>
-  <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
+  <b-modal id="share-location" size="md" dialog-class="m-0 m-md-auto" centered hide-footer>
     <template v-slot:modal-title>
       {{ $t('sharelocation.share') }}
     </template>
@@ -13,7 +13,7 @@
       <br />
       {{ $t('sharelocation.link') }}
       <br />
-      <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-75" id="share-link" />
+      <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-50" id="share-link" />
       <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
       <br />
     </p>
