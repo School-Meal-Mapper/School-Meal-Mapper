@@ -91,7 +91,7 @@ export default {
   padding-left: 10px;
 }
 .sendText {
-  padding-left: 14px;
+  padding-left: 15px;
 }
 .sendTextDiv {
   padding-top: 5px;
