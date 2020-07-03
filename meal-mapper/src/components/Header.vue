@@ -66,8 +66,7 @@ export default {
   methods: {
     search(event) {
       if (event.which === 13) {
-        console.log('user pressed enter')
-        console.log('user typed ' + this.text)
+        this.$emit('search', this.text)
       }
     }
   }

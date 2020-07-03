@@ -173,7 +173,8 @@
   },
   "search": {
     "address": "Address",
-    "find": "Find the meal site closest to..."
+    "find": "Find the meal site closest to...",
+    "noresults": "No results match your search. Please enter more information."
   },
   "title": "{0} COVID Support"
 }

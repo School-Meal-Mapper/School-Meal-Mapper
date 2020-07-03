@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <app-header :language="language.name" @language-selected="changeLanguage" :socialMedia="socialMediaico">
+    <app-header :language="language.name" @search="searchLoc" @language-selected="changeLanguage" :socialMedia="socialMediaico">
       <theme-header></theme-header>
     </app-header>
     <faq-modal />
@@ -116,6 +116,10 @@ export default {
         lng: theme.settings.initialMapCenter.lng,
         zoom: theme.settings.initialMapZoom
       },
+      searchLocation: {
+        lat: null,
+        lon: null
+      },
       darkModeMediaQuery: darkModeMediaQuery,
       darkMode: darkModeMediaQuery.matches,
       mapUrl: '',
@@ -202,6 +206,46 @@ export default {
     },
     passNoHover: function () {
       this.hoverItem = null
+    },
+    searchLoc: function (location) {
+      var fetchString = 'https://nominatim.openstreetmap.org/search?key=9Rl2TaZFQpBPsnQmQo6cq79sl3Rf9EfA&q=' + location + '&format=json'
+      fetch(fetchString)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data)
+          if (data.length === 0) {
+            alert(this.$t('search.noresults'))
+            return
+          }
+          var location = null
+          var i
+          for (i = 0; i < data.length; i++) {
+            if (data[i].lat >= 34 && data[i].lat <= 36.21 && data[i].lon <= -75.3 && data[i].lon >= -84.15) {
+              //Making sure result is in NC
+              location = data[i]
+              break
+            }
+          }
+          if (location == null) {
+            alert(this.$t('search.noresults'))
+            return
+          }
+          console.log(location)
+          this.searchLocation.lat = location.lat
+          this.searchLocation.lon = location.lon
+          var distances = []
+          this.filteredMarkers.forEach((entry) => {
+            distances.push(haversineDistance([location.lat, location.lon], [entry.marker.gsx$lat.$t, entry.marker.gsx$lon.$t], true))
+          })
+          const index = distances.indexOf(Math.min(...distances))
+          console.log(Math.min(...distances))
+          console.log(index)
+          const val = {
+            locValue: index,
+            isSetbyMap: false
+          }
+          this.passLocation(val)
+        })
     }
   },
   computed: {
