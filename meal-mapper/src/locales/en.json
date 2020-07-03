@@ -145,7 +145,10 @@
     "share": "Share",
     "link": "Link to share:",
     "copy": "COPY LINK",
-    "copied": "Link copied"
+    "copied": "Link copied",
+    "email": "Send email",
+    "text": "Send text message",
+    "share-site": "Share the location of this meal site"
   },
   "suggest-edit": {
     "edit": "Suggest an edit",

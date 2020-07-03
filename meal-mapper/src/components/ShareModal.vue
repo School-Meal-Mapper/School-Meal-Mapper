@@ -4,6 +4,9 @@
       {{ $t('sharelocation.share') }}
     </template>
     <p v-if="business !== null">
+      {{ $t('sharelocation.share-site') }}:
+      <br />
+      <br />
       <b> {{ business.marker.gsx$mealsitename.$t }} </b>
       <br />
       {{ getAddress(business.marker) }} <br />
@@ -12,12 +15,24 @@
       <br />
       <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-75" id="share-link" />
       <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
-      <span>
-        <a :href="emailLink(business.marker)">
-          <i class="fa fa-envelope fa-lg" aria-hidden="true" />
-        </a>
-      </span>
+      <br />
+      <br />
     </p>
+    <div v-if="business !== null">
+      <div>
+        <i class="fa fa-envelope fa-lg" id="email-icon" aria-hidden="true" />
+        <a :href="emailLink(business.marker)">
+          <span class="emailText">{{ $t('sharelocation.email') }} </span>
+        </a>
+      </div>
+      <br />
+      <div>
+        <i class="fa fa-mobile fa-lg" id="text-icon" aria-hidden="true" />
+        <a :href="emailLink(business.marker)">
+          <span class="sendText">{{ $t('sharelocation.text') }} </span>
+        </a>
+      </div>
+    </div>
   </b-modal>
 </template>
 
@@ -25,6 +40,7 @@
 import { getAddress } from '../utilities'
 export default {
   name: 'share-modal',
+  components: {},
   props: {
     business: Object
   },
@@ -64,4 +80,11 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.emailText {
+  padding-left: 10px;
+}
+.sendText {
+  padding-left: 10px;
+}
+</style>
