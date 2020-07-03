@@ -16,7 +16,6 @@
       <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-75" id="share-link" />
       <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
       <br />
-      <br />
     </p>
     <div v-if="business !== null">
       <div>
@@ -25,8 +24,7 @@
           <span class="emailText">{{ $t('sharelocation.email') }} </span>
         </a>
       </div>
-      <br />
-      <div>
+      <div class="sendTextDiv">
         <i class="fa fa-mobile fa-lg" id="text-icon" aria-hidden="true" />
         <a :href="emailLink(business.marker)">
           <span class="sendText">{{ $t('sharelocation.text') }} </span>
@@ -93,6 +91,10 @@ export default {
   padding-left: 10px;
 }
 .sendText {
-  padding-left: 10px;
+  padding-left: 14px;
+}
+.sendTextDiv {
+  padding-top: 5px;
+  padding-left: 3px;
 }
 </style>
