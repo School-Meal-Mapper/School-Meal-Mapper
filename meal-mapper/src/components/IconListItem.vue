@@ -62,10 +62,7 @@ export default {
     margin: 0.25rem 0;
   }
   a {
-    color: theme-color('warning');
-    @media (prefers-color-scheme: dark) {
-      color: theme-color-level(warning, 5);
-    }
+    color: theme-color('primary');
   }
 
   .leafletIcon {

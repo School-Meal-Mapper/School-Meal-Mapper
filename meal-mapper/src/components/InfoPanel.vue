@@ -31,18 +31,18 @@ export default {
 .note i,
 .handwash i {
   font-size: 3rem;
-  color: theme-color('warning');
+  color: theme-color('primary');
   @media (prefers-color-scheme: dark) {
-    color: theme-color-level(warning, 5);
+    color: theme-color-level(primary, 5);
   }
   margin: 7px 10px 0 0;
   float: left;
 }
 
 .handwash i {
-  color: theme-color('danger');
+  color: theme-color('primary');
   @media (prefers-color-scheme: dark) {
-    color: theme-color-level('danger', 5);
+    color: theme-color-level(primary, 5);
   }
 }
 

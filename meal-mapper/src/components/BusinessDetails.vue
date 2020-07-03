@@ -186,10 +186,7 @@ export default {
 .share-button {
   font-size: 0.8rem;
   padding: 0.375rem 1rem;
-  color: theme-color('warning');
-  @media (prefers-color-scheme: dark) {
-    color: theme-color-level(warning, 5);
-  }
+  color: theme-color('primary');
 }
 
 @media (max-width: 768px) {
