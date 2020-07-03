@@ -25,9 +25,11 @@
           <p v-if="getAddress(business.marker) !== ''">
             <b>{{ $t('label.address') }}:</b><br />
             {{ getAddress(business.marker) }}
-            <icon-list-item icon="fa fa-directions" :title="'Get directions'" :link="directionsLink(addressURL(business.marker))" />
+            <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
             <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">Share location</b-button>
+            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')"
+              >{{ $t('sharelocation.shareloc') }}
+            </b-button>
           </p>
 
           <p id="icon-list-mobile" v-if="maxDetails">
@@ -66,21 +68,6 @@
               :link="business.marker.gsx$facebook.$t"
             />
           </p>
-          <b-modal id="share-location" size="lg" dialog-class="m-0 m-md-auto" centered hide-footer>
-            <template v-slot:modal-title>
-              Share
-            </template>
-            <p>
-              <b> {{ business.marker.gsx$mealsitename.$t }} </b>
-              <br />
-              {{ getAddress(business.marker) }} <br />
-              <br />
-              Link to share:
-              <br />
-              <input readonly type="text" :value="shareLink(addressURL(business.marker))" size="75" id="share-link" />
-              <b-button variant="link" @click="copyShareLink()">COPY LINK</b-button>
-            </p>
-          </b-modal>
           <opening-hours :business="business.marker" :title="$t('label.openinghours')" v-if="maxDetails"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
@@ -143,16 +130,6 @@ export default {
     },
     directionsLink: function (address) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + address
-    },
-    shareLink: function (address) {
-      return 'https://www.google.com/maps/search/?api=1&query=' + address
-    },
-    copyShareLink: function () {
-      var copyText = document.getElementById('share-link')
-      copyText.select()
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand('copy')
-      alert('Link copied')
     },
     showMaximizeDetails: function () {
       this.maxDetails = true
