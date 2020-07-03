@@ -15,9 +15,6 @@
           >
         </b-nav-item>
 
-        <b-nav-item right @click="$bvModal.show('about-us')">
-          {{ $t('about.linktext') }}
-        </b-nav-item>
         <!--
         <b-nav-item :href="item.url" v-for="(item, index) in socialMedia" v-bind:key="index">
           <i :class="'fab fa-' + item.icon"></i>

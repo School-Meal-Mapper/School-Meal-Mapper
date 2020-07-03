@@ -41,7 +41,6 @@
 import AppHeader from './components/Header.vue'
 
 import ResourceMap from './components/ResourceMap.vue'
-import AboutUsModal from './components/AboutUs.vue'
 import FaqModal from './components/FAQ.vue'
 import ResultsList from './components/ResultsList.vue'
 
@@ -86,7 +85,6 @@ export default {
     this.fetchData()
   },
   components: {
-    AboutUsModal,
     AppHeader,
     FaqModal,
     ResourceMap,
