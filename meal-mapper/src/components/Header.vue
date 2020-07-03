@@ -4,8 +4,8 @@
       <slot></slot>
     </b-navbar-brand>
     <form class="form-group w-25 center-content">
-      <h>{{ $t('search.find') }}</h>
-      <b-form-input v-model="text" :placeholder="$t('search.address')"></b-form-input>
+      {{ $t('search.find') }}
+      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.address')"></b-form-input>
     </form>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -59,7 +59,16 @@ export default {
         { iso: 'ja', name: '日本人' },
         { iso: 'zh', name: '中文' },
         { iso: 'ms', name: 'ဗမာ' }
-      ]
+      ],
+      text: ''
+    }
+  },
+  methods: {
+    search(event) {
+      if (event.which === 13) {
+        console.log('user pressed enter')
+        console.log('user typed ' + this.text)
+      }
     }
   }
 }
