@@ -65,14 +65,22 @@ export default {
     },
     emailLink: function (marker) {
       const mailto = 'mailto:?subject='
-      var subject = 'Info on ' + marker.gsx$mealsitename.$t + ' Meal Site'
+      var subject = 'Find free meals for students at ' + marker.gsx$mealsitename.$t
       subject = encodeURI(subject)
       subject += '&body='
-      var body = 'Here is a link to ' + marker.gsx$mealsitename.$t + ', a school meal site located at ' + getAddress(marker) + ': '
+      var body =
+        'I thought you might be interested in visiting the ' +
+        marker.gsx$mealsitename.$t +
+        ' school meal site, located at ' +
+        getAddress(marker) +
+        '. This site provides free meals for students in the Chapel Hill-Carrboro school district during the summer. ' +
+        'Click this link to access the meal site in Google Maps: '
       body = encodeURI(body)
       var address = encodeURI(this.addressURL(marker))
       body += this.shareLink(address).replace('&', '%26') + '.'
-      body += encodeURI('\n\n') + 'For more information, visit https://school-meal-mapper.github.io/School-Meal-Mapper/.'
+      body +=
+        encodeURI('\n\n') +
+        'For more information about school meal sites in the Chapel Hill-Carrboro school district, visit https://school-meal-mapper.github.io/School-Meal-Mapper/.'
       return mailto + subject + body
     },
     getAddress: getAddress
