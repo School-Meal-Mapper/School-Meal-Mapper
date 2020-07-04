@@ -116,10 +116,6 @@ export default {
         lng: theme.settings.initialMapCenter.lng,
         zoom: theme.settings.initialMapZoom
       },
-      searchLocation: {
-        lat: null,
-        lon: null
-      },
       darkModeMediaQuery: darkModeMediaQuery,
       darkMode: darkModeMediaQuery.matches,
       mapUrl: '',
@@ -231,8 +227,6 @@ export default {
             return
           }
           console.log(location)
-          this.searchLocation.lat = location.lat
-          this.searchLocation.lon = location.lon
           var distances = []
           this.filteredMarkers.forEach((entry) => {
             distances.push(haversineDistance([location.lat, location.lon], [entry.marker.gsx$lat.$t, entry.marker.gsx$lon.$t], true))
