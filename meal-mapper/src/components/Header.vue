@@ -3,7 +3,10 @@
     <b-navbar-brand href="#">
       <slot></slot>
     </b-navbar-brand>
-
+    <form class="form-group w-25 center-content">
+      <span class="title">{{ $t('search.find') }}</span>
+      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.address')"></b-form-input>
+    </form>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
@@ -56,7 +59,15 @@ export default {
         { iso: 'ja', name: '日本人' },
         { iso: 'zh', name: '中文' },
         { iso: 'ms', name: 'ဗမာ' }
-      ]
+      ],
+      text: ''
+    }
+  },
+  methods: {
+    search(event) {
+      if (event.which === 13) {
+        this.$emit('search', this.text)
+      }
     }
   }
 }
@@ -139,6 +150,20 @@ export default {
   display: inline;
   @include media-breakpoint-up(lg) {
     display: none;
+  }
+}
+
+.center-content {
+  @media (max-width: 768px) {
+    display: none;
+  }
+  position: fixed;
+  left: 35%;
+}
+
+.title {
+  @media (prefers-color-scheme: dark) {
+    color: $gray-200;
   }
 }
 </style>
