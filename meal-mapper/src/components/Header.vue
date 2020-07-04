@@ -11,7 +11,7 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item right>
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')"
-            ><i class="fas info-plus-circle" aria-hidden="true"></i> {{ $t('faq.linktext') }}</b-button
+            ><i class="fas info-plus-circle" aria-hidden="true"></i><b>{{ $t('faq.linktext') }}</b></b-button
           >
         </b-nav-item>
 
