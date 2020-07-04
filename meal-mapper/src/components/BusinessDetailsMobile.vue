@@ -235,10 +235,7 @@ export default {
 .share-button {
   font-size: 0.8rem;
   padding: 0.175rem 1rem;
-  color: theme-color('warning');
-  @media (prefers-color-scheme: dark) {
-    color: theme-color-level(warning, 5);
-  }
+  color: theme-color('primary');
 }
 
 .closed-badge {
