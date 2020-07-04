@@ -208,7 +208,6 @@ export default {
       fetch(fetchString)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data)
           if (data.length === 0) {
             alert(this.$t('search.noresults'))
             return
@@ -226,14 +225,11 @@ export default {
             alert(this.$t('search.noresults'))
             return
           }
-          console.log(location)
           var distances = []
           this.filteredMarkers.forEach((entry) => {
             distances.push(haversineDistance([location.lat, location.lon], [entry.marker.gsx$lat.$t, entry.marker.gsx$lon.$t], true))
           })
           const index = distances.indexOf(Math.min(...distances))
-          console.log(Math.min(...distances))
-          console.log(index)
           const val = {
             locValue: index,
             isSetbyMap: false
