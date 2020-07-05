@@ -174,7 +174,8 @@
   "search": {
     "address": "Address",
     "find": "Find the meal site closest to...",
-    "noresults": "No results match your search. Please enter more information."
+    "noresults": "No results match your search. Please enter more information.",
+    "address-mobile": "Find site closest to address"
   },
   "title": "{0} COVID Support"
 }

@@ -13,6 +13,18 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item right>
+          <form class="form-group search-mobile">
+            <i class="fas fa-search search-button" @click="displaySearch = !displaySearch"></i
+            ><b-form-input
+              v-model="text"
+              v-if="displaySearch"
+              type="search"
+              @keydown.native="search"
+              :placeholder="$t('search.address-mobile')"
+            ></b-form-input>
+          </form>
+        </b-nav-item>
+        <b-nav-item right>
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')"
             ><i class="fas info-plus-circle" aria-hidden="true"></i> {{ $t('faq.linktext') }}</b-button
           >
@@ -60,7 +72,8 @@ export default {
         { iso: 'zh', name: '中文' },
         { iso: 'ms', name: 'ဗမာ' }
       ],
-      text: ''
+      text: '',
+      displaySearch: false
     }
   },
   methods: {
@@ -165,5 +178,16 @@ export default {
   @media (prefers-color-scheme: dark) {
     color: $gray-200;
   }
+}
+
+.search-button {
+  @media (min-width: 769px) {
+    display: none;
+  }
+  display: inline;
+}
+
+.search-mobile {
+  display: inline-block;
 }
 </style>
