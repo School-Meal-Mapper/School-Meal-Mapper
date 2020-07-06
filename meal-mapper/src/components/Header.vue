@@ -12,7 +12,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-form right class="right-align">
+        <b-nav-form right>
           <i class="fas fa-search search-button" @click="displaySearch = !displaySearch"></i
           ><b-form-input
             class="mobile-input"
