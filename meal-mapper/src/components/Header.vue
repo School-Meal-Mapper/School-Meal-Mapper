@@ -194,7 +194,7 @@ export default {
   padding-bottom: 5px;
 }
 
-.right-align:hover {
+.search-button:hover {
   cursor: pointer;
 }
 
