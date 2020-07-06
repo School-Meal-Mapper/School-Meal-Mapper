@@ -12,18 +12,17 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right>
-          <form class="form-group search-mobile">
-            <i class="fas fa-search search-button" @click="displaySearch = !displaySearch"></i
-            ><b-form-input
-              v-model="text"
-              v-if="displaySearch"
-              type="search"
-              @keydown.native="search"
-              :placeholder="$t('search.address-mobile')"
-            ></b-form-input>
-          </form>
-        </b-nav-item>
+        <b-nav-form right class="right-align">
+          <i class="fas fa-search search-button" @click="displaySearch = !displaySearch"></i
+          ><b-form-input
+            class="mobile-input"
+            v-model="mobileText"
+            v-if="displaySearch"
+            type="search"
+            @keydown.native="mobileSearch"
+            :placeholder="$t('search.address-mobile')"
+          ></b-form-input>
+        </b-nav-form>
         <b-nav-item right>
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')"
             ><i class="fas info-plus-circle" aria-hidden="true"></i> {{ $t('faq.linktext') }}</b-button
@@ -73,6 +72,7 @@ export default {
         { iso: 'ms', name: 'ဗမာ' }
       ],
       text: '',
+      mobileText: '',
       displaySearch: false
     }
   },
@@ -80,6 +80,12 @@ export default {
     search(event) {
       if (event.which === 13) {
         this.$emit('search', this.text)
+      }
+    },
+    mobileSearch(event) {
+      if (event.which === 13) {
+        event.preventDefault()
+        this.$emit('search', this.mobileText)
       }
     }
   }
@@ -184,10 +190,15 @@ export default {
   @media (min-width: 769px) {
     display: none;
   }
-  display: inline;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
-.search-mobile {
-  display: inline-block;
+.right-align:hover {
+  cursor: pointer;
+}
+
+.mobile-input {
+  width: 260px !important;
 }
 </style>
