@@ -86,10 +86,10 @@
             </b-button>
           </p>
 
-          <b-button button class="details" v-if="!maxDetails" @click="showMaximizeDetails()">
+          <b-button variant="outline-primary" class="details" v-if="!maxDetails" @click="showMaximizeDetails()">
             {{ $t('label.maxdetails') }}
           </b-button>
-          <b-button button class="details" v-if="maxDetails" @click="showMinimizeDetails()">
+          <b-button variant="outline-primary" class="details" v-if="maxDetails" @click="showMinimizeDetails()">
             {{ $t('label.mindetails') }}
           </b-button>
         </div>
