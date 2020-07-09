@@ -3,7 +3,7 @@
     <template v-slot:modal-title>
       {{ $t('suggest-edit.edit') }}
     </template>
-    <p>
+    <p v-if="currentBusiness !== null">
       {{ $t('suggest-edit.instructions') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b> listing?
     </p>
     <div>
