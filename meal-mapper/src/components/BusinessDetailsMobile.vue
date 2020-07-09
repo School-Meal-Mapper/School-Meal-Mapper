@@ -80,10 +80,16 @@
             {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
           </p>
 
-          <b-button button class="details" v-if="!maxDetails" @click="showMaximizeDetails()">
+          <p v-if="maxDetails">
+            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
+              {{ $t('suggest-edit.edit') }}
+            </b-button>
+          </p>
+
+          <b-button variant="outline-primary" class="details" v-if="!maxDetails" @click="showMaximizeDetails()">
             {{ $t('label.maxdetails') }}
           </b-button>
-          <b-button button class="details" v-if="maxDetails" @click="showMinimizeDetails()">
+          <b-button variant="outline-primary" class="details" v-if="maxDetails" @click="showMinimizeDetails()">
             {{ $t('label.mindetails') }}
           </b-button>
         </div>

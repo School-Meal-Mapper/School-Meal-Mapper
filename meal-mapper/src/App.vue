@@ -17,6 +17,7 @@
         :selected-day="day"
       />
       <share-modal :business="locationData.currentBusiness" />
+      <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
       <div id="page-content-wrapper">
         <resource-map
           :filteredMarkers="filteredMarkers"
@@ -42,6 +43,7 @@ import AppHeader from './components/Header.vue'
 
 import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
+import SuggestEditModal from './components/EditForm.vue'
 import FaqModal from './components/FAQ.vue'
 import ResultsList from './components/ResultsList.vue'
 
@@ -87,6 +89,7 @@ export default {
   },
   components: {
     ShareModal,
+    SuggestEditModal,
     AppHeader,
     FaqModal,
     ResourceMap,

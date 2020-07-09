@@ -80,7 +80,6 @@
         </div>
       </b-list-group-item>
     </b-list-group>
-    <suggest-edit-modal :currentBusiness="business" />
   </span>
 </template>
 
@@ -88,13 +87,12 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { getAddress } from '../utilities'
-import SuggestEditModal from './EditForm.vue'
+
 export default {
   name: 'BusinessDetails',
   components: {
     OpeningHours,
-    IconListItem,
-    SuggestEditModal
+    IconListItem
   },
   data() {
     return {}
