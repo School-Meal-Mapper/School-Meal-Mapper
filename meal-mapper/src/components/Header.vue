@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" variant="primary" id="topnav">
+  <b-navbar toggleable="lg" type="dark" class="banner" id="topnav">
     <b-navbar-brand href="#">
       <slot></slot>
     </b-navbar-brand>
@@ -164,6 +164,12 @@ export default {
 .title {
   @media (prefers-color-scheme: dark) {
     color: $gray-200;
+  }
+}
+.banner {
+  background: $banner;
+  @media (prefers-color-scheme: dark) {
+    background: $banner-dark;
   }
 }
 </style>
