@@ -73,13 +73,13 @@ The short version goes like this:
 
 ### Pull requests
 
-The most successful pull requests usually look like this:
+When submitting a pull request, please complete the following steps:
 
 - Fill in the required template (shown when starting a PR on GitHub), and link your pull request to an issue on our [issue tracker,](https://github.com/code-for-chapel-hill/NC-COVID-Support/issues) if applicable. You can do this by writing "This should close #1234" in the PR description. In this case, you would be closing issue 1234.
 - Include screenshots and animated GIFs in your pull request whenever possible to highlight what you have changed.
 - Ensure you have run [Prettier](#prettier-code-style) against your code
 
-Again, these are guidelines, not strict requirements. However, the more information that you give to us, the more we have to work with when considering your contributions. Good documentation of a pull request can really speed up the time it takes to review and merge your work!
+This is important to ensure that others can quickly review your pull request and provide any feedback.
 
 ## Reviews
 
