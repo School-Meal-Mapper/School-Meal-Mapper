@@ -154,11 +154,11 @@ export default {
 
   i {
     font-size: 3rem;
-    color: theme-color('quinary');
+    //color: theme-color('quinary');
     margin: 7px 10px 7px 0;
     float: left;
     @media (prefers-color-scheme: dark) {
-      color: theme-color-level('quinary', 5);
+      //color: theme-color-level('quinary', 5);
     }
   }
 }
@@ -185,6 +185,9 @@ export default {
   font-size: 0.8rem;
   padding: 0.375rem 1rem;
   color: theme-color('primary');
+  @media (prefers-color-scheme: dark) {
+    color: theme-color-level('primary', 2);
+  }
 }
 
 @media (max-width: 768px) {

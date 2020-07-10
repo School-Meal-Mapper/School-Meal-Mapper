@@ -4,7 +4,7 @@
       <slot></slot>
     </b-navbar-brand>
     <form class="form-group w-25 center-content">
-      <span class="title">{{ $t('search.find') }}</span>
+      <span class="searchTitle">{{ $t('search.find') }}</span>
       <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.address')"></b-form-input>
     </form>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -161,7 +161,7 @@ export default {
   left: 35%;
 }
 
-.title {
+.searchTitle {
   @media (prefers-color-scheme: dark) {
     color: $gray-200;
   }
