@@ -69,6 +69,9 @@ $map-key-dark: color-yiq($map-key);
 $cluster-inner: #4196f2;
 $cluster-outer: #7eb0e6;
 
+$banner: theme-color('primary');
+$banner-dark: theme-color-level('primary', 5);
+
 // Used for the location of the user
 $map-location: $blue;
 $map-location-outline: $white;
