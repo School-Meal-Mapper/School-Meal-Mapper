@@ -121,9 +121,11 @@
     "en": "English",
     "es": "Spanish",
     "fr": "French",
+    "hi": "Hindi",
     "ja": "Japanese",
     "ko": "Korean",
     "ms": "Burmese",
+    "vi": "Vietnamese",
     "zh": "Simplified Chinese"
   },
   "locationhelp": "Please make sure your device location is enabled",

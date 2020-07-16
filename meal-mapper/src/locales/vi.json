@@ -111,7 +111,7 @@
     "orderonline": "",
     "phone": "",
     "selectacategory": "",
-    "selected": "",
+    "selected": "Đã chọn",
     "seniorhours": "",
     "specialhours": "",
     "website": ""
@@ -121,9 +121,11 @@
     "en": "Anh",
     "es": "người Tây Ban Nha",
     "fr": "người Pháp",
+    "hi": "Tiếng Hindi",
     "ja": "tiếng Nhật",
     "ko": "Hàn Quốc",
     "ms": "Miến điện",
+    "vi": "tiếng việt",
     "zh": "Tiếng Trung giản thể"
   },
   "locationhelp": "",
