@@ -57,10 +57,26 @@
     "tuesday": "星期二",
     "wednesday": "星期三"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "地址",
     "allweek": "整个星期",
     "backtolist": "返回目录",
+    "backtolistmobile": "退出地图",
     "close": "关",
     "closed": "关闭",
     "closed-on": "封闭于",
@@ -82,8 +98,10 @@
     "instructions": "说明",
     "locationhelplinktext": "学到更多",
     "mapkey": "地图键",
+    "maxdetails": "展开详细资料",
     "mealpublic": "餐点向公众开放",
     "mealstudent": "给学生的饭菜",
+    "mindetails": "最小化细节",
     "mustpreorder": "必须预订",
     "normalhours": "正常营业时间",
     "notes": "笔记",
@@ -109,6 +127,21 @@
     "zh": "简体中文"
   },
   "locationhelp": "",
+  "search": {
+    "address": "地址",
+    "find": "查找离...最近的用餐地点",
+    "noresults": "没有结果与您的搜索相符。请输入更多信息。"
+  },
+  "sharelocation": {
+    "copied": "链接已复制",
+    "copy": "复制链接",
+    "email": "发送电子邮件",
+    "link": "链接分享：",
+    "share": "分享",
+    "share-site": "分享此餐点的位置",
+    "shareloc": "定位共享",
+    "text": "发送短信"
+  },
   "sidebar": {
     "close-panel": "关闭搜索面板",
     "info-about-us": "当前，此站点支持查塔姆县和北卡罗来纳州奥兰治县。用",
@@ -122,5 +155,26 @@
     "what-do-you-need": "你需要什么？",
     "when-do-you-need-it": "您什么时候需要它？"
   },
-  "title": "{0} COVID支持"
+  "suggest-edit": {
+    "additional-comments": "补充评论",
+    "address": "地址",
+    "contact": "联系信息",
+    "edit": "提出修改建议",
+    "enter-comments": "输入评论",
+    "form-submitted": "该表格已提交。感谢您的帮助，更新了以下条目",
+    "hours": "小时",
+    "instructions": "需要纠正什么",
+    "name": "网站名称",
+    "reset": "重启",
+    "select-checkbox": "请至少选中一个复选框",
+    "social": "社交媒体",
+    "submission-error": "提交有错误",
+    "submit": "提交"
+  },
+  "title": "{0} COVID支持",
+  "zoom": {
+    "no-more-results": "您无法进一步缩小。",
+    "noresults": "在这方面没有结果。",
+    "zoomout": "缩小以获得更多结果。"
+  }
 }

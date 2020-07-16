@@ -57,10 +57,26 @@
     "tuesday": "الثلاثاء",
     "wednesday": "الأربعاء"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "عنوان",
     "allweek": "كل الاسبوع",
     "backtolist": "الرجوع للقائمة",
+    "backtolistmobile": "الخروج للخريطة",
     "close": "قريب",
     "closed": "مغلق",
     "closed-on": "أغلقت يوم",
@@ -82,8 +98,10 @@
     "instructions": "تعليمات",
     "locationhelplinktext": "أعرف أكثر",
     "mapkey": "مفتاح الخريطة",
+    "maxdetails": "قم بتوسيع التفاصيل",
     "mealpublic": "وجبات مفتوحة للجمهور",
     "mealstudent": "وجبات الطلاب",
+    "mindetails": "تقليل التفاصيل",
     "mustpreorder": "يجب الطلب المسبق",
     "normalhours": "ساعات العمل العادية",
     "notes": "ملاحظات",
@@ -109,6 +127,21 @@
     "zh": "الصينية المبسطة"
   },
   "locationhelp": "",
+  "search": {
+    "address": "عنوان",
+    "find": "ابحث عن موقع الوجبة الأقرب إلى ...",
+    "noresults": "لا توجد نتائج تطابق بحثك. الرجاء إدخال المزيد من المعلومات."
+  },
+  "sharelocation": {
+    "copied": "تم نسخ الرابط",
+    "copy": "انسخ الرابط",
+    "email": "ارسل بريد الكتروني",
+    "link": "رابط للمشاركة:",
+    "share": "شارك",
+    "share-site": "شارك موقع هذه الوجبة",
+    "shareloc": "مشاركة الموقع",
+    "text": "ابعت رسالة نصية"
+  },
   "sidebar": {
     "close-panel": "أغلق لوحة البحث",
     "info-about-us": "حاليًا ، يدعم هذا الموقع مقاطعة Chatham ومقاطعة Orange ، NC. مع",
@@ -122,5 +155,26 @@
     "what-do-you-need": "ماذا تحتاج؟",
     "when-do-you-need-it": "متى تحتاجها؟"
   },
-  "title": "{0} دعم COVID"
+  "suggest-edit": {
+    "additional-comments": "تعليقات اضافية",
+    "address": "عنوان",
+    "contact": "معلومات للتواصل",
+    "edit": "اقتراح تعديل",
+    "enter-comments": "أدخل التعليقات",
+    "form-submitted": "تم تقديم النموذج. شكرا لمساعدتكم في تحديث الإدخال لـ",
+    "hours": "ساعات",
+    "instructions": "ما يجب تصحيحه لل",
+    "name": "اسم الموقع",
+    "reset": "إعادة تعيين",
+    "select-checkbox": "يرجى تحديد خانة اختيار واحدة على الأقل",
+    "social": "وسائل التواصل الاجتماعي",
+    "submission-error": "هناك خطأ في التقديم",
+    "submit": "خضع"
+  },
+  "title": "{0} دعم COVID",
+  "zoom": {
+    "no-more-results": "لا يمكنك التصغير أكثر.",
+    "noresults": "لا توجد نتائج في هذا المجال.",
+    "zoomout": "التصغير لمزيد من النتائج."
+  }
 }

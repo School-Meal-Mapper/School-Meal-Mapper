@@ -57,10 +57,26 @@
     "tuesday": "화요일",
     "wednesday": "수요일"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "주소",
     "allweek": "일주일",
     "backtolist": "다시 목록으로",
+    "backtolistmobile": "지도로 나가기",
     "close": "닫기",
     "closed": "닫은",
     "closed-on": "휴무",
@@ -82,8 +98,10 @@
     "instructions": "방법",
     "locationhelplinktext": "더 알아보기",
     "mapkey": "지도 키",
+    "maxdetails": "세부 사항 펼치기",
     "mealpublic": "공개 식사",
     "mealstudent": "학생 식사",
+    "mindetails": "세부 사항 최소화",
     "mustpreorder": "선주문 필요",
     "normalhours": "정상 시간",
     "notes": "노트",
@@ -109,6 +127,21 @@
     "zh": "중국어"
   },
   "locationhelp": "",
+  "search": {
+    "address": "주소",
+    "find": "가장 가까운 식사 장소 찾기 ...",
+    "noresults": "검색과 일치하는 결과가 없습니다. 더 많은 정보를 입력하십시오."
+  },
+  "sharelocation": {
+    "copied": "링크 복사",
+    "copy": "복사 링크",
+    "email": "이메일을 보내",
+    "link": "공유 링크 :",
+    "share": "몫",
+    "share-site": "이 식사 장소의 위치를 공유하십시오",
+    "shareloc": "위치 공유",
+    "text": "문자 메시지 보내기"
+  },
   "sidebar": {
     "close-panel": "검색 창 닫기",
     "info-about-us": "현재이 사이트는 채텀 카운티와 노스 캐롤라이나 주 오렌지 카운티를 지원합니다. 와",
@@ -122,5 +155,26 @@
     "what-do-you-need": "무엇이 필요합니까?",
     "when-do-you-need-it": "언제 필요합니까?"
   },
-  "title": "{0} COVID 지원"
+  "suggest-edit": {
+    "additional-comments": "추가 댓글",
+    "address": "주소",
+    "contact": "연락처 정보",
+    "edit": "편집 제안",
+    "enter-comments": "의견 입력",
+    "form-submitted": "양식이 제출되었습니다. 에 대한 항목을 업데이트하는 데 도움을 주셔서 감사합니다",
+    "hours": "시간",
+    "instructions": "무엇을 수정해야합니까?",
+    "name": "사이트 이름",
+    "reset": "다시 놓기",
+    "select-checkbox": "하나 이상의 확인란을 선택하십시오",
+    "social": "소셜 미디어",
+    "submission-error": "제출에 오류가 있습니다",
+    "submit": "제출"
+  },
+  "title": "{0} COVID 지원",
+  "zoom": {
+    "no-more-results": "더 축소 할 수 없습니다.",
+    "noresults": "이 영역에는 결과가 없습니다.",
+    "zoomout": "더 많은 결과를 보려면 축소하십시오."
+  }
 }

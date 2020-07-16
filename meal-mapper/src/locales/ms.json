@@ -57,10 +57,26 @@
     "tuesday": "Selasa",
     "wednesday": "Rabu"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "Alamat",
     "allweek": "Sepanjang minggu",
     "backtolist": "Kembali kepada senarai",
+    "backtolistmobile": "Keluar ke peta",
     "close": "Tutup",
     "closed": "Tertutup",
     "closed-on": "Tutup pada",
@@ -82,8 +98,10 @@
     "instructions": "Arahan",
     "locationhelplinktext": "Ketahui lebih lanjut",
     "mapkey": "Kunci Peta",
+    "maxdetails": "Kembangkan Butiran",
     "mealpublic": "Makanan dibuka untuk orang ramai",
     "mealstudent": "Makanan untuk pelajar",
+    "mindetails": "Minimumkan Butiran",
     "mustpreorder": "Mesti prapesan",
     "normalhours": "Jam biasa",
     "notes": "Nota",
@@ -109,6 +127,21 @@
     "zh": "Bahasa Cina Ringkas"
   },
   "locationhelp": "",
+  "search": {
+    "address": "Alamat",
+    "find": "Cari laman makan yang paling dekat dengan ...",
+    "noresults": "Tidak ada hasil yang sepadan dengan carian anda. Sila masukkan lebih banyak maklumat."
+  },
+  "sharelocation": {
+    "copied": "Pautan disalin",
+    "copy": "SALIN PAUTAN",
+    "email": "Menghantar e-mel",
+    "link": "Pautan untuk berkongsi:",
+    "share": "Kongsi",
+    "share-site": "Kongsi lokasi laman web makan ini",
+    "shareloc": "Berkongsi lokasi",
+    "text": "Hantar pesanan teks"
+  },
   "sidebar": {
     "close-panel": "Tutup panel carian",
     "info-about-us": "Pada masa ini, laman web ini menyokong Chatham County dan Orange County, NC. Dengan",
@@ -122,5 +155,26 @@
     "what-do-you-need": "Apa yang anda perlukan?",
     "when-do-you-need-it": "Bilakah anda memerlukannya?"
   },
-  "title": "{0} COVID Support"
+  "suggest-edit": {
+    "additional-comments": "Komen tambahan",
+    "address": "Alamat",
+    "contact": "Maklumat perhubungan",
+    "edit": "Cadangkan pengeditan",
+    "enter-comments": "Masukkan komen",
+    "form-submitted": "Borang telah dihantar. Terima kasih atas bantuan anda mengemas kini entri untuk",
+    "hours": "Jam",
+    "instructions": "Apa yang perlu diperbetulkan untuk",
+    "name": "Nama laman web",
+    "reset": "Tetapkan semula",
+    "select-checkbox": "Sila pilih sekurang-kurangnya satu kotak pilihan",
+    "social": "Media sosial",
+    "submission-error": "Terdapat ralat dengan penyerahan",
+    "submit": "mengemukakan"
+  },
+  "title": "{0} COVID Support",
+  "zoom": {
+    "no-more-results": "Anda tidak boleh mengezum keluar lagi.",
+    "noresults": "Tiada hasil di kawasan ini.",
+    "zoomout": "Zum keluar untuk mendapatkan lebih banyak hasil."
+  }
 }

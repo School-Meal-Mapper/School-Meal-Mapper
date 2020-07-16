@@ -35,20 +35,6 @@
     "partners": "Info Sources",
     "title": "About this site"
   },
-  "faq": {
-    "linktext": "Tell me about free meals",
-    "title": "Info about free meals",
-    "close": "Close",
-    "staySafeReminder": "Please be sure to wear a mask when visiting a pickup site or interacting with volunteers to help us all stay safe!",
-    "whatWeDoQuestion": "What does Food for Students do?",
-    "whatWeDoAnswer": "We help to connect kids and families with meals in their area.\n We know that School-sponsored meals are a lifeline for many kids and families during the COVID crisis. And now that the school year had ended, many school districts are offering families free meals through their summer program. We're here to help you find them.\n",
-    "freeMealsQuestion": "How can I get free meals?",
-    "freeMealsAnswer": "You can use our mapping tool to find meals close to you. Click on a distribution site to view its address and operating hours, then pick up free meals in that window.",
-    "helpQuestion": "How can I help?",
-    "helpAnswer-start": "If you would help us spread the word so everyone has access to our meals, we would be so grateful. Share our meal site on social media and text your friends!  Let's get everyone excited about Food For Students!\nPlease also consider donating to the ",
-    "helpAnswer-organization": "Public School Foundation",
-    "helpAnswer-end": "so the program can continue as long as it is needed."
-  },
   "category": {
     "childcare": "Child care",
     "family": "Prepared family meals",
@@ -71,6 +57,21 @@
     "tuesday": "Tuesday",
     "wednesday": "Wednesday"
   },
+  "faq": {
+    "close": "Close",
+    "freeMealsAnswer": "You can use our mapping tool to find meals close to you. Click on a distribution site to view its address and operating hours, then pick up free meals in that window.",
+    "freeMealsQuestion": "How can I get free meals?",
+    "helpAnswer-end": "so the program can continue as long as it is needed.",
+    "helpAnswer-organization": "Public School Foundation",
+    "helpAnswer-start": "If you would help us spread the word so everyone has access to our meals, we would be so grateful. Share our meal site on social media and text your friends!  Let's get everyone excited about Food For Students!\nPlease also consider donating to the ",
+    "helpQuestion": "How can I help?",
+    "linktext": "Tell me about free meals",
+    "staySafeReminder": "Please be sure to wear a mask when visiting a pickup site or interacting with volunteers to help us all stay safe!",
+    "title": "Info about free meals",
+    "whatWeDoAnswer": "We help to connect kids and families with meals in their area.\n We know that School-sponsored meals are a lifeline for many kids and families during the COVID crisis. And now that the school year had ended, many school districts are offering families free meals through their summer program. We're here to help you find them.\n",
+    "whatWeDoQuestion": "What does Food for Students do?"
+  },
+  "getdirections": "Get directions",
   "label": {
     "address": "Address",
     "allweek": "All week",
@@ -126,7 +127,21 @@
     "zh": "Simplified Chinese"
   },
   "locationhelp": "Please make sure your device location is enabled",
-  "getdirections": "Get directions",
+  "search": {
+    "address": "Address",
+    "find": "Find the meal site closest to...",
+    "noresults": "No results match your search. Please enter more information."
+  },
+  "sharelocation": {
+    "copied": "Link copied",
+    "copy": "COPY LINK",
+    "email": "Send email",
+    "link": "Link to share:",
+    "share": "Share",
+    "share-site": "Share the location of this meal site",
+    "shareloc": "Share location",
+    "text": "Send text message"
+  },
   "sidebar": {
     "close-panel": "Close search panel",
     "info-about-us": "Currently, this site supports Chatham County and Orange County, NC. With",
@@ -140,41 +155,26 @@
     "what-do-you-need": "What do you need?",
     "when-do-you-need-it": "When do you need it?"
   },
-  "sharelocation": {
-    "shareloc": "Share location",
-    "share": "Share",
-    "link": "Link to share:",
-    "copy": "COPY LINK",
-    "copied": "Link copied",
-    "email": "Send email",
-    "text": "Send text message",
-    "share-site": "Share the location of this meal site"
-  },
   "suggest-edit": {
-    "edit": "Suggest an edit",
-    "instructions": "What needs to be corrected for the ",
-    "name": "Site name",
+    "additional-comments": "Additional comments",
     "address": "Address",
     "contact": "Contact information",
-    "social": "Social media",
-    "hours": "Hours",
-    "additional-comments": "Additional comments",
+    "edit": "Suggest an edit",
     "enter-comments": "Enter comments",
-    "reset": "Reset",
-    "submit": "Submit",
     "form-submitted": "The form has been submitted. Thank you for your help updating the entry for ",
+    "hours": "Hours",
+    "instructions": "What needs to be corrected for the ",
+    "name": "Site name",
+    "reset": "Reset",
     "select-checkbox": "Please select at least one checkbox",
-    "submission-error": "There is an error with the submission"
+    "social": "Social media",
+    "submission-error": "There is an error with the submission",
+    "submit": "Submit"
   },
+  "title": "{0} COVID Support",
   "zoom": {
+    "no-more-results": "You can not zoom out more.",
     "noresults": "No results in this area.",
-    "zoomout": "Zoom out for more results.",
-    "no-more-results": "You can not zoom out more."
-  },
-  "search": {
-    "address": "Address",
-    "find": "Find the meal site closest to...",
-    "noresults": "No results match your search. Please enter more information."
-  },
-  "title": "{0} COVID Support"
+    "zoomout": "Zoom out for more results."
+  }
 }
