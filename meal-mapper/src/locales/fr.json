@@ -57,10 +57,26 @@
     "tuesday": "Mardi",
     "wednesday": "Mercredi"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "Adresse",
     "allweek": "Toute la semaine",
     "backtolist": "Retour à la liste",
+    "backtolistmobile": "Sortir sur la carte",
     "close": "Fermer",
     "closed": "Fermé",
     "closed-on": "Ferme le",
@@ -82,8 +98,10 @@
     "instructions": "Instructions",
     "locationhelplinktext": "apprendre encore plus",
     "mapkey": "Carte clé",
+    "maxdetails": "Développer les détails",
     "mealpublic": "Repas ouverts au public",
     "mealstudent": "Repas pour les étudiants",
+    "mindetails": "Réduire les détails",
     "mustpreorder": "Doit précommander",
     "normalhours": "Heures normales",
     "notes": "Remarques",
@@ -103,12 +121,29 @@
     "en": "Anglais",
     "es": "Espanol",
     "fr": "français",
+    "hi": "Hindi",
     "ja": "japonais",
     "ko": "coréen",
     "ms": "birman",
+    "vi": "vietnamien",
     "zh": "Chinois simplifié"
   },
   "locationhelp": "",
+  "search": {
+    "address": "Adresse",
+    "find": "Trouvez le restaurant le plus proche de ...",
+    "noresults": "Aucun résultat ne correspond à votre recherche. Veuillez entrer plus d'informations."
+  },
+  "sharelocation": {
+    "copied": "Lien copie",
+    "copy": "Copier le lien",
+    "email": "Envoyer un email",
+    "link": "Lien pour partager:",
+    "share": "Partager",
+    "share-site": "Partagez l'emplacement de ce site de repas",
+    "shareloc": "Emplacement partagé",
+    "text": "Envoyer un texto"
+  },
   "sidebar": {
     "close-panel": "Fermer le panneau de recherche",
     "info-about-us": "Actuellement, ce site prend en charge le comté de Chatham et le comté d'Orange, NC. Avec",
@@ -122,5 +157,26 @@
     "what-do-you-need": "De quoi avez-vous besoin?",
     "when-do-you-need-it": "Quand en avez-vous besoin?"
   },
-  "title": "Prise en charge de {0} COVID"
+  "suggest-edit": {
+    "additional-comments": "Commentaires supplémentaires",
+    "address": "Adresse",
+    "contact": "Informations de contact",
+    "edit": "Suggérer une modification",
+    "enter-comments": "Entrez des commentaires",
+    "form-submitted": "Le formulaire a été soumis. Merci de votre aide pour la mise à jour de l'entrée pour",
+    "hours": "heures",
+    "instructions": "Ce qui doit être corrigé pour le",
+    "name": "Nom du site",
+    "reset": "Réinitialiser",
+    "select-checkbox": "Veuillez cocher au moins une case",
+    "social": "Des médias sociaux",
+    "submission-error": "Il y a une erreur avec la soumission",
+    "submit": "Soumettre"
+  },
+  "title": "Prise en charge de {0} COVID",
+  "zoom": {
+    "no-more-results": "Vous ne pouvez plus dézoomer.",
+    "noresults": "Aucun résultat dans ce domaine.",
+    "zoomout": "Zoom arrière pour plus de résultats."
+  }
 }

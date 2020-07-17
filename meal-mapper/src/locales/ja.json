@@ -57,10 +57,26 @@
     "tuesday": "火曜日",
     "wednesday": "水曜日"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "住所",
     "allweek": "1週間中",
     "backtolist": "リストに戻る",
+    "backtolistmobile": "地図に戻る",
     "close": "閉じる",
     "closed": "閉まっている",
     "closed-on": "休業",
@@ -82,8 +98,10 @@
     "instructions": "説明書",
     "locationhelplinktext": "もっと詳しく知る",
     "mapkey": "マップキー",
+    "maxdetails": "詳細を展開",
     "mealpublic": "食事は一般に公開されています",
     "mealstudent": "学生のための食事",
+    "mindetails": "詳細を最小化",
     "mustpreorder": "予約が必要",
     "normalhours": "通常の時間",
     "notes": "ノート",
@@ -103,12 +121,29 @@
     "en": "英語",
     "es": "スペイン語",
     "fr": "フランス語",
+    "hi": "ヒンディー語",
     "ja": "日本人",
     "ko": "韓国語",
     "ms": "ビルマ語",
+    "vi": "ベトナム人",
     "zh": "簡体字中国語"
   },
   "locationhelp": "",
+  "search": {
+    "address": "住所",
+    "find": "最寄りの食事場所を見つける...",
+    "noresults": "検索に一致する結果はありません。詳細を入力してください。"
+  },
+  "sharelocation": {
+    "copied": "リンクをコピーしました",
+    "copy": "リンクをコピーする",
+    "email": "メールを送る",
+    "link": "共有するリンク：",
+    "share": "シェア",
+    "share-site": "この食事サイトの場所を共有してください",
+    "shareloc": "共有場所",
+    "text": "テキストメッセージを送信"
+  },
   "sidebar": {
     "close-panel": "検索パネルを閉じる",
     "info-about-us": "現在、このサイトはノースカロライナ州チャタム郡とオレンジ郡をサポートしています。と",
@@ -122,5 +157,26 @@
     "what-do-you-need": "あなたは何が必要ですか？",
     "when-do-you-need-it": "いつそれが必要ですか？"
   },
-  "title": "{0} COVIDのサポート"
+  "suggest-edit": {
+    "additional-comments": "追加コメント",
+    "address": "住所",
+    "contact": "連絡先",
+    "edit": "編集を提案する",
+    "enter-comments": "コメントを入力してください",
+    "form-submitted": "フォームが送信されました。のエントリの更新にご協力いただきありがとうございます",
+    "hours": "時間",
+    "instructions": "のために修正する必要があるもの",
+    "name": "サイト名",
+    "reset": "リセット",
+    "select-checkbox": "少なくとも1つのチェックボックスを選択してください",
+    "social": "ソーシャルメディア",
+    "submission-error": "送信にエラーがあります",
+    "submit": "提出する"
+  },
+  "title": "{0} COVIDのサポート",
+  "zoom": {
+    "no-more-results": "これ以上縮小することはできません。",
+    "noresults": "このエリアには結果がありません。",
+    "zoomout": "より多くの結果を表示するにはズームアウトしてください。"
+  }
 }
