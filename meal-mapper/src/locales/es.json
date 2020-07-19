@@ -57,10 +57,26 @@
     "tuesday": "Martes",
     "wednesday": "Miércoles"
   },
+  "faq": {
+    "close": "",
+    "freeMealsAnswer": "",
+    "freeMealsQuestion": "",
+    "helpAnswer-end": "",
+    "helpAnswer-organization": "",
+    "helpAnswer-start": "",
+    "helpQuestion": "",
+    "linktext": "",
+    "staySafeReminder": "",
+    "title": "",
+    "whatWeDoAnswer": "",
+    "whatWeDoQuestion": ""
+  },
+  "getdirections": "",
   "label": {
     "address": "Dirección",
     "allweek": "Toda la semana",
     "backtolist": "Volver a la lista",
+    "backtolistmobile": "Salir al mapa",
     "close": "Cerrar",
     "closed": "Cerrado",
     "closed-on": "Cerrado el",
@@ -82,8 +98,10 @@
     "instructions": "Instrucciones",
     "locationhelplinktext": "aprende más",
     "mapkey": "Guia de mapa",
+    "maxdetails": "Expandir detalles",
     "mealpublic": "Comidas abiertas al público",
     "mealstudent": "Comidas para estudiantes",
+    "mindetails": "Minimizar detalles",
     "mustpreorder": "Debe pre-ordenar",
     "normalhours": "Horas normales",
     "notes": "Notas",
@@ -103,12 +121,29 @@
     "en": "inglés",
     "es": "español",
     "fr": "francés",
+    "hi": "hindi",
     "ja": "japonés",
     "ko": "coreano",
     "ms": "birmano",
+    "vi": "vietnamita",
     "zh": "Chino simplificado"
   },
   "locationhelp": "",
+  "search": {
+    "address": "Dirección",
+    "find": "Encuentra el sitio de comidas más cercano a ...",
+    "noresults": "Ningún resultado coincide con su búsqueda. Por favor ingrese más información."
+  },
+  "sharelocation": {
+    "copied": "Enlace copiado",
+    "copy": "Copiar link",
+    "email": "Enviar correo electrónico",
+    "link": "Enlace para compartir:",
+    "share": "Compartir",
+    "share-site": "Comparta la ubicación de este sitio de comidas",
+    "shareloc": "Comparte ubicacion",
+    "text": "Envíe mensaje de texto"
+  },
   "sidebar": {
     "close-panel": "Cerrar panel de búsqueda",
     "info-about-us": "Actualmente, este sitio admite el condado de Chatham y el condado de Orange, Carolina del Norte. Con",
@@ -122,5 +157,26 @@
     "what-do-you-need": "¿Que necesita?",
     "when-do-you-need-it": "Cuando lo necesita?"
   },
-  "title": "Soporte de {0} COVID"
+  "suggest-edit": {
+    "additional-comments": "Comentarios adicionales",
+    "address": "Dirección",
+    "contact": "Información del contacto",
+    "edit": "Sugerir una edición",
+    "enter-comments": "Ingrese comentarios",
+    "form-submitted": "El formulario ha sido enviado. Gracias por su ayuda para actualizar la entrada de",
+    "hours": "horas",
+    "instructions": "Lo que debe corregirse para",
+    "name": "Nombre del sitio",
+    "reset": "Reiniciar",
+    "select-checkbox": "Seleccione al menos una casilla de verificación",
+    "social": "Medios de comunicación social",
+    "submission-error": "Hay un error con el envío.",
+    "submit": "Enviar"
+  },
+  "title": "Soporte de {0} COVID",
+  "zoom": {
+    "no-more-results": "No puedes alejarte más.",
+    "noresults": "No hay resultados en esta área.",
+    "zoomout": "Alejar para obtener más resultados."
+  }
 }

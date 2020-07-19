@@ -63,6 +63,9 @@ export default {
   }
   a {
     color: theme-color('primary');
+    @media (prefers-color-scheme: dark) {
+      color: theme-color-level(primary, 2);
+    }
   }
 
   .leafletIcon {

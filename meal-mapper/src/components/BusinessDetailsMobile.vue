@@ -15,21 +15,18 @@
             </div>
           </div>
           <div v-if="!maxDetails">
-            <span class="closed-badge" v-if="closed(business)">
-              {{ closedMessage }}
-            </span>
-            <span class="hours-badge" v-if="!closed(business)">
-              {{ hours(business) }}
-            </span>
+            <span class="closed-badge" v-if="closed(business)">{{ closedMessage }}</span>
+            <span class="hours-badge" v-if="!closed(business)">{{ hours(business) }}</span>
           </div>
           <p v-if="getAddress(business.marker) !== ''">
-            <b>{{ $t('label.address') }}:</b><br />
+            <b>{{ $t('label.address') }}:</b>
+            <br />
             {{ getAddress(business.marker) }}
             <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
             <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')"
-              >{{ $t('sharelocation.shareloc') }}
-            </b-button>
+            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
+              $t('sharelocation.shareloc')
+            }}</b-button>
           </p>
 
           <p id="icon-list-mobile" v-if="maxDetails">
@@ -72,7 +69,9 @@
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
-              <b>{{ $t('label.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
+              <b>{{ $t('label.notes') }}:</b>
+              <br />
+              {{ business.marker.gsx$notes.$t }}
             </p>
           </template>
 
@@ -81,17 +80,17 @@
           </p>
 
           <p v-if="maxDetails">
-            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
-              {{ $t('suggest-edit.edit') }}
-            </b-button>
+            <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">{{
+              $t('suggest-edit.edit')
+            }}</b-button>
           </p>
 
-          <b-button variant="outline-primary" class="details" v-if="!maxDetails" @click="showMaximizeDetails()">
-            {{ $t('label.maxdetails') }}
-          </b-button>
-          <b-button variant="outline-primary" class="details" v-if="maxDetails" @click="showMinimizeDetails()">
-            {{ $t('label.mindetails') }}
-          </b-button>
+          <b-button variant="outline-primary" class="details" v-if="!maxDetails" @click="showMaximizeDetails()">{{
+            $t('label.maxdetails')
+          }}</b-button>
+          <b-button variant="outline-primary" class="details" v-if="maxDetails" @click="showMinimizeDetails()">{{
+            $t('label.mindetails')
+          }}</b-button>
         </div>
       </b-list-group-item>
     </b-list-group>
@@ -182,6 +181,11 @@ export default {
 .backtomap {
   font-size: 0.8rem;
   padding-top: 30px;
+  color: theme-color('primary');
+  font-weight: bold;
+  @media (prefers-color-scheme: dark) {
+    color: theme-color('quinary');
+  }
 
   i {
     margin-right: 0.375rem;
@@ -211,11 +215,11 @@ export default {
 
   i {
     font-size: 1.8rem;
-    color: theme-color('quinary');
+    //color: theme-color('quinary');
     margin: 7px 10px 7px 0;
     float: left;
     @media (prefers-color-scheme: dark) {
-      color: theme-color-level('quinary', 5);
+      //color: theme-color-level('quinary', 5);
     }
   }
 }
@@ -242,6 +246,9 @@ export default {
   font-size: 0.8rem;
   padding: 0.175rem 1rem;
   color: theme-color('primary');
+  @media (prefers-color-scheme: dark) {
+    color: theme-color-level('primary', 2);
+  }
 }
 
 .closed-badge {
