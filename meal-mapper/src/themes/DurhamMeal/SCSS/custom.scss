@@ -16,12 +16,12 @@
 // covid-19-support\node_modules\bootstrap-vue\src\_variables.scss
 $font-family-base: 'Poppins', $font-family-sans-serif;
 
-$blue: #0052a5;
+$blue: #436c7c;
 $dark-blue: #031e3b;
-$orange: #fcbd6a;
-$red: #e0162b;
+$orange: #fdb017;
+$red: #bf1e2e;
 $green: #52aa36;
-$teal: #0ba2ae;
+$teal: #2a83a1;
 $yellow: #ffb71c;
 $light-orange: #ee8842;
 $marker-open: #566ca9 !default;
@@ -69,8 +69,8 @@ $map-key-dark: color-yiq($map-key);
 $cluster-inner: #4196f2;
 $cluster-outer: #7eb0e6;
 
-$banner: theme-color('primary');
-$banner-dark: theme-color-level('primary', 5);
+$banner: $teal;
+$banner-dark: #123642;
 
 // Used for the location of the user
 $map-location: $blue;
