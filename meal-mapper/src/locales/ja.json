@@ -1,6 +1,7 @@
 {
   "about": {
     "close": "閉じる",
+    "communitysafe": "コミュニティを安全に保つためにご協力ください。",
     "contact": "お問い合わせ",
     "contactus": {
       "email": "Eメール",
@@ -58,18 +59,18 @@
     "wednesday": "水曜日"
   },
   "faq": {
-    "close": "",
-    "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "close": "閉じる",
+    "freeMealsAnswer": "マッピングツールを使用して、近くの食事を見つけることができます。配布サイトをクリックして住所と営業時間を確認し、そのウィンドウで無料の食事を受け取ります。",
+    "freeMealsQuestion": "どうすれば無料の食事を入手できますか？",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "手伝いましょうか？",
+    "linktext": "無料の食事について教えてください",
+    "staySafeReminder": "ピックアップサイトに行くときやボランティアとやり取りするときは、必ずマスクを着用してください。",
+    "title": "無料の食事についての情報",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "学生向けの食品とは何ですか？"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +167,8 @@
     "form-submitted": "フォームが送信されました。のエントリの更新にご協力いただきありがとうございます",
     "hours": "時間",
     "instructions": "のために修正する必要があるもの",
+    "instructions-1": "のために修正する必要があるもの",
+    "instructions-2": "上場？",
     "name": "サイト名",
     "reset": "リセット",
     "select-checkbox": "少なくとも1つのチェックボックスを選択してください",

@@ -1,6 +1,7 @@
 {
   "about": {
     "close": "बंद करे",
+    "communitysafe": "हमारे समुदाय को सुरक्षित रखने में मदद करें।",
     "contact": "हमसे संपर्क करें",
     "contactus": {
       "email": "ईमेल",
@@ -58,18 +59,18 @@
     "wednesday": "बुधवार"
   },
   "faq": {
-    "close": "",
-    "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "close": "बंद करे",
+    "freeMealsAnswer": "आपके पास भोजन खोजने के लिए आप हमारे मैपिंग टूल का उपयोग कर सकते हैं। एक वितरण साइट पर क्लिक करके उसका पता और संचालन घंटे देखें, फिर उस विंडो में मुफ्त भोजन लें।",
+    "freeMealsQuestion": "मुझे मुफ्त भोजन कैसे मिल सकता है?",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "मैं आपकी कैसे मदद कर सकता हूँ?",
+    "linktext": "मुझे मुफ्त भोजन के बारे में बताओ",
+    "staySafeReminder": "कृपया पिकअप साइट पर जाने या स्वयंसेवकों के साथ बातचीत करने के लिए मास्क पहनना सुनिश्चित करें ताकि हम सभी सुरक्षित रहें!",
+    "title": "मुफ्त भोजन के बारे में जानकारी",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "छात्रों के लिए भोजन क्या करता है?"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +167,8 @@
     "form-submitted": "फॉर्म जमा कर दिया गया है। प्रविष्टि के लिए आपकी मदद के लिए धन्यवाद",
     "hours": "घंटे",
     "instructions": "के लिए क्या सही किया जाना चाहिए",
+    "instructions-1": "के लिए क्या सही किया जाना चाहिए",
+    "instructions-2": "लिस्टिंग?",
     "name": "साइट का नाम",
     "reset": "रीसेट",
     "select-checkbox": "कृपया कम से कम एक चेकबॉक्स चुनें",

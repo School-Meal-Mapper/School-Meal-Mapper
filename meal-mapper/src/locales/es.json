@@ -1,6 +1,7 @@
 {
   "about": {
     "close": "Cerrar",
+    "communitysafe": "Ayude a mantener segura a nuestra comunidad.",
     "contact": "Contáctenos",
     "contactus": {
       "email": "Email",
@@ -58,18 +59,18 @@
     "wednesday": "Miércoles"
   },
   "faq": {
-    "close": "",
+    "close": "Cerrar",
     "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "freeMealsQuestion": "¿Cómo puedo obtener comidas gratis?",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "¿Cómo puedo ayudar?",
+    "linktext": "Cuéntame sobre comidas gratis",
+    "staySafeReminder": "¡Asegúrese de usar una máscara cuando visite un sitio de recolección o interactúe con voluntarios para ayudarnos a mantenernos a salvo!",
+    "title": "Información sobre comidas gratis",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "¿Qué hace Food for Students?"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +167,8 @@
     "form-submitted": "El formulario ha sido enviado. Gracias por su ayuda para actualizar la entrada de",
     "hours": "horas",
     "instructions": "Lo que debe corregirse para",
+    "instructions-1": "Lo que debe corregirse para",
+    "instructions-2": "¿listado?",
     "name": "Nombre del sitio",
     "reset": "Reiniciar",
     "select-checkbox": "Seleccione al menos una casilla de verificación",

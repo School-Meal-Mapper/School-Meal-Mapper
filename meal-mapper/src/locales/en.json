@@ -1,6 +1,7 @@
 {
   "about": {
     "close": "Close",
+    "communitysafe": "Help keep our community safe.",
     "contact": "Contact Us",
     "contactus": {
       "email": "email",
@@ -165,7 +166,9 @@
     "enter-comments": "Enter comments",
     "form-submitted": "The form has been submitted. Thank you for your help updating the entry for ",
     "hours": "Hours",
-    "instructions": "What needs to be corrected for the ",
+    "instructions": "",
+    "instructions-1": "What needs to be corrected for the ",
+    "instructions-2": "listing?",
     "name": "Site name",
     "reset": "Reset",
     "select-checkbox": "Please select at least one checkbox",
