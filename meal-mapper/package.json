@@ -15,6 +15,7 @@
     "serve-cm": "cross-env VUE_APP_THEME=CMMeal vue-cli-service serve",
     "serve-chatham": "cross-env VUE_APP_THEME=ChathamMeal vue-cli-service serve",
     "serve-roanoke": "cross-env VUE_APP_THEME=RoanokeMeal vue-cli-service serve",
+    "serve-wake": "cross-env VUE_APP_THEME=WakeMeal vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
