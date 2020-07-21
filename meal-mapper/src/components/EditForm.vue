@@ -4,7 +4,8 @@
       {{ $t('suggest-edit.edit') }}
     </template>
     <p v-if="currentBusiness !== null">
-      {{ $t('suggest-edit.instructions') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b> listing?
+      {{ $t('suggest-edit.instructions-1') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b>
+      {{ $t('suggest-edit.instructions-2') }}
     </p>
     <div>
       <b-form-group>

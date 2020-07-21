@@ -1,6 +1,7 @@
 {
   "about": {
     "close": "关",
+    "communitysafe": "帮助确保我们社区的安全。",
     "contact": "联系我们",
     "contactus": {
       "email": "电子邮件",
@@ -58,18 +59,18 @@
     "wednesday": "星期三"
   },
   "faq": {
-    "close": "",
+    "close": "关",
     "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "freeMealsQuestion": "我如何获得免费餐点？",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "有什么可以帮忙的吗？",
+    "linktext": "告诉我免费用餐",
+    "staySafeReminder": "前往接送地点或与志愿者互动时，请务必戴上口罩，以帮助我们所有人安全！",
+    "title": "关于免费用餐的信息",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "给学生吃的食物做什么？"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +167,8 @@
     "form-submitted": "该表格已提交。感谢您的帮助，更新了以下条目",
     "hours": "小时",
     "instructions": "需要纠正什么",
+    "instructions-1": "需要纠正什么",
+    "instructions-2": "清单？",
     "name": "网站名称",
     "reset": "重启",
     "select-checkbox": "请至少选中一个复选框",

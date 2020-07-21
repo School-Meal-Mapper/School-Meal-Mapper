@@ -1,6 +1,7 @@
 {
   "about": {
     "close": "قريب",
+    "communitysafe": "ساعد في الحفاظ على مجتمعنا آمنة.",
     "contact": "اتصل بنا",
     "contactus": {
       "email": "البريد الإلكتروني",
@@ -58,18 +59,18 @@
     "wednesday": "الأربعاء"
   },
   "faq": {
-    "close": "",
+    "close": "قريب",
     "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "freeMealsQuestion": "كيف يمكنني الحصول على وجبات مجانية؟",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "كيف يمكنني أن أقدم المساعدة؟",
+    "linktext": "أخبرني عن الوجبات المجانية",
+    "staySafeReminder": "يرجى التأكد من ارتداء قناع عند زيارة موقع الالتقاط أو التفاعل مع المتطوعين لمساعدتنا جميعًا على البقاء آمنًا!",
+    "title": "معلومات حول الوجبات المجانية",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "ماذا يفعل الغذاء للطلاب؟"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +167,8 @@
     "form-submitted": "تم تقديم النموذج. شكرا لمساعدتكم في تحديث الإدخال لـ",
     "hours": "ساعات",
     "instructions": "ما يجب تصحيحه لل",
+    "instructions-1": "ما يجب تصحيحه لل",
+    "instructions-2": "قائمة؟",
     "name": "اسم الموقع",
     "reset": "إعادة تعيين",
     "select-checkbox": "يرجى تحديد خانة اختيار واحدة على الأقل",
