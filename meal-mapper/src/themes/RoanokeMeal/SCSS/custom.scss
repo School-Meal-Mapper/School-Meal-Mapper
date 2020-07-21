@@ -1,0 +1,124 @@
+// File: custom.scss
+// This file is where you should override any of the site's SCSS for your specific brand site.
+// Please make sure that if you add new functionality to the core project that no core SCSS is
+// added to your custom.scss file, or this will break the functionality for others.
+
+// More information about creating themes can be found here:
+// https://bootstrap-vue.org/docs/reference/theming
+
+// To find out more about how you can customize bootstrap features take a look at:
+// https://getbootstrap.com/docs/4.4/getting-started/theming/
+
+// To see a list of variables you can customize for Bootstrap
+// covid-19-support\node_modules\bootstrap\scss\_variables.scss
+
+// To see a list of variables you can customize for Bootstrap Vue
+// covid-19-support\node_modules\bootstrap-vue\src\_variables.scss
+$font-family-base: 'Poppins', $font-family-sans-serif;
+
+$blue: #0052a5;
+$dark-blue: #031e3b;
+$orange: #fcbd6a;
+$red: #e0162b;
+$green: #52aa36;
+$teal: #0ba2ae;
+$yellow: #ffb71c;
+$light-orange: #ee8842;
+$marker-open: #566ca9 !default;
+$marker-closed: #999 !default;
+$marker-selected: #ff3d3d !default;
+$user-marker: $pink;
+
+$warning: $yellow;
+$danger: $red;
+
+// 46c4d7
+$theme-colors: (
+  'primary': #d59402,
+  'secondary': $gray-100,
+  'tertiary': $orange,
+  'quaternary': $red,
+  'quinary': $light-orange,
+  'buttons': $gray-400,
+  'success': $green,
+  'warning': $warning,
+  'danger': $danger,
+  'secondaryDark': $gray-800
+);
+
+$body-bg: #eee;
+$body-color: #111;
+
+$modal-bg-dark: $gray-800;
+$modal-body-dark: $gray-300;
+$hover-color-dark: $gray-500;
+$button-text: $black;
+
+$nav-dropdown: $white;
+$nav-dropdown-dark: rgba(255, 255, 255, 0.8);
+$nav-dropdown-bg: theme-color-level('primary', -2);
+$nav-dropdown-bg-dark: theme-color-level('primary', 6);
+$nav-dropdown-bg-hover: theme-color-level('primary', -4);
+$nav-dropdown-bg-hover-dark: theme-color-level('primary', 8);
+
+$map-key-bg: #f8f9fa;
+$map-key-bg-dark: #222;
+$map-key: color-yiq($map-key-bg);
+$map-key-dark: color-yiq($map-key);
+
+$cluster-inner: #4196f2;
+$cluster-outer: #7eb0e6;
+
+$banner: $black;
+$banner-dark: $black;
+
+// Used for the location of the user
+$map-location: $blue;
+$map-location-outline: $white;
+
+// Used to show the possible inaccuracy of the users location
+$map-accuracy: $blue;
+$map-accuracy-outline: $white;
+
+$navbar-padding-x: 1rem;
+$navbar-padding-y: 0;
+
+// Define your Bootstrap variable overrides here
+//  $enable-shadows: true;
+//  $enable-gradients: true;
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 456px,
+//   md: 789px,
+//   lg: 999px,
+//   xl: 1234px
+// );
+$bv-enable-table-stacked: false;
+
+@include list-group-item-variant('sideNav', theme-color('secondary'), $black);
+@media (prefers-color-scheme: dark) {
+  @include list-group-item-variant('sideNav', theme-color('secondaryDark'), $gray-500);
+
+  .bg-primary {
+    background-color: theme-color-level('primary', 5) !important;
+  }
+  .bg-secondary {
+    background-color: theme-color-level('secondary', 8) !important;
+  }
+  .bg-tertiary {
+    background-color: theme-color-level('tertiary', 5) !important;
+  }
+
+  .bg-quaternary {
+    background-color: theme-color-level('quaternary', 5) !important;
+  }
+
+  .btn-buttons {
+    @include button-variant($gray-500, $gray-500);
+  }
+
+  .modal-content {
+    background: $modal-bg-dark;
+    color: $modal-body-dark;
+  }
+}
