@@ -4,6 +4,7 @@
       <theme-header></theme-header>
     </app-header>
     <faq-modal />
+    <covid-popup-modal />
 
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
       <results-list
@@ -45,6 +46,8 @@ import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
 import FaqModal from './components/FAQ.vue'
+import CovidPopUp from './components/CovidPopUp.vue'
+
 import ResultsList from './components/ResultsList.vue'
 
 import { latLng } from 'leaflet'
@@ -92,6 +95,7 @@ export default {
     SuggestEditModal,
     AppHeader,
     FaqModal,
+    CovidPopUp,
     ResourceMap,
     ThemeHeader,
     ResultsList

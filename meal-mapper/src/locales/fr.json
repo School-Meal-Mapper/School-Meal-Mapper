@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "Fermer",
-    "communitysafe": "Aidez à garder notre communauté en sécurité.",
     "contact": "Contactez nous",
     "contactus": {
       "email": "email",
@@ -47,6 +46,9 @@
     "pharmacy": "Pharmacie",
     "restaurant": "Restaurants",
     "school": "Repas scolaires"
+  },
+  "covidpopup": {
+    "title": "Aidez à garder notre communauté en sécurité."
   },
   "dayofweek": {
     "any": "Tout",

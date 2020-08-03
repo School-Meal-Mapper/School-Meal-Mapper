@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "Tutup",
-    "communitysafe": "Bantu menjaga keselamatan masyarakat kita.",
     "contact": "Hubungi Kami",
     "contactus": {
       "email": "E-mel",
@@ -47,6 +46,9 @@
     "pharmacy": "Farmasi",
     "restaurant": "Restoran",
     "school": "Makanan sekolah"
+  },
+  "covidpopup": {
+    "title": "Bantu menjaga keselamatan masyarakat kita."
   },
   "dayofweek": {
     "any": "Sebarang",
