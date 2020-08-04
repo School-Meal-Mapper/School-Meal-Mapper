@@ -4,7 +4,7 @@
       <theme-header></theme-header>
     </app-header>
     <faq-modal />
-    <covid-popup-modal />
+    <covid-pop-up />
 
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
       <results-list
