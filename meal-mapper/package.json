@@ -1,8 +1,8 @@
 {
-  "name": "meals-for-families",
+  "name": "meal-mapper",
   "version": "0.0.1",
   "private": true,
-  "description": "meals-for-families",
+  "description": "meal-mapper",
   "author": {
     "name": "School Meal Mapper"
   },
