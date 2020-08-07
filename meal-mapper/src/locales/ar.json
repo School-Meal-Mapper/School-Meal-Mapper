@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "قريب",
-    "communitysafe": "ساعد في الحفاظ على مجتمعنا آمنة.",
     "contact": "اتصل بنا",
     "contactus": {
       "email": "البريد الإلكتروني",
@@ -47,6 +46,9 @@
     "pharmacy": "مقابل",
     "restaurant": "مطاعم",
     "school": "الوجبات المدرسية"
+  },
+  "covidpopup": {
+    "title": "ساعد في الحفاظ على مجتمعنا آمنة."
   },
   "dayofweek": {
     "any": "أي",

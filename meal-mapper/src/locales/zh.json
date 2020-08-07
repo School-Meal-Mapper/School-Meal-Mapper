@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "关",
-    "communitysafe": "帮助确保我们社区的安全。",
     "contact": "联系我们",
     "contactus": {
       "email": "电子邮件",
@@ -47,6 +46,9 @@
     "pharmacy": "药房",
     "restaurant": "餐厅",
     "school": "学校餐"
+  },
+  "covidpopup": {
+    "title": "帮助确保我们社区的安全。"
   },
   "dayofweek": {
     "any": "任何",

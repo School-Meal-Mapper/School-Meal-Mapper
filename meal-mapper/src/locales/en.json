@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "Close",
-    "communitysafe": "Help keep our community safe.",
     "contact": "Contact Us",
     "contactus": {
       "email": "email",
@@ -47,6 +46,9 @@
     "pharmacy": "Pharmacy",
     "restaurant": "Restaurants",
     "school": "School meals"
+  },
+  "covidpopup": {
+    "title": "Help keep our community safe."
   },
   "dayofweek": {
     "any": "Any",
