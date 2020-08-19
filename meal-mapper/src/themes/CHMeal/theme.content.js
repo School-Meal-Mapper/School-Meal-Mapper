@@ -8,8 +8,8 @@ module.exports = {
   og: {
     type: 'website',
     url: 'http://mealsforfamilies.org/',
-    title: 'Meal Mapper',
-    site_name: 'Meal Mapper',
+    title: 'Meals for Families',
+    site_name: 'Meals for Families',
     description: 'Map depicting summer school meal sites for the Chapel Hill-Carrboro School District',
     locale: 'en_US',
     localeAlt: 'es_US',
@@ -25,7 +25,7 @@ module.exports = {
   // Twitter Card
   // optional
   twitterCard: {
-    title: 'Meal Mapper',
+    title: 'Meals for Families',
     description: 'Map depicting summer school meal sites for the Chapel Hill-Carrboro School District',
 
     // optional
@@ -35,7 +35,7 @@ module.exports = {
     creator: '@mapsforpeople',
 
     domain: 'http://mealsforfamilies.org/',
-    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
+    url: 'http://mealsforfamilies.org/',
     image: {
       url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
       alt: 'Meal Mapper',
