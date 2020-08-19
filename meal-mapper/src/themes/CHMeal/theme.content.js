@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Meal Mapper',
+  title: 'Meals for Families',
   keywords: 'Map, School Meals, Free Meals, Chapel Hill, Carrboro',
   description: 'Map depicting summer school meal sites for the Chapel Hill-Carrboro School District',
 
