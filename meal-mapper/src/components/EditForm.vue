@@ -1,22 +1,20 @@
 <template>
   <b-modal id="suggest-edit" size="lg" dialog-class="m-0 m-md-auto" centered scrollable>
     <template v-slot:modal-title>
-      {{ $t('suggest-edit.edit') }}
+      Suggest an edit
     </template>
-    <p v-if="currentBusiness !== null">
-      {{ $t('suggest-edit.instructions') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b> listing?
+    <p>
+      Please use this form to let us know what is incorrect about the listing for <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}.</b>
     </p>
     <div>
       <b-form-group>
         <b-form-checkbox-group id="checkbox-group-1" v-model="selected" :options="options" name="flavour-1"></b-form-checkbox-group>
       </b-form-group>
-      {{ $t('suggest-edit.additional-comments') }}
-      <b-form-input v-model="text" :placeholder="$t('suggest-edit.enter-comments')"></b-form-input>
     </div>
     <template v-slot:modal-footer>
       <div class="w-100">
-        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">{{ $t('suggest-edit.submit') }}</b-button>
-        <b-button variant="danger" class="float-left" @click="reset()">{{ $t('suggest-edit.reset') }}</b-button>
+        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">Submit</b-button>
+        <b-button variant="danger" class="float-left" @click="reset()">Reset</b-button>
       </div>
     </template>
   </b-modal>
@@ -32,57 +30,57 @@ export default {
     return {
       selected: [],
       options: [
-        { text: this.$tc('suggest-edit.name'), value: 'name' },
-        { text: this.$tc('suggest-edit.address'), value: 'address' },
-        { text: this.$tc('suggest-edit.contact'), value: 'contact' },
-        { text: this.$tc('suggest-edit.social'), value: 'social' },
-        { text: this.$tc('suggest-edit.hours'), value: 'hours' }
-      ],
-      text: ''
+        { text: 'Site name', value: 'name' },
+        { text: 'Address', value: 'address' },
+        { text: 'Contact information', value: 'contact' },
+        { text: 'Social media', value: 'social' },
+        { text: 'Hours', value: 'hours' }
+      ]
     }
   },
   methods: {
     reset: function () {
       this.selected = []
     },
-    async postForm(arr) {
-      const urlbase = 'https://docs.google.com/forms/d/e/1FAIpQLSeHMzatGVcqUcFdyxJMNtaDUApJaE_-enb3yFdWXlkOc84mXA/formResponse'
-      const form_entries = [
-        'entry.1322101299',
-        'entry.963360749',
-        'entry.1587815264',
-        'entry.91941245',
-        'entry.383547902',
-        'entry.351688335',
-        'entry.729350868',
-        'entry.117758355'
-      ]
-      const query = form_entries.reduce((u, e, i) => {
-        return u + e + '=' + encodeURI(arr[i]) + '&'
-      }, '?')
-      // POST to google form
-      try {
-        await fetch(urlbase + query.slice(0, -1), {
-          method: 'post',
-          mode: 'no-cors'
-        })
-      } catch (e) {
-        alert(this.$t('suggest-edit.submission-error'))
-      }
-    },
     submitForm: function (business) {
       if (this.selected.length == 0) {
-        alert(this.$tc('suggest-edit.select-checkbox'))
+        alert('Please select at least one checkbox')
       } else {
-        let data = [business.marker.gsx$mealsitename.$t, business.marker.gsx$contact.$t]
-        this.options.forEach((option) => {
-          if (this.selected.includes(option.value)) {
-            data.push(1)
-          } else data.push(0)
+        var nodemailer = require('nodemailer')
+        var transport = nodemailer.createTransport({
+          host: 'smtp.mailtrap.io',
+          port: 2525,
+          auth: {
+            user: 'fb3370a77cb4d3',
+            pass: 'fa89669c951b5c'
+          }
         })
-        data.push(this.text)
-        this.postForm(data)
-        alert(this.$tc('suggest-edit.form-submitted') + business.marker.gsx$mealsitename.$t + '!')
+        var toEmail
+        if (business.marker.gsx$contact.$t.includes('@')) {
+          toEmail = business.marker.gsx$contact.$t
+        } else toEmail = 'ecp.3299@gmail.com'
+        var emailText =
+          'A user has indicated that there is a problem with the listing for ' +
+          business.marker.gsx$mealsitename.$t +
+          '. The error is in the following '
+        if (this.selected.length == 1) {
+          emailText += 'category:'
+        } else emailText += 'categories:'
+        this.selected.forEach((element) => (emailText += ' ' + element))
+        var mailOptions = {
+          from: 'ecp.3299@gmail.com',
+          to: toEmail,
+          subject: 'Incorrect information for ' + business.marker.gsx$mealsitename.$t + ' listing',
+          text: emailText
+        }
+        transport.sendMail(mailOptions, (error, info) => {
+          if (error) {
+            return console.log(error)
+          }
+          console.log('Message sent: %s', info.messageId)
+        })
+
+        alert('The form has been submitted. Thank you for your help updating the entry for ' + business.marker.gsx$mealsitename.$t + '!')
         this.selected = []
       }
     }
@@ -94,11 +92,5 @@ export default {
 .error {
   color: theme-color(danger);
   size: 0.75rem;
-}
-.close {
-  color: #000 !important;
-  @media (prefers-color-scheme: dark) {
-    color: #eee !important;
-  }
 }
 </style>
