@@ -35,7 +35,7 @@ module.exports = {
     creator: '@mapsforpeople',
 
     domain: 'http://mealsforfamilies.org/',
-    url: 'http://mealsforfamilies.org/',
+    url: 'https://github.com/School-Meal-Mapper/School-Meal-Mapper',
     image: {
       url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
       alt: 'Meal Mapper',
