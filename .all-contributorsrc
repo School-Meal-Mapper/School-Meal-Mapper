@@ -1,0 +1,87 @@
+{
+  "files": [
+    "docs/readme.md"
+  ],
+  "contributors": [
+    {
+      "login": "eparadise",
+      "name": "Eliza Paradise",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43389857?v=4",
+      "profile": "https://github.com/eparadise",
+      "contributions": [
+        "code",
+        "design",
+        "question",
+        "ideas",
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "KM-Hanson",
+      "name": "KM-Hanson",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/58799043?v=4",
+      "profile": "https://github.com/KM-Hanson",
+      "contributions": [
+        "business",
+        "content",
+        "doc",
+        "ideas",
+        "projectManagement",
+        "question"
+      ]
+    },
+    {
+      "login": "readingdancer",
+      "name": "Chris Houston",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4398217?v=4",
+      "profile": "https://www.vizioz.com",
+      "contributions": [
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "no40",
+      "name": "Nathan Ostrowski",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37667134?v=4",
+      "profile": "https://github.com/no40",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "helenx15",
+      "name": "Helen Xiao",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49924616?v=4",
+      "profile": "https://github.com/helenx15",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "himanshukj17122000",
+      "name": "himanshukj17122000",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/42729494?v=4",
+      "profile": "http://himanshukj.me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "caleb-watson",
+      "name": "Caleb Watson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/63649838?v=4",
+      "profile": "https://github.com/caleb-watson",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "projectName": "School-Meal-Mapper",
+  "projectOwner": "School-Meal-Mapper",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributorsPerLine": 7
+}
