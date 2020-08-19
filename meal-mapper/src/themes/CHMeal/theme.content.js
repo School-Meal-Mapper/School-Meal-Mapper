@@ -14,8 +14,8 @@ module.exports = {
     locale: 'en_US',
     localeAlt: 'es_US',
     image: {
-      url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
-      secure_url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
+      url: 'https://github.com/School-Meal-Mapper/School-Meal-Mapper/blob/master/meal-mapper/public/images/Share-Twitter.png',
+      secure_url: 'https://github.com/School-Meal-Mapper/School-Meal-Mapper/blob/master/meal-mapper/public/images/Share-Twitter.png',
       width: 1200,
       height: 670,
       type: 'image/png'
@@ -37,7 +37,7 @@ module.exports = {
     domain: 'http://mealsforfamilies.org/',
     url: 'https://github.com/School-Meal-Mapper/School-Meal-Mapper',
     image: {
-      url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
+      url: 'https://github.com/School-Meal-Mapper/School-Meal-Mapper/blob/master/meal-mapper/public/images/Share-Twitter.png',
       alt: 'Meal Mapper',
       width: 1200,
       height: 670
