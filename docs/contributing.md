@@ -6,7 +6,6 @@ Thank you for your interest in contributing to the School Meal Mapper (https://s
 
 The following is a set of guidelines, to help you contribute to the Meal Mapper project.
 
-
 ## Table of contents
 
 [Contributing code changes](#contributing-code-changes)
@@ -36,11 +35,9 @@ The following is a set of guidelines, to help you contribute to the Meal Mapper 
 - [Build the client side project using the Development Mode](#build-the-client-side-project-using-the-development-mode)
 - [Where do I put things](#where-do-i-put-things)
 
-
 ## Contributing code changes
 
 This document gives you a quick overview on how to get started.
-
 
 ### New developers and good first issues
 
@@ -49,7 +46,6 @@ If you are a new developer or simply looking for an easy first ticket to work on
 ### How to begin
 
 The short version goes like this:
-
 
 - **Clone** - Clone the repository using your favorite GitHub tool.
 
@@ -73,13 +69,13 @@ The short version goes like this:
 
 ### Pull requests
 
-The most successful pull requests usually look like this:
+When submitting a pull request, please complete the following steps:
 
 - Fill in the required template (shown when starting a PR on GitHub), and link your pull request to an issue on our [issue tracker,](https://github.com/code-for-chapel-hill/NC-COVID-Support/issues) if applicable. You can do this by writing "This should close #1234" in the PR description. In this case, you would be closing issue 1234.
 - Include screenshots and animated GIFs in your pull request whenever possible to highlight what you have changed.
 - Ensure you have run [Prettier](#prettier-code-style) against your code
 
-Again, these are guidelines, not strict requirements. However, the more information that you give to us, the more we have to work with when considering your contributions. Good documentation of a pull request can really speed up the time it takes to review and merge your work!
+This is important to ensure that others can quickly review your pull request and provide any feedback.
 
 ## Reviews
 
@@ -184,7 +180,7 @@ A simple way to do this is to run the command line command:
 
 ### Download the source code
 
-Follow the instructions above for setting up your environment, cloning the project, then from a command or terminal window, navigate to the 'src' folder and run **`npm install`** to download the dependencies.
+Follow the instructions above for setting up your environment, cloning the project, then from a command or terminal window, navigate to the 'src' folder (meal-mapper/src) and run **`npm install`** to download the dependencies.
 
 ### Build the client side project using the Development Mode
 
@@ -210,5 +206,5 @@ The `/meal-mapper` directory is where all the client side development files go:
 / tests - All code tests
     / unit - Our unit tests
     / e2e - Any end to end tests
-/ docs - All the documentation files used to drive the GitHub pages documentation    
+/ docs - All the documentation files used to drive the GitHub pages documentation
 ```
