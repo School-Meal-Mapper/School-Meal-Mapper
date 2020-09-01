@@ -35,7 +35,7 @@ $danger: $red;
 // 46c4d7
 $theme-colors: (
   'primary': $blue,
-  'secondary': #ede9ec,
+  'secondary': $gray-100,
   'tertiary': $orange,
   'quaternary': $red,
   'quinary': $light-orange,
@@ -43,7 +43,7 @@ $theme-colors: (
   'success': $green,
   'warning': $warning,
   'danger': $danger,
-  'secondaryDark': #221c20
+  'secondaryDark': $gray-800
 );
 
 $body-bg: #eee;
