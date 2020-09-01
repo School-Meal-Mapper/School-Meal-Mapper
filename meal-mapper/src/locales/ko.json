@@ -47,6 +47,9 @@
     "restaurant": "레스토랑",
     "school": "학교 급식"
   },
+  "covidpopup": {
+    "title": "지역 사회를 안전하게 지키십시오."
+  },
   "dayofweek": {
     "any": "어떤",
     "friday": "금요일",
@@ -58,18 +61,18 @@
     "wednesday": "수요일"
   },
   "faq": {
-    "close": "",
-    "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "close": "닫기",
+    "freeMealsAnswer": "지도 도구를 사용하여 가까운 식사를 찾을 수 있습니다. 배포 사이트를 클릭하여 주소와 운영 시간을 본 다음 해당 창에서 무료 식사를 선택하십시오.",
+    "freeMealsQuestion": "무료 식사는 어떻게합니까?",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "내가 어떻게 도움이 될 수 있습니다?",
+    "linktext": "무료 식사에 대해 알려주세요",
+    "staySafeReminder": "픽업 사이트를 방문하거나 자원 봉사자들과 교류 할 때 모두가 안전하게 지낼 수 있도록 마스크를 착용하십시오!",
+    "title": "무료 식사에 대한 정보",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "학생들을위한 음식은 무엇을합니까?"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +169,8 @@
     "form-submitted": "양식이 제출되었습니다. 에 대한 항목을 업데이트하는 데 도움을 주셔서 감사합니다",
     "hours": "시간",
     "instructions": "무엇을 수정해야합니까?",
+    "instructions-1": "무엇을 수정해야합니까?",
+    "instructions-2": "리스팅?",
     "name": "사이트 이름",
     "reset": "다시 놓기",
     "select-checkbox": "하나 이상의 확인란을 선택하십시오",

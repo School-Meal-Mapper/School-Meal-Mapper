@@ -47,6 +47,9 @@
     "restaurant": "Restoran",
     "school": "Makanan sekolah"
   },
+  "covidpopup": {
+    "title": "Bantu menjaga keselamatan masyarakat kita."
+  },
   "dayofweek": {
     "any": "Sebarang",
     "friday": "Jumaat",
@@ -58,18 +61,18 @@
     "wednesday": "Rabu"
   },
   "faq": {
-    "close": "",
-    "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "close": "Tutup",
+    "freeMealsAnswer": "Anda boleh menggunakan alat pemetaan kami untuk mencari makanan yang berdekatan dengan anda. Klik di laman pengedaran untuk melihat alamat dan waktu operasi, kemudian ambil makanan percuma di tetingkap itu.",
+    "freeMealsQuestion": "Bagaimana saya boleh mendapatkan makanan percuma?",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "Bagaimana saya boleh membantu?",
+    "linktext": "Beritahu saya tentang makanan percuma",
+    "staySafeReminder": "Pastikan memakai topeng semasa melawat laman web pengambilan atau berinteraksi dengan sukarelawan untuk membantu kita semua selamat!",
+    "title": "Maklumat mengenai makanan percuma",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "Apa yang dilakukan oleh Makanan untuk Pelajar?"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +169,8 @@
     "form-submitted": "Borang telah dihantar. Terima kasih atas bantuan anda mengemas kini entri untuk",
     "hours": "Jam",
     "instructions": "Apa yang perlu diperbetulkan untuk",
+    "instructions-1": "Apa yang perlu diperbetulkan untuk",
+    "instructions-2": "penyenaraian?",
     "name": "Nama laman web",
     "reset": "Tetapkan semula",
     "select-checkbox": "Sila pilih sekurang-kurangnya satu kotak pilihan",

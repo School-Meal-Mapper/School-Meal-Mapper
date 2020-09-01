@@ -47,6 +47,9 @@
     "restaurant": "",
     "school": ""
   },
+  "covidpopup": {
+    "title": "Giúp giữ cho cộng đồng của chúng ta an toàn."
+  },
   "dayofweek": {
     "any": "Bất kì",
     "friday": "thứ sáu",
@@ -58,18 +61,18 @@
     "wednesday": "thứ tư"
   },
   "faq": {
-    "close": "",
+    "close": "Gần",
     "freeMealsAnswer": "",
-    "freeMealsQuestion": "",
+    "freeMealsQuestion": "Làm thế nào tôi có thể có được bữa ăn miễn phí?",
     "helpAnswer-end": "",
     "helpAnswer-organization": "",
     "helpAnswer-start": "",
-    "helpQuestion": "",
-    "linktext": "",
-    "staySafeReminder": "",
-    "title": "",
+    "helpQuestion": "Tôi có thể giúp gì?",
+    "linktext": "Nói cho tôi biết về những bữa ăn miễn phí",
+    "staySafeReminder": "Hãy chắc chắn đeo mặt nạ khi truy cập một trang web đón hoặc tương tác với các tình nguyện viên để giúp tất cả chúng ta được an toàn!",
+    "title": "Thông tin về bữa ăn miễn phí",
     "whatWeDoAnswer": "",
-    "whatWeDoQuestion": ""
+    "whatWeDoQuestion": "Thực phẩm cho học sinh làm gì?"
   },
   "getdirections": "",
   "label": {
@@ -166,6 +169,8 @@
     "form-submitted": "Mẫu đã được gửi. Cảm ơn bạn đã giúp đỡ cập nhật mục nhập cho",
     "hours": "Giờ",
     "instructions": "Những gì cần được sửa chữa cho",
+    "instructions-1": "Những gì cần được sửa chữa cho",
+    "instructions-2": "niêm yết?",
     "name": "Tên trang web",
     "reset": "Cài lại",
     "select-checkbox": "Vui lòng chọn ít nhất một hộp kiểm",

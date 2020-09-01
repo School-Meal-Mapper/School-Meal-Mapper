@@ -3,8 +3,9 @@
     <template v-slot:modal-title>
       Suggest an edit
     </template>
-    <p>
-      Please use this form to let us know what is incorrect about the listing for <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}.</b>
+    <p v-if="currentBusiness !== null">
+      {{ $t('suggest-edit.instructions-1') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b>
+      {{ $t('suggest-edit.instructions-2') }}
     </p>
     <div>
       <b-form-group>

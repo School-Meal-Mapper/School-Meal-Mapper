@@ -50,6 +50,7 @@
           {{ item.marker.gsx$mealsiteaddress1.$t }}{{ item.marker.gsx$mealsiteaddress1.$t !== '' ? ',' : '' }}
           {{ item.marker.gsx$city.$t }}
         </span>
+        <i class="fa fa-chevron-right arrow"></i>
         <div>
           <span class="closed-badge" v-if="closed(item)">{{ getClosedMessage() }}</span>
           <span class="hours-badge" v-if="!closed(item)">{{ hours(item) }}</span>
@@ -191,7 +192,12 @@ export default {
     box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.5);
   }
 }
-
+.arrow {
+  position: absolute;
+  bottom: 35px;
+  right: 0px;
+  color: $gray-400;
+}
 .closed-badge {
   display: inline-block;
   border-radius: 100px;
