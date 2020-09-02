@@ -281,7 +281,6 @@ export default {
           distance: haversineDistance([this.centroid.lat, this.centroid.lng], [marker.gsx$lat.$t, marker.gsx$lon.$t], true)
         }))
       ).sort(sortByDistance)
-
       return retList
     },
     highlightFilteredMarkers() {
@@ -289,7 +288,6 @@ export default {
       this.filteredMarkers.forEach((m) => {
         if (this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))) contained.push(m)
       })
-
       if (!this.isAnyDaySelected(this.day)) {
         return contained
       }

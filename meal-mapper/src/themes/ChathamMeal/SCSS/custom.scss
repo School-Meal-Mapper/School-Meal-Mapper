@@ -34,7 +34,7 @@ $danger: $red;
 
 // 46c4d7
 $theme-colors: (
-  'primary': #0063b1,
+  'primary': #6d375c,
   'secondary': $gray-100,
   'tertiary': $orange,
   'quaternary': $red,
@@ -69,8 +69,8 @@ $map-key-dark: color-yiq($map-key);
 $cluster-inner: #4196f2;
 $cluster-outer: #7eb0e6;
 
-$banner: $gray-200;
-$banner-dark: $gray-900;
+$banner: #ece8ef;
+$banner-dark: theme-color-level('primary', 8);
 
 // Used for the location of the user
 $map-location: $blue;

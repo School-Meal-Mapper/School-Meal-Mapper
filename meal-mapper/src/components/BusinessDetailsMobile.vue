@@ -126,7 +126,7 @@ export default {
       return urlParts[0]
     },
     addressURL: function (marker) {
-      var address = marker.gsx$mealsiteaddress.$t
+      var address = marker.gsx$mealsiteaddress1.$t
       address = address.replace(/\s/g, '%20')
       var city = marker.gsx$city.$t.replace(/\s/g, '%20')
       var state = marker.gsx$state.$t.replace(/\s/g, '%20')

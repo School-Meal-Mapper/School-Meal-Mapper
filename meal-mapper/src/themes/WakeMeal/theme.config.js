@@ -1,17 +1,17 @@
 export const theme = {
   settings: {
     initialMapCenter: {
-      lat: 35.943068,
-      lng: -79.097216
+      lat: 35.7796,
+      lng: -78.6382
     },
-    initialMapZoom: 12,
+    initialMapZoom: 10,
     clusterZoom: 12,
     maxZoom: 17,
-    minZoom: 12
+    minZoom: 10
   },
   socialMedia: [{}],
   data: {
-    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1JYqkJR8BtNC71Uerg0PTOPdr3KCz6NW4N0kbFiSBHOU/1/public/values?alt=json'
   },
   maps: {
     normal: {

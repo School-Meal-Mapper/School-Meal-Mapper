@@ -21,7 +21,7 @@ $dark-blue: #031e3b;
 $orange: #fcbd6a;
 $red: #e0162b;
 $green: #52aa36;
-$teal: #0ba2ae;
+$teal: #04acd4;
 $yellow: #ffb71c;
 $light-orange: #ee8842;
 $marker-open: #566ca9 !default;
@@ -34,7 +34,7 @@ $danger: $red;
 
 // 46c4d7
 $theme-colors: (
-  'primary': #0063b1,
+  'primary': $teal,
   'secondary': $gray-100,
   'tertiary': $orange,
   'quaternary': $red,
@@ -69,8 +69,8 @@ $map-key-dark: color-yiq($map-key);
 $cluster-inner: #4196f2;
 $cluster-outer: #7eb0e6;
 
-$banner: $gray-200;
-$banner-dark: $gray-900;
+$banner: #04acd4;
+$banner-dark: #015a6e;
 
 // Used for the location of the user
 $map-location: $blue;
