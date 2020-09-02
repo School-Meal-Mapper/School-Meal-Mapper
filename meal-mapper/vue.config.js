@@ -17,7 +17,7 @@ const mapEnvVariables = {
 const themeMeta = Object.assign(mapEnvVariables, themeContent)
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'CHMeal' ? '/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/',
   pluginOptions: {
     i18n: {
       locale: 'en',
