@@ -7,7 +7,7 @@ module.exports = {
   // optional
   og: {
     type: 'website',
-    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
+    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/dps',
     title: 'Meal Mapper',
     site_name: 'Meal Mapper',
     description: 'Map depicting summer school meal sites for the Durham School District',
@@ -34,8 +34,8 @@ module.exports = {
     // optional
     creator: '@mapsforpeople',
 
-    domain: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
-    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
+    domain: 'https://school-meal-mapper.github.io/School-Meal-Mapper/dps',
+    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/dps',
     image: {
       url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
       alt: 'Meal Mapper',
