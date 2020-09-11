@@ -7,7 +7,7 @@ module.exports = {
   // optional
   og: {
     type: 'website',
-    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/',
+    url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/DPS',
     title: 'Meal Mapper',
     site_name: 'Meal Mapper',
     description: 'Map depicting summer school meal sites for the Durham School District',
