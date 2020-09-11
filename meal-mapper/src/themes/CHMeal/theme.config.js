@@ -11,7 +11,7 @@ export const theme = {
   },
   socialMedia: [{}],
   data: {
-    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1wdW0piXpOlL1REibmqeuM86HayW9smBIaS3FsitpquE/1/public/values?alt=json'
+    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
   },
   maps: {
     normal: {

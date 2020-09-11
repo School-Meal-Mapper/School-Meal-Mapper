@@ -47,7 +47,7 @@
       >
         <h5 class="resultTitle">{{ item.marker.gsx$mealsitename.$t }}</h5>
         <span class="resultAddress">
-          {{ item.marker.gsx$mealsiteaddress.$t }}{{ item.marker.gsx$mealsiteaddress.$t !== '' ? ',' : '' }}
+          {{ item.marker.gsx$mealsiteaddress1.$t }}{{ item.marker.gsx$mealsiteaddress1.$t !== '' ? ',' : '' }}
           {{ item.marker.gsx$city.$t }}
         </span>
         <i class="fa fa-chevron-right arrow"></i>

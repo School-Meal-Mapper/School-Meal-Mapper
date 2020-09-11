@@ -164,6 +164,7 @@ export default {
 }
 
 .searchTitle {
+  color: color-yiq($banner);
   @media (prefers-color-scheme: dark) {
     color: $gray-200;
   }
@@ -172,6 +173,13 @@ export default {
   background: $banner;
   @media (prefers-color-scheme: dark) {
     background: $banner-dark;
+  }
+}
+
+.nav-link {
+  color: color-yiq($banner) !important;
+  @media (prefers-color-scheme: dark) {
+    color: $gray-200 !important;
   }
 }
 </style>

@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "閉じる",
-    "communitysafe": "コミュニティを安全に保つためにご協力ください。",
     "contact": "お問い合わせ",
     "contactus": {
       "email": "Eメール",
@@ -47,6 +46,9 @@
     "pharmacy": "薬局",
     "restaurant": "レストラン|レストラン",
     "school": "学校給食"
+  },
+  "covidpopup": {
+    "title": "コミュニティを安全に保つためにご協力ください。"
   },
   "dayofweek": {
     "any": "どれか",

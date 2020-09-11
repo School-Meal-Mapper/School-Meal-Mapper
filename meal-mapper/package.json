@@ -10,8 +10,12 @@
     "build": "vue-cli-service build",
     "format": "prettier --write .",
     "lint": "eslint src && prettier --check .",
-    "serve": "cross-env vue-cli-service serve",
-    "serve-meal": "cross-env VUE_APP_THEME=CHMeal vue-cli-service serve",
+    "serve-ch": "cross-env VUE_APP_THEME=CHMeal vue-cli-service serve",
+    "serve-durham": "cross-env VUE_APP_THEME=DurhamMeal vue-cli-service serve",
+    "serve-cm": "cross-env VUE_APP_THEME=CMMeal vue-cli-service serve",
+    "serve-chatham": "cross-env VUE_APP_THEME=ChathamMeal vue-cli-service serve",
+    "serve-roanoke": "cross-env VUE_APP_THEME=RoanokeMeal vue-cli-service serve",
+    "serve-wake": "cross-env VUE_APP_THEME=WakeMeal vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {

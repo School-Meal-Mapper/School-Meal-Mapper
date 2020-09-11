@@ -6,7 +6,6 @@ Thank you for your interest in contributing to the School Meal Mapper (https://s
 
 The following is a set of guidelines, to help you contribute to the Meal Mapper project.
 
-
 ## Table of contents
 
 [Contributing code changes](#contributing-code-changes)
@@ -36,11 +35,9 @@ The following is a set of guidelines, to help you contribute to the Meal Mapper 
 - [Build the client side project using the Development Mode](#build-the-client-side-project-using-the-development-mode)
 - [Where do I put things](#where-do-i-put-things)
 
-
 ## Contributing code changes
 
 This document gives you a quick overview on how to get started.
-
 
 ### New developers and good first issues
 
@@ -49,7 +46,6 @@ If you are a new developer or simply looking for an easy first ticket to work on
 ### How to begin
 
 The short version goes like this:
-
 
 - **Clone** - Clone the repository using your favorite GitHub tool.
 
@@ -210,5 +206,5 @@ The `/meal-mapper` directory is where all the client side development files go:
 / tests - All code tests
     / unit - Our unit tests
     / e2e - Any end to end tests
-/ docs - All the documentation files used to drive the GitHub pages documentation    
+/ docs - All the documentation files used to drive the GitHub pages documentation
 ```

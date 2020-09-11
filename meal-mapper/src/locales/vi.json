@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "Gần",
-    "communitysafe": "Giúp giữ cho cộng đồng của chúng ta an toàn.",
     "contact": "Liên hệ chúng tôi",
     "contactus": {
       "email": "E-mail",
@@ -47,6 +46,9 @@
     "pharmacy": "",
     "restaurant": "",
     "school": ""
+  },
+  "covidpopup": {
+    "title": "Giúp giữ cho cộng đồng của chúng ta an toàn."
   },
   "dayofweek": {
     "any": "Bất kì",

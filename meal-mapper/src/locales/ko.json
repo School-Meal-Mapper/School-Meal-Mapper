@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "닫기",
-    "communitysafe": "지역 사회를 안전하게 지키십시오.",
     "contact": "문의하기",
     "contactus": {
       "email": "이메일",
@@ -47,6 +46,9 @@
     "pharmacy": "약국",
     "restaurant": "레스토랑",
     "school": "학교 급식"
+  },
+  "covidpopup": {
+    "title": "지역 사회를 안전하게 지키십시오."
   },
   "dayofweek": {
     "any": "어떤",

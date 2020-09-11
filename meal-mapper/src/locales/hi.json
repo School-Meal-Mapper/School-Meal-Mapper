@@ -1,7 +1,6 @@
 {
   "about": {
     "close": "बंद करे",
-    "communitysafe": "हमारे समुदाय को सुरक्षित रखने में मदद करें।",
     "contact": "हमसे संपर्क करें",
     "contactus": {
       "email": "ईमेल",
@@ -47,6 +46,9 @@
     "pharmacy": "",
     "restaurant": "",
     "school": ""
+  },
+  "covidpopup": {
+    "title": "हमारे समुदाय को सुरक्षित रखने में मदद करें।"
   },
   "dayofweek": {
     "any": "कोई भी",
