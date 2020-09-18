@@ -4,8 +4,7 @@
       <slot></slot>
     </b-navbar-brand>
     <form class="form-group w-25 center-content">
-      <span class="searchTitle">{{ $t('search.find') }}</span>
-      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.address')"></b-form-input>
+      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
     </form>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -13,9 +12,10 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item right>
-          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')"
-            ><i class="fas info-plus-circle" aria-hidden="true"></i><b>{{ $t('faq.linktext') }}</b></b-button
-          >
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
+            <i class="fas info-plus-circle" aria-hidden="true"></i>
+            <b>{{ $t('faq.linktext') }}</b>
+          </b-button>
         </b-nav-item>
 
         <!--
@@ -31,9 +31,9 @@
             <span v-html="language" class="language" />
           </template>
           <b-dropdown-item href="#" v-for="item in languages" v-bind:key="item.iso">
-            <span :title="$t('languages.' + item.iso)"
-              ><div v-html="item.name" :lang="item.iso" @click="$emit('language-selected', item)"></div
-            ></span>
+            <span :title="$t('languages.' + item.iso)">
+              <div v-html="item.name" :lang="item.iso" @click="$emit('language-selected', item)"></div>
+            </span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
@@ -160,7 +160,9 @@ export default {
     display: none;
   }
   position: fixed;
-  left: 35%;
+  margin-left: 15%;
+  top: 3.8%;
+  float: left;
 }
 
 .searchTitle {

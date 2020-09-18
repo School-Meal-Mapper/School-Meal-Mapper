@@ -133,7 +133,7 @@
   },
   "locationhelp": "Please make sure your device location is enabled",
   "search": {
-    "address": "Address",
+    "prompt": "Enter the address here ",
     "find": "Find the meal site closest to...",
     "noresults": "No results match your search. Please enter more information."
   },
