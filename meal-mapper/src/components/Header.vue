@@ -1,11 +1,15 @@
 <template>
   <b-navbar toggleable="lg" type="dark" class="banner" id="topnav">
-    <b-navbar-brand href="#">
-      <slot></slot>
-    </b-navbar-brand>
-    <form class="form-group w-25 center-content">
-      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
-    </form>
+    <div class="searchBar d-flex flex-row">
+      <div class="p-2">
+        <b-navbar-brand href="#" class="left"> <slot></slot> </b-navbar-brand>
+      </div>
+      <div class="p-2">
+        <form class="form-group w-25 center-content right">
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
+        </form>
+      </div>
+    </div>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
@@ -134,6 +138,16 @@ export default {
   }
 }
 
+.searchBar {
+  display: flex;
+}
+.searchBar .left {
+  flex: 1;
+}
+.searchBar.right {
+  flex: 1;
+}
+
 @media (min-width: 768px) {
   .navbar-nav {
     margin-bottom: 0 !important;
@@ -160,9 +174,7 @@ export default {
     display: none;
   }
   position: fixed;
-  margin-left: 15%;
   top: 3.8%;
-  float: left;
 }
 
 .searchTitle {
