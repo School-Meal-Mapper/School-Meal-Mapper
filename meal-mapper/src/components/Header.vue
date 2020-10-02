@@ -72,6 +72,7 @@ export default {
   methods: {
     search(event) {
       if (event.which === 13) {
+        event.preventDefault()
         this.$emit('search', this.text)
       }
     }
