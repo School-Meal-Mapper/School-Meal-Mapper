@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="lg" type="dark" class="banner" id="topnav">
     <div class="searchBar d-flex flex-row">
-      <div class="p-2">
+      <div>
         <b-navbar-brand href="#" class="left"> <slot></slot> </b-navbar-brand>
       </div>
       <div class="p-2">
