@@ -1,12 +1,15 @@
 <template>
   <b-navbar toggleable="lg" type="dark" class="banner" id="topnav">
-    <b-navbar-brand href="#">
-      <slot></slot>
-    </b-navbar-brand>
-    <form class="form-group w-25 center-content">
-      <span class="searchTitle">{{ $t('search.find') }}</span>
-      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.address')"></b-form-input>
-    </form>
+    <div class="searchBar d-flex flex-row">
+      <div>
+        <b-navbar-brand href="#" class="left"> <slot></slot> </b-navbar-brand>
+      </div>
+      <div class="p-2">
+        <form class="form-group w-25 center-content right">
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
+        </form>
+      </div>
+    </div>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
