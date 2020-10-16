@@ -19,9 +19,9 @@
         </b-card>
         <b-card no-body class="mb-1">
           <b-card-header header-tag="header" class="p-1" role="tab">
-            <b-button block v-b-toggle.accordion-2 class="font-weight-bold question" variant="info">{{
-              $t('faq.freeMealsQuestion')
-            }}</b-button>
+            <b-button block v-b-toggle.accordion-2 class="font-weight-bold question" variant="info"
+              >{{ $t('faq.freeMealsQuestion') }}
+            </b-button>
           </b-card-header>
           <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
             <b-card-body>
@@ -78,9 +78,18 @@ export default {
     }
   }
 }
-.question::after {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '              \f067';
+.question[aria-expanded='false'] {
+  &::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f067';
+  }
+}
+.question[aria-expanded='true'] {
+  &:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f068';
+  }
 }
 </style>
