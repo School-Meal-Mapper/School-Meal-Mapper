@@ -28,13 +28,24 @@
           <span class="sm-name">{{ item.name }}</span>
         </b-nav-item>
         -->
-
+        <b-navbar-nav v-if="window.width > 991">
+          <b-nav-item href="#" v-for="item in filteredLangs" v-bind:key="item.iso" class="d-lg-block d-xl-block">
+            <span :title="$t('languages.' + item.iso)">
+              <div
+                v-html="item.name"
+                :lang="item.iso"
+                @click="$emit('language-selected', item)"
+                :class="{ selected: item.name == language }"
+              ></div>
+            </span>
+          </b-nav-item>
+        </b-navbar-nav>
         <b-nav-item-dropdown right>
           <template v-slot:button-content>
-            <i class="fas fa-globe-americas" aria-hidden="true" />
-            <span v-html="language" class="language" />
+            <i class="fas fa-language" aria-hidden="true" />
+            <span v-if="window.width < 991" v-html="language" class="language" />
           </template>
-          <b-dropdown-item href="#" v-for="item in languages" v-bind:key="item.iso">
+          <b-dropdown-item href="#" v-for="item in selectLangs" v-bind:key="item.iso">
             <span :title="$t('languages.' + item.iso)">
               <div v-html="item.name" :lang="item.iso" @click="$emit('language-selected', item)"></div>
             </span>
@@ -66,14 +77,38 @@ export default {
         { iso: 'hi', name: 'हिंदी' },
         { iso: 'vi', name: 'tiếng việt' }
       ],
-      text: ''
+      text: '',
+      window: {
+        width: 0,
+        height: 0
+      }
     }
+  },
+  computed: {
+    filteredLangs: function () {
+      return this.languages.slice(0, 2)
+    },
+    selectLangs: function () {
+      if (this.window.width > 991) {
+        return this.languages.slice(2)
+      } else {
+        return this.languages
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
   },
   methods: {
     search(event) {
       if (event.which === 13) {
         this.$emit('search', this.text)
       }
+    },
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
     }
   }
 }
