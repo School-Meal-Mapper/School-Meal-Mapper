@@ -5,13 +5,13 @@
     </template>
     <template v-slot:default>
       <p id="wearmask">
-        <img src="../images/WearMask.png" alt="Wear A Mask" />
+        <i class="fas fa-head-side-mask" aria-hidden="true" style="font-size: 600%;"></i>
       </p>
       <p id="socialdist">
-        <img src="../images/SocialDistancing.png" alt="Social Distance" />
+        <i class="fas fa-people-arrows" aria-hidden="true" style="font-size: 600%;"></i>
       </p>
       <p id="washhands">
-        <img src="../images/WashHands.png" alt="Wash Hands" />
+        <i class="fas fa-hands-wash" aria-hidden="true" style="font-size: 600%;"></i>
       </p>
     </template>
   </b-modal>
@@ -36,12 +36,15 @@ export default {
 
 <style lang="scss">
 #wearmask {
+  padding: 15px 0px 15px;
   text-align: center;
 }
 #socialdist {
+  padding: 15px 0px 15px;
   text-align: center;
 }
 #washhands {
+  padding: 15px 0px 15px;
   text-align: center;
 }
 
