@@ -1,24 +1,58 @@
 <template>
-  <b-modal id="faq" size="xl" dialog-class="m-0 m-md-auto" centered scrollable hide-header-close>
+  <b-modal id="faq" size="lg" dialog-class="m-0 m-md-auto" centered scrollable hide-header-close>
     <template v-slot:modal-title>
       {{ $t('faq.title') }}
     </template>
     <template v-slot:default>
-      <h4>{{ $t('faq.whatWeDoQuestion') }}</h4>
-      <p>{{ $t('faq.whatWeDoAnswer') }}</p>
-      <h4>{{ $t('faq.freeMealsQuestion') }}</h4>
-      <p>
-        {{ $t('faq.freeMealsAnswer') }}
-        <strong>{{ $t('faq.staySafeReminder') }}</strong>
-      </p>
-      <h4>{{ $t('faq.helpQuestion') }}</h4>
-      <p>
-        {{ $t('faq.helpAnswer-start') }}
-        <a href="https://portal.icheckgateway.com/publicschoolfoundation/AnnualAppeal.aspx">
-          {{ $t('faq.helpAnswer-organization') }}
-        </a>
-        {{ $t('faq.helpAnswer-end') }}
-      </p>
+      <div class="accordion" role="tablist">
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-1 class="font-weight-bold question" variant="info">{{
+              $t('faq.whatWeDoQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.whatWeDoAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-2 class="font-weight-bold question" variant="info"
+              >{{ $t('faq.freeMealsQuestion') }}
+            </b-button>
+          </b-card-header>
+          <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>
+                <p>
+                  {{ $t('faq.freeMealsAnswer') }}
+                  <strong>{{ $t('faq.staySafeReminder') }}</strong>
+                </p>
+              </b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-3 class="font-weight-bold question" variant="info">{{ $t('faq.helpQuestion') }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>
+                <p>
+                  {{ $t('faq.helpAnswer-start') }}
+                  <a href="https://portal.icheckgateway.com/publicschoolfoundation/AnnualAppeal.aspx">
+                    {{ $t('faq.helpAnswer-organization') }}
+                  </a>
+                  {{ $t('faq.helpAnswer-end') }}
+                </p>
+              </b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+      </div>
     </template>
     <template v-slot:modal-footer>
       <b-button @click="$bvModal.hide('faq')" right>{{ $t('label.close') }}</b-button>
@@ -42,6 +76,40 @@ export default {
       min-height: 100vh;
       height: 100vh;
     }
+  }
+}
+
+.question {
+  outline-style: solid;
+  outline-color: #dcdcdc;
+  @media (prefers-color-scheme: dark) {
+    color: $gray-100 !important;
+  }
+}
+
+.question:hover {
+  background-color: theme-color-level('primary', -5);
+  outline-style: solid;
+  outline-color: black;
+  @media (prefers-color-scheme: dark) {
+    background-color: theme-color-level('primary', 5);
+  }
+}
+
+.question[aria-expanded='false'] {
+  &::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f067';
+    margin-left: 15px;
+  }
+}
+.question[aria-expanded='true'] {
+  &:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f068';
+    margin-left: 15px;
   }
 }
 </style>
