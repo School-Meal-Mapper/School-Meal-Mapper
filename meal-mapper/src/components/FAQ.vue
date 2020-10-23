@@ -82,12 +82,18 @@ export default {
 .question {
   outline-style: solid;
   outline-color: #dcdcdc;
+  @media (prefers-color-scheme: dark) {
+    color: $gray-100 !important;
+  }
 }
 
 .question:hover {
   background-color: theme-color-level('primary', -5);
   outline-style: solid;
   outline-color: black;
+  @media (prefers-color-scheme: dark) {
+    background-color: theme-color-level('primary', 5);
+  }
 }
 
 .question[aria-expanded='false'] {
