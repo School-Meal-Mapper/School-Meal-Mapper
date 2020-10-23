@@ -78,11 +78,24 @@ export default {
     }
   }
 }
+
+.question {
+  outline-style: solid;
+  outline-color: #dcdcdc;
+}
+
+.question:hover {
+  background-color: theme-color-level('primary', -5);
+  outline-style: solid;
+  outline-color: black;
+}
+
 .question[aria-expanded='false'] {
   &::after {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f067';
+    margin-left: 15px;
   }
 }
 .question[aria-expanded='true'] {
@@ -90,6 +103,7 @@ export default {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f068';
+    margin-left: 15px;
   }
 }
 </style>
