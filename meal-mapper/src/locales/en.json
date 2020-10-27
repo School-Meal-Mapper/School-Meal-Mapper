@@ -133,7 +133,7 @@
   },
   "locationhelp": "Please make sure your device location is enabled",
   "search": {
-    "prompt": "Enter address to find nearest free meals",
+    "prompt": "Search with your address",
     "find": "Find meals near:",
     "noresults": "No results match your search. Please enter more information."
   },
