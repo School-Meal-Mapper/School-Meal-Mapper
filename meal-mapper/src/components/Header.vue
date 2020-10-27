@@ -222,6 +222,7 @@ export default {
 
 .form-group {
   margin-bottom: 0rem !important;
+  width: 305px;
 }
 
 .banner {
