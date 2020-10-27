@@ -134,6 +134,7 @@
   "locationhelp": "",
   "search": {
     "address": "Dirección",
+    "prompt": "Ingrese su dirección aquí",
     "find": "Encuentra el sitio de comidas más cercano a ...",
     "noresults": "Ningún resultado coincide con su búsqueda. Por favor ingrese más información."
   },
