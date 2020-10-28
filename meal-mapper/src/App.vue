@@ -26,6 +26,7 @@
           :location="locationData"
           :attribution="attribution"
           :hoverIt="hoverItem"
+          :searchLocationData="searchLocData"
           @hoverOver="passHover"
           @hoverLeave="passNoHover"
           @location-selected="passLocation"
@@ -114,6 +115,7 @@ export default {
         currentBusiness: null,
         isSetByMap: false
       },
+      searchLocData: false,
       showList: false,
       showResults: false,
       highlightFilters: [],
@@ -190,6 +192,7 @@ export default {
 
       this.entries = entries.feed.entry
     },
+    latLng,
     passLocation: function (val) {
       val.currentBusiness = this.filteredMarkers[val.locValue]
       this.locationData = val
@@ -232,6 +235,7 @@ export default {
             alert(this.$t('search.noresults'))
             return
           }
+          this.searchLocData = latLng(location.lat, location.lon)
           var distances = []
           this.filteredMarkers.forEach((entry) => {
             distances.push(haversineDistance([location.lat, location.lon], [entry.marker.gsx$lat.$t, entry.marker.gsx$lon.$t], true))

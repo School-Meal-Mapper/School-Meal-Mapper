@@ -43,6 +43,7 @@
           :weight="1"
           :class-name="'locMarker'"
         ></l-circle-marker>
+        <l-marker :lat-lng="searchLocationData" v-if="searchLocationData"></l-marker>
         <v-marker-cluster ref="marks" :options="clusterOptions">
           <!-- @clusterclick="click()" @ready="ready" -->
           <l-marker
@@ -117,6 +118,7 @@ export default {
       currentBusiness: Object,
       isSetByMap: Boolean
     },
+    searchLocationData: { lat: Number, lng: Number },
     mapUrl: String,
     attribution: String,
     centroid: { lat: Number, lng: Number },
