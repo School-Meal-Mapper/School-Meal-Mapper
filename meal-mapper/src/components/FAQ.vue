@@ -52,6 +52,134 @@
             </b-card-body>
           </b-collapse>
         </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-4 class="font-weight-bold question" variant="info">{{ $t('faq.whoQuestion') }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.whoAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-5 class="font-weight-bold question" variant="info">{{
+              $t('faq.registerQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.registerAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-6 class="font-weight-bold question" variant="info">{{
+              $t('faq.typeoffoodQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.typeoffoodAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-7 class="font-weight-bold question" variant="info">{{
+              $t('faq.preparedmealsQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.preparedmealsAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-8 class="font-weight-bold question" variant="info">{{
+              $t('faq.adultavaliabilityQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.adultavaliabilityAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-9 class="font-weight-bold question" variant="info">{{
+              $t('faq.childrenpresentQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.childrenpresentAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-10 class="font-weight-bold question" variant="info">{{ $t('faq.idQuestion') }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-10" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.idAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-11 class="font-weight-bold question" variant="info">{{
+              $t('faq.numberofmealsQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-11" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.numberofmealsAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-12 class="font-weight-bold question" variant="info">{{
+              $t('faq.packagingQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-12" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.packagingAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-13 class="font-weight-bold question" variant="info">{{
+              $t('faq.vegetarianQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-13" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.vegetarianAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-14 class="font-weight-bold question" variant="info">{{
+              $t('faq.babyfoodQuestion')
+            }}</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-14" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ $t('faq.babyfoodAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
       </div>
     </template>
     <template v-slot:modal-footer>
