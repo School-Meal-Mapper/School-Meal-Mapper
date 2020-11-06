@@ -72,7 +72,29 @@
     "staySafeReminder": "前往接送地点或与志愿者互动时，请务必戴上口罩，以帮助我们所有人安全！",
     "title": "关于免费用餐的信息",
     "whatWeDoAnswer": "我们帮助联系儿童和家庭与他们所在地区的饮食。\n 我们知道，在COVID危机期间，学校赞助的饭菜是许多孩子和家庭的生命线。现在学年结束了，许多学区都通过暑期课程为家庭提供免费餐点。我们在这里可以帮助您找到他们。\n",
-    "whatWeDoQuestion": "给学生吃的食物做什么？"
+    "whatWeDoQuestion": "给学生吃的食物做什么？",
+    "whoQuestion": "",
+    "whoAnswer": "",
+    "registerQuestion": "",
+    "registerAnswer": "",
+    "typeoffoodQuestion": "",
+    "typeoffoodAnswer": "",
+    "preparedmealsQuestion": "",
+    "preparedmealsAnswer": "",
+    "adultavaliabilityQuestion": "",
+    "adultavaliabilityAnswer": "",
+    "childrenpresentQuestion": "",
+    "childrenpresentAnswer": "",
+    "idQuestion": "",
+    "idAnswer": "",
+    "numberofmealsQuestion": "",
+    "numberofmealsAnswer": "",
+    "packagingQuestion": "",
+    "packagingAnswer": "",
+    "vegetarianQuestion": "",
+    "vegetarianAnswer": "",
+    "babyfoodQuestion": "",
+    "babyfoodAnswer": ""
   },
   "getdirections": "",
   "label": {
@@ -117,7 +139,8 @@
     "selected": "选",
     "seniorhours": "高级时间",
     "specialhours": "高级购物时间",
-    "website": "网站"
+    "website": "网站",
+    "searchloc": ""
   },
   "languages": {
     "ar": "阿拉伯",

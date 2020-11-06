@@ -72,7 +72,29 @@
     "staySafeReminder": "कृपया पिकअप साइट पर जाने या स्वयंसेवकों के साथ बातचीत करने के लिए मास्क पहनना सुनिश्चित करें ताकि हम सभी सुरक्षित रहें!",
     "title": "मुफ्त भोजन के बारे में जानकारी",
     "whatWeDoAnswer": "हम बच्चों और परिवारों को उनके क्षेत्र में भोजन से जोड़ने में मदद करते हैं।\n हम जानते हैं कि स्कूल-प्रायोजित भोजन COVID संकट के दौरान कई बच्चों और परिवारों के लिए एक जीवन रेखा है। और अब जब स्कूल वर्ष समाप्त हो गया था, कई स्कूल जिले अपने ग्रीष्मकालीन कार्यक्रम के माध्यम से परिवारों को मुफ्त भोजन दे रहे हैं। हम उन्हें खोजने में आपकी सहायता के लिए यहां हैं।\n",
-    "whatWeDoQuestion": "छात्रों के लिए भोजन क्या करता है?"
+    "whatWeDoQuestion": "छात्रों के लिए भोजन क्या करता है?",
+    "whoQuestion": "",
+    "whoAnswer": "",
+    "registerQuestion": "",
+    "registerAnswer": "",
+    "typeoffoodQuestion": "",
+    "typeoffoodAnswer": "",
+    "preparedmealsQuestion": "",
+    "preparedmealsAnswer": "",
+    "adultavaliabilityQuestion": "",
+    "adultavaliabilityAnswer": "",
+    "childrenpresentQuestion": "",
+    "childrenpresentAnswer": "",
+    "idQuestion": "",
+    "idAnswer": "",
+    "numberofmealsQuestion": "",
+    "numberofmealsAnswer": "",
+    "packagingQuestion": "",
+    "packagingAnswer": "",
+    "vegetarianQuestion": "",
+    "vegetarianAnswer": "",
+    "babyfoodQuestion": "",
+    "babyfoodAnswer": ""
   },
   "getdirections": "",
   "label": {
@@ -117,7 +139,8 @@
     "selected": "चयनित",
     "seniorhours": "",
     "specialhours": "",
-    "website": ""
+    "website": "",
+    "searchloc": ""
   },
   "languages": {
     "ar": "अरबी",

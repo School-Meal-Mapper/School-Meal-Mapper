@@ -72,7 +72,29 @@
     "staySafeReminder": "يرجى التأكد من ارتداء قناع عند زيارة موقع الالتقاط أو التفاعل مع المتطوعين لمساعدتنا جميعًا على البقاء آمنًا!",
     "title": "معلومات حول الوجبات المجانية",
     "whatWeDoAnswer": "نحن نساعد على ربط الأطفال والعائلات بالوجبات في منطقتهم.\n نحن نعلم أن الوجبات التي ترعاها المدرسة هي شريان الحياة للعديد من الأطفال والأسر خلال أزمة COVID. والآن وقد انتهى العام الدراسي ، تقدم العديد من المناطق التعليمية للعائلات وجبات مجانية من خلال برنامجها الصيفي. نحن هنا لمساعدتك في العثور عليهم.\n",
-    "whatWeDoQuestion": "ماذا يفعل الغذاء للطلاب؟"
+    "whatWeDoQuestion": "ماذا يفعل الغذاء للطلاب؟",
+    "whoQuestion": "",
+    "whoAnswer": "",
+    "registerQuestion": "",
+    "registerAnswer": "",
+    "typeoffoodQuestion": "",
+    "typeoffoodAnswer": "",
+    "preparedmealsQuestion": "",
+    "preparedmealsAnswer": "",
+    "adultavaliabilityQuestion": "",
+    "adultavaliabilityAnswer": "",
+    "childrenpresentQuestion": "",
+    "childrenpresentAnswer": "",
+    "idQuestion": "",
+    "idAnswer": "",
+    "numberofmealsQuestion": "",
+    "numberofmealsAnswer": "",
+    "packagingQuestion": "",
+    "packagingAnswer": "",
+    "vegetarianQuestion": "",
+    "vegetarianAnswer": "",
+    "babyfoodQuestion": "",
+    "babyfoodAnswer": ""
   },
   "getdirections": "",
   "label": {
@@ -117,7 +139,8 @@
     "selected": "المحدد",
     "seniorhours": "ساعات كبار",
     "specialhours": "ساعات تسوق كبار",
-    "website": "موقع الكتروني"
+    "website": "موقع الكتروني",
+    "searchloc": ""
   },
   "languages": {
     "ar": "عربى",

@@ -72,7 +72,29 @@
     "staySafeReminder": "Veuillez vous assurer de porter un masque lorsque vous visitez un site de ramassage ou interagissez avec des bénévoles pour nous aider à rester en sécurité!",
     "title": "Informations sur les repas gratuits",
     "whatWeDoAnswer": "Nous aidons à connecter les enfants et les familles avec les repas dans leur région.\n Nous savons que les repas parrainés par l'école sont une bouée de sauvetage pour de nombreux enfants et familles pendant la crise du COVID. Et maintenant que l'année scolaire est terminée, de nombreux districts scolaires offrent aux familles des repas gratuits dans le cadre de leur programme d'été. Nous sommes là pour vous aider à les trouver.\n",
-    "whatWeDoQuestion": "Que fait Food for Students?"
+    "whatWeDoQuestion": "Que fait Food for Students?",
+    "whoQuestion": "",
+    "whoAnswer": "",
+    "registerQuestion": "",
+    "registerAnswer": "",
+    "typeoffoodQuestion": "",
+    "typeoffoodAnswer": "",
+    "preparedmealsQuestion": "",
+    "preparedmealsAnswer": "",
+    "adultavaliabilityQuestion": "",
+    "adultavaliabilityAnswer": "",
+    "childrenpresentQuestion": "",
+    "childrenpresentAnswer": "",
+    "idQuestion": "",
+    "idAnswer": "",
+    "numberofmealsQuestion": "",
+    "numberofmealsAnswer": "",
+    "packagingQuestion": "",
+    "packagingAnswer": "",
+    "vegetarianQuestion": "",
+    "vegetarianAnswer": "",
+    "babyfoodQuestion": "",
+    "babyfoodAnswer": ""
   },
   "getdirections": "",
   "label": {
@@ -117,7 +139,8 @@
     "selected": "Choisi",
     "seniorhours": "Heures seniors",
     "specialhours": "Heures de magasinage pour les seniors",
-    "website": "Site Internet"
+    "website": "Site Internet",
+    "searchloc": ""
   },
   "languages": {
     "ar": "Arabe",

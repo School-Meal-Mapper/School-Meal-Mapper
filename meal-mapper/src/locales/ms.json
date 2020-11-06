@@ -72,7 +72,29 @@
     "staySafeReminder": "Pastikan memakai topeng semasa melawat laman web pengambilan atau berinteraksi dengan sukarelawan untuk membantu kita semua selamat!",
     "title": "Maklumat mengenai makanan percuma",
     "whatWeDoAnswer": "Kami membantu menghubungkan anak-anak dan keluarga dengan makanan di kawasan mereka.\n Kami tahu bahawa makanan yang ditaja oleh sekolah adalah jalan kehidupan bagi banyak anak dan keluarga semasa krisis COVID. Dan sekarang setelah tahun sekolah berakhir, banyak daerah sekolah menawarkan makanan percuma kepada keluarga melalui program musim panas mereka. Kami sedia membantu anda mencarinya.\n",
-    "whatWeDoQuestion": "Apa yang dilakukan oleh Makanan untuk Pelajar?"
+    "whatWeDoQuestion": "Apa yang dilakukan oleh Makanan untuk Pelajar?",
+    "whoQuestion": "",
+    "whoAnswer": "",
+    "registerQuestion": "",
+    "registerAnswer": "",
+    "typeoffoodQuestion": "",
+    "typeoffoodAnswer": "",
+    "preparedmealsQuestion": "",
+    "preparedmealsAnswer": "",
+    "adultavaliabilityQuestion": "",
+    "adultavaliabilityAnswer": "",
+    "childrenpresentQuestion": "",
+    "childrenpresentAnswer": "",
+    "idQuestion": "",
+    "idAnswer": "",
+    "numberofmealsQuestion": "",
+    "numberofmealsAnswer": "",
+    "packagingQuestion": "",
+    "packagingAnswer": "",
+    "vegetarianQuestion": "",
+    "vegetarianAnswer": "",
+    "babyfoodQuestion": "",
+    "babyfoodAnswer": ""
   },
   "getdirections": "",
   "label": {
@@ -117,7 +139,8 @@
     "selected": "Dipilih",
     "seniorhours": "Jam kanan",
     "specialhours": "Waktu membeli-belah kanan",
-    "website": "Laman web"
+    "website": "Laman web",
+    "searchloc": ""
   },
   "languages": {
     "ar": "Bahasa Arab",

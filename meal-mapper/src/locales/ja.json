@@ -72,7 +72,29 @@
     "staySafeReminder": "ピックアップサイトに行くときやボランティアとやり取りするときは、必ずマスクを着用してください。",
     "title": "無料の食事についての情報",
     "whatWeDoAnswer": "私たちは子供たちと家族を彼らの地域の食事と結びつけるのを助けます。\n COVID危機の際、学校が主催する食事は多くの子供たちと家族の生命線であることを私たちは知っています。 そして今学年が終わった今、多くの学区は彼らの夏のプログラムを通して家族に無料の食事を提供しています。私たちはあなたがそれらを見つけるのを助けるためにここにいます。\n",
-    "whatWeDoQuestion": "学生向けの食品とは何ですか？"
+    "whatWeDoQuestion": "学生向けの食品とは何ですか？",
+    "whoQuestion": "",
+    "whoAnswer": "",
+    "registerQuestion": "",
+    "registerAnswer": "",
+    "typeoffoodQuestion": "",
+    "typeoffoodAnswer": "",
+    "preparedmealsQuestion": "",
+    "preparedmealsAnswer": "",
+    "adultavaliabilityQuestion": "",
+    "adultavaliabilityAnswer": "",
+    "childrenpresentQuestion": "",
+    "childrenpresentAnswer": "",
+    "idQuestion": "",
+    "idAnswer": "",
+    "numberofmealsQuestion": "",
+    "numberofmealsAnswer": "",
+    "packagingQuestion": "",
+    "packagingAnswer": "",
+    "vegetarianQuestion": "",
+    "vegetarianAnswer": "",
+    "babyfoodQuestion": "",
+    "babyfoodAnswer": ""
   },
   "getdirections": "",
   "label": {
@@ -117,7 +139,8 @@
     "selected": "選択済み",
     "seniorhours": "シニアアワー",
     "specialhours": "シニアショッピング時間",
-    "website": "ウェブサイト"
+    "website": "ウェブサイト",
+    "searchloc": ""
   },
   "languages": {
     "ar": "アラビア語",
