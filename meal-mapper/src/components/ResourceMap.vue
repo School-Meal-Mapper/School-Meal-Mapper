@@ -43,6 +43,7 @@
           :weight="1"
           :class-name="'locMarker'"
         ></l-circle-marker>
+        <l-marker :icon="locationIcon()" :lat-lng="searchLocationData" v-if="searchLocationData"></l-marker>
         <v-marker-cluster ref="marks" :options="clusterOptions">
           <!-- @clusterclick="click()" @ready="ready" -->
           <l-marker
@@ -117,6 +118,7 @@ export default {
       currentBusiness: Object,
       isSetByMap: Boolean
     },
+    searchLocationData: { lat: Number, lng: Number },
     mapUrl: String,
     attribution: String,
     centroid: { lat: Number, lng: Number },
@@ -188,6 +190,15 @@ export default {
             prefix: 'fa',
             svg: true
           })
+        },
+        {
+          title: this.$t('label.searchloc'),
+          icon: ExtraMarkers.icon({
+            markerColor: 'pink',
+            icon: 'na',
+            prefix: 'fa',
+            svg: true
+          })
         }
       ]
     }
@@ -208,6 +219,15 @@ export default {
       const icon = ExtraMarkers.icon({
         markerColor: 'usermarker',
         icon: 'fas fa-home',
+        prefix: 'fa',
+        svg: true
+      })
+      return icon
+    },
+    locationIcon() {
+      const icon = ExtraMarkers.icon({
+        markerColor: 'pink',
+        icon: 'fas fa-map-pin',
         prefix: 'fa',
         svg: true
       })
