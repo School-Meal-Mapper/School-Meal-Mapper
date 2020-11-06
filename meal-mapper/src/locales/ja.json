@@ -139,7 +139,8 @@
     "selected": "選択済み",
     "seniorhours": "シニアアワー",
     "specialhours": "シニアショッピング時間",
-    "website": "ウェブサイト"
+    "website": "ウェブサイト",
+    "searchloc": ""
   },
   "languages": {
     "ar": "アラビア語",
