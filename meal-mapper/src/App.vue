@@ -181,8 +181,16 @@ export default {
       this.$root.updateLang(item.iso)
     },
     async fetchData() {
-      const res = await fetch(theme.data.spreadsheetUrl)
-      const entries = await res.json()
+      var url_string = window.location.href
+      var url = new URL(url_string)
+      var location = url.searchParams.get('location')
+      var entries = null
+      if (location === 'chapelhill') {
+        const res = await fetch(
+          'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+        )
+        entries = await res.json()
+      }
 
       // if (entries !== null) {
       //   entries.forEach(c => {
