@@ -5,7 +5,7 @@ if (process.env.VUE_APP_THEME == null) {
 }
 
 const themePath = './src/themes/MealsForFamilies/' // Remnant of parent project, hardcoded in as MealsForFamilies instead of switching on ENV theme variable.
-const themeContent = require(`${themePath}theme.content.js`)
+const themeContent = require(`${themePath}theme.content.js`) // TODO: evaluate whether this and the above are necessary
 
 const mapEnvVariables = {
   BASE_URL: process.env.BASE_URL,
@@ -17,7 +17,7 @@ const mapEnvVariables = {
 const themeMeta = Object.assign(mapEnvVariables, themeContent)
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/', // TODO
+  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/', // TODO what does this do
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -32,7 +32,7 @@ module.exports = {
       return args
     })
   },
-  configureWebpack: {
+  configureWebpack: { // TODO: evaluate whether necessary
     resolve: {
       alias: {
         ['districtData.config$']: path.resolve(__dirname, themePath + '/districtData.config.js'),
@@ -48,8 +48,8 @@ module.exports = {
        @import "~bootstrap/scss/variables";
        @import "~bootstrap/scss/mixins";
        @import './src/scss/Mixins.scss';
-       @import "./src/themes/${process.env.VUE_APP_THEME !== undefined ? process.env.VUE_APP_THEME : 'CHMeal'}/SCSS/custom.scss";
-      `
+       @import "./src/themes/MealsForFamilies/SCSS/custom.scss"; 
+      ` // Hardcoded the above to MealsForFamilies theme
       }
     }
   }
