@@ -57,8 +57,8 @@
             "
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
-            @mouseover="$emit('hoverOver', item)"
-            @mouseleave="$emit('hoverLeave')"
+            @mouseover="$emit('hover-over', item)"
+            @mouseleave="$emit('hover-leave')"
             @click="
               $emit('location-selected', {
                 locValue: index,
@@ -88,7 +88,7 @@ import { latLng, Icon, ExtraMarkers } from 'leaflet'
 import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import IconListItem from './IconListItem.vue'
 import { businessIcon } from '../utilities'
-import { theme } from 'theme.config'
+import { districtData } from '../themes/MealsForFamilies/districtData'
 import { eventManager } from '../main'
 
 delete Icon.Default.prototype._getIconUrl
@@ -133,8 +133,8 @@ export default {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
       zoom: this.centroid.zoom,
-      max: theme.settings.maxZoom,
-      min: theme.settings.minZoom,
+      max: districtData.settings.maxZoom,
+      min: districtData.settings.minZoom,
       showParagraph: true,
       showError: false,
       errorMessage: '',
@@ -150,7 +150,7 @@ export default {
       clusterOptions: {
         spiderfyOnMaxZoom: true,
         maxClusterRadius: 40,
-        disableClusteringAtZoom: theme.settings.clusterZoom
+        disableClusteringAtZoom: districtData.settings.clusterZoom
       },
       showKey: true
     }

@@ -95,6 +95,10 @@ $navbar-padding-y: 0;
 // );
 $bv-enable-table-stacked: false;
 
+:export {
+  theme-colors-primary: $theme-colors('primary');
+}
+
 @include list-group-item-variant('sideNav', theme-color('secondary'), $black);
 @media (prefers-color-scheme: dark) {
   @include list-group-item-variant('sideNav', theme-color('secondaryDark'), $gray-500);

@@ -36,8 +36,8 @@
           closedOne: item.oc == false
         }"
         :ref="'result' + index"
-        @mouseover="$emit('hoverOver', item)"
-        @mouseleave="$emit('hoverLeave')"
+        @mouseover="$emit('hover-over', item)"
+        @mouseleave="$emit('hover-leave')"
         @click="
           $emit('location-selected', {
             locValue: index,
@@ -79,7 +79,7 @@
 import { days } from '../constants'
 import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
-import { theme } from 'theme.config'
+import { districtData } from '../themes/MealsForFamilies/districtData' // Hardcoded in to Meals For Families theme.
 import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
 
 export default {
@@ -90,8 +90,8 @@ export default {
       today: new Date().getDay(),
       locationData: location,
       showListing: this.showList,
-      zoom: theme.settings.initialMapZoom,
-      minZoom: theme.settings.minZoom,
+      zoom: districtData.settings.initialMapZoom,
+      minZoom: districtData.settings.minZoom,
       showRes: this.showResults
     }
   },

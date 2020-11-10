@@ -1,3 +1,5 @@
+import variables from './variables.scss';
+
 var districtName = null
 var primaryColor = null
 var initialMapCenterLat = null
@@ -12,8 +14,10 @@ var lightAttribution = null
 var darkUrl = null
 var darkAttribution = null
 
-switch (new districtString = window.location.href){
-  case districtString.includes("chapelhill"):
+console.log("DEBUG: logged urlString: " + window.location.href)
+
+switch (new urlString = window.location.href){
+  case urlString.includes("chapelhill"):
     districtName = "chapelhill"
     primaryColor = "d59402"
     initialMapCenterLat = 35.943068
@@ -28,7 +32,7 @@ switch (new districtString = window.location.href){
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
     darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break;
-  case districtString.includes("durham"):
+  case urlString.includes("durham"):
     districtName = "durham"
     primaryColor = ""
     initialMapCenterLat = 35.994
@@ -43,7 +47,7 @@ switch (new districtString = window.location.href){
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
     darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break;
-  case districtString.includes("cms"):
+  case urlString.includes("cms"):
     districtName = "cms"
     primaryColor = ""
     initialMapCenterLat = 35.2271
@@ -58,7 +62,7 @@ switch (new districtString = window.location.href){
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
     darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break;
-  case districtString.includes("roanoke"):
+  case urlString.includes("roanoke"):
     districtName = "roanoke"
     primaryColor = ""
     initialMapCenterLat = 36.4615
@@ -73,7 +77,7 @@ switch (new districtString = window.location.href){
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
     darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break;
-  case districtString.includes("chatham"):
+  case urlString.includes("chatham"):
     districtName = "chatham"
     primaryColor = ""
     initialMapCenterLat = 35.7235
@@ -88,7 +92,7 @@ switch (new districtString = window.location.href){
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
     darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break;
-  case districtString.includes("wake"):
+  case urlString.includes("wake"):
     districtName = "wake"
     primaryColor = ""
     initialMapCenterLat = 35.7796
@@ -119,6 +123,8 @@ switch (new districtString = window.location.href){
     darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break;
 }
+
+console.log("DEBUG: primary theme color: " +  variables.theme-color-primary)
 
 export const districtData = {
   districtName: districtName,
