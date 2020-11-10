@@ -1,4 +1,4 @@
-export const theme = {
+export const districtData = {
   settings: {
     initialMapCenter: {
       lat: 35.994,
