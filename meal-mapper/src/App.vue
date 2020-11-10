@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <app-header :language="language.name" @search="searchLoc" @language-selected="changeLanguage" :socialMedia="socialMediaico">
-      <theme-header></theme-header>
+      <theme-header :districtName="districtData.districtName"></theme-header>
     </app-header>
     <faq-modal />
     <covid-pop-up />
@@ -11,8 +11,8 @@
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
         @location-selected="passLocation"
-        @hoverOver="passHover"
-        @hoverLeave="passNoHover"
+        @hover-over="passHover"
+        @hover-leave="passNoHover"
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
@@ -27,8 +27,8 @@
           :attribution="attribution"
           :hoverIt="hoverItem"
           :searchLocationData="searchLocData"
-          @hoverOver="passHover"
-          @hoverLeave="passNoHover"
+          @hover-over="passHover"
+          @hover-leave="passNoHover"
           @location-selected="passLocation"
           @bounds="boundsUpdated"
           @center="centerUpdated"
@@ -56,8 +56,8 @@ import { haversineDistance, sortByDistance } from './utilities'
 
 import { dayFilters, booleanFilters, dayAny } from './constants'
 
-import { districtData } from 'theme.config'
-import ThemeHeader from 'theme.header'
+import { districtData } from './themes/MealsForFamilies/districtData'
+import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
 
 function extend(obj, src) {
   for (var key in src) {
