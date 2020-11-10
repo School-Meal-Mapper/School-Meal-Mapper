@@ -4,7 +4,7 @@
 // ./node_modules/bootstrap/scss/_functions.scss - The Bootstrap Functions
 // ~bootstrap/scss/variables - The default Bootstrap Variables
 // ~bootstrap/scss/mixins - The Bootstrap Minins
-// ./src/themes/${process.env.VUE_APP_THEME}/SCSS/custom.scss - Our "theme" SCSS
+// ./src/themes/${process.env.VUE_APP_THEME}/SCSS/custom.scss - Our "theme" SCSS //TODO: where is this import? This might help us solve our conditional primary color issue.
 
 import Vue from 'vue'
 import { BootstrapVue } from 'bootstrap-vue' // IconsPlugin
