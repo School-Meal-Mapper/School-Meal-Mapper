@@ -4,7 +4,7 @@ if (process.env.VUE_APP_THEME == null) {
   throw new Error('Please provide VUE_APP_THEME environment variable')
 }
 
-const themePath = './src/themes/' + process.env.VUE_APP_THEME + '/'
+const themePath = './src/themes/MealsForFamilies/' // Remnant of parent project, hardcoded in as MealsForFamilies instead of switching on ENV theme variable.
 const themeContent = require(`${themePath}theme.content.js`)
 
 const mapEnvVariables = {
@@ -17,7 +17,7 @@ const mapEnvVariables = {
 const themeMeta = Object.assign(mapEnvVariables, themeContent)
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/',
+  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/', // TODO
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -35,7 +35,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        ['theme.config$']: path.resolve(__dirname, themePath + '/theme.config.js'),
+        ['districtData.config$']: path.resolve(__dirname, themePath + '/districtData.config.js'),
         ['theme.header$']: path.resolve(__dirname, themePath + '/components/theme.header.vue')
       }
     }
