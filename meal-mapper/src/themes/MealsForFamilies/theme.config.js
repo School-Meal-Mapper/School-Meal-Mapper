@@ -1,17 +1,17 @@
-export const districtData = {
+export const theme = {
   settings: {
     initialMapCenter: {
-      lat: 36.4615,
-      lng: -77.6541
+      lat: 35.994,
+      lng: -78.8986
     },
-    initialMapZoom: 14,
-    clusterZoom: 14,
+    initialMapZoom: 11,
+    clusterZoom: 13,
     maxZoom: 17,
-    minZoom: 14
+    minZoom: 11
   },
   socialMedia: [{}],
   data: {
-    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1d6kgVHTBBsSnG7dzx51iPPrbnkxS0MUewwTC1KB0tCQ/1/public/values?alt=json'
+    spreadsheetUrl: 'https://spreadsheets.google.com/feeds/list/1kclyQ5Q-sOOSLARn_qaLxXUnq5f6Q8XWGNvAM5po6E0/1/public/values?alt=json'
   },
   maps: {
     normal: {
