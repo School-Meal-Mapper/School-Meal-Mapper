@@ -1,6 +1,6 @@
 // import SCSSvariables from './SCSS/custom.scss';
 
-var districtName = chapelhill
+var districtName = 'chapelhill'
 var primaryColor = null
 var initialMapCenterLat = null
 var initialMapCenterLng = null
@@ -16,12 +16,14 @@ var darkAttribution = null
 
 var urlString = window.location.href
 
-console.log("DEBUG: logged urlString: " + urlString)
-
-switch (urlString){
-  case urlString.includes("chapelhill"):
-    districtName = "chapelhill"
-    primaryColor = "d59402"
+console.log('DEBUG: logged urlString: ' + urlString)
+console.log(urlString.includes('durham'))
+const county = urlString.split('/')[3]
+console.log(county)
+switch (county) {
+  case 'chapelhill':
+    districtName = 'chapelhill'
+    primaryColor = 'd59402'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
@@ -30,13 +32,15 @@ switch (urlString){
     minZoom = 12
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
-  case urlString.includes("durham"):
-    districtName = "durham"
-    primaryColor = ""
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
+  case 'durham':
+    districtName = 'durham'
+    primaryColor = ''
     initialMapCenterLat = 35.994
     initialMapCenterLng = -78.8986
     initialMapZoom = 11
@@ -45,13 +49,15 @@ switch (urlString){
     minZoom = 11
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1kclyQ5Q-sOOSLARn_qaLxXUnq5f6Q8XWGNvAM5po6E0/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
-  case urlString.includes("cms"):
-    districtName = "cms"
-    primaryColor = ""
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
+  case 'cms':
+    districtName = 'cms'
+    primaryColor = ''
     initialMapCenterLat = 35.2271
     initialMapCenterLng = -80.8431
     initialMapZoom = 10
@@ -60,13 +66,15 @@ switch (urlString){
     minZoom = 10
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1fZBlAwDsSkLPxy2CU3nafPMIAjWKsbY7dDySCaspu6I/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
-  case urlString.includes("roanoke"):
-    districtName = "roanoke"
-    primaryColor = ""
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
+  case 'roanoke':
+    districtName = 'roanoke'
+    primaryColor = ''
     initialMapCenterLat = 36.4615
     initialMapCenterLng = -77.6541
     initialMapZoom = 14
@@ -75,13 +83,15 @@ switch (urlString){
     minZoom = 14
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1d6kgVHTBBsSnG7dzx51iPPrbnkxS0MUewwTC1KB0tCQ/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
-  case urlString.includes("chatham"):
-    districtName = "chatham"
-    primaryColor = ""
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
+  case 'chatham':
+    districtName = 'chatham'
+    primaryColor = ''
     initialMapCenterLat = 35.7235
     initialMapCenterLng = -79.4622
     initialMapZoom = 11
@@ -90,13 +100,15 @@ switch (urlString){
     minZoom = 11
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1r6uyEPzmiPzdb77niHbgHzSoPGth9Pzt1FiriviJkyU/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
-  case urlString.includes("wake"):
-    districtName = "wake"
-    primaryColor = ""
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
+  case 'wake':
+    districtName = 'wake'
+    primaryColor = ''
     initialMapCenterLat = 35.7796
     initialMapCenterLng = -78.6382
     initialMapZoom = 10
@@ -105,13 +117,17 @@ switch (urlString){
     minZoom = 10
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1JYqkJR8BtNC71Uerg0PTOPdr3KCz6NW4N0kbFiSBHOU/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
-  default: // Roanoke
-    districtName = "roanoke"
-    primaryColor = ""
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
+  default:
+    // Roanoke
+    console.log('Includes roanoke !!!!')
+    districtName = 'roanoke'
+    primaryColor = ''
     initialMapCenterLat = 36.4615
     initialMapCenterLng = -77.6541
     initialMapZoom = 14
@@ -120,10 +136,12 @@ switch (urlString){
     minZoom = 14
     spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1d6kgVHTBBsSnG7dzx51iPPrbnkxS0MUewwTC1KB0tCQ/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    lightAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    lightAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-    darkAttribution = '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    break;
+    darkAttribution =
+      '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    break
 }
 
 // console.log("DEBUG: primary theme color: " +  SCSSvariables.theme-color-primary)
@@ -131,7 +149,7 @@ switch (urlString){
 export const districtData = {
   districtName: districtName,
   colors: {
-    primaryColor: primaryColor,
+    primaryColor: primaryColor
   },
   settings: {
     initialMapCenter: {

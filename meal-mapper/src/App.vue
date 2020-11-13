@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <app-header :language="language.name" @search="searchLoc" @language-selected="changeLanguage" :socialMedia="socialMediaico">
-      <theme-header :districtName="districtData.districtName"></theme-header>
+      <theme-header :districtName="districtName"></theme-header>
     </app-header>
     <faq-modal />
     <covid-pop-up />
@@ -130,7 +130,8 @@ export default {
       mapUrl: '',
       attribution: null,
       socialMediaico: districtData.socialMedia,
-      hoverItem: null
+      hoverItem: null,
+      districtName: districtData.districtName
     }
   },
   mounted() {
@@ -181,16 +182,9 @@ export default {
       this.$root.updateLang(item.iso)
     },
     async fetchData() {
-      var url_string = window.location.href
-      var url = new URL(url_string)
-      var location = url.searchParams.get('location')
-      var entries = null
-      if (location === 'chapelhill') {
-        const res = await fetch(
-          'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
-        )
-        entries = await res.json()
-      }
+      const res = await fetch(districtData.data.spreadsheetUrl)
+      console.log(res)
+      const entries = await res.json()
 
       // if (entries !== null) {
       //   entries.forEach(c => {
