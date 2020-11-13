@@ -32,7 +32,8 @@ module.exports = {
       return args
     })
   },
-  configureWebpack: { // TODO: evaluate whether necessary
+  configureWebpack: {
+    // TODO: evaluate whether necessary
     resolve: {
       alias: {
         ['districtData.config$']: path.resolve(__dirname, themePath + '/districtData.config.js'),
@@ -48,8 +49,9 @@ module.exports = {
        @import "~bootstrap/scss/variables";
        @import "~bootstrap/scss/mixins";
        @import './src/scss/Mixins.scss';
-       @import "./src/themes/MealsForFamilies/SCSS/custom.scss"; 
+       @import "./src/themes/MealsForFamilies/SCSS/custom.scss";
       ` // Hardcoded the above to MealsForFamilies theme
+        //
       }
     }
   }

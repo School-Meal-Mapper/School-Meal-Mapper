@@ -16,10 +16,8 @@ var darkAttribution = null
 
 var urlString = window.location.href
 
-console.log('DEBUG: logged urlString: ' + urlString)
-console.log(urlString.includes('durham'))
 const county = urlString.split('/')[3]
-console.log(county)
+
 switch (county) {
   case 'chapelhill':
     districtName = 'chapelhill'
@@ -124,17 +122,15 @@ switch (county) {
       '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     break
   default:
-    // Roanoke
-    console.log('Includes roanoke !!!!')
-    districtName = 'roanoke'
-    primaryColor = ''
-    initialMapCenterLat = 36.4615
-    initialMapCenterLng = -77.6541
-    initialMapZoom = 14
-    clusterZoom = 14
+    districtName = 'chapelhill'
+    primaryColor = 'd59402'
+    initialMapCenterLat = 35.943068
+    initialMapCenterLng = -79.097216
+    initialMapZoom = 12
+    clusterZoom = 12
     maxZoom = 17
-    minZoom = 14
-    spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1d6kgVHTBBsSnG7dzx51iPPrbnkxS0MUewwTC1KB0tCQ/1/public/values?alt=json'
+    minZoom = 12
+    spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
     lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
     lightAttribution =
       '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
