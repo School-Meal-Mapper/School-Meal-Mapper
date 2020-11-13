@@ -1,6 +1,6 @@
-import variables from './variables.scss';
+// import SCSSvariables from './SCSS/custom.scss';
 
-var districtName = null
+var districtName = chapelhill
 var primaryColor = null
 var initialMapCenterLat = null
 var initialMapCenterLng = null
@@ -14,9 +14,11 @@ var lightAttribution = null
 var darkUrl = null
 var darkAttribution = null
 
-console.log("DEBUG: logged urlString: " + window.location.href)
+var urlString = window.location.href
 
-switch (new urlString = window.location.href){
+console.log("DEBUG: logged urlString: " + urlString)
+
+switch (urlString){
   case urlString.includes("chapelhill"):
     districtName = "chapelhill"
     primaryColor = "d59402"
@@ -124,13 +126,12 @@ switch (new urlString = window.location.href){
     break;
 }
 
-console.log("DEBUG: primary theme color: " +  variables.theme-color-primary)
+// console.log("DEBUG: primary theme color: " +  SCSSvariables.theme-color-primary)
 
 export const districtData = {
   districtName: districtName,
   colors: {
     primaryColor: primaryColor,
-    secondaryColor: secondaryColor
   },
   settings: {
     initialMapCenter: {
