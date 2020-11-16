@@ -7,7 +7,6 @@
   </span>
 </template>
 <script>
-
 export default {
   name: 'theme-header',
   props: ['districtName']
