@@ -4,8 +4,8 @@
       <div>
         <b-navbar-brand href="#" class="left"> <slot></slot> </b-navbar-brand>
       </div>
-      <div class="p-2">
-        <form class="form-group w-25 center-content right">
+      <div class="p2">
+        <form class="form-group left">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
         </form>
       </div>
@@ -137,6 +137,12 @@ export default {
   padding: 0 5px;
 }
 
+.p2 {
+  padding: 1rem !important;
+  margin-left: 1rem;
+  align-items: center;
+}
+
 .navbar-nav {
   margin-bottom: 16px !important;
 }
@@ -177,12 +183,6 @@ export default {
 .searchBar {
   display: flex;
 }
-.searchBar .left {
-  flex: 1;
-}
-.searchBar.right {
-  flex: 1;
-}
 
 @media (min-width: 768px) {
   .navbar-nav {
@@ -219,6 +219,12 @@ export default {
     color: $gray-200;
   }
 }
+
+.form-group {
+  margin-bottom: 0rem !important;
+  width: 305px;
+}
+
 .banner {
   background: $banner;
   @media (prefers-color-scheme: dark) {

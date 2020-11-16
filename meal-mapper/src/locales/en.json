@@ -156,8 +156,8 @@
   },
   "locationhelp": "Please make sure your device location is enabled",
   "search": {
-    "prompt": "Enter the address here ",
-    "find": "Find the meal site closest to...",
+    "prompt": "Search with your address",
+    "find": "Find meals near:",
     "noresults": "No results match your search. Please enter more information."
   },
   "sharelocation": {
