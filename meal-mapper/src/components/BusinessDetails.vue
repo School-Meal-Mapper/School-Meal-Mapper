@@ -87,6 +87,10 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { getAddress } from '../utilities'
+import { districtData } from '../themes/MealsForFamilies/districtData'
+
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+console.log('Business Details ran')
 
 export default {
   name: 'BusinessDetails',
@@ -129,6 +133,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.root {
+  --primary-color: red;
+}
+
 .business-details {
   max-height: calc(100vh - 86px - 62px);
   overflow-y: auto;
@@ -157,9 +165,6 @@ export default {
     //color: theme-color('quinary');
     margin: 7px 10px 7px 0;
     float: left;
-    @media (prefers-color-scheme: dark) {
-      //color: theme-color-level('quinary', 5);
-    }
   }
 }
 
@@ -184,10 +189,7 @@ export default {
 .share-button {
   font-size: 0.8rem;
   padding: 0.375rem 1rem;
-  color: theme-color('primary');
-  @media (prefers-color-scheme: dark) {
-    color: theme-color-level('primary', 2);
-  }
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

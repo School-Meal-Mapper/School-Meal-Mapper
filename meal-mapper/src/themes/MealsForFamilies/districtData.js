@@ -2,6 +2,9 @@
 
 var districtName = 'chapelhill'
 var primaryColor = null
+var navBarColor = null
+var navBarColorDark = null
+var linkColor = null
 var initialMapCenterLat = null
 var initialMapCenterLng = null
 var initialMapZoom = null
@@ -21,7 +24,10 @@ const county = urlString.split('/')[3]
 switch (county) {
   case 'chapelhill':
     districtName = 'chapelhill'
-    primaryColor = 'd59402'
+    primaryColor = '#0063b1'
+    navBarColor = '#E9ECEF'
+    navBarColorDark = '#212529'
+    linkColor = '#0063b1'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
@@ -38,7 +44,7 @@ switch (county) {
     break
   case 'durham':
     districtName = 'durham'
-    primaryColor = ''
+    primaryColor = '#0ba2ae'
     initialMapCenterLat = 35.994
     initialMapCenterLng = -78.8986
     initialMapZoom = 11
@@ -55,7 +61,7 @@ switch (county) {
     break
   case 'cms':
     districtName = 'cms'
-    primaryColor = ''
+    primaryColor = '#0ba2ae'
     initialMapCenterLat = 35.2271
     initialMapCenterLng = -80.8431
     initialMapZoom = 10
@@ -72,7 +78,7 @@ switch (county) {
     break
   case 'roanoke':
     districtName = 'roanoke'
-    primaryColor = ''
+    primaryColor = '#d59402'
     initialMapCenterLat = 36.4615
     initialMapCenterLng = -77.6541
     initialMapZoom = 14
@@ -89,7 +95,7 @@ switch (county) {
     break
   case 'chatham':
     districtName = 'chatham'
-    primaryColor = ''
+    primaryColor = '#6d375c'
     initialMapCenterLat = 35.7235
     initialMapCenterLng = -79.4622
     initialMapZoom = 11
@@ -106,7 +112,7 @@ switch (county) {
     break
   case 'wake':
     districtName = 'wake'
-    primaryColor = ''
+    primaryColor = '#005498'
     initialMapCenterLat = 35.7796
     initialMapCenterLng = -78.6382
     initialMapZoom = 10
@@ -123,7 +129,7 @@ switch (county) {
     break
   default:
     districtName = 'chapelhill'
-    primaryColor = 'd59402'
+    primaryColor = '#d59402'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
@@ -145,7 +151,9 @@ switch (county) {
 export const districtData = {
   districtName: districtName,
   colors: {
-    primaryColor: primaryColor
+    primaryColor: primaryColor,
+    navBarColor: navBarColor,
+    linkColor: linkColor
   },
   settings: {
     initialMapCenter: {

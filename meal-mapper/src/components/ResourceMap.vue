@@ -91,6 +91,9 @@ import { businessIcon } from '../utilities'
 import { districtData } from '../themes/MealsForFamilies/districtData'
 import { eventManager } from '../main'
 
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+console.log('Resource Map ran')
+
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
@@ -325,6 +328,10 @@ export default {
 </script>
 
 <style lang="scss">
+.root {
+  --primary-color: red;
+}
+
 .map {
   width: auto;
   height: 100%;
@@ -528,10 +535,10 @@ div.markeropen svg path {
     }
   }
   &.active {
-    color: theme-color('primary') !important;
+    color: var(--primary-color) !important;
   }
   &.disabled {
-    color: theme-color('#bbb') !important;
+    color: var(--primary-color) !important;
   }
 }
 </style>

@@ -189,12 +189,21 @@
 </template>
 
 <script>
+import { districtData } from '../themes/MealsForFamilies/districtData'
+
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+console.log('FAQ ran')
+
 export default {
   name: 'faq-modal'
 }
 </script>
 
 <style lang="scss">
+.root {
+  --primary-color: red;
+}
+
 @media (max-width: 991px) {
   #faq > .modal-dialog {
     justify-content: normal;
@@ -216,12 +225,12 @@ export default {
 }
 
 .question:hover {
-  background-color: theme-color-level('primary', -5);
+  background-color: var(--primary-color);
   outline-style: solid;
   outline-color: black;
-  @media (prefers-color-scheme: dark) {
-    background-color: theme-color-level('primary', 5);
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: theme-color-level('primary', 5);
+  // }
 }
 
 .question[aria-expanded='false'] {
