@@ -2,9 +2,8 @@
 
 var districtName = 'chapelhill'
 var primaryColor = null
-var navBarColor = null
-var navBarColorDark = null
-var linkColor = null
+var bannerColor = null
+var bannerColorDark = null
 var initialMapCenterLat = null
 var initialMapCenterLng = null
 var initialMapZoom = null
@@ -25,9 +24,8 @@ switch (county) {
   case 'chapelhill':
     districtName = 'chapelhill'
     primaryColor = '#0063b1'
-    navBarColor = '#E9ECEF'
-    navBarColorDark = '#212529'
-    linkColor = '#0063b1'
+    bannerColor = '#E9ECEF'
+    bannerColorDark = '#212529'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
@@ -45,6 +43,8 @@ switch (county) {
   case 'durham':
     districtName = 'durham'
     primaryColor = '#0ba2ae'
+    bannerColor = '#E9ECEF'
+    bannerColorDark = '#212529'
     initialMapCenterLat = 35.994
     initialMapCenterLng = -78.8986
     initialMapZoom = 11
@@ -152,8 +152,8 @@ export const districtData = {
   districtName: districtName,
   colors: {
     primaryColor: primaryColor,
-    navBarColor: navBarColor,
-    linkColor: linkColor
+    bannerColor: bannerColor,
+    bannerColorDark: bannerColorDark
   },
   settings: {
     initialMapCenter: {
