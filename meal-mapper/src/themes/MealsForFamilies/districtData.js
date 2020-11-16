@@ -42,9 +42,9 @@ switch (county) {
     break
   case 'durham':
     districtName = 'durham'
-    primaryColor = '#0ba2ae'
-    bannerColor = '#E9ECEF'
-    bannerColorDark = '#212529'
+    primaryColor = '#024379'
+    bannerColor = '#024379'
+    bannerColorDark = '#113858'
     initialMapCenterLat = 35.994
     initialMapCenterLng = -78.8986
     initialMapZoom = 11
@@ -62,6 +62,8 @@ switch (county) {
   case 'cms':
     districtName = 'cms'
     primaryColor = '#0ba2ae'
+    bannerColor = '#04ACD4'
+    bannerColorDark = '#015A6E'
     initialMapCenterLat = 35.2271
     initialMapCenterLng = -80.8431
     initialMapZoom = 10
@@ -79,6 +81,8 @@ switch (county) {
   case 'roanoke':
     districtName = 'roanoke'
     primaryColor = '#d59402'
+    bannerColor = '#333333'
+    bannerColorDark = '#000000'
     initialMapCenterLat = 36.4615
     initialMapCenterLng = -77.6541
     initialMapZoom = 14
@@ -96,6 +100,8 @@ switch (county) {
   case 'chatham':
     districtName = 'chatham'
     primaryColor = '#6d375c'
+    bannerColor = '#ECE8EF'
+    bannerColorDark = '#151414'
     initialMapCenterLat = 35.7235
     initialMapCenterLng = -79.4622
     initialMapZoom = 11
@@ -113,6 +119,8 @@ switch (county) {
   case 'wake':
     districtName = 'wake'
     primaryColor = '#005498'
+    bannerColor = '#005498'
+    bannerColorDark = '#002543'
     initialMapCenterLat = 35.7796
     initialMapCenterLng = -78.6382
     initialMapZoom = 10
@@ -130,6 +138,8 @@ switch (county) {
   default:
     districtName = 'chapelhill'
     primaryColor = '#d59402'
+    bannerColor = '#E9ECEF'
+    bannerColorDark = '#212529'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
