@@ -150,7 +150,7 @@
   },
   "locationhelp": "Please make sure your device location is enabled",
   "search": {
-    "prompt": "Enter the address here ",
+    "prompt": "Find meals near address...",
     "find": "Find the meal site closest to...",
     "noresults": "No results match your search. Please enter more information."
   },
