@@ -192,7 +192,10 @@
 import { districtData } from '../themes/MealsForFamilies/districtData'
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
-console.log('FAQ ran')
+document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
+document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
+document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLink)
+document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
 
 export default {
   name: 'faq-modal'
@@ -202,6 +205,10 @@ export default {
 <style lang="scss">
 .root {
   --primary-color: red;
+  --banner-light: '#E9ECEF';
+  --banner-dark: '#212529';
+  --nav-link-light: '#F8F8F8';
+  --nav-link-dark: '#F8F8F8';
 }
 
 @media (max-width: 991px) {
@@ -225,12 +232,26 @@ export default {
 }
 
 .question:hover {
-  background-color: var(--primary-color);
+  background-color: var(--banner-light);
   outline-style: solid;
   outline-color: black;
-  // @media (prefers-color-scheme: dark) {
-  //   background-color: theme-color-level('primary', 5);
-  // }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--banner-dark);
+  }
+}
+
+.btn {
+  color: #313639 !important;
+  @media (prefers-color-scheme: dark) {
+    color: #f8f8f8 !important;
+  }
+}
+
+.btn:hover {
+  color: var(--nav-link-light) !important;
+  @media (prefers-color-scheme: dark) {
+    color: var(--nav-link-dark) !important;
+  }
 }
 
 .question[aria-expanded='false'] {
