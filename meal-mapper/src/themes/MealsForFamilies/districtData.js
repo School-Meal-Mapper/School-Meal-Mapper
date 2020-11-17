@@ -141,7 +141,7 @@ switch (county) {
     break
   default:
     districtName = 'chapelhill'
-    primaryColor = '#d59402'
+    primaryColor = '#0063b1'
     bannerColor = '#E9ECEF'
     bannerColorDark = '#212529'
     navLink = '#313639'

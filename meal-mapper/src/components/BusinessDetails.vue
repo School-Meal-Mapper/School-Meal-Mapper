@@ -189,7 +189,7 @@ export default {
 .share-button {
   font-size: 0.8rem;
   padding: 0.375rem 1rem;
-  color: var(--primary-color);
+  color: #007bff;
 }
 
 @media (max-width: 768px) {

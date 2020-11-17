@@ -34,7 +34,6 @@
 import { districtData } from '../themes/MealsForFamilies/districtData'
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
-console.log('IconsListItem ran')
 
 export default {
   name: 'IconListItem',
@@ -71,7 +70,7 @@ export default {
     margin: 0.25rem 0;
   }
   a {
-    color: var(--primary-color);
+    color: #007bff;
     // @media (prefers-color-scheme: dark) {
     //   color: theme-color-level(primary, 2);
     // }
