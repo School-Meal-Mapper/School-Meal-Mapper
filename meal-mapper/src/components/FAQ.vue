@@ -19,8 +19,8 @@
         </b-card>
         <b-card no-body class="mb-1">
           <b-card-header header-tag="header" class="p-1" role="tab">
-            <b-button block v-b-toggle.accordion-2 class="font-weight-bold question" variant="info"
-              >{{ $t('faq.freeMealsQuestion') }}
+            <b-button block v-b-toggle.accordion-2 class="font-weight-bold question" variant="info">
+              {{ $t('faq.freeMealsQuestion') }}
             </b-button>
           </b-card-header>
           <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
@@ -240,14 +240,14 @@ export default {
   }
 }
 
-.btn {
+.btn-block {
   color: #313639 !important;
   @media (prefers-color-scheme: dark) {
     color: #f8f8f8 !important;
   }
 }
 
-.btn:hover {
+.btn-block:hover {
   color: var(--nav-link-light) !important;
   @media (prefers-color-scheme: dark) {
     color: var(--nav-link-dark) !important;
