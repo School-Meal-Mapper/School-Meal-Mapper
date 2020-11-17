@@ -144,6 +144,8 @@ switch (county) {
     primaryColor = '#d59402'
     bannerColor = '#E9ECEF'
     bannerColorDark = '#212529'
+    navLink = '#313639'
+    navLinkDark = '#f8f8ff'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
