@@ -15,6 +15,8 @@ var lightUrl = null
 var lightAttribution = null
 var darkUrl = null
 var darkAttribution = null
+var navLink = '#f8f8ff'
+var navLinkDark = '#f8f8ff'
 
 var urlString = window.location.href
 
@@ -26,6 +28,8 @@ switch (county) {
     primaryColor = '#0063b1'
     bannerColor = '#E9ECEF'
     bannerColorDark = '#212529'
+    navLink = '#313639'
+    navLinkDark = '#f8f8ff'
     initialMapCenterLat = 35.943068
     initialMapCenterLng = -79.097216
     initialMapZoom = 12
@@ -163,7 +167,9 @@ export const districtData = {
   colors: {
     primaryColor: primaryColor,
     bannerColor: bannerColor,
-    bannerColorDark: bannerColorDark
+    bannerColorDark: bannerColorDark,
+    navLink: navLink,
+    navLinkDark: navLinkDark
   },
   settings: {
     initialMapCenter: {
