@@ -204,7 +204,7 @@ export default {
 
 <style lang="scss">
 .root {
-  --primary-color: red;
+  --primary-color: blue;
   --banner-light: '#E9ECEF';
   --banner-dark: '#212529';
   --nav-link-light: '#F8F8F8';

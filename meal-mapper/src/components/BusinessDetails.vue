@@ -90,7 +90,10 @@ import { getAddress } from '../utilities'
 import { districtData } from '../themes/MealsForFamilies/districtData'
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
-console.log('Business Details ran')
+document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
+document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
+document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLink)
+document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
 
 export default {
   name: 'BusinessDetails',
@@ -134,7 +137,11 @@ export default {
 
 <style scoped lang="scss">
 .root {
-  --primary-color: red;
+  --primary-color: blue;
+  --banner-light: '#E9ECEF';
+  --banner-dark: '#212529';
+  --nav-link-light: '#F8F8F8';
+  --nav-link-dark: '#F8F8F8';
 }
 
 .business-details {
@@ -184,6 +191,24 @@ export default {
 
 .updated {
   color: #aaa;
+}
+
+.btn-outline-primary {
+  color: #313639 !important;
+  border-color: #313639 !important;
+  @media (prefers-color-scheme: dark) {
+    color: #f8f8f8 !important;
+    border-color: #f8f8f8 !important;
+  }
+}
+
+.btn-outline-primary:hover {
+  color: var(--nav-link-light) !important;
+  background-color: var(--banner-light) !important;
+  @media (prefers-color-scheme: dark) {
+    color: var(--nav-link-dark) !important;
+    background-color: var(--banner-dark) !important;
+  }
 }
 
 .share-button {
