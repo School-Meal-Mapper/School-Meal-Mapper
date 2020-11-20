@@ -20,7 +20,7 @@ var navLinkDark = '#f8f8ff'
 
 var urlString = window.location.href
 var url = new URL(urlString)
-var district = url.searchParams.get('district')
+var district = url.searchParams.get('d')
 
 //const county = urlString.split('/')[3]
 
