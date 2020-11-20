@@ -19,10 +19,12 @@ var navLink = '#f8f8ff'
 var navLinkDark = '#f8f8ff'
 
 var urlString = window.location.href
+var url = new URL(urlString)
+var district = url.searchParams.get('district')
 
-const county = urlString.split('/')[3]
+//const county = urlString.split('/')[3]
 
-switch (county) {
+switch (district) {
   case 'chapelhill':
     districtName = 'chapelhill'
     primaryColor = '#0063b1'
