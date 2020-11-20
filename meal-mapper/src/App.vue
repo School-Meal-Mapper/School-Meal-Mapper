@@ -5,8 +5,17 @@
     </app-header>
     <faq-modal />
     <covid-pop-up />
-
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
+    <div class="d-flex" v-if="!checkParam">
+      <div class="district-buttons">
+        <b-button href="?district=durham">Durham</b-button>
+        <b-button href="?district=cms">Charlotte Mecklenburg</b-button>
+        <b-button href="?district=chapelhill">Chapel Hill</b-button>
+        <b-button href="?district=roanoke">Roanoke</b-button>
+        <b-button href="?district=chatham">Chatham</b-button>
+        <b-button href="?district=wake">Wake</b-button>
+      </div>
+    </div>
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -257,6 +266,13 @@ export default {
     }
   },
   computed: {
+    checkParam() {
+      console.log('here')
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      console.log(url.searchParams.has('district'))
+      return url.searchParams.has('district')
+    },
     filteredMarkers() {
       if (this.entries == null) return null
 
@@ -313,4 +329,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.district-buttons {
+  margin: 20vh auto;
+}
+</style>
