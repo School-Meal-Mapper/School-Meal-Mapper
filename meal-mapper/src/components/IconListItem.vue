@@ -31,6 +31,10 @@
 </template>
 
 <script>
+import { districtData } from '../themes/MealsForFamilies/districtData'
+
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+
 export default {
   name: 'IconListItem',
   data() {
@@ -54,6 +58,10 @@ export default {
 </script>
 
 <style lang="scss">
+.root {
+  --primary-color: red;
+}
+
 .iconListItem {
   div {
     display: inline-block;
@@ -62,10 +70,10 @@ export default {
     margin: 0.25rem 0;
   }
   a {
-    color: theme-color('primary');
-    @media (prefers-color-scheme: dark) {
-      color: theme-color-level(primary, 2);
-    }
+    color: #007bff;
+    // @media (prefers-color-scheme: dark) {
+    //   color: theme-color-level(primary, 2);
+    // }
   }
 
   .leafletIcon {

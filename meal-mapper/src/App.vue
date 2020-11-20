@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <app-header :language="language.name" @search="searchLoc" @language-selected="changeLanguage" :socialMedia="socialMediaico">
-      <theme-header></theme-header>
+      <theme-header :districtName="districtName"></theme-header>
     </app-header>
     <faq-modal />
     <covid-pop-up />
@@ -11,8 +11,8 @@
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
         @location-selected="passLocation"
-        @hoverOver="passHover"
-        @hoverLeave="passNoHover"
+        @hover-over="passHover"
+        @hover-leave="passNoHover"
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
@@ -27,8 +27,8 @@
           :attribution="attribution"
           :hoverIt="hoverItem"
           :searchLocationData="searchLocData"
-          @hoverOver="passHover"
-          @hoverLeave="passNoHover"
+          @hover-over="passHover"
+          @hover-leave="passNoHover"
           @location-selected="passLocation"
           @bounds="boundsUpdated"
           @center="centerUpdated"
@@ -39,6 +39,11 @@
     </div>
   </div>
 </template>
+<!-- 
+<style lang="scss">
+// @import './themes/DurhamMeal/SCSS/custom.scss';
+// </style>
+-->
 
 <script>
 import AppHeader from './components/Header.vue'
@@ -56,8 +61,8 @@ import { haversineDistance, sortByDistance } from './utilities'
 
 import { dayFilters, booleanFilters, dayAny } from './constants'
 
-import { theme } from 'theme.config'
-import ThemeHeader from 'theme.header'
+import { districtData } from './themes/MealsForFamilies/districtData'
+import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
 
 function extend(obj, src) {
   for (var key in src) {
@@ -121,16 +126,17 @@ export default {
       highlightFilters: [],
       bounds: null,
       centroid: {
-        lat: theme.settings.initialMapCenter.lat,
-        lng: theme.settings.initialMapCenter.lng,
-        zoom: theme.settings.initialMapZoom
+        lat: districtData.settings.initialMapCenter.lat,
+        lng: districtData.settings.initialMapCenter.lng,
+        zoom: districtData.settings.initialMapZoom
       },
       darkModeMediaQuery: darkModeMediaQuery,
       darkMode: darkModeMediaQuery.matches,
       mapUrl: '',
       attribution: null,
-      socialMediaico: theme.socialMedia,
-      hoverItem: null
+      socialMediaico: districtData.socialMedia,
+      hoverItem: null,
+      districtName: districtData.districtName
     }
   },
   mounted() {
@@ -142,8 +148,8 @@ export default {
   },
   methods: {
     setDarkMode(darkMode) {
-      this.mapUrl = darkMode ? theme.maps.dark.url : theme.maps.normal.url
-      this.attribution = darkMode ? theme.maps.dark.attribution : theme.maps.normal.attribution
+      this.mapUrl = darkMode ? districtData.maps.dark.url : districtData.maps.normal.url
+      this.attribution = darkMode ? districtData.maps.dark.attribution : districtData.maps.normal.attribution
     },
     centerUpdated(center) {
       this.centroid = { lat: center.lat, lng: center.lng }
@@ -181,7 +187,8 @@ export default {
       this.$root.updateLang(item.iso)
     },
     async fetchData() {
-      const res = await fetch(theme.data.spreadsheetUrl)
+      const res = await fetch(districtData.data.spreadsheetUrl)
+      console.log(res)
       const entries = await res.json()
 
       // if (entries !== null) {

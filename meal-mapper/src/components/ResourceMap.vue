@@ -57,8 +57,8 @@
             "
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
-            @mouseover="$emit('hoverOver', item)"
-            @mouseleave="$emit('hoverLeave')"
+            @mouseover="$emit('hover-over', item)"
+            @mouseleave="$emit('hover-leave')"
             @click="
               $emit('location-selected', {
                 locValue: index,
@@ -88,8 +88,11 @@ import { latLng, Icon, ExtraMarkers } from 'leaflet'
 import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import IconListItem from './IconListItem.vue'
 import { businessIcon } from '../utilities'
-import { theme } from 'theme.config'
+import { districtData } from '../themes/MealsForFamilies/districtData'
 import { eventManager } from '../main'
+
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+console.log('Resource Map ran')
 
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
@@ -133,8 +136,8 @@ export default {
     return {
       center: latLng(this.centroid.lat, this.centroid.lng),
       zoom: this.centroid.zoom,
-      max: theme.settings.maxZoom,
-      min: theme.settings.minZoom,
+      max: districtData.settings.maxZoom,
+      min: districtData.settings.minZoom,
       showParagraph: true,
       showError: false,
       errorMessage: '',
@@ -150,7 +153,7 @@ export default {
       clusterOptions: {
         spiderfyOnMaxZoom: true,
         maxClusterRadius: 40,
-        disableClusteringAtZoom: theme.settings.clusterZoom
+        disableClusteringAtZoom: districtData.settings.clusterZoom
       },
       showKey: true
     }
@@ -325,6 +328,10 @@ export default {
 </script>
 
 <style lang="scss">
+.root {
+  --primary-color: red;
+}
+
 .map {
   width: auto;
   height: 100%;
@@ -528,10 +535,10 @@ div.markeropen svg path {
     }
   }
   &.active {
-    color: theme-color('primary') !important;
+    color: var(--primary-color) !important;
   }
   &.disabled {
-    color: theme-color('#bbb') !important;
+    color: var(--primary-color) !important;
   }
 }
 </style>

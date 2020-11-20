@@ -57,6 +57,12 @@
 </template>
 
 <script>
+import { districtData } from '../themes/MealsForFamilies/districtData'
+document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
+document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
+document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLink)
+document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
+
 export default {
   name: 'app-header',
   props: {
@@ -116,6 +122,13 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --banner-light: '#E9ECEF';
+  --banner-dark: '#212529';
+  --nav-link-light: '#F8F8F8';
+  --nav-link-dark: '#F8F8F8';
+}
+
 #topnav {
   position: absolute;
   width: 100%;
@@ -214,22 +227,22 @@ export default {
 }
 
 .searchTitle {
-  color: color-yiq($banner);
+  color: var(--banner-light);
   @media (prefers-color-scheme: dark) {
-    color: $gray-200;
+    color: var(--banner-dark);
   }
 }
 .banner {
-  background: $banner;
+  background: var(--banner-light);
   @media (prefers-color-scheme: dark) {
-    background: $banner-dark;
+    background: var(--banner-dark);
   }
 }
 
 .nav-link {
-  color: color-yiq($banner) !important;
+  color: var(--nav-link-light) !important;
   @media (prefers-color-scheme: dark) {
-    color: $gray-200 !important;
+    color: var(--nav-link-dark) !important;
   }
 }
 </style>

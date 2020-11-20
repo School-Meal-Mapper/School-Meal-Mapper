@@ -10,6 +10,11 @@
 </template>
 
 <script>
+import { districtData } from '../themes/MealsForFamilies/districtData'
+
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+console.log('InfoPanel ran')
+
 export default {
   name: 'InfoPanel',
   data() {
@@ -23,6 +28,10 @@ export default {
 </script>
 
 <style lang="scss">
+.root {
+  --primary-color: red;
+}
+
 .note,
 .handwash {
   font-size: 0.8rem;
@@ -31,19 +40,19 @@ export default {
 .note i,
 .handwash i {
   font-size: 3rem;
-  color: theme-color('primary');
-  @media (prefers-color-scheme: dark) {
-    color: theme-color-level(primary, 5);
-  }
+  color: var(--primary-color);
+  // @media (prefers-color-scheme: dark) {
+  //   color: theme-color-level(primary, 5);
+  // }
   margin: 7px 10px 0 0;
   float: left;
 }
 
 .handwash i {
-  color: theme-color('primary');
-  @media (prefers-color-scheme: dark) {
-    color: theme-color-level(primary, 5);
-  }
+  color: var(--primary-color);
+  // @media (prefers-color-scheme: dark) {
+  //   color: theme-color-level(primary, 5);
+  // }
 }
 
 .note div,
