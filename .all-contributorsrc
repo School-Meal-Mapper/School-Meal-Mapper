@@ -48,6 +48,11 @@
       "profile": "https://github.com/no40",
       "contributions": [
         "code"
+        "design",
+        "question",
+        "ideas",
+        "review",
+        "doc"
       ]
     },
     {
@@ -57,6 +62,9 @@
       "profile": "https://github.com/helenx15",
       "contributions": [
         "code"
+        "design",
+        "ideas",
+        "review",
       ]
     },
     {
@@ -66,6 +74,9 @@
       "profile": "http://himanshukj.me",
       "contributions": [
         "code"
+        "design",
+        "ideas",
+        "review",
       ]
     },
     {
@@ -75,6 +86,10 @@
       "profile": "https://github.com/caleb-watson",
       "contributions": [
         "code"
+        "design",
+        "question",
+        "ideas",
+        "review",
       ]
     }
   ],
