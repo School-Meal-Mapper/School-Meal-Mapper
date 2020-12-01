@@ -4,7 +4,6 @@ about: What do we need to change/fix in our data structure?
 title: ''
 labels: documentation
 assignees: ''
-
 ---
 
 **Is your feature request related to a problem? Please describe.**

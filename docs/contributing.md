@@ -4,7 +4,7 @@
 
 Thank you for your interest in contributing to the School Meal Mapper (https://school-meal-mapper.github.io/School-Meal-Mapper/) website.
 
-The following is a set of guidelines, to help you contribute to the Meal Mapper project.
+The following is a set of guidelines, to help you contribute to Meals For Families.
 
 ## Table of contents
 
@@ -41,7 +41,7 @@ This document gives you a quick overview on how to get started.
 
 ### New developers and good first issues
 
-If you are a new developer or simply looking for an easy first ticket to work on, try taking a look at any tickets with the [`good first issue`](https://github.com/code-for-chapel-hill/NC-COVID-Support/labels/good%20first%20issue) label. In addition, feel free to reach out to Eliza Paradise (the tech lead) or Kate Hanson (the project manager) if you want a suggestion of where to start!
+If you are a new developer or simply looking for an easy first ticket to work on, try taking a look at any tickets with the [`good first issue`](https://github.com/code-for-chapel-hill/NC-COVID-Support/labels/good%20first%20issue) label. In addition, feel free to reach out to Eliza Paradise, Kate Hanson, Caleb Watson, or Nathan Ostrowski if you want a suggestion of where to start!
 
 ### How to begin
 
@@ -113,7 +113,7 @@ BootstrapVue - Responsive Layout - ( Version of Bootstrap that works well with V
 
 ### Open source repositories used
 
-Our code was adapted from [NC Covid Support] (https://github.com/code-for-chapel-hill/NC-COVID-Support), created by [Code for Chapel Hill ](http://www.codeforchapelhill.com/). In addition, some features were informed by [Bay Area Community Resource Map] (https://github.com/dcl-covid-19/mega-map-dev). You may find that these repositories are useful to look to as you develop!
+Our initial code was adapted from [NC Covid Support] (https://github.com/code-for-chapel-hill/NC-COVID-Support), created by [Code for Chapel Hill ](http://www.codeforchapelhill.com/). In addition, some features were informed by [Bay Area Community Resource Map] (https://github.com/dcl-covid-19/mega-map-dev). You may find that these repositories are useful to look to as you develop.
 
 ### Development machine requirements
 
@@ -184,7 +184,7 @@ Follow the instructions above for setting up your environment, cloning the proje
 
 ### Build the client side project using the Development Mode
 
-Once completed. you can run **`npm run serve-meal'** to build the solution. Once you have done this, the terminal will output the location of your code (likely localhost:8080) and you can navigate to this address in the browser of your choice for a development web server to start and automatically open the website. As you make changes to the code, this server will automatically update to show your changes. If you want to test the site on another device, you can navigate to the "Network" address on another device that's connected to the same internet network.
+Once completed. you can run **`npm run serve-mff'** to build the solution. Once you have done this, the terminal will output the location of your code (likely localhost:8080) and you can navigate to this address in the browser of your choice for a development web server to start and automatically open the website. As you make changes to the code, this server will automatically update to show your changes. If you want to test the site on another device, you can navigate to the "Network" address on another device that's connected to the same internet network.
 
 ### Where do I put things
 
@@ -196,13 +196,10 @@ The `/meal-mapper` directory is where all the client side development files go:
 / public -- The source Index.html file and any non-compiled files like Robots.txt / Favicon.ico etc.
 / src
     / components -- This is where we put VueJS Single File Components
-    / images -- These should be images that are generic and used across ALL skinned versions of the NC Covid Support site
+    / images -- This is where we put icons, favicons, etc.
     / locales -- The i18n Translation files
     / scss - The main SCSS files
-    / themes - This is where all Theme specific code and media should exist
-        / NCCovidSupport - The main NC Covid Support theme
-            / images - Any images used by this theme
-            / scss - Any theme SCSS
+    / themes - This is where all theme-specific code and media should exist.
 / tests - All code tests
     / unit - Our unit tests
     / e2e - Any end to end tests
