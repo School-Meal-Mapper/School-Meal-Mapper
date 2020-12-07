@@ -4,7 +4,7 @@ if (process.env.VUE_APP_THEME == null) {
   throw new Error('Please provide VUE_APP_THEME environment variable')
 }
 
-const themePath = './src/themes/MealsForFamilies/' // Remnant of parent project, hardcoded in as MealsForFamilies instead of switching on ENV theme variable.
+const themePath = './src/themes/MealsForFamilies/'
 const themeContent = require(`${themePath}theme.content.js`) // TODO: evaluate whether this and the above are necessary
 
 const mapEnvVariables = {
@@ -17,7 +17,7 @@ const mapEnvVariables = {
 const themeMeta = Object.assign(mapEnvVariables, themeContent)
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/', // TODO what does this do
+  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'DurhamMeal' ? '/dps' : '/', // TODO
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -50,8 +50,7 @@ module.exports = {
        @import "~bootstrap/scss/mixins";
        @import './src/scss/Mixins.scss';
        @import "./src/themes/MealsForFamilies/SCSS/custom.scss";
-      ` // Hardcoded the above to MealsForFamilies theme
-        //
+      `
       }
     }
   }
