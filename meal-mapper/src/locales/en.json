@@ -35,6 +35,10 @@
     "partners": "Info Sources",
     "title": "About this site"
   },
+  "home": {
+    "intro": "Welcome to Meals for Families! Select a state and a school district to find free meal sites in your area. Currently, data is only available for districts in North Carolina.",
+    "btn": "Find free meals near me!"
+  },
   "category": {
     "childcare": "Child care",
     "family": "Prepared family meals",

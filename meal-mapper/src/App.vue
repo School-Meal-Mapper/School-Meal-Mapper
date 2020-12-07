@@ -7,12 +7,14 @@
     <covid-pop-up />
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
-        <b-button href="?district=durham">Durham</b-button>
-        <b-button href="?district=cms">Charlotte Mecklenburg</b-button>
-        <b-button href="?district=chapelhill">Chapel Hill</b-button>
-        <b-button href="?district=roanoke">Roanoke</b-button>
-        <b-button href="?district=chatham">Chatham</b-button>
-        <b-button href="?district=wake">Wake</b-button>
+        <p class="intro">{{ this.$t('home.intro') }}</p>
+        <p>
+          <b-form-select v-model="selectedState" :options="states">Select a state.</b-form-select>
+          <b-form-select v-model="selectedDistrict" :options="districts" :disabled="this.selectedState === null"
+            >Select a district.</b-form-select
+          >
+        </p>
+        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
     </div>
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
@@ -129,6 +131,16 @@ export default {
         currentBusiness: null,
         isSetByMap: false
       },
+      selectedState: null,
+      selectedDistrict: null,
+      states: [
+        { value: null, text: 'Please select a state.' },
+        { value: 'NC', text: 'North Carolina' }
+      ],
+      districts: [
+        { value: null, text: 'Please select a district.' },
+        { value: 'durham', text: 'Durham' }
+      ],
       searchLocData: false,
       showList: false,
       showResults: false,
@@ -156,6 +168,11 @@ export default {
     })
   },
   methods: {
+    districtLink() {
+      if (this.selectedDistrict != null) {
+        location.href = '/?d=' + this.selectedDistrict
+      }
+    },
     setDarkMode(darkMode) {
       this.mapUrl = darkMode ? districtData.maps.dark.url : districtData.maps.normal.url
       this.attribution = darkMode ? districtData.maps.dark.attribution : districtData.maps.normal.attribution
@@ -267,11 +284,10 @@ export default {
   },
   computed: {
     checkParam() {
-      console.log('here')
       var urlString = window.location.href
       var url = new URL(urlString)
-      console.log(url.searchParams.has('district'))
-      return url.searchParams.has('district')
+      console.log(url.searchParams.has('d'))
+      return url.searchParams.has('d')
     },
     filteredMarkers() {
       if (this.entries == null) return null
@@ -330,7 +346,11 @@ export default {
 </script>
 
 <style>
+body {
+  color: #808080 !important;
+}
 .district-buttons {
   margin: 20vh auto;
+  text-align: center;
 }
 </style>
