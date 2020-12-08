@@ -10,7 +10,7 @@
         <p class="intro">{{ this.$t('home.intro') }}</p>
         <p>
           <b-form-select v-model="selectedState" :options="states">Select a state.</b-form-select>
-          <b-form-select v-model="selectedDistrict" :options="districts" :disabled="this.selectedState === null"
+          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'"
             >Select a district.</b-form-select
           >
         </p>
@@ -70,7 +70,7 @@ import ResultsList from './components/ResultsList.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
-import { dayFilters, booleanFilters, dayAny } from './constants'
+import { dayFilters, booleanFilters, dayAny, states, districts } from './constants'
 
 import { districtData } from './themes/MealsForFamilies/districtData'
 import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
@@ -133,14 +133,8 @@ export default {
       },
       selectedState: null,
       selectedDistrict: null,
-      states: [
-        { value: null, text: 'Please select a state.' },
-        { value: 'NC', text: 'North Carolina' }
-      ],
-      districts: [
-        { value: null, text: 'Please select a district.' },
-        { value: 'durham', text: 'Durham' }
-      ],
+      states: states,
+      districts: districts,
       searchLocData: false,
       showList: false,
       showResults: false,
@@ -283,6 +277,16 @@ export default {
     }
   },
   computed: {
+    districtOptions() {
+      if (this.selectedState == 'nc') {
+        return districts[this.selectedState]
+      }
+      if (this.selectedState == null) {
+        return [{ value: null, text: 'You must select a state in order to select a district.' }]
+      } else {
+        return [{ value: null, text: 'There is currently no data available for the selected state.' }]
+      }
+    },
     checkParam() {
       var urlString = window.location.href
       var url = new URL(urlString)
