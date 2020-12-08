@@ -143,7 +143,7 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('wcpss')) {
+} else if (url.searchParams.has('wake')) {
   //case 'wake':
   // district name and theming
   districtName = 'wake'
