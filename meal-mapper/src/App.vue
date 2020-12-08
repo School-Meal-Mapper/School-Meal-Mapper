@@ -164,7 +164,7 @@ export default {
   methods: {
     districtLink() {
       if (this.selectedDistrict != null) {
-        location.href = '/?d=' + this.selectedDistrict
+        location.href = '/?' + this.selectedDistrict
       }
     },
     setDarkMode(darkMode) {
@@ -289,9 +289,9 @@ export default {
     },
     checkParam() {
       var urlString = window.location.href
-      var url = new URL(urlString)
-      console.log(url.searchParams.has('d'))
-      return url.searchParams.has('d')
+      //var url = new URL(urlString)
+      //console.log(url.searchParams.has('d'))
+      return urlString.includes('?')
     },
     filteredMarkers() {
       if (this.entries == null) return null
