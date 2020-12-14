@@ -20,16 +20,24 @@
 <script>
 export default {
   name: 'covid-popup-modal',
+  data() {
+    return {
+      popupseen: false
+    }
+  },
   methods: {
     showModal() {
       this.$refs['covid-popup'].show()
+      sessionStorage.setItem('popupseen', true)
     },
     hideModal() {
       this.$refs['covid-popup'].hide()
     }
   },
   mounted() {
-    this.showModal()
+    if (sessionStorage.getItem('popupseen') == null) {
+      this.showModal()
+    }
   }
 }
 </script>
