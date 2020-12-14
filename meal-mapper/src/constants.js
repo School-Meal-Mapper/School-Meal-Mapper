@@ -38,7 +38,6 @@ export const days = ['sun', 'mon', 'tues', 'wed', 'thr', 'fri', 'sat'].map((attr
 export const seniorDayFilters = ['mon', 'tues', 'wed', 'thr', 'fri', 'sat', 'sun'].map((attr) => `gsx$sp${attr}`)
 
 export const states = [
-  { value: null, text: 'Please select a state.' },
   { value: 'al', text: 'Alabama' },
   { value: 'ak', text: 'Alaska' },
   { value: 'az', text: 'Arizona' },
@@ -93,7 +92,6 @@ export const states = [
 
 export const districts = {
   nc: [
-    { value: null, text: 'Please select a school district.' },
     { value: 'chccs', text: 'Chapel Hill and Carrboro City Schools' },
     { value: 'cms', text: 'Charlotte-Mecklenburg Schools' },
     { value: 'chatham', text: 'Chatham County Schools' },

@@ -106,6 +106,7 @@ export default {
   },
   created() {
     this.fetchData()
+    this.states.unshift({ value: null, text: this.$t('home.select-state') })
   },
   components: {
     ShareModal,
@@ -279,12 +280,13 @@ export default {
   computed: {
     districtOptions() {
       if (this.selectedState == 'nc') {
+        districts[this.selectedState].unshift({ value: null, text: this.$t('home.select-district') })
         return districts[this.selectedState]
       }
       if (this.selectedState == null) {
-        return [{ value: null, text: 'You must select a state in order to select a district.' }]
+        return [{ value: null, text: this.$t('home.no-state') }]
       } else {
-        return [{ value: null, text: 'There is currently no data available for the selected state.' }]
+        return [{ value: null, text: this.$t('home.no-data') }]
       }
     },
     checkParam() {
