@@ -9,10 +9,10 @@
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
         <p>
-          <b-form-select v-model="selectedState" :options="states">Select a state.</b-form-select>
-          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'"
-            >Select a district.</b-form-select
-          >
+          <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
+          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
+            this.$t('home.select-district')
+          }}</b-form-select>
         </p>
         <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
@@ -279,12 +279,13 @@ export default {
   computed: {
     districtOptions() {
       if (this.selectedState == 'nc') {
+        districts[this.selectedState].unshift({ value: null, text: this.$t('home.select-district') })
         return districts[this.selectedState]
       }
       if (this.selectedState == null) {
-        return [{ value: null, text: 'You must select a state in order to select a district.' }]
+        return [{ value: null, text: this.$t('home.no-state') }]
       } else {
-        return [{ value: null, text: 'There is currently no data available for the selected state.' }]
+        return [{ value: null, text: this.$t('home.no-data') }]
       }
     },
     checkParam() {
@@ -352,9 +353,29 @@ export default {
 <style>
 body {
   color: #808080 !important;
+  background-color: #ffffff !important;
 }
 .district-buttons {
   margin: 20vh auto;
   text-align: center;
+  color: #000000;
+}
+.btn-secondary:disabled {
+  background-color: #e9ecef !important;
+  border-color: #a9a9a9 !important;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000 !important;
+  }
+  .district-buttons {
+    color: #f5f5f5;
+  }
+  .custom-select {
+    color: #f5f5f5 !important;
+  }
+  select:disabled {
+    color: #000000 !important;
+  }
 }
 </style>
