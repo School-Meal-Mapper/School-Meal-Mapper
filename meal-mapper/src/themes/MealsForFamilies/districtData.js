@@ -166,6 +166,9 @@ if (url.searchParams.has('chccs')) {
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 } else {
+  if (urlString.includes('?')) {
+    location.href = '/'
+  }
   //default:
   // current default is chapel hill (i.e. what happens when you don't type in a query). This should change to nav page.
   // district name and theming

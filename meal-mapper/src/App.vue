@@ -5,8 +5,19 @@
     </app-header>
     <faq-modal />
     <covid-pop-up />
-
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
+    <div class="d-flex" v-if="!checkParam">
+      <div class="district-buttons">
+        <p class="intro">{{ this.$t('home.intro') }}</p>
+        <p>
+          <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
+          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
+            this.$t('home.select-district')
+          }}</b-form-select>
+        </p>
+        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
+      </div>
+    </div>
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -59,7 +70,7 @@ import ResultsList from './components/ResultsList.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
-import { dayFilters, booleanFilters, dayAny } from './constants'
+import { dayFilters, booleanFilters, dayAny, states, districts } from './constants'
 
 import { districtData } from './themes/MealsForFamilies/districtData'
 import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
@@ -120,6 +131,10 @@ export default {
         currentBusiness: null,
         isSetByMap: false
       },
+      selectedState: null,
+      selectedDistrict: null,
+      states: states,
+      districts: districts,
       searchLocData: false,
       showList: false,
       showResults: false,
@@ -147,6 +162,11 @@ export default {
     })
   },
   methods: {
+    districtLink() {
+      if (this.selectedDistrict != null) {
+        location.href = '/?' + this.selectedDistrict
+      }
+    },
     setDarkMode(darkMode) {
       this.mapUrl = darkMode ? districtData.maps.dark.url : districtData.maps.normal.url
       this.attribution = darkMode ? districtData.maps.dark.attribution : districtData.maps.normal.attribution
@@ -257,6 +277,23 @@ export default {
     }
   },
   computed: {
+    districtOptions() {
+      if (this.selectedState == 'nc') {
+        districts[this.selectedState].unshift({ value: null, text: this.$t('home.select-district') })
+        return districts[this.selectedState]
+      }
+      if (this.selectedState == null) {
+        return [{ value: null, text: this.$t('home.no-state') }]
+      } else {
+        return [{ value: null, text: this.$t('home.no-data') }]
+      }
+    },
+    checkParam() {
+      var urlString = window.location.href
+      //var url = new URL(urlString)
+      //console.log(url.searchParams.has('d'))
+      return urlString.includes('?')
+    },
     filteredMarkers() {
       if (this.entries == null) return null
 
@@ -313,4 +350,32 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+body {
+  color: #808080 !important;
+  background-color: #ffffff !important;
+}
+.district-buttons {
+  margin: 20vh auto;
+  text-align: center;
+  color: #000000;
+}
+.btn-secondary:disabled {
+  background-color: #e9ecef !important;
+  border-color: #a9a9a9 !important;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000 !important;
+  }
+  .district-buttons {
+    color: #f5f5f5;
+  }
+  .custom-select {
+    color: #f5f5f5 !important;
+  }
+  select:disabled {
+    color: #000000 !important;
+  }
+}
+</style>

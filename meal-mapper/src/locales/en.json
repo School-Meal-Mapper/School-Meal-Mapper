@@ -35,6 +35,14 @@
     "partners": "Info Sources",
     "title": "About this site"
   },
+  "home": {
+    "intro": "Welcome to Meals for Families! Select a state and a school district to find free meal sites in your area.",
+    "btn": "Find free meals near me!",
+    "select-state": "Please select a state.",
+    "select-district": "Please select a school district.",
+    "no-state": "You must select a state in order to select a district.",
+    "no-data": "There is currently no data available for the selected state."
+  },
   "category": {
     "childcare": "Child care",
     "family": "Prepared family meals",
