@@ -8,21 +8,14 @@
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
-        <div>
-          <b-form-select v-model="selectedState" :options="states"></b-form-select>
+        <p>
+          <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
           <br />
           <br />
-          <div class="row">
-            <div class="col-sm">
-              <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'"></b-form-select>
-            </div>
-            <div class="col-sm">
-              Don't know your district? Enter your zipcode to find the closest school district(s).
-              <b-form-input v-model="zip" type="search" @keydown.native="searchZip" placeholder="Enter zipcode"></b-form-input>
-            </div>
-          </div>
-        </div>
-        <br />
+          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
+            this.$t('home.select-district')
+          }}</b-form-select>
+        </p>
         <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
     </div>
@@ -374,9 +367,29 @@ export default {
 <style>
 body {
   color: #808080 !important;
+  background-color: #ffffff !important;
 }
 .district-buttons {
   margin: 20vh auto;
   text-align: center;
+  color: #000000;
+}
+.btn-secondary:disabled {
+  background-color: #e9ecef !important;
+  border-color: #a9a9a9 !important;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000 !important;
+  }
+  .district-buttons {
+    color: #f5f5f5;
+  }
+  .custom-select {
+    color: #f5f5f5 !important;
+  }
+  select:disabled {
+    color: #000000 !important;
+  }
 }
 </style>
