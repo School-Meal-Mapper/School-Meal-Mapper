@@ -10,6 +10,8 @@
         <p class="intro">{{ this.$t('home.intro') }}</p>
         <p>
           <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
+          <br />
+          <br />
           <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
             this.$t('home.select-district')
           }}</b-form-select>
@@ -106,6 +108,7 @@ export default {
   },
   created() {
     this.fetchData()
+    this.states.unshift({ value: null, text: this.$t('home.select-state') })
   },
   components: {
     ShareModal,
@@ -151,7 +154,8 @@ export default {
       attribution: null,
       socialMediaico: districtData.socialMedia,
       hoverItem: null,
-      districtName: districtData.districtName
+      districtName: districtData.districtName,
+      zip: ''
     }
   },
   mounted() {
@@ -274,6 +278,16 @@ export default {
           }
           this.passLocation(val)
         })
+    },
+    searchZip(event) {
+      if (event.which === 13) {
+        event.preventDefault()
+        if (this.zip.length != 5) {
+          alert('Please enter a valid zipcode')
+        } else {
+          console.log(this.zip)
+        }
+      }
     }
   },
   computed: {
