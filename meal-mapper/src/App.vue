@@ -8,12 +8,21 @@
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
-        <p>
-          <b-form-select v-model="selectedState" :options="states">Select a state.</b-form-select>
-          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'"
-            >Select a district.</b-form-select
-          >
-        </p>
+        <div>
+          <b-form-select v-model="selectedState" :options="states"></b-form-select>
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-sm">
+              <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'"></b-form-select>
+            </div>
+            <div class="col-sm">
+              Don't know your district? Enter your zipcode to find the closest school district(s).
+              <b-form-input v-model="zip" type="search" @keydown.native="searchZip" placeholder="Enter zipcode"></b-form-input>
+            </div>
+          </div>
+        </div>
+        <br />
         <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
     </div>
@@ -152,7 +161,8 @@ export default {
       attribution: null,
       socialMediaico: districtData.socialMedia,
       hoverItem: null,
-      districtName: districtData.districtName
+      districtName: districtData.districtName,
+      zip: ''
     }
   },
   mounted() {
@@ -275,6 +285,16 @@ export default {
           }
           this.passLocation(val)
         })
+    },
+    searchZip(event) {
+      if (event.which === 13) {
+        event.preventDefault()
+        if (this.zip.length != 5) {
+          alert('Please enter a valid zipcode')
+        } else {
+          console.log(this.zip)
+        }
+      }
     }
   },
   computed: {
