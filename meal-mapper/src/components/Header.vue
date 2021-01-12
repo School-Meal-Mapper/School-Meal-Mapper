@@ -5,7 +5,7 @@
         <b-navbar-brand href="#" class="left"> <slot></slot> </b-navbar-brand>
       </div>
       <div class="p-2">
-        <form class="form-group w-25 center-content right">
+        <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
         </form>
       </div>
@@ -87,7 +87,8 @@ export default {
       window: {
         width: 0,
         height: 0
-      }
+      },
+      districtName: districtData.districtName
     }
   },
   computed: {

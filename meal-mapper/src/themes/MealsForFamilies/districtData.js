@@ -6,7 +6,7 @@
   ease of use. If the project scales, our practices for keeping this data should change.
 */
 
-var districtName = 'chapelhill'
+var districtName = 'mff'
 var primaryColor = null
 var bannerColor = null
 var bannerColorDark = null
@@ -172,10 +172,10 @@ if (url.searchParams.has('chccs')) {
   //default:
   // current default is chapel hill (i.e. what happens when you don't type in a query). This should change to nav page.
   // district name and theming
-  districtName = 'chapelhill'
+  districtName = 'mff'
   primaryColor = '#0063b1'
-  bannerColor = '#E9ECEF'
-  bannerColorDark = '#212529'
+  bannerColor = '#00aaaa'
+  bannerColorDark = '#015e5e'
   navLink = '#313639'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page
