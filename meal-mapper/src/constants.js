@@ -96,6 +96,7 @@ export const districts = {
     { value: 'cms', text: 'Charlotte-Mecklenburg Schools' },
     { value: 'chatham', text: 'Chatham County Schools' },
     { value: 'dps', text: 'Durham Public Schools' },
+    { value: 'jcps', text: 'Johnston County Public Schools' },
     { value: 'rss', text: 'Roanoke Rapids Graded School District' },
     { value: 'wake', text: 'Wake County Public Schools' }
   ]
