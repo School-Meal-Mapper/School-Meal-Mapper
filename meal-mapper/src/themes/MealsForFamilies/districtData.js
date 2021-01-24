@@ -173,9 +173,9 @@ if (url.searchParams.has('chccs')) {
   bannerColor = '#0e2c6c'
   bannerColorDark = '#0e2c6c'
   // map settings for district-specific page
-  initialMapCenterLat = 35.95
-  initialMapCenterLng = -79.1
-  initialMapZoom = 11
+  initialMapCenterLat = 35.56928878
+  initialMapCenterLng = -78.42296134
+  initialMapZoom = 10
   clusterZoom = 12
   maxZoom = 17
   minZoom = 10
