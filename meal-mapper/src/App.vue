@@ -315,6 +315,20 @@ export default {
       markers = this.entries
       // Only show markers whose meal site status is open
       markers = markers.filter((m) => m['gsx$mealsitestatus'].$t.toLowerCase() == 'open')
+      // Only show markers whose end date hasn't passed
+      var month = new Date().getMonth()
+      var date = new Date().getDate()
+      var year = new Date().getFullYear()
+      //console.log(parseInt(markers[0].gsx$enddate.$t.split('/')[2]) >= year)
+      //console.log(parseInt(m['gsx$enddate'].$t.split('/')[0]) >= month)
+      //console.log(parseInt(m['gsx$enddate'].$t.split('/')[1]) >= date)
+      markers = markers.filter(
+        (m) =>
+          m['gsx$enddate'].$t == '' ||
+          (parseInt(m['gsx$enddate'].$t.split('/')[2]) >= year &&
+            parseInt(m['gsx$enddate'].$t.split('/')[0]) >= month &&
+            parseInt(m['gsx$enddate'].$t.split('/')[1]) >= date)
+      )
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {
