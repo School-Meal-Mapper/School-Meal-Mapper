@@ -313,7 +313,8 @@ export default {
 
       var markers
       markers = this.entries
-
+      // Only show markers whose meal site status is open
+      markers = markers.filter((m) => m['gsx$mealsitestatus'].$t.toLowerCase() == 'open')
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {
