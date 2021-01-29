@@ -67,6 +67,7 @@ export default {
   name: 'app-header',
   props: {
     language: String,
+    logoLink: String,
     socialMedia: Array
   },
   data() {
@@ -88,8 +89,7 @@ export default {
         width: 0,
         height: 0
       },
-      districtName: districtData.districtName,
-      logoLink: districtData.logoLink
+      districtName: districtData.districtName
     }
   },
   computed: {
