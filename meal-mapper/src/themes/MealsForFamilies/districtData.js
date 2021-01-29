@@ -21,6 +21,7 @@ var lightUrl = null
 var lightAttribution = null
 var darkUrl = null
 var darkAttribution = null
+var logoLink = '#'
 var navLink = '#f8f8ff'
 var navLinkDark = '#f8f8ff'
 
@@ -49,6 +50,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 12
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+  logoLink = 'https://www.foodforstudents.info/'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -71,6 +73,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 11
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1kclyQ5Q-sOOSLARn_qaLxXUnq5f6Q8XWGNvAM5po6E0/1/public/values?alt=json'
+  logoLink = 'https://www.dpsnc.net/'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -93,6 +96,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 10
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1fZBlAwDsSkLPxy2CU3nafPMIAjWKsbY7dDySCaspu6I/1/public/values?alt=json'
+  logoLink = 'https://www.cms.k12.nc.us/Pages/default.aspx'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -115,6 +119,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 14
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1d6kgVHTBBsSnG7dzx51iPPrbnkxS0MUewwTC1KB0tCQ/1/public/values?alt=json'
+  logoLink = 'https://www.rrgsd.org/'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -137,6 +142,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 11
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1r6uyEPzmiPzdb77niHbgHzSoPGth9Pzt1FiriviJkyU/1/public/values?alt=json'
+  logoLink = 'https://www.chatham.k12.nc.us/chatham'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -159,6 +165,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 10
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1JYqkJR8BtNC71Uerg0PTOPdr3KCz6NW4N0kbFiSBHOU/1/public/values?alt=json'
+  logoLink = 'https://www.wcpss.net/'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -181,6 +188,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 10
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ldO41Qh93H-C9jZ4Y2SkAbdz1vfTdxQVup7GTVz-6I8/1/public/values?alt=json'
+  logoLink = 'https://jcpscafes.com/'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -209,6 +217,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 12
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+  logoLink = '#'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -221,6 +230,7 @@ if (url.searchParams.has('chccs')) {
 
 export const districtData = {
   districtName: districtName,
+  logoLink: logoLink,
   colors: {
     primaryColor: primaryColor,
     bannerColor: bannerColor,

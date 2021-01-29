@@ -2,7 +2,7 @@
   <b-navbar toggleable="lg" type="dark" class="banner" id="topnav">
     <div class="searchBar d-flex flex-row">
       <div>
-        <b-navbar-brand href="#" class="left"> <slot></slot> </b-navbar-brand>
+        <b-navbar-brand :href="logoLink" class="left"> <slot></slot> </b-navbar-brand>
       </div>
       <div class="p-2">
         <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
@@ -88,7 +88,8 @@ export default {
         width: 0,
         height: 0
       },
-      districtName: districtData.districtName
+      districtName: districtData.districtName,
+      logoLink: districtData.logoLink
     }
   },
   computed: {
