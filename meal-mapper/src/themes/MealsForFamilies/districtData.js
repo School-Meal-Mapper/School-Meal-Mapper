@@ -188,6 +188,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 10
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ldO41Qh93H-C9jZ4Y2SkAbdz1vfTdxQVup7GTVz-6I8/1/public/values?alt=json'
+  logoLink = 'https://jcpscafes.com/'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
