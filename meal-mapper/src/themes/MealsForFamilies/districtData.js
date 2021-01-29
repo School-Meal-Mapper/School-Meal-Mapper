@@ -172,6 +172,28 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('jcps')) {
+  //case 'wake':
+  // district name and theming
+  districtName = 'johnston'
+  primaryColor = '#005498'
+  bannerColor = '#0e2c6c'
+  bannerColorDark = '#0e2c6c'
+  // map settings for district-specific page
+  initialMapCenterLat = 35.56928878
+  initialMapCenterLng = -78.42296134
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ldO41Qh93H-C9jZ4Y2SkAbdz1vfTdxQVup7GTVz-6I8/1/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 } else {
   if (urlString.includes('?')) {
     location.href = '/'
