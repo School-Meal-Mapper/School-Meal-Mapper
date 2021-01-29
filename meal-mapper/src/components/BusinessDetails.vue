@@ -56,7 +56,7 @@
             <icon-list-item
               v-if="business.marker.gsx$facebook !== undefined && !!business.marker.gsx$facebook.$t"
               icon="fa fa-facebook-square"
-              :title="'Facebook'"
+              :title="'@' + business.marker.gsx$facebook.$t.split('/')[3]"
               :link="business.marker.gsx$facebook.$t"
             />
           </p>
