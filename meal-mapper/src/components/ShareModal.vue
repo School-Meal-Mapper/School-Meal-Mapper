@@ -61,6 +61,13 @@ export default {
       document.execCommand('copy')
       alert(this.$tc('sharelocation.copied'))
     },
+    /*
+    moreInfo: function () {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      console.log(url.searchParams.toString().slice(0, -1))
+      return 'For more information about free meal sites organized by the Chapel Hill-Carrboro school district, visit ' + urlString + '.'
+    }, */
     emailLink: function (marker) {
       const mailto = 'mailto:?subject='
       var subject = 'Find free meals for children at ' + marker.gsx$mealsitename.$t
@@ -76,9 +83,7 @@ export default {
       body = encodeURI(body)
       var address = encodeURI(this.addressURL(marker))
       body += this.shareLink(address).replace('&', '%26') + '.'
-      body +=
-        encodeURI('\n\n') +
-        'For more information about free meal sites organized by the Chapel Hill-Carrboro school district, visit https://school-meal-mapper.github.io/School-Meal-Mapper/.'
+      body += encodeURI('\n\n') + 'For more information about free meal sites, visit https://mealsforfamilies.org/.'
       return mailto + subject + body
     },
     getAddress: getAddress
