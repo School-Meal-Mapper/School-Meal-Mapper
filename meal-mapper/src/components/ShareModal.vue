@@ -100,7 +100,6 @@ export default {
         ' free meal site, located at ' +
         getAddress(marker) +
         '.' +
-        encodeURI('\n\n\n') +
         ' Click this link to access the meal site in Google Maps: '
       var address = encodeURI(this.addressURL(marker))
       body += this.shareLink(address).replace('&', '%26') + '.'

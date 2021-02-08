@@ -24,9 +24,7 @@
             {{ getAddress(business.marker) }}
             <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
             <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
-              $t('sharelocation.shareloc')
-            }}</b-button>
+            <b-link class="share-button" @click="$bvModal.show('share-location')">{{ $t('sharelocation.shareloc') }}</b-link>
           </p>
 
           <p id="icon-list-mobile" v-if="maxDetails">
