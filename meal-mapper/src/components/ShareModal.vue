@@ -120,7 +120,7 @@ export default {
       body = encodeURI(body)
       var address = encodeURI(this.addressURL(marker))
       body += this.shareLink(address).replace('&', '%26') + '.'
-      body += encodeURI('\n\n') + 'For more information about free meal sites, visit https://mealsforfamilies.org/.'
+      body += encodeURI('\n\n') + 'For more information about free meal sites in this district, visit ' + window.location.href + '.'
       return mailto + subject + body
     },
     getAddress: getAddress
