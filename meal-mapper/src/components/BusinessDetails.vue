@@ -21,12 +21,12 @@
 
           <p v-if="business.marker.gsx$sitedescription != null">
             {{ business.marker.gsx$sitedescription.$t }}
-            <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
-            <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
-            <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
-              $t('sharelocation.shareloc')
-            }}</b-button>
           </p>
+          <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
+          <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
+          <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
+            $t('sharelocation.shareloc')
+          }}</b-button>
 
           <p>
             <icon-list-item
