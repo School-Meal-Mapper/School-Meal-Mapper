@@ -14,7 +14,7 @@
       {{ $t('sharelocation.link') }}
       <br />
       <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-50" id="share-link" />
-      <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy') }}</b-button>
+      <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy-link') }}</b-button>
       <br />
     </p>
     <div v-if="business !== null">
@@ -26,9 +26,22 @@
       </div>
       <div class="sendTextDiv">
         <i class="fa fa-mobile fa-lg" id="text-icon" aria-hidden="true" />
-        <a :href="emailLink(business.marker)">
+        <b-link @click="showText = !showText">
           <span class="sendText">{{ $t('sharelocation.text') }} </span>
-        </a>
+        </b-link>
+        <br />
+        <p v-if="showText">
+          <textarea
+            readonly
+            type="text"
+            :value="textMessage(business.marker)"
+            class="form-control w-75"
+            id="text-message"
+            style="height: 200px;"
+            rows="4"
+          />
+          <b-link @click="copyTextMessage()">{{ $t('sharelocation.copy-message') }}</b-link>
+        </p>
       </div>
     </div>
   </b-modal>
@@ -39,6 +52,11 @@ import { getAddress } from '../utilities'
 export default {
   name: 'share-modal',
   components: {},
+  data() {
+    return {
+      showText: false
+    }
+  },
   props: {
     business: Object
   },
@@ -61,6 +79,32 @@ export default {
       document.execCommand('copy')
       alert(this.$tc('sharelocation.copied'))
     },
+    copyTextMessage: function () {
+      var copyText = document.getElementById('text-message')
+      copyText.select()
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+      alert(this.$tc('sharelocation.copied'))
+    },
+    /*
+    moreInfo: function () {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      console.log(url.searchParams.toString().slice(0, -1))
+      return 'For more information about free meal sites organized by the Chapel Hill-Carrboro school district, visit ' + urlString + '.'
+    }, */
+    textMessage: function (marker) {
+      var body =
+        'I thought you might be interested in visiting the ' +
+        marker.gsx$mealsitename.$t +
+        ' free meal site, located at ' +
+        getAddress(marker) +
+        '.' +
+        ' Click this link to access the meal site in Google Maps: '
+      var address = encodeURI(this.addressURL(marker))
+      body += this.shareLink(address).replace('&', '%26') + '.'
+      return body
+    },
     emailLink: function (marker) {
       const mailto = 'mailto:?subject='
       var subject = 'Find free meals for children at ' + marker.gsx$mealsitename.$t
@@ -76,9 +120,7 @@ export default {
       body = encodeURI(body)
       var address = encodeURI(this.addressURL(marker))
       body += this.shareLink(address).replace('&', '%26') + '.'
-      body +=
-        encodeURI('\n\n') +
-        'For more information about free meal sites organized by the Chapel Hill-Carrboro school district, visit https://school-meal-mapper.github.io/School-Meal-Mapper/.'
+      body += encodeURI('\n\n') + 'For more information about free meal sites in this district, visit ' + window.location.href + '.'
       return mailto + subject + body
     },
     getAddress: getAddress

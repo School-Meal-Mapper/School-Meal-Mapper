@@ -1,16 +1,16 @@
 module.exports = {
-  title: 'Meal Mapper',
-  keywords: 'Map, School Meals, Free Meals, Durham',
-  description: 'Map depicting summer school meal sites for the Durham School District',
+  title: 'Meals for Families',
+  keywords: 'Map, School Meals, Free Meals',
+  description: 'Find free meals for children ages 0-18 using an interactive map',
 
   // Open Graph
   // optional
   og: {
     type: 'website',
     url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/dps',
-    title: 'Meal Mapper',
-    site_name: 'Meal Mapper',
-    description: 'Map depicting summer school meal sites for the Durham School District',
+    title: 'Meals for Families',
+    site_name: 'Meals for Families',
+    description: 'Find free meals for children ages 0-18 using an interactive map',
     locale: 'en_US',
     localeAlt: 'es_US',
     image: {
@@ -25,8 +25,8 @@ module.exports = {
   // Twitter Card
   // optional
   twitterCard: {
-    title: 'Meal Mapper',
-    description: 'Map depicting summer school meal sites for the Durham School District',
+    title: 'Meals for Families',
+    description: 'Find free meals for children ages 0-18 using an interactive map',
 
     // optional
     site: '@schoolmealmapper',
@@ -38,7 +38,7 @@ module.exports = {
     url: 'https://school-meal-mapper.github.io/School-Meal-Mapper/dps',
     image: {
       url: 'https://youneedtofix.github.io/NC-COVID-Support/images/Share-Twitter.png',
-      alt: 'Meal Mapper',
+      alt: 'Meals for Families',
       width: 1200,
       height: 670
     }

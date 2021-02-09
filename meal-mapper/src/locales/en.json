@@ -163,8 +163,9 @@
     "noresults": "No results match your search. Please enter more information."
   },
   "sharelocation": {
-    "copied": "Link copied",
-    "copy": "COPY LINK",
+    "copied": "Copied",
+    "copy-link": "COPY LINK",
+    "copy-message": "Copy Message",
     "email": "Send email",
     "link": "Link to share:",
     "share": "Share",

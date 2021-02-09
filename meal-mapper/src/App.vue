@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <app-header :language="language.name" @search="searchLoc" @language-selected="changeLanguage" :socialMedia="socialMediaico">
+    <app-header
+      :logoLink="logoLink"
+      :language="language.name"
+      @search="searchLoc"
+      @language-selected="changeLanguage"
+      :socialMedia="socialMediaico"
+    >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
     <faq-modal />
@@ -155,7 +161,8 @@ export default {
       socialMediaico: districtData.socialMedia,
       hoverItem: null,
       districtName: districtData.districtName,
-      zip: ''
+      zip: '',
+      logoLink: null
     }
   },
   mounted() {
@@ -222,6 +229,7 @@ export default {
       // }
 
       this.entries = entries.feed.entry
+      this.logoLink = this.entries[0]['gsx$redirectlink'].$t
     },
     latLng,
     passLocation: function (val) {
@@ -325,10 +333,8 @@ export default {
       // Only show markers whose meal site status is open
       markers = markers.filter((m) => m['gsx$mealsitestatus'].$t.toLowerCase() == 'open')
       // Only show markers whose end date hasn't passed
-      //console.log(parseInt(markers[0].gsx$enddate.$t.split('/')[2]) >= year)
-      //console.log(parseInt(m['gsx$enddate'].$t.split('/')[0]) >= month)
-      //console.log(parseInt(m['gsx$enddate'].$t.split('/')[1]) >= date)
       markers = markers.filter((m) => m['gsx$enddate'].$t == '' || this.dateComp(m['gsx$enddate'].$t))
+      //logoLink = markers[0]['gsx$redirectlink'].$t
       // Filter out the boolean items
       this.highlightFilters.forEach((element) => {
         if (booleanFilters.includes(element)) {
