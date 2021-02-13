@@ -103,6 +103,7 @@ export default {
         ' Click this link to access the meal site in Google Maps: '
       var address = encodeURI(this.addressURL(marker))
       body += this.shareLink(address).replace('&', '%26') + '.'
+      body += ' For more information about free meal sites in this district, visit ' + window.location.href + '.'
       return body
     },
     emailLink: function (marker) {
