@@ -4,7 +4,7 @@
       {{ $t('faq.title') }}
     </template>
     <template v-slot:default>
-      <div class="accordion" role="tablist">
+      <div class="accordion" role="tablist" v-if="questions == null">
         <b-card no-body class="mb-1">
           <b-card-header header-tag="header" class="p-1" role="tab">
             <b-button block v-b-toggle.accordion-1 class="font-weight-bold question" variant="info">{{
@@ -170,13 +170,27 @@
         </b-card>
         <b-card no-body class="mb-1">
           <b-card-header header-tag="header" class="p-1" role="tab">
-            <b-button block v-b-toggle.accordion-14 class="font-weight-bold question" variant="info">{{
+            <b-button block v-b-toggle="'accordion-' + '14'" class="font-weight-bold question" variant="info">{{
               $t('faq.babyfoodQuestion')
             }}</b-button>
           </b-card-header>
           <b-collapse id="accordion-14" accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <b-card-text>{{ $t('faq.babyfoodAnswer') }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+      </div>
+      <div class="accordion" role="tablist" v-if="questions != null">
+        <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle="'accordion-' + index.toString()" class="font-weight-bold question" variant="info"
+              >{{ question.gsx$englishquestion.$t }}
+            </b-button>
+          </b-card-header>
+          <b-collapse :id="'accordion-' + index.toString()" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ question.gsx$englishanswer.$t }}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
@@ -198,7 +212,10 @@ document.documentElement.style.setProperty('--nav-link-light', districtData.colo
 document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
 
 export default {
-  name: 'faq-modal'
+  name: 'faq-modal',
+  props: {
+    questions: Array
+  }
 }
 </script>
 

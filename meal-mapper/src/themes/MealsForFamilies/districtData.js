@@ -17,6 +17,7 @@ var clusterZoom = null
 var maxZoom = null
 var minZoom = null
 var spreadsheetUrl = null
+var faqUrl = null
 var lightUrl = null
 var lightAttribution = null
 var darkUrl = null
@@ -49,6 +50,7 @@ if (url.searchParams.has('chccs')) {
   minZoom = 12
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/2/public/values?alt=json'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -240,7 +242,8 @@ export const districtData = {
   },
   socialMedia: [{}],
   data: {
-    spreadsheetUrl: spreadsheetUrl
+    spreadsheetUrl: spreadsheetUrl,
+    faqUrl: faqUrl
   },
   maps: {
     normal: {
