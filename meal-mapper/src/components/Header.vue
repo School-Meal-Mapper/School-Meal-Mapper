@@ -15,7 +15,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right>
+        <b-nav-item right v-if="hasFaqs">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
             <b>{{ $t('faq.linktext') }}</b>
@@ -68,7 +68,8 @@ export default {
   props: {
     language: String,
     logoLink: String,
-    socialMedia: Array
+    socialMedia: Array,
+    hasFaqs: Boolean
   },
   data() {
     return {

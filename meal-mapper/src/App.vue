@@ -6,6 +6,7 @@
       @search="searchLoc"
       @language-selected="changeLanguage"
       :socialMedia="socialMediaico"
+      :hasFaqs="faqs != null"
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
@@ -225,6 +226,7 @@ export default {
         const res2 = await fetch(districtData.data.faqUrl)
         const faqs = await res2.json()
         this.faqs = faqs.feed.entry
+        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
       }
       const entries = await res.json()
 
