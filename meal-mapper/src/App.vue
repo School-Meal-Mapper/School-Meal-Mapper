@@ -9,7 +9,7 @@
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
-    <faq-modal />
+    <faq-modal :questions="faqs" />
     <covid-pop-up />
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
@@ -130,6 +130,7 @@ export default {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     return {
       entries: null,
+      faqs: null,
       need: 'none',
       day: dayAny,
       isFilterOpen: true,
@@ -220,6 +221,11 @@ export default {
     async fetchData() {
       const res = await fetch(districtData.data.spreadsheetUrl)
       console.log(res)
+      if (districtData.data.faqUrl != null) {
+        const res2 = await fetch(districtData.data.faqUrl)
+        const faqs = await res2.json()
+        this.faqs = faqs.feed.entry
+      }
       const entries = await res.json()
 
       // if (entries !== null) {
