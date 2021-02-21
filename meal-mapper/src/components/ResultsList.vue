@@ -148,16 +148,14 @@ export default {
       }
     },
     closed: function (item) {
-      //var todayNum = new Date().getDay()
-      var todayNum = 1
+      var todayNum = new Date().getDay()
       var todayDay = days[todayNum]
       if (item.marker[todayDay].$t == 0) {
         return true
       } else return false
     },
     hours: function (item) {
-      //var today = new Date().getDay()
-      var today = 1
+      var today = new Date().getDay()
       var day = days[today]
       return item.marker[day].$t
     },

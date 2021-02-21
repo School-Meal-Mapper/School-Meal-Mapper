@@ -22,7 +22,7 @@
           <p v-if="business.marker.gsx$sitedescription != null">
             {{ business.marker.gsx$sitedescription.$t }}
           </p>
-          <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(addressURL(business.marker))" />
+          <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(business.marker)" />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
           <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
             $t('sharelocation.shareloc')
@@ -126,8 +126,8 @@ export default {
       address = address + '%2C%20' + city + '%2C%20' + state + '%20' + marker.gsx$zip.$t
       return address
     },
-    directionsLink: function (address) {
-      return 'https://www.google.com/maps/dir/?api=1&destination=' + address
+    directionsLink: function (marker) {
+      return 'https://www.google.com/maps/dir/?api=1&destination=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
     },
     getAddress: getAddress
   },
