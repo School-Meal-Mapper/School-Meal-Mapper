@@ -53,8 +53,16 @@
         <i class="fa fa-chevron-right arrow"></i>
         <div>
           <span class="closed-badge" v-if="closed(item)">{{ getClosedMessage() }}</span>
-          <span class="hours-badge" v-if="!closed(item) && item.marker.gsx$specialsite.$t == '0'">{{ hours(item) }}</span>
-          <span class="special-badge" v-if="!closed(item) && item.marker.gsx$specialsite.$t == '1'">{{ hours(item) }}</span>
+          <span
+            class="hours-badge"
+            v-if="!closed(item) && (item.marker.gsx$specialsite == null || item.marker.gsx$specialsite.$t == '0')"
+            >{{ hours(item) }}</span
+          >
+          <span
+            class="special-badge"
+            v-if="!closed(item) && item.marker.gsx$specialsite != null && item.marker.gsx$specialsite.$t == '1'"
+            >{{ hours(item) }}</span
+          >
         </div>
       </b-list-group-item>
     </b-list-group>
@@ -140,14 +148,16 @@ export default {
       }
     },
     closed: function (item) {
-      var todayNum = new Date().getDay()
+      //var todayNum = new Date().getDay()
+      var todayNum = 1
       var todayDay = days[todayNum]
       if (item.marker[todayDay].$t == 0) {
         return true
       } else return false
     },
     hours: function (item) {
-      var today = new Date().getDay()
+      //var today = new Date().getDay()
+      var today = 1
       var day = days[today]
       return item.marker[day].$t
     },
