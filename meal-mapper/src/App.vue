@@ -79,7 +79,7 @@ import ResultsList from './components/ResultsList.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
-import { dayFilters, booleanFilters, dayAny, states, districts } from './constants'
+import { dayFilters, booleanFilters, dayAny, nc, districts } from './constants'
 
 import { districtData } from './themes/MealsForFamilies/districtData'
 import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
@@ -144,7 +144,7 @@ export default {
       },
       selectedState: null,
       selectedDistrict: null,
-      states: states,
+      states: nc,
       districts: districts,
       searchLocData: false,
       showList: false,
