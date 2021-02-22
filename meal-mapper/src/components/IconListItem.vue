@@ -8,7 +8,7 @@
           <img :src="image" v-if="icon == null || icon == ''" />
         </div>
         <div class="ilTitle">
-          <a :href="link" v-if="link != null && link != ''">
+          <a :href="link" target="_blank" v-if="link != null && link != ''">
             <span class="title">{{ title }}</span>
           </a>
           <span class="title" v-if="link == null || link == ''">{{ title }}</span>
