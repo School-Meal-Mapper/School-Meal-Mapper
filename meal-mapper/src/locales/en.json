@@ -160,7 +160,8 @@
   "search": {
     "prompt": "Find meals near address...",
     "find": "Find the meal site closest to...",
-    "noresults": "No results match your search. Please enter more information."
+    "noresults": "No results match your search. Please enter more information.",
+    "other-district": "Or find sites in another district"
   },
   "sharelocation": {
     "copied": "Copied",
