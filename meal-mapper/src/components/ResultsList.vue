@@ -55,7 +55,7 @@
           <span class="closed-badge" v-if="closed(item)">{{ getClosedMessage() }}</span>
           <span
             class="hours-badge"
-            v-if="!closed(item) && (item.marker.gsx$specialsite == null || item.marker.gsx$specialsite.$t == '0')"
+            v-if="!closed(item) && (item.marker.gsx$specialsite == null || item.marker.gsx$specialsite.$t != '1')"
             >{{ hours(item) }}</span
           >
           <span
