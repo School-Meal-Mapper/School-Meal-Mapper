@@ -225,7 +225,7 @@ export default {
     display: none;
   }
   position: fixed;
-  top: 3.8%;
+  margin-top: 1rem;
 }
 
 .searchTitle {
