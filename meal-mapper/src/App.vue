@@ -316,7 +316,6 @@ export default {
   computed: {
     districtOptions() {
       if (this.selectedState == 'nc') {
-        districts[this.selectedState].unshift({ value: null, text: this.$t('home.select-district') })
         return districts[this.selectedState]
       }
       if (this.selectedState == null) {
