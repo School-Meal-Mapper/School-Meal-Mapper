@@ -52,13 +52,13 @@
   },
   "dayofweek": {
     "any": "Sebarang",
-    "friday": "Jumaat",
-    "monday": "တနင်္လာနေ့",
-    "saturday": "Sabtu",
-    "sunday": "Ahad",
-    "thursday": "Khamis",
-    "tuesday": "Selasa",
-    "wednesday": "Rabu"
+    "friday": "သောကြာ<",
+    "monday": "တနင်္လာ",
+    "saturday": "စနေ",
+    "sunday": "တနင်္ဂနွေ",
+    "thursday": "ကြာသပတေး",
+    "tuesday": "အင်္",
+    "wednesday": "ဗုဒ္ဓဟူး"
   },
   "faq": {
     "close": "Tutup",

@@ -37,8 +37,8 @@ if (url.searchParams.has('chccs')) {
   // district name and theming
   districtName = 'chapelhill'
   primaryColor = '#0063b1'
-  bannerColor = '#E9ECEF'
-  bannerColorDark = '#212529'
+  bannerColor = '#00a5ad'
+  bannerColorDark = '#0c6364'
   navLink = '#313639'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page

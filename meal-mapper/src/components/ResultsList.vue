@@ -53,7 +53,16 @@
         <i class="fa fa-chevron-right arrow"></i>
         <div>
           <span class="closed-badge" v-if="closed(item)">{{ getClosedMessage() }}</span>
-          <span class="hours-badge" v-if="!closed(item)">{{ hours(item) }}</span>
+          <span
+            class="hours-badge"
+            v-if="!closed(item) && (item.marker.gsx$specialsite == null || item.marker.gsx$specialsite.$t != '1')"
+            >{{ hours(item) }}</span
+          >
+          <span
+            class="special-badge"
+            v-if="!closed(item) && item.marker.gsx$specialsite != null && item.marker.gsx$specialsite.$t == '1'"
+            >{{ hours(item) }}</span
+          >
         </div>
       </b-list-group-item>
     </b-list-group>
@@ -213,6 +222,17 @@ export default {
   display: inline-block;
   border-radius: 100px;
   background-color: $marker-open;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.special-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #9c9100;
   border: 1px solid $gray-400;
   color: $gray-100;
   padding: 2px 6px;

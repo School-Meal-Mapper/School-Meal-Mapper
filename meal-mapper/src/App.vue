@@ -6,6 +6,7 @@
       @search="searchLoc"
       @language-selected="changeLanguage"
       :socialMedia="socialMediaico"
+      :hasFaqs="faqs != null"
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
@@ -78,7 +79,7 @@ import ResultsList from './components/ResultsList.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
-import { dayFilters, booleanFilters, dayAny, states, districts } from './constants'
+import { dayFilters, booleanFilters, dayAny, nc, districts } from './constants'
 
 import { districtData } from './themes/MealsForFamilies/districtData'
 import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
@@ -143,7 +144,7 @@ export default {
       },
       selectedState: null,
       selectedDistrict: null,
-      states: states,
+      states: nc,
       districts: districts,
       searchLocData: false,
       showList: false,
@@ -225,6 +226,7 @@ export default {
         const res2 = await fetch(districtData.data.faqUrl)
         const faqs = await res2.json()
         this.faqs = faqs.feed.entry
+        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
       }
       const entries = await res.json()
 

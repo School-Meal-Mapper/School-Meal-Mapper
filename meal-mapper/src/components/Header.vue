@@ -7,6 +7,7 @@
       <div class="p-2">
         <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
         </form>
       </div>
     </div>
@@ -15,10 +16,11 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right>
+        <b-nav-item right v-if="hasFaqs || districtName == 'mff'">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b>{{ $t('faq.linktext') }}</b>
+            <b v-if="districtName != 'mff'">{{ $t('faq.linktext') }}</b>
+            <b v-if="districtName == 'mff'">{{ $t('about.linktext') }}</b>
           </b-button>
         </b-nav-item>
 
@@ -68,7 +70,8 @@ export default {
   props: {
     language: String,
     logoLink: String,
-    socialMedia: Array
+    socialMedia: Array,
+    hasFaqs: Boolean
   },
   data() {
     return {

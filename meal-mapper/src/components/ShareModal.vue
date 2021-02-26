@@ -13,7 +13,7 @@
       <br />
       {{ $t('sharelocation.link') }}
       <br />
-      <input readonly type="text" :value="shareLink(addressURL(business.marker))" class="w-50" id="share-link" />
+      <input readonly type="text" :value="shareLink(business.marker)" class="w-50" id="share-link" />
       <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy-link') }}</b-button>
       <br />
     </p>
@@ -69,8 +69,8 @@ export default {
       address = address + '%2C%20' + city + '%2C%20' + state + '%20' + marker.gsx$zip.$t
       return address
     },
-    shareLink: function (address) {
-      return 'https://www.google.com/maps/search/?api=1&query=' + address
+    shareLink: function (marker) {
+      return 'https://www.google.com/maps/search/?api=1&query=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
     },
     copyShareLink: function () {
       var copyText = document.getElementById('share-link')
@@ -101,8 +101,9 @@ export default {
         getAddress(marker) +
         '.' +
         ' Click this link to access the meal site in Google Maps: '
-      var address = encodeURI(this.addressURL(marker))
-      body += this.shareLink(address).replace('&', '%26') + '.'
+      //var address = encodeURI(this.addressURL(marker))
+      //body += this.shareLink(address).replace('&', '%26') + '.'
+      body += this.shareLink(marker) + '.'
       body += ' For more information about free meal sites in this district, visit ' + window.location.href + '.'
       return body
     },
@@ -119,8 +120,9 @@ export default {
         '. This site provides free meals for children aged 0-18.\n\n' +
         'Click this link to access the meal site in Google Maps:\n'
       body = encodeURI(body)
-      var address = encodeURI(this.addressURL(marker))
-      body += this.shareLink(address).replace('&', '%26') + '.'
+      //var address = encodeURI(this.addressURL(marker))
+      //body += this.shareLink(address).replace('&', '%26') + '.'
+      body += this.shareLink(marker).replace('&', '%26') + '.'
       body += encodeURI('\n\n') + 'For more information about free meal sites in this district, visit ' + window.location.href + '.'
       return mailto + subject + body
     },

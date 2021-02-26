@@ -90,6 +90,8 @@ export const states = [
   { value: 'wy', text: 'Wyoming' }
 ]
 
+export const nc = [{ value: 'nc', text: 'North Carolina' }]
+
 export const districts = {
   nc: [
     { value: 'chccs', text: 'Chapel Hill-Carrboro City Schools' },
