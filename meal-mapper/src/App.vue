@@ -261,6 +261,21 @@ export default {
       this.hoverItem = null
     },
     searchLoc: function (location) {
+      for (var index = 0; index < this.filteredMarkers.length; index++) {
+        const entry = this.filteredMarkers[index].marker
+        if (
+          entry['gsx$mealsitename'].$t.toLowerCase().includes(location.toLowerCase()) ||
+          location.toLowerCase().includes(entry['gsx$mealsiteaddress1'].$t.toLowerCase()) ||
+          entry['gsx$mealsiteaddress1'].$t.toLowerCase().includes(location.toLowerCase())
+        ) {
+          const val = {
+            locValue: index,
+            isSetbyMap: false
+          }
+          this.passLocation(val)
+          return
+        }
+      }
       var fetchString = 'https://nominatim.openstreetmap.org/search?key=9Rl2TaZFQpBPsnQmQo6cq79sl3Rf9EfA&q=' + location + '&format=json'
       fetch(fetchString)
         .then((response) => response.json())
