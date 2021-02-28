@@ -199,8 +199,8 @@ if (url.searchParams.has('chccs')) {
   // district name and theming
   districtName = 'mff'
   primaryColor = '#0063b1'
-  bannerColor = '#00aaaa'
-  bannerColorDark = '#015e5e'
+  bannerColor = '#2E90C8'
+  bannerColorDark = '#32325B'
   navLink = '#313639'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page
@@ -211,7 +211,7 @@ if (url.searchParams.has('chccs')) {
   maxZoom = 17
   minZoom = 12
   // data source urls and attributions
-  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+  spreadsheetUrl = ''
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
