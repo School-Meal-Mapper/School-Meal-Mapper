@@ -19,9 +19,9 @@
             {{ getAddress(business.marker) }}
           </p>
 
-          <p v-if="business.marker.gsx$sitedescription != null && business.marker.gsx$sitedescription.$t !== ''">
+          <p v-if="business.marker.gsx$additionaldirections != null && business.marker.gsx$additionaldirections.$t !== ''">
             <b>{{ $t('label.description') }}:</b><br />
-            {{ business.marker.gsx$sitedescription.$t }}
+            {{ business.marker.gsx$additionaldirections.$t }}
           </p>
           <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(business.marker)" />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
