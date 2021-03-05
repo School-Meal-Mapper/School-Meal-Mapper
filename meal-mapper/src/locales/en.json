@@ -50,7 +50,10 @@
     "school": "School meals"
   },
   "covidpopup": {
-    "title": "Help keep our community safe."
+    "title": "Help keep our community safe.",
+    "mask": "Wear your mask.",
+    "socialdist": "Maintain 6 feet apart from others.",
+    "washhands": "Be sure to wash your hands."
   },
   "dayofweek": {
     "any": "Any",
