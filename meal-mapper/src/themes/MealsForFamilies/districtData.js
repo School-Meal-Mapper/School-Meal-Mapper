@@ -82,7 +82,7 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('cms')) {
+} /*else if (url.searchParams.has('cms')) {
   //case 'cms':
   // district name and theming
   districtName = 'cms'
@@ -126,7 +126,9 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('chatham')) {
+} */ else if (
+  url.searchParams.has('chatham')
+) {
   //case 'chatham':
   // district name and theming
   districtName = 'chatham'
@@ -148,7 +150,7 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('wake')) {
+} /*else if (url.searchParams.has('wake')) {
   //case 'wake':
   // district name and theming
   districtName = 'wake'
@@ -170,7 +172,9 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('jcps')) {
+} */ else if (
+  url.searchParams.has('jcps')
+) {
   //case 'wake':
   // district name and theming
   districtName = 'johnston'
