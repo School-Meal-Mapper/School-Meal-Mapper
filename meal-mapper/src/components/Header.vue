@@ -17,7 +17,7 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item right v-if="hasFaqs">
-          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" router-link="/faqs">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
             <b>{{ $t('faq.linktext') }}</b>
           </b-button>

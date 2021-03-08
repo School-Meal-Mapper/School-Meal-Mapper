@@ -7,10 +7,13 @@
 // ./src/themes/${process.env.VUE_APP_THEME}/SCSS/custom.scss - Our "theme" SCSS //TODO: where is this import? This might help us solve our conditional primary color issue.
 
 import Vue from 'vue'
+import VueRouter from 'vue-router'
 import { BootstrapVue } from 'bootstrap-vue' // IconsPlugin
 import i18n from './i18n'
 
 import App from './App.vue'
+import FAQ from './components/FAQ.vue'
+import Home from './components/Home.vue'
 
 import './ExtraMarkers/css/leaflet.extra-markers.min.css'
 import './ExtraMarkers/js/leaflet.extra-markers.min.js'
@@ -32,10 +35,17 @@ export const eventManager = new Vue()
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 // Vue.use(IconsPlugin)
+Vue.use(VueRouter)
 
+const routes = [
+  { path: '/faqs', component: FAQ },
+  { path: '/', component: Home }
+]
+const router = new VueRouter({ routes })
 Vue.config.productionTip = true
 
 new Vue({
+  router,
   i18n,
   render: (h) => h(App),
   methods: {

@@ -1,55 +1,48 @@
 <template>
-  <b-modal id="faq" size="lg" dialog-class="m-0 m-md-auto" centered scrollable hide-header-close>
-    <template v-slot:modal-title>
-      {{ $t('faq.title') }}
-      <p v-if="info != null">
-        For more information, check out the following resources:
-        <a target="_blank" :href="info[0].gsx$weblink.$t" v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t">
-          {{ getDomain(info[0].gsx$weblink.$t) }}
-        </a>
+  <div>
+    {{ $t('faq.title') }}
+    <p v-if="info != null">
+      For more information, check out the following resources:
+      <a target="_blank" :href="info[0].gsx$weblink.$t" v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t">
+        {{ getDomain(info[0].gsx$weblink.$t) }}
+      </a>
 
-        <a
-          target="_blank"
-          v-if="info[0].gsx$twitter !== undefined && !!info[0].gsx$twitter.$t"
-          :href="'https://www.twitter.com/' + info[0].gsx$twitter.$t"
-        >
-          {{ '@' + info[0].gsx$twitter.$t }}
-        </a>
+      <a
+        target="_blank"
+        v-if="info[0].gsx$twitter !== undefined && !!info[0].gsx$twitter.$t"
+        :href="'https://www.twitter.com/' + info[0].gsx$twitter.$t"
+      >
+        {{ '@' + info[0].gsx$twitter.$t }}
+      </a>
 
-        <a target="_blank" v-if="info[0].gsx$instagram !== undefined && !!info[0].gsx$instagram.$t" :href="'@' + info[0].gsx$instagram.$t">
-          {{ '@' + info[0].gsx$instagram.$t }}
-        </a>
+      <a target="_blank" v-if="info[0].gsx$instagram !== undefined && !!info[0].gsx$instagram.$t" :href="'@' + info[0].gsx$instagram.$t">
+        {{ '@' + info[0].gsx$instagram.$t }}
+      </a>
 
-        <a
-          target="_blank"
-          v-if="info[0].gsx$facebook !== undefined && !!info[0].gsx$facebook.$t"
-          :href="'https://www.facebook.com/' + info[0].gsx$facebook.$t"
-        >
-          {{ '@' + info[0].gsx$facebook.$t.split('/')[3] }}
-        </a>
-      </p>
-    </template>
+      <a
+        target="_blank"
+        v-if="info[0].gsx$facebook !== undefined && !!info[0].gsx$facebook.$t"
+        :href="'https://www.facebook.com/' + info[0].gsx$facebook.$t"
+      >
+        {{ '@' + info[0].gsx$facebook.$t.split('/')[3] }}
+      </a>
+    </p>
 
-    <template v-slot:default>
-      <div class="accordion" role="tablist" v-if="questions != null">
-        <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
-          <b-card-header header-tag="header" class="p-1" role="tab">
-            <b-button block v-b-toggle="'accordion-' + index.toString()" class="font-weight-bold question" variant="info"
-              >{{ question.gsx$englishquestion.$t }}
-            </b-button>
-          </b-card-header>
-          <b-collapse :id="'accordion-' + index.toString()" accordion="my-accordion" role="tabpanel">
-            <b-card-body>
-              <b-card-text>{{ question.gsx$englishanswer.$t }}</b-card-text>
-            </b-card-body>
-          </b-collapse>
-        </b-card>
-      </div>
-    </template>
-    <template v-slot:modal-footer>
-      <b-button @click="$bvModal.hide('faq')" right>{{ $t('label.close') }}</b-button>
-    </template>
-  </b-modal>
+    <div class="accordion" role="tablist" v-if="questions != null">
+      <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
+        <b-card-header header-tag="header" class="p-1" role="tab">
+          <b-button block v-b-toggle="'accordion-' + index.toString()" class="font-weight-bold question" variant="info"
+            >{{ question.gsx$englishquestion.$t }}
+          </b-button>
+        </b-card-header>
+        <b-collapse :id="'accordion-' + index.toString()" accordion="my-accordion" role="tabpanel">
+          <b-card-body>
+            <b-card-text>{{ question.gsx$englishanswer.$t }}</b-card-text>
+          </b-card-body>
+        </b-collapse>
+      </b-card>
+    </div>
+  </div>
 </template>
 
 <script>
