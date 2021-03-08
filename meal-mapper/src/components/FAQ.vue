@@ -2,7 +2,34 @@
   <b-modal id="faq" size="lg" dialog-class="m-0 m-md-auto" centered scrollable hide-header-close>
     <template v-slot:modal-title>
       {{ $t('faq.title') }}
+      <p v-if="info != null">
+        For more information, check out the following resources:
+        <a target="_blank" :href="info[0].gsx$weblink.$t" v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t">
+          {{ getDomain(info[0].gsx$weblink.$t) }}
+        </a>
+
+        <a
+          target="_blank"
+          v-if="info[0].gsx$twitter !== undefined && !!info[0].gsx$twitter.$t"
+          :href="'https://www.twitter.com/' + info[0].gsx$twitter.$t"
+        >
+          {{ '@' + info[0].gsx$twitter.$t }}
+        </a>
+
+        <a target="_blank" v-if="info[0].gsx$instagram !== undefined && !!info[0].gsx$instagram.$t" :href="'@' + info[0].gsx$instagram.$t">
+          {{ '@' + info[0].gsx$instagram.$t }}
+        </a>
+
+        <a
+          target="_blank"
+          v-if="info[0].gsx$facebook !== undefined && !!info[0].gsx$facebook.$t"
+          :href="'https://www.facebook.com/' + info[0].gsx$facebook.$t"
+        >
+          {{ '@' + info[0].gsx$facebook.$t.split('/')[3] }}
+        </a>
+      </p>
     </template>
+
     <template v-slot:default>
       <div class="accordion" role="tablist" v-if="questions != null">
         <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
@@ -37,7 +64,14 @@ document.documentElement.style.setProperty('--nav-link-dark', districtData.color
 export default {
   name: 'faq-modal',
   props: {
-    questions: Array
+    questions: Array,
+    info: Array
+  },
+  methods: {
+    getDomain: function (url) {
+      var urlParts = url.replace('http://', '').replace('https://', '').replace('www.', '')
+      return urlParts
+    }
   }
 }
 </script>

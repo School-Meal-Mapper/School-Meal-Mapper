@@ -10,8 +10,8 @@
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
-    <faq-modal :questions="faqs" />
-    <covid-pop-up />
+    <faq-modal :questions="faqs" :info="info" />
+    <!-- <covid-pop-up /> -->
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
@@ -33,6 +33,7 @@
         @location-selected="passLocation"
         @hover-over="passHover"
         @hover-leave="passNoHover"
+        :info="info"
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
@@ -72,7 +73,7 @@ import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
 import FaqModal from './components/FAQ.vue'
-import CovidPopUp from './components/CovidPopUp.vue'
+//import CovidPopUp from './components/CovidPopUp.vue'
 
 import ResultsList from './components/ResultsList.vue'
 
@@ -122,7 +123,7 @@ export default {
     SuggestEditModal,
     AppHeader,
     FaqModal,
-    CovidPopUp,
+    //CovidPopUp,
     ResourceMap,
     ThemeHeader,
     ResultsList
@@ -132,6 +133,7 @@ export default {
     return {
       entries: null,
       faqs: null,
+      provInfo: null,
       need: 'none',
       day: dayAny,
       isFilterOpen: true,
@@ -228,6 +230,11 @@ export default {
         this.faqs = faqs.feed.entry
         this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
       }
+      if (districtData.data.providerinfoUrl != null) {
+        const res3 = await fetch(districtData.data.providerinfoUrl)
+        const info = await res3.json()
+        this.info = info.feed.entry
+      }
       const entries = await res.json()
 
       // if (entries !== null) {
@@ -261,6 +268,21 @@ export default {
       this.hoverItem = null
     },
     searchLoc: function (location) {
+      for (var index = 0; index < this.filteredMarkers.length; index++) {
+        const entry = this.filteredMarkers[index].marker
+        if (
+          entry['gsx$mealsitename'].$t.toLowerCase().includes(location.toLowerCase()) ||
+          location.toLowerCase().includes(entry['gsx$mealsiteaddress1'].$t.toLowerCase()) ||
+          entry['gsx$mealsiteaddress1'].$t.toLowerCase().includes(location.toLowerCase())
+        ) {
+          const val = {
+            locValue: index,
+            isSetbyMap: false
+          }
+          this.passLocation(val)
+          return
+        }
+      }
       var fetchString = 'https://nominatim.openstreetmap.org/search?key=9Rl2TaZFQpBPsnQmQo6cq79sl3Rf9EfA&q=' + location + '&format=json'
       fetch(fetchString)
         .then((response) => response.json())

@@ -112,6 +112,7 @@
     "curbside": "Curbside pick-up",
     "delivery": "Delivery",
     "details-last-updated": "Details last updated",
+    "description": "Additional directions",
     "discountmedical": "Medical worker discount|Medical worker discounts",
     "discounts": "",
     "drivethru": "Drive thru",
@@ -157,6 +158,7 @@
     "zh": "Simplified Chinese"
   },
   "locationhelp": "Please make sure your device location is enabled",
+  "menu": "Weekly menu",
   "search": {
     "prompt": "Find meals near address...",
     "find": "Find the meal site closest to...",

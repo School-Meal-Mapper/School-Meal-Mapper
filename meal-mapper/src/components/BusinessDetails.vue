@@ -19,8 +19,9 @@
             {{ getAddress(business.marker) }}
           </p>
 
-          <p v-if="business.marker.gsx$sitedescription != null">
-            {{ business.marker.gsx$sitedescription.$t }}
+          <p v-if="business.marker.gsx$additionaldirections != null && business.marker.gsx$additionaldirections.$t !== ''">
+            <b>{{ $t('label.description') }}:</b><br />
+            {{ business.marker.gsx$additionaldirections.$t }}
           </p>
           <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(business.marker)" />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
@@ -30,38 +31,10 @@
 
           <p>
             <icon-list-item
-              v-if="business.marker.gsx$contact !== undefined && !!business.marker.gsx$contact.$t"
-              icon="fas fa-phone-alt"
-              :title="business.marker.gsx$contact.$t"
-              :link="'tel:' + business.marker.gsx$contact.$t"
-            />
-
-            <icon-list-item
-              v-if="business.marker.gsx$weblink !== undefined && !!business.marker.gsx$weblink.$t"
-              icon="fas fa-globe"
-              :title="getDomain(business.marker.gsx$weblink.$t)"
-              :link="business.marker.gsx$weblink.$t"
-            />
-
-            <icon-list-item
-              v-if="business.marker.gsx$twitter !== undefined && !!business.marker.gsx$twitter.$t"
-              icon="fa fa-twitter"
-              :title="'@' + business.marker.gsx$twitter.$t"
-              :link="'https://www.twitter.com/' + business.marker.gsx$twitter.$t"
-            />
-
-            <icon-list-item
-              v-if="business.marker.gsx$instagram !== undefined && !!business.marker.gsx$instagram.$t"
-              icon="fa fa-instagram"
-              :title="'@' + business.marker.gsx$instagram.$t"
-              :link="'https://www.instagram.com/' + business.marker.gsx$instagram.$t"
-            />
-
-            <icon-list-item
-              v-if="business.marker.gsx$facebook !== undefined && !!business.marker.gsx$facebook.$t"
-              icon="fa fa-facebook-square"
-              :title="'@' + business.marker.gsx$facebook.$t.split('/')[3]"
-              :link="business.marker.gsx$facebook.$t"
+              v-if="info != null && info[0].gsx$menulink !== undefined && !!info[0].gsx$menulink.$t"
+              icon="fas fa-apple-alt"
+              :title="$t('menu')"
+              :link="info[0].gsx$menulink.$t"
             />
           </p>
           <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
@@ -111,13 +84,10 @@ export default {
   props: {
     infotype: { type: String },
     icon: { type: String },
-    business: Object
+    business: Object,
+    info: Array
   },
   methods: {
-    getDomain: function (url) {
-      var urlParts = url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)
-      return urlParts[0]
-    },
     addressURL: function (marker) {
       var address = marker.gsx$mealsiteaddress1.$t
       address = address.replace(/\s/g, '%20')

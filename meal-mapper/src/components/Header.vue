@@ -16,11 +16,16 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right v-if="hasFaqs || districtName == 'mff'">
+        <b-nav-item right v-if="hasFaqs">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b v-if="districtName != 'mff'">{{ $t('faq.linktext') }}</b>
-            <b v-if="districtName == 'mff'">{{ $t('about.linktext') }}</b>
+            <b>{{ $t('faq.linktext') }}</b>
+          </b-button>
+        </b-nav-item>
+        <b-nav-item right v-if="districtName == 'mff'" href="https://meals4families.community/" target="_blank">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button">
+            <i class="fas info-plus-circle" aria-hidden="true"></i>
+            <b>{{ $t('about.linktext') }}</b>
           </b-button>
         </b-nav-item>
 

@@ -18,6 +18,7 @@ var maxZoom = null
 var minZoom = null
 var spreadsheetUrl = null
 var faqUrl = null
+var providerinfoUrl = null
 var lightUrl = null
 var lightAttribution = null
 var darkUrl = null
@@ -51,6 +52,7 @@ if (url.searchParams.has('chccs')) {
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
   faqUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/3/public/values?alt=json'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -80,7 +82,7 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('cms')) {
+} /*else if (url.searchParams.has('cms')) {
   //case 'cms':
   // district name and theming
   districtName = 'cms'
@@ -124,7 +126,9 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('chatham')) {
+} */ else if (
+  url.searchParams.has('chatham')
+) {
   //case 'chatham':
   // district name and theming
   districtName = 'chatham'
@@ -146,7 +150,7 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('wake')) {
+} /*else if (url.searchParams.has('wake')) {
   //case 'wake':
   // district name and theming
   districtName = 'wake'
@@ -168,7 +172,9 @@ if (url.searchParams.has('chccs')) {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('jcps')) {
+} */ else if (
+  url.searchParams.has('jcps')
+) {
   //case 'wake':
   // district name and theming
   districtName = 'johnston'
@@ -199,8 +205,8 @@ if (url.searchParams.has('chccs')) {
   // district name and theming
   districtName = 'mff'
   primaryColor = '#0063b1'
-  bannerColor = '#00aaaa'
-  bannerColorDark = '#015e5e'
+  bannerColor = '#1E5ADC'
+  bannerColorDark = '#32325B'
   navLink = '#313639'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page
@@ -211,7 +217,7 @@ if (url.searchParams.has('chccs')) {
   maxZoom = 17
   minZoom = 12
   // data source urls and attributions
-  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
+  spreadsheetUrl = ''
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -244,7 +250,8 @@ export const districtData = {
   socialMedia: [{}],
   data: {
     spreadsheetUrl: spreadsheetUrl,
-    faqUrl: faqUrl
+    faqUrl: faqUrl,
+    providerinfoUrl: providerinfoUrl
   },
   maps: {
     normal: {
