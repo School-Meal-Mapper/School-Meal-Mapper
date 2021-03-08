@@ -8,6 +8,7 @@
       :infotype="'green'"
       :icon="'fa-tractor'"
       :business="location.currentBusiness"
+      :info="info"
       v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
     ></BusinessDetails>
@@ -110,6 +111,7 @@ export default {
   },
   props: {
     filteredMarkers: Array,
+    info: Array,
     location: {
       locValue: Number,
       isSetByMap: Boolean,

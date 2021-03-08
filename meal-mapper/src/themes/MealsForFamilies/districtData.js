@@ -18,6 +18,7 @@ var maxZoom = null
 var minZoom = null
 var spreadsheetUrl = null
 var faqUrl = null
+var providerinfoUrl = null
 var lightUrl = null
 var lightAttribution = null
 var darkUrl = null
@@ -51,6 +52,7 @@ if (url.searchParams.has('chccs')) {
   // data source urls and attributions
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
   faqUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/3/public/values?alt=json'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -199,7 +201,7 @@ if (url.searchParams.has('chccs')) {
   // district name and theming
   districtName = 'mff'
   primaryColor = '#0063b1'
-  bannerColor = '#2E90C8'
+  bannerColor = '#1E5ADC'
   bannerColorDark = '#32325B'
   navLink = '#313639'
   navLinkDark = '#f8f8ff'
@@ -244,7 +246,8 @@ export const districtData = {
   socialMedia: [{}],
   data: {
     spreadsheetUrl: spreadsheetUrl,
-    faqUrl: faqUrl
+    faqUrl: faqUrl,
+    providerinfoUrl: providerinfoUrl
   },
   maps: {
     normal: {

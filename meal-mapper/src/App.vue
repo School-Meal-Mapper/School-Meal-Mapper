@@ -10,7 +10,7 @@
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
-    <faq-modal :questions="faqs" />
+    <faq-modal :questions="faqs" :info="info" />
     <covid-pop-up />
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
@@ -33,6 +33,7 @@
         @location-selected="passLocation"
         @hover-over="passHover"
         @hover-leave="passNoHover"
+        :info="info"
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
@@ -132,6 +133,7 @@ export default {
     return {
       entries: null,
       faqs: null,
+      provInfo: null,
       need: 'none',
       day: dayAny,
       isFilterOpen: true,
@@ -227,6 +229,11 @@ export default {
         const faqs = await res2.json()
         this.faqs = faqs.feed.entry
         this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
+      }
+      if (districtData.data.providerinfoUrl != null) {
+        const res3 = await fetch(districtData.data.providerinfoUrl)
+        const info = await res3.json()
+        this.info = info.feed.entry
       }
       const entries = await res.json()
 
