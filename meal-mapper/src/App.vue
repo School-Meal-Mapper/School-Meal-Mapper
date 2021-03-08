@@ -11,7 +11,7 @@
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
     <faq-modal :questions="faqs" :info="info" />
-    <covid-pop-up />
+    <!-- <covid-pop-up /> -->
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
@@ -73,7 +73,7 @@ import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
 import FaqModal from './components/FAQ.vue'
-import CovidPopUp from './components/CovidPopUp.vue'
+//import CovidPopUp from './components/CovidPopUp.vue'
 
 import ResultsList from './components/ResultsList.vue'
 
@@ -123,7 +123,7 @@ export default {
     SuggestEditModal,
     AppHeader,
     FaqModal,
-    CovidPopUp,
+    //CovidPopUp,
     ResourceMap,
     ThemeHeader,
     ResultsList
