@@ -1,6 +1,6 @@
 <template>
-  <div>
-    {{ $t('faq.title') }}
+  <div id="faqs">
+    <h3>{{ $t('faq.title') }}</h3>
     <p v-if="info != null">
       For more information, check out the following resources:
       <a target="_blank" :href="info[0].gsx$weblink.$t" v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t">
@@ -55,10 +55,28 @@ document.documentElement.style.setProperty('--nav-link-light', districtData.colo
 document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
 
 export default {
-  name: 'faq-modal',
-  props: {
-    questions: Array,
-    info: Array
+  name: 'faq',
+  data() {
+    return {
+      questions: null,
+      info: null,
+      faqUrl: 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/2/public/values?alt=json',
+      providerinfoUrl: 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/3/public/values?alt=json'
+    }
+  },
+  async created() {
+    console.log(this.faqUrl)
+    console.log(this.providerinfoUrl)
+    if (this.faqUrl != null) {
+      const res2 = await fetch(this.faqUrl)
+      const faqs = await res2.json()
+      this.questions = faqs.feed.entry.slice(0, 20) // don't want a district to have more than 20
+    }
+    if (this.providerinfoUrl != null) {
+      const res3 = await fetch(this.providerinfoUrl)
+      const info = await res3.json()
+      this.info = info.feed.entry
+    }
   },
   methods: {
     getDomain: function (url) {
@@ -76,18 +94,6 @@ export default {
   --banner-dark: '#212529';
   --nav-link-light: '#F8F8F8';
   --nav-link-dark: '#F8F8F8';
-}
-
-@media (max-width: 991px) {
-  #faq > .modal-dialog {
-    justify-content: normal;
-    max-width: 100%;
-
-    & > .modal-content {
-      min-height: 100vh;
-      height: 100vh;
-    }
-  }
 }
 
 .question {
@@ -136,5 +142,12 @@ export default {
     content: '\f068';
     margin-left: 15px;
   }
+}
+#faqs {
+  padding: 100px 24px 24px;
+  margin: 0 auto;
+  text-align: center;
+  max-height: 100vh;
+  overflow-y: overlay;
 }
 </style>

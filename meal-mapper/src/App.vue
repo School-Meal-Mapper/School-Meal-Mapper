@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <router-view> <faq-modal :questions="faqs" :info="info" /> </router-view>
     <app-header
       :logoLink="logoLink"
       :language="language.name"
@@ -11,10 +10,23 @@
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
-
+    <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->
-    <router-view> <home /> </router-view>
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
+    <div class="d-flex" v-if="checkParam">
+      <div class="district-buttons">
+        <p class="intro">{{ this.$t('home.intro') }}</p>
+        <p>
+          <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
+          <br />
+          <br />
+          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
+            this.$t('home.select-district')
+          }}</b-form-select>
+        </p>
+        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
+      </div>
+    </div>
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && districtName != null && districtName != 'mff'">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -46,6 +58,7 @@
         />
       </div>
     </div>
+    <router-view />
   </div>
 </template>
 <!-- 
@@ -60,9 +73,8 @@ import AppHeader from './components/Header.vue'
 import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
-import FaqModal from './components/FAQ.vue'
+//import Faq from './components/FAQ.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
-import Home from './components/Home.vue'
 import ResultsList from './components/ResultsList.vue'
 
 import { latLng } from 'leaflet'
@@ -110,12 +122,11 @@ export default {
     ShareModal,
     SuggestEditModal,
     AppHeader,
-    FaqModal,
+    //Faq,
     //CovidPopUp,
     ResourceMap,
     ThemeHeader,
-    ResultsList,
-    Home
+    ResultsList
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -341,7 +352,8 @@ export default {
       var urlString = window.location.href
       //var url = new URL(urlString)
       //console.log(url.searchParams.has('d'))
-      return urlString.includes('?')
+      console.log(this.$route.path)
+      return this.$route.path == '/' && !urlString.includes('?')
     },
     filteredMarkers() {
       if (this.entries == null) return null
