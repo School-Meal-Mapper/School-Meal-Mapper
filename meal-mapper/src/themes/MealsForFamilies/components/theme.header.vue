@@ -20,7 +20,7 @@ export default {
 }
 @media only screen and (max-width: 480px) {
   .image {
-    height: 60px !important;
+    height: 60px;
   }
 }
 </style>
