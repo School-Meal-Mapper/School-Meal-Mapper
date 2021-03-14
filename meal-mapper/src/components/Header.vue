@@ -4,12 +4,12 @@
       <div>
         <b-navbar-brand :href="logoLink" class="left"> <slot></slot> </b-navbar-brand>
       </div>
-      <div class="p-2">
+      <!--<div class="p-2">
         <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
           <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
         </form>
-      </div>
+      </div> -->
     </div>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
