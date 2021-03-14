@@ -2,7 +2,7 @@
   <span class="pagetitle">
     <picture>
       <source :srcset="require(`@/districtLogos/${districtName}-logo-dark.png`)" media="(prefers-color-scheme: dark)" />
-      <img :src="require(`@/districtLogos/${districtName}-logo.png`)" height="80" alt="District Logo" />
+      <img :src="require(`@/districtLogos/${districtName}-logo.png`)" height="80" alt="District Logo" class="image" />
     </picture>
   </span>
 </template>
@@ -12,4 +12,16 @@ export default {
   props: ['districtName']
 }
 </script>
+<style lang="scss">
+@media only screen and (max-width: 350px) {
+  .image {
+    height: 50px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .image {
+    height: 60px !important;
+  }
+}
+</style>
 <style lang="sass"></style>
