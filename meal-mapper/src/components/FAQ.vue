@@ -59,21 +59,19 @@ export default {
   data() {
     return {
       questions: null,
-      info: null,
-      faqUrl: 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/2/public/values?alt=json',
-      providerinfoUrl: 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/3/public/values?alt=json'
+      info: null
     }
   },
   async created() {
-    console.log(this.faqUrl)
-    console.log(this.providerinfoUrl)
-    if (this.faqUrl != null) {
-      const res2 = await fetch(this.faqUrl)
+    console.log(districtData.data.faqUrl)
+    console.log(districtData.data.providerinfoUrl)
+    if (districtData.data.faqUrl != null) {
+      const res2 = await fetch(districtData.data.faqUrl)
       const faqs = await res2.json()
       this.questions = faqs.feed.entry.slice(0, 20) // don't want a district to have more than 20
     }
-    if (this.providerinfoUrl != null) {
-      const res3 = await fetch(this.providerinfoUrl)
+    if (districtData.data.providerinfoUrl != null) {
+      const res3 = await fetch(districtData.data.providerinfoUrl)
       const info = await res3.json()
       this.info = info.feed.entry
     }

@@ -26,7 +26,7 @@
         <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
     </div>
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && districtName != null && districtName != 'mff'">
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -354,6 +354,10 @@ export default {
       //console.log(url.searchParams.has('d'))
       console.log(this.$route.path)
       return this.$route.path == '/' && !urlString.includes('?')
+    },
+    showMap() {
+      var urlString = window.location.href
+      return urlString.includes('?')
     },
     filteredMarkers() {
       if (this.entries == null) return null
