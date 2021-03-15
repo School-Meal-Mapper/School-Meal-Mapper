@@ -17,7 +17,7 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item right v-if="hasFaqs">
-          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateFaqUrl()">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
             <b>{{ $t('faq.linktext') }}</b>
           </b-button>
@@ -122,6 +122,17 @@ export default {
         event.preventDefault()
         this.$emit('search', this.text)
       }
+    },
+    generateFaqUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = url.search.split('?')[1]
+      if (district == null) {
+        window.location.reload()
+      }
+      console.log(origin + '/#/' + district + '/' + 'faqs')
+      window.location.href = origin + '/#/' + district + '/' + 'faqs'
     },
     handleResize() {
       this.window.width = window.innerWidth

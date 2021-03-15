@@ -10,9 +10,9 @@
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
-    <faq-modal :questions="faqs" :info="info" />
+    <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->
-    <div class="d-flex" v-if="!checkParam">
+    <div class="d-flex" v-if="checkParam">
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
         <p>
@@ -26,7 +26,7 @@
         <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
     </div>
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -58,6 +58,7 @@
         />
       </div>
     </div>
+    <router-view />
   </div>
 </template>
 <!-- 
@@ -72,9 +73,8 @@ import AppHeader from './components/Header.vue'
 import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
-import FaqModal from './components/FAQ.vue'
+//import Faq from './components/FAQ.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
-
 import ResultsList from './components/ResultsList.vue'
 
 import { latLng } from 'leaflet'
@@ -122,7 +122,7 @@ export default {
     ShareModal,
     SuggestEditModal,
     AppHeader,
-    FaqModal,
+    //Faq,
     //CovidPopUp,
     ResourceMap,
     ThemeHeader,
@@ -352,6 +352,11 @@ export default {
       var urlString = window.location.href
       //var url = new URL(urlString)
       //console.log(url.searchParams.has('d'))
+      console.log(this.$route.path)
+      return this.$route.path == '/' && !urlString.includes('?')
+    },
+    showMap() {
+      var urlString = window.location.href
       return urlString.includes('?')
     },
     filteredMarkers() {
