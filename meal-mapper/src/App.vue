@@ -6,7 +6,7 @@
       @search="searchLoc"
       @language-selected="changeLanguage"
       :socialMedia="socialMediaico"
-      :hasFaqs="faqs != null"
+      :hasFaqs="faqUrl != null"
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
@@ -37,6 +37,7 @@
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
+        :hasFaqs="faqUrl != null"
       />
       <share-modal :business="locationData.currentBusiness" />
       <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
@@ -132,7 +133,7 @@ export default {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     return {
       entries: null,
-      faqs: null,
+      faqUrl: null,
       provInfo: null,
       need: 'none',
       day: dayAny,
@@ -225,10 +226,11 @@ export default {
       const res = await fetch(districtData.data.spreadsheetUrl)
       console.log(res)
       if (districtData.data.faqUrl != null) {
-        const res2 = await fetch(districtData.data.faqUrl)
+        this.faqUrl = districtData.data.faqUrl
+        /*const res2 = await fetch(districtData.data.faqUrl)
         const faqs = await res2.json()
         this.faqs = faqs.feed.entry
-        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
+        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20*/
       }
       if (districtData.data.providerinfoUrl != null) {
         const res3 = await fetch(districtData.data.providerinfoUrl)
