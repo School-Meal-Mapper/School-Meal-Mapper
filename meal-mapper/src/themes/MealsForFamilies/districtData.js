@@ -61,7 +61,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('dps') || hash == 'dps') {
+} /* else if (url.searchParams.has('dps') || hash == 'dps') {
   //case 'durham':
   // district name and theming
   districtName = 'durham'
@@ -84,7 +84,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} /*else if (url.searchParams.has('cms') || hash == 'cms') {
+} else if (url.searchParams.has('cms') || hash == 'cms') {
   //case 'cms':
   // district name and theming
   districtName = 'cms'
@@ -128,7 +128,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} */ else if (
+}  else if (
   url.searchParams.has('chatham') ||
   hash == 'chatham'
 ) {
@@ -153,7 +153,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} /*else if (url.searchParams.has('wake') || hash == 'wake') {
+} else if (url.searchParams.has('wake') || hash == 'wake') {
   //case 'wake':
   // district name and theming
   districtName = 'wake'
@@ -175,7 +175,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} */ else if (
+}  else if (
   url.searchParams.has('jcps') ||
   hash == 'jcps'
 ) {
@@ -187,7 +187,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColorDark = '#0e2c6c'
   // map settings for district-specific page
   initialMapCenterLat = 35.56928878
-  initialMapCenterLng = -78.42296134
+  initialMapCenterLng = -78.42296134 
   initialMapZoom = 10
   clusterZoom = 12
   maxZoom = 17
@@ -200,7 +200,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else {
+}  */ else {
   if (urlString.includes('?')) {
     location.href = '/'
   }
