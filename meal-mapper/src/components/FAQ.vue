@@ -65,15 +65,15 @@ export default {
   async created() {
     console.log(districtData.data.faqUrl)
     console.log(districtData.data.providerinfoUrl)
-    if (districtData.data.faqUrl != null) {
-      const res2 = await fetch(districtData.data.faqUrl)
-      const faqs = await res2.json()
-      this.questions = faqs.feed.entry.slice(0, 20) // don't want a district to have more than 20
-    }
     if (districtData.data.providerinfoUrl != null) {
       const res3 = await fetch(districtData.data.providerinfoUrl)
       const info = await res3.json()
       this.info = info.feed.entry
+    }
+    if (districtData.data.faqUrl != null) {
+      const res2 = await fetch(districtData.data.faqUrl)
+      const faqs = await res2.json()
+      this.questions = faqs.feed.entry.slice(0, 20) // don't want a district to have more than 20
     }
   },
   methods: {
