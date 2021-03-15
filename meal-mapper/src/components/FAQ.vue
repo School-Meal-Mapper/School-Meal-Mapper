@@ -8,6 +8,7 @@
         icon="fas fa-phone-alt"
         :title="info[0].gsx$contactname.$t"
         :link="'tel:' + info[0].gsx$contactphone.$t"
+        target="_blank"
       />
 
       <icon-list-item
@@ -15,6 +16,7 @@
         icon="fas fa-globe"
         :title="getDomain(info[0].gsx$weblink.$t)"
         :link="info[0].gsx$weblink.$t"
+        target="_blank"
       />
 
       <icon-list-item
@@ -22,6 +24,7 @@
         icon="fa fa-twitter"
         :title="'@' + info[0].gsx$twitter.$t"
         :link="'https://www.twitter.com/' + info[0].gsx$twitter.$t"
+        target="_blank"
       />
 
       <icon-list-item
@@ -29,6 +32,7 @@
         icon="fa fa-instagram"
         :title="'@' + info[0].gsx$instagram.$t"
         :link="'https://www.instagram.com/' + info[0].gsx$instagram.$t"
+        target="_blank"
       />
 
       <icon-list-item
@@ -36,6 +40,7 @@
         icon="fa fa-facebook-square"
         :title="'@' + info[0].gsx$facebook.$t.split('/')[3]"
         :link="info[0].gsx$facebook.$t"
+        target="_blank"
       />
     </p>
 
