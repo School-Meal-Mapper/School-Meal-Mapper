@@ -3,29 +3,40 @@
     <h3>{{ $t('faq.title') }}</h3>
     <p v-if="info != null">
       For more information, check out the following resources:
-      <a target="_blank" :href="info[0].gsx$weblink.$t" v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t">
-        {{ getDomain(info[0].gsx$weblink.$t) }}
-      </a>
+      <icon-list-item
+        v-if="info[0].gsx$contactname !== undefined && !!info[0].gsx$contactname.$t"
+        icon="fas fa-phone-alt"
+        :title="info[0].gsx$contactname.$t"
+        :link="'tel:' + info[0].gsx$contactphone.$t"
+      />
 
-      <a
-        target="_blank"
+      <icon-list-item
+        v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t"
+        icon="fas fa-globe"
+        :title="getDomain(info[0].gsx$weblink.$t)"
+        :link="info[0].gsx$weblink.$t"
+      />
+
+      <icon-list-item
         v-if="info[0].gsx$twitter !== undefined && !!info[0].gsx$twitter.$t"
-        :href="'https://www.twitter.com/' + info[0].gsx$twitter.$t"
-      >
-        {{ '@' + info[0].gsx$twitter.$t }}
-      </a>
+        icon="fa fa-twitter"
+        :title="'@' + info[0].gsx$twitter.$t"
+        :link="'https://www.twitter.com/' + info[0].gsx$twitter.$t"
+      />
 
-      <a target="_blank" v-if="info[0].gsx$instagram !== undefined && !!info[0].gsx$instagram.$t" :href="'@' + info[0].gsx$instagram.$t">
-        {{ '@' + info[0].gsx$instagram.$t }}
-      </a>
+      <icon-list-item
+        v-if="info[0].gsx$instagram !== undefined && !!info[0].gsx$instagram.$t"
+        icon="fa fa-instagram"
+        :title="'@' + info[0].gsx$instagram.$t"
+        :link="'https://www.instagram.com/' + info[0].gsx$instagram.$t"
+      />
 
-      <a
-        target="_blank"
+      <icon-list-item
         v-if="info[0].gsx$facebook !== undefined && !!info[0].gsx$facebook.$t"
-        :href="'https://www.facebook.com/' + info[0].gsx$facebook.$t"
-      >
-        {{ '@' + info[0].gsx$facebook.$t.split('/')[3] }}
-      </a>
+        icon="fa fa-facebook-square"
+        :title="'@' + info[0].gsx$facebook.$t.split('/')[3]"
+        :link="info[0].gsx$facebook.$t"
+      />
     </p>
 
     <div class="accordion" role="tablist" v-if="questions != null">
@@ -47,6 +58,7 @@
 
 <script>
 import { districtData } from '../themes/MealsForFamilies/districtData'
+import IconListItem from './IconListItem.vue'
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
 document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
@@ -56,6 +68,9 @@ document.documentElement.style.setProperty('--nav-link-dark', districtData.color
 
 export default {
   name: 'faq',
+  components: {
+    IconListItem
+  },
   data() {
     return {
       questions: null,

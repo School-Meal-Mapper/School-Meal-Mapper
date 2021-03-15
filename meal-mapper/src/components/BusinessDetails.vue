@@ -40,7 +40,7 @@
             <icon-list-item
               v-if="hasFaqs"
               icon="fas fa-question-circle"
-              title="Questions and contact info"
+              title="Questions and contact information"
               :link="generateFaqUrl()"
               target="_self"
             />
