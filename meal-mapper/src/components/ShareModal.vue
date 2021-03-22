@@ -1,17 +1,17 @@
 <template>
   <b-modal id="share-location" size="md" dialog-class="m-0 m-md-auto" centered hide-footer>
     <template v-slot:modal-title>
-      {{ $t('sharelocation.share') }}
+      {{ $t('shareOptions.share') }}
     </template>
     <p v-if="business !== null">
-      {{ $t('sharelocation.share-site') }}:
+      {{ $t('shareOptions.shareInformationAboutMealSite') }}:
       <br />
       <br />
       <b> {{ business.marker.gsx$mealsitename.$t }} </b>
       <br />
       {{ getAddress(business.marker) }} <br />
       <br />
-      {{ $t('sharelocation.link') }}
+      {{ $t('shareOptions.learnMore') }}
       <br />
       <input readonly type="text" :value="shareLink(business.marker)" class="w-50" id="share-link" />
       <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy-link') }}</b-button>
@@ -21,13 +21,13 @@
       <div>
         <i class="fa fa-envelope fa-lg" id="email-icon" aria-hidden="true" />
         <a :href="emailLink(business.marker)">
-          <span class="emailText">{{ $t('sharelocation.email') }} </span>
+          <span class="emailText">{{ $t('shareOptions.sendEmail') }} </span>
         </a>
       </div>
       <div class="sendTextDiv">
         <i class="fa fa-mobile fa-lg" id="text-icon" aria-hidden="true" />
         <b-link @click="showText = !showText">
-          <span class="sendText">{{ $t('sharelocation.text') }} </span>
+          <span class="sendText">{{ $t('shareOptions.sendTextMessage') }} </span>
         </b-link>
         <br />
         <p v-if="showText">
