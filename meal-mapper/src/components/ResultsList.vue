@@ -79,7 +79,7 @@
         {{ this.$t('zoom.zoomout') }}</b-card
       >
       <b-card hover height="100%" class="no-zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
-        {{ this.$t('zoom.no-more-results') }}</b-card
+        {{ this.$t('mapPrompts.youCanNotZoomOutMore') }}</b-card
       >
     </div>
   </div>
