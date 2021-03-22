@@ -1,0 +1,68 @@
+{
+  "FAQs": {
+    "buttonText": "Txog Pluas Mov Dawb",
+    "hyperlinkText": "Cov lus nug thiab cov ntaub ntawv tiv toj"
+  },
+  "landingPage": {
+    "aboutUs": "Hais txog peb",
+    "findFreeMealsNearMe": "Nrhiav pluas mov dawb nyob ze kuv!",
+    "findYourCountyAndSelectProvider": "Xaiv cov neeg muab zaub mov hauv koj lub nroog.",
+    "pleaseSelectState": "Xaiv koj lub xeev.",
+    "welcomeStatement": "Txais tos rau Meals4Families!",
+    "youMustSelectState": "Koj yuav tsum xaiv lub xeev ua ntej xaiv cov kev pabcuam noj mov."
+  },
+  "mapKey": {
+    "closedToday": "kaw hnub no",
+    "mapKeyTitle": "Daim Ntawv Qhia Tseem Ceeb",
+    "openToday": "qhib hnub no",
+    "searched": "tshawb",
+    "selected": "xaiv"
+  },
+  "mapPrompts": {
+    "backToList": "Rov qab mus rau npe.",
+    "youCanNotZoomOutMore": "Koj tsis tuaj yeem tsim tawm ntau ntxiv."
+  },
+  "mealSiteCard": {
+    "hours": "Sijhawm",
+    "address": "Chaw Nyob:",
+    "closed": "Kaw",
+    "detailsLastUpdated": "Cov ntaub ntawv hloov tshiab kawg:",
+    "expandDetails": "Nthuav cov ntsiab lus",
+    "friday": "Hnub Friday",
+    "getDirections": "Tau txais kev qhia",
+    "minimizeDetails": "Txo cov lus",
+    "monday": "Hnub Monday",
+    "notes": "Sau ntawv",
+    "questionsContactInfo": "Cov lus nug thiab cov ntaub ntawv tiv toj",
+    "saturday": "Hnub Saturday",
+    "shareLocation": "Qhia thaj chaw",
+    "suggestAnEdit": "Hais tawm qhov kho kom raug",
+    "sunday": "Hnub Sunday",
+    "thursday": "Hnub Thursday",
+    "tuesday": "Hnub Tuesday",
+    "wednesday": "Hnub Wednesday",
+    "weeklyMenu": "Cov zaub mov txhua lub limtiam"
+  },
+  "searchBar": {
+    "noResults": "Tsis muaj qhov tshwm sim txuam nrog koj tshawb. Thov koj sim dua.",
+    "searchPrompt": "Nrhiav pluas noj nyob ze chaw nyob"
+  },
+  "shareOptions": {
+    "aboutUs": "Cov ntaub ntawv no tau coj tuaj rau koj los ntawm Meals4Families hauv kev koom tes nrog",
+    "findNearbySites": "Siv qhov txuas no kom pom daim duab qhia chaw noj mov nyob ze:",
+    "learnMore": "Siv txuas no kom paub ntau ntxiv txog zaub mov dawb:",
+    "mealSiteInfo": "Ua raws cov kab ntawv txuas hauv qab no kom paub cov ntsiab lus rau lub chaw noj mov no suav nrog teev thiab cov lus qhia:",
+    "messageIntro": "muaj mov noj dawb rau txhua tus menyuam hnub nyoog 0-18. Nrog peb noj ua mov!",
+    "sendEmail": "Xa email",
+    "sendTextMessage": "Xa kab ntawv",
+    "share": "Qhia tawm",
+    "shareInformationAboutMealSite": "Qhia cov ncauj lus txog lub chaw noj mov no:",
+    "suggestedMealSite": "Tej zaum koj yuav txaus siab nyob rau hauv lub rooj noj mov no:"
+  },
+  "specialSite": {
+    "doorDelivery": "Qhov Rooj Xa"
+  },
+  "themeHeaderBar": {
+    "aboutFreeMeals": "Txog Pluas Mov Dawb"
+  }
+}

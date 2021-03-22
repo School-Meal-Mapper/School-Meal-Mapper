@@ -6,7 +6,7 @@
       </div>
       <div class="p-2">
         <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
-          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
           <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
         </form>
       </div>
@@ -19,13 +19,13 @@
         <b-nav-item right v-if="hasFaqs">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b>{{ $t('faq.linktext') }}</b>
+            <b>{{ $t('FAQs.hyperlinkText') }}</b>
           </b-button>
         </b-nav-item>
         <b-nav-item right v-if="districtName == 'mff'" href="https://meals4families.community/" target="_blank">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b>{{ $t('about.linktext') }}</b>
+            <b>{{ $t('landingPage.aboutUs') }}</b>
           </b-button>
         </b-nav-item>
 

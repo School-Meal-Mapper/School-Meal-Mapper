@@ -24,7 +24,7 @@
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
-        <strong>{{ this.$t('zoom.noresults') + ' ' + this.$t('zoom.zoomout') }}</strong>
+        <strong>{{ this.$t('mapPrompts.youCanNotZoomOutMore') + ' ' + this.$t('zoom.zoomout') }}</strong>
       </b-alert>
       <b-list-group-item
         action
@@ -140,7 +140,12 @@ export default {
     //   return this.filteredMarkers === emp&& this.markers.length == 0
     // },
     getClosedMessage: function () {
-      return this.$t(`label.closed-today`)
+      var textArr = this.$t(`mapKey.closedToday`).split(' ')
+      var closed = textArr[0]
+      closed = closed[0].toUpperCase() + closed.substr(1)
+      var today = textArr[1]
+      today = today[0].toUpperCase() + today.substr(1)
+      return closed + ' ' + today
     },
     closeDetails: function () {
       this.showRes = true

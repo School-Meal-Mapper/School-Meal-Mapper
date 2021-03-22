@@ -1,210 +1,68 @@
 {
-  "about": {
-    "close": "閉じる",
-    "contact": "お問い合わせ",
-    "contactus": {
-      "email": "Eメール",
-      "info": "このページは {1}の {0} を利用しています。ご不明な点がございましたら、 {2}までメールでお問い合わせください。"
-    },
-    "datahead": "データ共有に関する注意",
-    "dataprivacy": "NC COVIDサポートに関する情報は、ボランティアによって公開されたWebソースから収集されたか、事業主/リソースプロバイダーによって入力されたものです。データは、COVID-19パンデミックの際に、公共、地方企業、政府パートナー、および非営利団体を支援するために提供されます。 NC COVIDサポートの明示的な許可なしに、データを商業ベンチャーまたはその他の目的に使用しないでください。",
-    "devhelp": {
-      "addbusiness": "ビジネスを追加",
-      "addinfo": "オンラインフォームを使用して、 {0} または {1}にアクセスしてください。",
-      "ambassadorinfo": "ノースカロライナ全体のカバレッジの拡大にご協力ください。アンバサダーは地方自治体や企業団体と協力して、NC COVIDサポートをコミュニティに提供します。開始するためのツールとリソースについては、 {0} までメールでお問い合わせください。",
-      "becomeambassador": "コミュニティアンバサダーになる",
-      "conduct": "行動規範",
-      "devnote": "開発者-GitHubで {0} と {1} を見つけてください。",
-      "dupsite": "または、自分の州のサイトを複製することもできます。",
-      "info": "これはオープンソースプロジェクトであり、他のコミュニティと共有して拡大するために構築されています。",
-      "source": "ソースコード",
-      "support": "近所の人や地元の企業をサポートしてください-私たちが成長するのを助けてください！",
-      "updatebusiness": "既存のエントリを更新する"
-    },
-    "getinvolved": "参加する",
-    "info": "リソースのデータベースには、次の組織が収集した情報が役立ちます。",
-    "linktext": "私たちに関しては",
-    "orgs": {
-      "bureau": "チャペルヒル/オレンジカウンティビジターズビューロー",
-      "cfa": "アメリカのコード",
-      "chb": "チャペルヒル旅団",
-      "localistnc": "#LocalListNC",
-      "partnership": "チャペルヒルダウンタウンパートナーシップ",
-      "pittsboro-siler": "ピッツボロサイラーシティコンベンション＆ビジターズビューロー"
-    },
-    "partners": "情報源",
-    "title": "このサイトについて"
+  "FAQs": {
+    "buttonText": "無料の食事について",
+    "hyperlinkText": "質問と連絡先情報"
   },
-  "category": {
-    "childcare": "育児",
-    "family": "家族の食事の準備",
-    "farm": "農場および農民市場",
-    "food_bev": "専門食料品",
-    "grocery": "食料品",
-    "meal": "無料の食事",
-    "pet": "ペット用品",
-    "pharmacy": "薬局",
-    "restaurant": "レストラン|レストラン",
-    "school": "学校給食"
+  "landingPage": {
+    "aboutUs": "我々について",
+    "findFreeMealsNearMe": "私の近くで無料の食事を見つける!",
+    "findYourCountyAndSelectProvider": "お住いの国の食事の提供者を選択します。",
+    "pleaseSelectState": "状態を選択します。",
+    "welcomeStatement": "Meals4Familiesへようこそ！",
+    "youMustSelectState": "食事の提供者を選択する前に、状態を選択する必要があります。"
   },
-  "covidpopup": {
-    "title": "コミュニティを安全に保つためにご協力ください。"
+  "mapKey": {
+    "closedToday": "本日は休業",
+    "mapKeyTitle": "マップ キー",
+    "openToday": "今日オープン",
+    "searched": "検索",
+    "selected": "選択"
   },
-  "dayofweek": {
-    "any": "どれか",
+  "mapPrompts": {
+    "backToList": "リストに戻ります。",
+    "youCanNotZoomOutMore": "あなたはより多くのズームアウトすることはできません。"
+  },
+  "mealSiteCard": {
+    "hours": "時間",
+    "address": "アドレス：",
+    "closed": "閉鎖",
+    "detailsLastUpdated": "最終更新日の詳細:",
+    "expandDetails": "詳細を展開する",
     "friday": "金曜日",
-    "monday": "月曜",
+    "getDirections": "道順を取得する",
+    "minimizeDetails": "詳細を最小限に抑える",
+    "monday": "月曜日",
+    "notes": "ノート",
+    "questionsContactInfo": "質問と連絡先情報",
     "saturday": "土曜日",
+    "shareLocation": "共有場所",
+    "suggestAnEdit": "編集の提案",
     "sunday": "日曜日",
     "thursday": "木曜日",
     "tuesday": "火曜日",
-    "wednesday": "水曜日"
+    "wednesday": "水曜日",
+    "weeklyMenu": "ウィークリーメニュー"
   },
-  "faq": {
-    "close": "閉じる",
-    "freeMealsAnswer": "マッピングツールを使用して、近くの食事を見つけることができます。配布サイトをクリックして住所と営業時間を確認し、そのウィンドウで無料の食事を受け取ります。",
-    "freeMealsQuestion": "どうすれば無料の食事を入手できますか？",
-    "helpAnswer-end": "そのため、プログラムは必要な間継続できます。",
-    "helpAnswer-organization": "公立学校財団",
-    "helpAnswer-start": "みんなが私たちの食事にアクセスできるように広めるのを手伝ってくれるとしたら、私たちはとても感謝しています。 ソーシャルメディアで食事サイトを共有し、友達にテキストメッセージを送ってください！  学生のための食糧のために皆を興奮させましょう！\nへの寄付もご検討ください ",
-    "helpQuestion": "手伝いましょうか？",
-    "linktext": "無料の食事について教えてください",
-    "staySafeReminder": "ピックアップサイトに行くときやボランティアとやり取りするときは、必ずマスクを着用してください。",
-    "title": "無料の食事についての情報",
-    "whatWeDoAnswer": "私たちは子供たちと家族を彼らの地域の食事と結びつけるのを助けます。\n COVID危機の際、学校が主催する食事は多くの子供たちと家族の生命線であることを私たちは知っています。 そして今学年が終わった今、多くの学区は彼らの夏のプログラムを通して家族に無料の食事を提供しています。私たちはあなたがそれらを見つけるのを助けるためにここにいます。\n",
-    "whatWeDoQuestion": "学生向けの食品とは何ですか？",
-    "whoQuestion": "",
-    "whoAnswer": "",
-    "registerQuestion": "",
-    "registerAnswer": "",
-    "typeoffoodQuestion": "",
-    "typeoffoodAnswer": "",
-    "preparedmealsQuestion": "",
-    "preparedmealsAnswer": "",
-    "adultavaliabilityQuestion": "",
-    "adultavaliabilityAnswer": "",
-    "childrenpresentQuestion": "",
-    "childrenpresentAnswer": "",
-    "idQuestion": "",
-    "idAnswer": "",
-    "numberofmealsQuestion": "",
-    "numberofmealsAnswer": "",
-    "packagingQuestion": "",
-    "packagingAnswer": "",
-    "vegetarianQuestion": "",
-    "vegetarianAnswer": "",
-    "babyfoodQuestion": "",
-    "babyfoodAnswer": ""
+  "searchBar": {
+    "noResults": "検索結果に一致する結果はありません。もう一度やり直してください。",
+    "searchPrompt": "住所の近くで食事を探す"
   },
-  "getdirections": "",
-  "label": {
-    "address": "住所",
-    "allweek": "1週間中",
-    "backtolist": "リストに戻る",
-    "backtolistmobile": "地図に戻る",
-    "close": "閉じる",
-    "closed": "閉まっている",
-    "closed-on": "休業",
-    "closed-today": "本日休業",
-    "closedonday": "定休日（当日）",
-    "curbside": "カーブサイドピックアップ",
-    "delivery": "配達",
-    "details-last-updated": "詳細最終更新",
-    "discountmedical": "医療従事者割引|医療従事者割引",
-    "discounts": "",
-    "drivethru": "ドライブスルー",
-    "email": "Eメール",
-    "email_lowercase": "Eメール",
-    "farmersmarket": "ファーマーズマーケット|ファーマーズマーケット",
-    "farmpick-up": "農場出迎え",
-    "freegroceries": "無料の食料品店|無料の食料品店",
-    "freemeals": "無料の食事場所|無料の食事場所",
-    "freeproduce": "無料の商品の場所|無料の商品の場所",
-    "instructions": "説明書",
-    "locationhelplinktext": "もっと詳しく知る",
-    "mapkey": "マップキー",
-    "maxdetails": "詳細を展開",
-    "mealpublic": "食事は一般に公開されています",
-    "mealstudent": "学生のための食事",
-    "mindetails": "詳細を最小化",
-    "mustpreorder": "予約が必要",
-    "normalhours": "通常の時間",
-    "notes": "ノート",
-    "offers": "オファー",
-    "open": "開いた",
-    "openinghours": "営業時間",
-    "orderonline": "オンラインで注文して支払う",
-    "phone": "電話",
-    "selectacategory": "カテゴリーを選ぶ...",
-    "selected": "選択済み",
-    "seniorhours": "シニアアワー",
-    "specialhours": "シニアショッピング時間",
-    "website": "ウェブサイト",
-    "searchloc": ""
+  "shareOptions": {
+    "aboutUs": "この情報は、食事によってもたらされる4家族と提携して",
+    "findNearbySites": "近くの食事サイトの地図を見るためにこのリンクを使用してください:",
+    "learnMore": "無料の食事の詳細については、このリンクを使用してください。",
+    "mealSiteInfo": "時間と道順を含むこの食事サイトの完全な詳細を見つけるために、以下のリンクに従ってください:",
+    "messageIntro": "0~18歳の子供のための無料の食事を提供しています。食事に参加!",
+    "sendEmail": "メールを送信する",
+    "sendTextMessage": "テキストメッセージを送信する",
+    "share": "共有",
+    "shareInformationAboutMealSite": "この食事サイトに関する情報を共有します。",
+    "suggestedMealSite": "あなたはこの食事のサイトに興味があるかもしれません:"
   },
-  "languages": {
-    "ar": "アラビア語",
-    "en": "英語",
-    "es": "スペイン語",
-    "fr": "フランス語",
-    "hi": "ヒンディー語",
-    "ja": "日本人",
-    "ko": "韓国語",
-    "ms": "ビルマ語",
-    "vi": "ベトナム人",
-    "zh": "簡体字中国語"
+  "specialSite": {
+    "doorDelivery": "ドア配達"
   },
-  "locationhelp": "",
-  "search": {
-    "address": "住所",
-    "find": "最寄りの食事場所を見つける...",
-    "noresults": "検索に一致する結果はありません。詳細を入力してください。"
-  },
-  "sharelocation": {
-    "copied": "リンクをコピーしました",
-    "copy": "リンクをコピーする",
-    "email": "メールを送る",
-    "link": "共有するリンク：",
-    "share": "シェア",
-    "share-site": "この食事サイトの場所を共有してください",
-    "shareloc": "共有場所",
-    "text": "テキストメッセージを送信"
-  },
-  "sidebar": {
-    "close-panel": "検索パネルを閉じる",
-    "info-about-us": "現在、このサイトはノースカロライナ州チャタム郡とオレンジ郡をサポートしています。と",
-    "info-end-text": "、範囲を拡大できます。",
-    "info-link-text": "あなたの助け",
-    "open-panel": "検索パネルを開く",
-    "shopsafe": "安全なショップをどうぞ！",
-    "sixfeet": "ショッピングをするときは6フィート離してください。",
-    "stayhome": "病気のときは家にいてください。",
-    "washhands": "手をよく洗ってください。",
-    "what-do-you-need": "あなたは何が必要ですか？",
-    "when-do-you-need-it": "いつそれが必要ですか？"
-  },
-  "suggest-edit": {
-    "additional-comments": "追加コメント",
-    "address": "住所",
-    "contact": "連絡先",
-    "edit": "編集を提案する",
-    "enter-comments": "コメントを入力してください",
-    "form-submitted": "フォームが送信されました。のエントリの更新にご協力いただきありがとうございます",
-    "hours": "時間",
-    "instructions": "のために修正する必要があるもの",
-    "instructions-1": "のために修正する必要があるもの",
-    "instructions-2": "上場？",
-    "name": "サイト名",
-    "reset": "リセット",
-    "select-checkbox": "少なくとも1つのチェックボックスを選択してください",
-    "social": "ソーシャルメディア",
-    "submission-error": "送信にエラーがあります",
-    "submit": "提出する"
-  },
-  "title": "{0} COVIDのサポート",
-  "zoom": {
-    "no-more-results": "これ以上縮小することはできません。",
-    "noresults": "このエリアには結果がありません。",
-    "zoomout": "より多くの結果を表示するにはズームアウトしてください。"
+  "themeHeaderBar": {
+    "aboutFreeMeals": "無料の食事について"
   }
 }

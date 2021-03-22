@@ -1,7 +1,7 @@
 <template>
   <b-modal id="faq" size="lg" dialog-class="m-0 m-md-auto" centered scrollable hide-header-close>
     <template v-slot:modal-title>
-      {{ $t('faq.title') }}
+      {{ $t('FAQs.buttonText') }}
       <p v-if="info != null">
         For more information, check out the following resources:
         <a target="_blank" :href="info[0].gsx$weblink.$t" v-if="info[0].gsx$weblink !== undefined && !!info[0].gsx$weblink.$t">
