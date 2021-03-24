@@ -1,17 +1,22 @@
 <template>
   <div class="resultWrapper" id="search-filter-wrapper">
-    <div class="tab bg-dialogs border-right border-top border-bottom" @click="$emit('toggle')">
-      <i class="fas fa-caret-down" />
+    <b-list-group style="padding-top: 50px;" v-if="location.currentBusiness == null && showRes">
+      <b-list-group-item variant="sideNav">
+        <form>
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
+        </form>
+      </b-list-group-item>
+    </b-list-group>
+    <div style="padding-top: 25px;" v-if="location.currentBusiness != null && showRes != true">
+      <BusinessDetails
+        :infotype="'green'"
+        :icon="'fa-tractor'"
+        :business="location.currentBusiness"
+        :info="info"
+        @close-details="closeDetails"
+      ></BusinessDetails>
     </div>
-
-    <BusinessDetails
-      :infotype="'green'"
-      :icon="'fa-tractor'"
-      :business="location.currentBusiness"
-      :info="info"
-      v-if="location.currentBusiness != null && showRes != true"
-      @close-details="closeDetails"
-    ></BusinessDetails>
 
     <BusinessDetailsMobile
       :infotype="'green'"
@@ -139,6 +144,13 @@ export default {
     // isEmpty() {
     //   return this.filteredMarkers === emp&& this.markers.length == 0
     // },
+    search(event) {
+      if (event.which === 13) {
+        console.log('here')
+        event.preventDefault()
+        this.$emit('search', this.text)
+      }
+    },
     getClosedMessage: function () {
       return this.$t(`label.closed-today`)
     },
@@ -292,7 +304,8 @@ export default {
 .resultList {
   max-height: calc(100vh - 105px);
   overflow-y: overlay;
-  padding-top: 20px;
+  padding-bottom: 10px;
+  //padding-top: 20px;
 }
 .resultItem {
   padding: 10px;

@@ -12,11 +12,6 @@
     </app-header>
 
     <faq-modal :questions="faqs" :info="info" />
-    <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
-      <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
-      <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
-    </form>
-    <!--<search @search="searchLoc" v-if="districtName != 'mff'" />-->
     <!-- <covid-pop-up /> -->
     <div class="d-flex" v-if="!checkParam">
       <div class="district-buttons">
@@ -39,6 +34,7 @@
         @location-selected="passLocation"
         @hover-over="passHover"
         @hover-leave="passNoHover"
+        @search="searchLoc"
         :info="info"
         v-if="showList"
         :showResults="showResults"
@@ -79,7 +75,6 @@ import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
 import FaqModal from './components/FAQ.vue'
-//import Search from './components/Search.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
 
 import ResultsList from './components/ResultsList.vue'
@@ -134,7 +129,6 @@ export default {
     ResourceMap,
     ThemeHeader,
     ResultsList
-    //Search
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
