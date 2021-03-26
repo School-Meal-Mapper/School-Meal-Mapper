@@ -6,13 +6,13 @@
       @search="searchLoc"
       @language-selected="changeLanguage"
       :socialMedia="socialMediaico"
-      :hasFaqs="faqs != null"
+      :hasFaqs="faqUrl != null"
     >
       <theme-header :districtName="districtName"></theme-header>
     </app-header>
-    <faq-modal :questions="faqs" :info="info" />
+    <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->
-    <div class="d-flex" v-if="!checkParam">
+    <div class="d-flex" v-if="checkParam">
       <div class="district-buttons">
         <p class="intro">{{ this.$t('home.intro') }}</p>
         <p>
@@ -26,7 +26,7 @@
         <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
       </div>
     </div>
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -37,6 +37,7 @@
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
+        :hasFaqs="faqUrl != null"
       />
       <share-modal :business="locationData.currentBusiness" />
       <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
@@ -58,6 +59,7 @@
         />
       </div>
     </div>
+    <router-view />
   </div>
 </template>
 <!-- 
@@ -72,9 +74,8 @@ import AppHeader from './components/Header.vue'
 import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
-import FaqModal from './components/FAQ.vue'
+//import Faq from './components/FAQ.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
-
 import ResultsList from './components/ResultsList.vue'
 
 import { latLng } from 'leaflet'
@@ -122,7 +123,7 @@ export default {
     ShareModal,
     SuggestEditModal,
     AppHeader,
-    FaqModal,
+    //Faq,
     //CovidPopUp,
     ResourceMap,
     ThemeHeader,
@@ -132,7 +133,7 @@ export default {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     return {
       entries: null,
-      faqs: null,
+      faqUrl: null,
       provInfo: null,
       need: 'none',
       day: dayAny,
@@ -225,10 +226,11 @@ export default {
       const res = await fetch(districtData.data.spreadsheetUrl)
       console.log(res)
       if (districtData.data.faqUrl != null) {
-        const res2 = await fetch(districtData.data.faqUrl)
+        this.faqUrl = districtData.data.faqUrl
+        /*const res2 = await fetch(districtData.data.faqUrl)
         const faqs = await res2.json()
         this.faqs = faqs.feed.entry
-        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
+        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20*/
       }
       if (districtData.data.providerinfoUrl != null) {
         const res3 = await fetch(districtData.data.providerinfoUrl)
@@ -352,6 +354,11 @@ export default {
       var urlString = window.location.href
       //var url = new URL(urlString)
       //console.log(url.searchParams.has('d'))
+      console.log(this.$route.path)
+      return this.$route.path == '/' && !urlString.includes('?')
+    },
+    showMap() {
+      var urlString = window.location.href
       return urlString.includes('?')
     },
     filteredMarkers() {

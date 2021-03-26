@@ -4,7 +4,7 @@
       <div>
         <b-navbar-brand :href="logoLink" class="left"> <slot></slot> </b-navbar-brand>
       </div>
-      <div class="p-2">
+      <div class="p-2" v-if="!onFaqPage()">
         <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
           <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
@@ -16,10 +16,16 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right v-if="hasFaqs">
-          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
+        <b-nav-item right v-if="hasFaqs && !onFaqPage()">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateFaqUrl()">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
             <b>{{ $t('faq.linktext') }}</b>
+          </b-button>
+        </b-nav-item>
+        <b-nav-item right v-if="hasFaqs && onFaqPage()">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateMapUrl()">
+            <i class="fas info-plus-circle" aria-hidden="true"></i>
+            <b>Back to Map</b>
           </b-button>
         </b-nav-item>
         <b-nav-item right v-if="districtName == 'mff'" href="https://meals4families.community/" target="_blank">
@@ -115,6 +121,7 @@ export default {
   created() {
     window.addEventListener('resize', this.handleResize)
     this.handleResize()
+    console.log(this.$route)
   },
   methods: {
     search(event) {
@@ -122,6 +129,27 @@ export default {
         event.preventDefault()
         this.$emit('search', this.text)
       }
+    },
+    generateFaqUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = url.search.split('?')[1]
+      if (district == null) {
+        window.location.reload()
+      }
+      console.log(origin + '/#/' + district + '/' + 'faqs')
+      window.location.href = origin + '/#/' + district + '/' + 'faqs'
+    },
+    generateMapUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = this.$route.params.district
+      window.location.href = origin + '/?' + district
+    },
+    onFaqPage() {
+      return this.$route.path.includes('faqs')
     },
     handleResize() {
       this.window.width = window.innerWidth
