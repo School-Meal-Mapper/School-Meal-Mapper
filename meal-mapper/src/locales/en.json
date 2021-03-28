@@ -45,7 +45,8 @@
   },
   "searchBar": {
     "noResults": "No results match your search. Please try again.",
-    "searchPrompt": "Find meals near address"
+    "searchPrompt": "Find meals near address",
+    "otherDistrict": "Or find meals in another district"
   },
   "shareOptions": {
     "aboutUs": "This information is brought to you by Meals4Families in partnership with",

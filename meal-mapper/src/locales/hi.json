@@ -35,34 +35,34 @@
     "notes": "नोट्स",
     "questionsContactInfo": "प्रश्न और संपर्क जानकारी",
     "saturday": "शानिवार",
-    "shareLocation": "Share location",
-    "suggestAnEdit": "Suggest an edit",
-    "sunday": "Sunday",
-    "thursday": "Thursday",
-    "tuesday": "Tuesday",
-    "wednesday": "Wednesday",
-    "weeklyMenu": "Weekly menu"
+    "shareLocation": "स्थान साझा करें",
+    "suggestAnEdit": "एक संपादन का सुझाव दें",
+    "sunday": "रविवार",
+    "thursday": "गुरूवार",
+    "tuesday": "मंगलवार",
+    "wednesday": "बुधवार",
+    "weeklyMenu": "साप्ताहिक मेनू"
   },
   "searchBar": {
-    "noResults": "No results match your search. Please try again.",
-    "searchPrompt": "Find meals near address"
+    "noResults": "कोई परिणाम आपकी खोज से मेल नहीं खाते हैं। कृपया फिर से प्रयास करें।",
+    "searchPrompt": "पते के पास भोजन का पता लगाएं"
   },
   "shareOptions": {
-    "aboutUs": "This information is brought to you by Meals4Families in partnership with",
-    "findNearbySites": "Use this link to see a map of nearby meal sites:",
-    "learnMore": "Use this link to learn more about free meals:",
-    "mealSiteInfo": "Follow the link below to find full details for this meal site including hours and directions:",
-    "messageIntro": "offers free meals for all children aged 0-18. Join us for a meal!",
-    "sendEmail": "Send email",
-    "sendTextMessage": "Send text message",
-    "share": "Share",
-    "shareInformationAboutMealSite": "Share information about this meal site:",
-    "suggestedMealSite": "You might be interested in this meal site:"
+    "aboutUs": "यह जानकारी के साथ साझेदारी में भोजन 4Families द्वारा आप के लिए लाया जाता है",
+    "findNearbySites": "आस-पास की भोजन साइटों का नक्शा देखने के लिए इस लिंक का उपयोग करें:",
+    "learnMore": "मुफ्त भोजन के बारे में अधिक जानने के लिए इस लिंक का उपयोग करें:",
+    "mealSiteInfo": "घंटे और निर्देश सहित इस भोजन साइट के लिए पूरा विवरण खोजने के लिए नीचे दिए गए लिंक का पालन करें:",
+    "messageIntro": "0-18 आयु वर्ग के सभी बच्चों के लिए मुफ्त भोजन प्रदान करता है। हमें एक भोजन के लिए शामिल हों!",
+    "sendEmail": "ईमेल भेजें",
+    "sendTextMessage": "टेक्स्ट मैसेज भेजें",
+    "share": "साझा",
+    "shareInformationAboutMealSite": "इस भोजन साइट के बारे में जानकारी साझा करें:",
+    "suggestedMealSite": "आप इस भोजन साइट में रुचि हो सकती है:"
   },
   "specialSite": {
-    "doorDelivery": "Door Delivery"
+    "doorDelivery": "दरवाजा वितरण"
   },
   "themeHeaderBar": {
-    "aboutFreeMeals": "About Free Meals"
+    "aboutFreeMeals": "मुफ्त भोजन के बारे में"
   }
 }

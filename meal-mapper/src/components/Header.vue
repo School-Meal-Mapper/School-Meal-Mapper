@@ -7,7 +7,7 @@
       <div class="p-2">
         <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
         </form>
       </div>
     </div>
@@ -90,7 +90,17 @@ export default {
         { iso: 'zh', name: '中文' },
         { iso: 'ms', name: 'ဗမာ' },
         { iso: 'hi', name: 'हिंदी' },
-        { iso: 'vi', name: 'tiếng việt' }
+        { iso: 'vi', name: 'tiếng việt' },
+        { iso: 'bn', name: 'bn' },
+        { iso: 'hmn', name: 'hmn' },
+        { iso: 'my', name: 'my' },
+        { iso: 'ne', name: 'ne' },
+        { iso: 'pl', name: 'pl' },
+        { iso: 'pt', name: 'pt' },
+        { iso: 'ru', name: 'ru' },
+        { iso: 'rw', name: 'rw' },
+        { iso: 'so', name: 'so' },
+        { iso: 'ur', name: 'ur' }
       ],
       text: '',
       window: {
