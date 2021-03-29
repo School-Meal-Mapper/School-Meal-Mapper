@@ -24,7 +24,12 @@
             <b>{{ $t('label.description') }}:</b><br />
             {{ 'Additional directions' }}
           </p>
-          <icon-list-item icon="fa fa-directions" :title="$t('mealSiteCard.getDirections')" :link="directionsLink(business.marker)" target="_blank" />
+          <icon-list-item
+            icon="fa fa-directions"
+            :title="$t('mealSiteCard.getDirections')"
+            :link="directionsLink(business.marker)"
+            target="_blank"
+          />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
           <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
             $t('mealSiteCard.shareLocation')
