@@ -35,12 +35,12 @@
         <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
           <b-card-header header-tag="header" class="p-1" role="tab">
             <b-button block v-b-toggle="'accordion-' + index.toString()" class="font-weight-bold question" variant="info"
-              >{{ question.gsx$englishquestion.$t }}
+              >{{ question['gsx$' + $i18n.locale + 'question'].$t }}
             </b-button>
           </b-card-header>
           <b-collapse :id="'accordion-' + index.toString()" accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <b-card-text>{{ question.gsx$englishanswer.$t }}</b-card-text>
+              <b-card-text>{{ question['gsx$' + $i18n.locale + 'answer'].$t }}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
