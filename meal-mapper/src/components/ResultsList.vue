@@ -3,21 +3,21 @@
     <b-list-group style="padding-top: 50px;" v-if="location.currentBusiness == null && showRes">
       <b-list-group-item variant="sideNav">
         <form>
-          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
         </form>
       </b-list-group-item>
     </b-list-group>
     <div style="padding-top: 25px;" v-if="location.currentBusiness != null && showRes != true">
-       <BusinessDetails
-      :infotype="'green'"
-      :icon="'fa-tractor'"
-      :business="location.currentBusiness"
-      :info="info"
-      v-if="location.currentBusiness != null && showRes != true"
-      @close-details="closeDetails"
-      :hasFaqs="hasFaqs"
-    ></BusinessDetails>
+      <BusinessDetails
+        :infotype="'green'"
+        :icon="'fa-tractor'"
+        :business="location.currentBusiness"
+        :info="info"
+        v-if="location.currentBusiness != null && showRes != true"
+        @close-details="closeDetails"
+        :hasFaqs="hasFaqs"
+      ></BusinessDetails>
     </div>
 
     <BusinessDetailsMobile
