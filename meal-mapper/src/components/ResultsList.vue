@@ -9,13 +9,15 @@
       </b-list-group-item>
     </b-list-group>
     <div style="padding-top: 25px;" v-if="location.currentBusiness != null && showRes != true">
-      <BusinessDetails
-        :infotype="'green'"
-        :icon="'fa-tractor'"
-        :business="location.currentBusiness"
-        :info="info"
-        @close-details="closeDetails"
-      ></BusinessDetails>
+       <BusinessDetails
+      :infotype="'green'"
+      :icon="'fa-tractor'"
+      :business="location.currentBusiness"
+      :info="info"
+      v-if="location.currentBusiness != null && showRes != true"
+      @close-details="closeDetails"
+      :hasFaqs="hasFaqs"
+    ></BusinessDetails>
     </div>
 
     <BusinessDetailsMobile
@@ -29,7 +31,7 @@
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
-        <strong>{{ this.$t('zoom.noresults') + ' ' + this.$t('zoom.zoomout') }}</strong>
+        <strong>{{ this.$t('mapPrompts.youCanNotZoomOutMore') + ' ' + 'Zoom out for more results.' }}</strong>
       </b-alert>
       <b-list-group-item
         action
@@ -81,10 +83,10 @@
         @click="setZoom"
         id="resultslistnav"
       >
-        {{ this.$t('zoom.zoomout') }}</b-card
+        {{ 'Zoom out for more results.' }}</b-card
       >
       <b-card hover height="100%" class="no-zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
-        {{ this.$t('zoom.no-more-results') }}</b-card
+        {{ this.$t('mapPrompts.youCanNotZoomOutMore') }}</b-card
       >
     </div>
   </div>
@@ -123,7 +125,8 @@ export default {
       currentBusiness: Object
     },
     showResults: Boolean,
-    selectedDay: Number
+    selectedDay: Number,
+    hasFaqs: Boolean
   },
   watch: {
     location: function (locationVal) {
@@ -152,7 +155,12 @@ export default {
       }
     },
     getClosedMessage: function () {
-      return this.$t(`label.closed-today`)
+      var textArr = this.$t(`mapKey.closedToday`).split(' ')
+      var closed = textArr[0]
+      closed = closed[0].toUpperCase() + closed.substr(1)
+      var today = textArr[1]
+      today = today[0].toUpperCase() + today.substr(1)
+      return closed + ' ' + today
     },
     closeDetails: function () {
       this.showRes = true

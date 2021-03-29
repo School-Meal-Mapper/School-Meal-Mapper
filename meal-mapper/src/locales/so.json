@@ -1,0 +1,68 @@
+{
+  "FAQs": {
+    "buttonText": "Ku saabsan Cunnooyinka Bilaashka ah",
+    "hyperlinkText": "Su'aalaha iyo macluumaadka xiriirka"
+  },
+  "landingPage": {
+    "aboutUs": "Nagu saabsan",
+    "findFreeMealsNearMe": "Raadi cunto bilaash ah aniga agtayda!",
+    "findYourCountyAndSelectProvider": "Xullo bixiye cunno ee degmadaada.",
+    "pleaseSelectState": "Xulo gobolkaaga.",
+    "welcomeStatement": "Ku soo dhowow Meals4Families!",
+    "youMustSelectState": "Waa inaad doorataa gobol kahor intaadan dooran bixiyaha cuntada."
+  },
+  "mapKey": {
+    "closedToday": "xiran maanta",
+    "mapKeyTitle": "Furaha Khariidada",
+    "openToday": "fur maanta",
+    "searched": "raadiyey",
+    "selected": "la xushay"
+  },
+  "mapPrompts": {
+    "backToList": "Ku noqo liiska.",
+    "youCanNotZoomOutMore": "Ma fogeyn kartid wax intaa ka badan."
+  },
+  "mealSiteCard": {
+    "hours": "Saacado",
+    "address": "Cinwaanka:",
+    "closed": "Xidhan",
+    "detailsLastUpdated": "Faahfaahinta markii ugu dambeysay ee la cusbooneysiiyay:",
+    "expandDetails": "Fidi faahfaahinta",
+    "friday": "Jimcaha",
+    "getDirections": "Hel tilmaamo",
+    "minimizeDetails": "Yaree faahfaahinta",
+    "monday": "Isniinta",
+    "notes": "Xusuusin",
+    "questionsContactInfo": "Su'aalaha iyo macluumaadka xiriirka",
+    "saturday": "Sabti",
+    "shareLocation": "La wadaag goobta",
+    "suggestAnEdit": "Soo jeedi wax ka bedel",
+    "sunday": "Axada",
+    "thursday": "Khamiis",
+    "tuesday": "Talaado",
+    "wednesday": "Arbaco",
+    "weeklyMenu": "Liistada toddobaadlaha ah"
+  },
+  "searchBar": {
+    "noResults": "Majiraaan natiijooyin u dhigma raadintaada. Fadlan iskuday markale.",
+    "searchPrompt": "Raadi cunno u dhow cinwaanka"
+  },
+  "shareOptions": {
+    "aboutUs": "Macluumaadkan waxaa kuu keenay Meals4Families oo kaashanaysa",
+    "findNearbySites": "U adeegso xiriiriyehan si aad u aragto khariiddada goobaha cuntada ee ku dhow:",
+    "learnMore": "U adeegso xiriiriyehan si aad wax badan uga ogaato cuntada bilaashka ah:",
+    "mealSiteInfo": "Raac xiriirka hoose si aad u hesho faahfaahin buuxda oo ku saabsan goobtan cuntada oo ay ku jiraan saacadaha iyo tilmaamaha:",
+    "messageIntro": "waxay siisaa cunto bilaash ah dhammaan carruurta da'doodu tahay 0-18. Nagala soo qaybgal cunto!",
+    "sendEmail": "U dir email",
+    "sendTextMessage": "U dir fariin qoraal ah",
+    "share": "La wadaag",
+    "shareInformationAboutMealSite": "La wadaag macluumaadka ku saabsan goobtan cuntada:",
+    "suggestedMealSite": "Waxaad xiiseyn kartaa bartan cunnada:"
+  },
+  "specialSite": {
+    "doorDelivery": "Bixinta Albaabka"
+  },
+  "themeHeaderBar": {
+    "aboutFreeMeals": "Ku saabsan Cunnooyinka Bilaashka ah"
+  }
+}

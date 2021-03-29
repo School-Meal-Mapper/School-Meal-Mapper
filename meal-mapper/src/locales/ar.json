@@ -1,210 +1,68 @@
 {
-  "about": {
-    "close": "قريب",
-    "contact": "اتصل بنا",
-    "contactus": {
-      "email": "البريد الإلكتروني",
-      "info": "هذه الصفحة مدعومة من {0} من {1}. للأسئلة ، يرجى الاتصال بنا عبر البريد الإلكتروني على {2}."
-    },
-    "datahead": "ملاحظة حول مشاركة البيانات",
-    "dataprivacy": "تم جمع المعلومات حول NC COVID Support من مصادر الويب العامة من قبل متطوعين أو تم إدخالها من قبل أصحاب الأعمال / مقدمي الموارد. يتم توفير البيانات لمساعدة الجمهور والشركات المحلية والشركاء الحكوميين والمنظمات غير الربحية خلال جائحة COVID-19. لا يجب استخدام البيانات للمشاريع التجارية أو لأغراض أخرى دون إذن صريح من NC COVID Support.",
-    "devhelp": {
-      "addbusiness": "إضافة عمل",
-      "addinfo": "استخدم نماذجنا عبر الإنترنت لـ {0} أو {1}.",
-      "ambassadorinfo": "ساعدنا في توسيع التغطية عبر ولاية كارولينا الشمالية. سيعمل السفراء مع الحكومة المحلية وجمعيات الأعمال لجلب NC COVID Support إلى مجتمعهم. راسلنا عبر البريد الإلكتروني {0} للحصول على الأدوات والموارد للبدء.",
-      "becomeambassador": "كن سفير مجتمع",
-      "conduct": "مدونة قواعد السلوك",
-      "devnote": "مطورو البرامج - ابحث عن {0} و {1} على GitHub.",
-      "dupsite": "بدلاً من ذلك ، يمكنك تكرار موقع لولتك.",
-      "info": "هذا مشروع مفتوح المصدر ، تم بناؤه للمشاركة والتوسع في المجتمعات الأخرى.",
-      "source": "مصدر الرمز",
-      "support": "ادعم جيرانك والشركات المحلية - ساعدنا على النمو!",
-      "updatebusiness": "تحديث إدخال موجود"
-    },
-    "getinvolved": "شارك",
-    "info": "تستفيد قاعدة بياناتنا من الموارد من المعلومات التي تجمعها هذه المنظمات:",
-    "linktext": "معلومات عنا",
-    "orgs": {
-      "bureau": "مكتب زوار تشابل هيل / مقاطعة أورانج",
-      "cfa": "كود لأمريكا",
-      "chb": "لواء تشابل هيل",
-      "localistnc": "#LocalListNC",
-      "partnership": "شراكة وسط تشابل هيل",
-      "pittsboro-siler": "بيتسبورو-سيلر سيتي للمؤتمرات ومكتب الزوار"
-    },
-    "partners": "مصادر المعلومات",
-    "title": "عن هذا الموقع"
+  "FAQs": {
+    "buttonText": "حول الوجبات المجانية",
+    "hyperlinkText": "أسئلة ومعلومات الاتصال"
   },
-  "category": {
-    "childcare": "رعاية الطفل",
-    "family": "وجبات عائلية معدة",
-    "farm": "أسواق المزارع والمزارعين",
-    "food_bev": "المأكولات والمشروبات المتخصصة",
-    "grocery": "البقالة",
-    "meal": "وجبات مجانية",
-    "pet": "مستلزمات الحيوانات الأليفة",
-    "pharmacy": "مقابل",
-    "restaurant": "مطاعم",
-    "school": "الوجبات المدرسية"
+  "landingPage": {
+    "aboutUs": "معلومات عنا",
+    "findFreeMealsNearMe": "البحث عن وجبات مجانية بالقرب مني!",
+    "findYourCountyAndSelectProvider": "حدد مزود وجبة في مقاطعتك.",
+    "pleaseSelectState": "حدد ولايتك.",
+    "welcomeStatement": "مرحبا بكم في Meals4Families!",
+    "youMustSelectState": "يجب عليك تحديد الولاية قبل اختيار مقدم الوجبات."
   },
-  "covidpopup": {
-    "title": "ساعد في الحفاظ على مجتمعنا آمنة."
+  "mapKey": {
+    "closedToday": "مغلق اليوم",
+    "mapKeyTitle": "مفتاح الخريطة",
+    "openToday": "مفتوح اليوم",
+    "searched": "فتشت",
+    "selected": "المحدد"
   },
-  "dayofweek": {
-    "any": "أي",
+  "mapPrompts": {
+    "backToList": "العودة إلى القائمة.",
+    "youCanNotZoomOutMore": "لا يمكنك التصغير أكثر."
+  },
+  "mealSiteCard": {
+    "hours": "ساعات",
+    "address": "عنوان:",
+    "closed": "مغلق",
+    "detailsLastUpdated": "آخر تحديث للتفاصيل:",
+    "expandDetails": "قم بتوسيع التفاصيل",
     "friday": "يوم الجمعة",
+    "getDirections": "احصل على الاتجاهات",
+    "minimizeDetails": "تقليل التفاصيل",
     "monday": "الإثنين",
+    "notes": "ملاحظات",
+    "questionsContactInfo": "أسئلة ومعلومات الاتصال",
     "saturday": "يوم السبت",
+    "shareLocation": "مشاركة الموقع",
+    "suggestAnEdit": "اقتراح تعديل",
     "sunday": "الأحد",
     "thursday": "الخميس",
     "tuesday": "الثلاثاء",
-    "wednesday": "الأربعاء"
+    "wednesday": "الأربعاء",
+    "weeklyMenu": "قائمة أسبوعية"
   },
-  "faq": {
-    "close": "قريب",
-    "freeMealsAnswer": "يمكنك استخدام أداة رسم الخرائط الخاصة بنا للعثور على وجبات قريبة منك. انقر على موقع توزيع لعرض عنوانه وساعات العمل ، ثم احصل على وجبات مجانية في تلك النافذة.",
-    "freeMealsQuestion": "كيف يمكنني الحصول على وجبات مجانية؟",
-    "helpAnswer-end": "حتى يتمكن البرنامج من الاستمرار طالما كانت هناك حاجة إليه.",
-    "helpAnswer-organization": "مؤسسة المدارس العامة",
-    "helpAnswer-start": "إذا ساعدتنا في نشر الخبر حتى يتمكن الجميع من الوصول إلى وجباتنا ، فسوف نكون ممتنين للغاية. شارك موقع وجباتنا على وسائل التواصل الاجتماعي وقم بمراسلة أصدقائك! دعنا نشعر بالإثارة تجاه الطعام للطلاب!\nيرجى أيضا النظر في التبرع ل ",
-    "helpQuestion": "كيف يمكنني أن أقدم المساعدة؟",
-    "linktext": "أخبرني عن الوجبات المجانية",
-    "staySafeReminder": "يرجى التأكد من ارتداء قناع عند زيارة موقع الالتقاط أو التفاعل مع المتطوعين لمساعدتنا جميعًا على البقاء آمنًا!",
-    "title": "معلومات حول الوجبات المجانية",
-    "whatWeDoAnswer": "نحن نساعد على ربط الأطفال والعائلات بالوجبات في منطقتهم.\n نحن نعلم أن الوجبات التي ترعاها المدرسة هي شريان الحياة للعديد من الأطفال والأسر خلال أزمة COVID. والآن وقد انتهى العام الدراسي ، تقدم العديد من المناطق التعليمية للعائلات وجبات مجانية من خلال برنامجها الصيفي. نحن هنا لمساعدتك في العثور عليهم.\n",
-    "whatWeDoQuestion": "ماذا يفعل الغذاء للطلاب؟",
-    "whoQuestion": "",
-    "whoAnswer": "",
-    "registerQuestion": "",
-    "registerAnswer": "",
-    "typeoffoodQuestion": "",
-    "typeoffoodAnswer": "",
-    "preparedmealsQuestion": "",
-    "preparedmealsAnswer": "",
-    "adultavaliabilityQuestion": "",
-    "adultavaliabilityAnswer": "",
-    "childrenpresentQuestion": "",
-    "childrenpresentAnswer": "",
-    "idQuestion": "",
-    "idAnswer": "",
-    "numberofmealsQuestion": "",
-    "numberofmealsAnswer": "",
-    "packagingQuestion": "",
-    "packagingAnswer": "",
-    "vegetarianQuestion": "",
-    "vegetarianAnswer": "",
-    "babyfoodQuestion": "",
-    "babyfoodAnswer": ""
+  "searchBar": {
+    "noResults": "لا توجد نتائج تطابق بحثك. حاول مرة اخرى.",
+    "searchPrompt": "البحث عن وجبات بالقرب من العنوان"
   },
-  "getdirections": "",
-  "label": {
-    "address": "عنوان",
-    "allweek": "كل الاسبوع",
-    "backtolist": "الرجوع للقائمة",
-    "backtolistmobile": "الخروج للخريطة",
-    "close": "قريب",
-    "closed": "مغلق",
-    "closed-on": "أغلقت يوم",
-    "closed-today": "مغلق اليوم",
-    "closedonday": "مغلق (في اليوم المحدد الحالي)",
-    "curbside": "البيك اب",
-    "delivery": "توصيل",
-    "details-last-updated": "تم تحديث التفاصيل",
-    "discountmedical": "خصم عامل طبي | تخفيضات عامل طبي",
-    "discounts": "خصم عامل طبي | تخفيضات عامل طبي",
-    "drivethru": "الطلب من المركبة",
-    "email": "البريد الإلكتروني",
-    "email_lowercase": "البريد الإلكتروني",
-    "farmersmarket": "سوق المزارعين |",
-    "farmpick-up": "الاستلام من المزرعة",
-    "freegroceries": "موقع بقالة مجاني | مواقع بقالة مجانية",
-    "freemeals": "موقع وجبة مجانية | مواقع وجبات مجانية",
-    "freeproduce": "موقع إنتاج مجاني | مواقع إنتاج مجاني",
-    "instructions": "تعليمات",
-    "locationhelplinktext": "أعرف أكثر",
-    "mapkey": "مفتاح الخريطة",
-    "maxdetails": "قم بتوسيع التفاصيل",
-    "mealpublic": "وجبات مفتوحة للجمهور",
-    "mealstudent": "وجبات الطلاب",
-    "mindetails": "تقليل التفاصيل",
-    "mustpreorder": "يجب الطلب المسبق",
-    "normalhours": "ساعات العمل العادية",
-    "notes": "ملاحظات",
-    "offers": "عروض",
-    "open": "افتح",
-    "openinghours": "ساعات العمل",
-    "orderonline": "اطلب وادفع عبر الإنترنت",
-    "phone": "هاتف",
-    "selectacategory": "اختر تصنيف...",
-    "selected": "المحدد",
-    "seniorhours": "ساعات كبار",
-    "specialhours": "ساعات تسوق كبار",
-    "website": "موقع الكتروني",
-    "searchloc": ""
-  },
-  "languages": {
-    "ar": "عربى",
-    "en": "الإنجليزية",
-    "es": "الأسبانية",
-    "fr": "الفرنسية",
-    "hi": "الهندية",
-    "ja": "اليابانية",
-    "ko": "الكورية",
-    "ms": "البورمية",
-    "vi": "الفيتنامية",
-    "zh": "الصينية المبسطة"
-  },
-  "locationhelp": "",
-  "search": {
-    "address": "عنوان",
-    "find": "ابحث عن موقع الوجبة الأقرب إلى ...",
-    "noresults": "لا توجد نتائج تطابق بحثك. الرجاء إدخال المزيد من المعلومات."
-  },
-  "sharelocation": {
-    "copied": "تم نسخ الرابط",
-    "copy": "انسخ الرابط",
-    "email": "ارسل بريد الكتروني",
-    "link": "رابط للمشاركة:",
+  "shareOptions": {
+    "aboutUs": "يتم تقديم هذه المعلومات إليك من خلال Meals4Families بالشراكة مع",
+    "findNearbySites": "استخدم هذا الارتباط لمشاهدة خريطة مواقع الوجبات القريبة:",
+    "learnMore": "استخدم هذا الرابط لمعرفة المزيد عن الوجبات المجانية:",
+    "mealSiteInfo": "اتبع الرابط أدناه للعثور على التفاصيل الكاملة لموقع الوجبة هذا بما في ذلك الساعات والاتجاهات:",
+    "messageIntro": "يقدم وجبات مجانية لجميع الأطفال الذين تتراوح أعمارهم بين 0 و 18 عامًا. انضم إلينا لتناول وجبة!",
+    "sendEmail": "ارسل بريد الكتروني",
+    "sendTextMessage": "ابعت رسالة نصية",
     "share": "شارك",
-    "share-site": "شارك موقع هذه الوجبة",
-    "shareloc": "مشاركة الموقع",
-    "text": "ابعت رسالة نصية"
+    "shareInformationAboutMealSite": "شارك المعلومات حول موقع الوجبة هذا:",
+    "suggestedMealSite": "قد تكون مهتمًا بموقع الوجبات هذا:"
   },
-  "sidebar": {
-    "close-panel": "أغلق لوحة البحث",
-    "info-about-us": "حاليًا ، يدعم هذا الموقع مقاطعة Chatham ومقاطعة Orange ، NC. مع",
-    "info-end-text": "، يمكننا توسيع تغطيتنا.",
-    "info-link-text": "مساعدتك",
-    "open-panel": "افتح لوحة البحث",
-    "shopsafe": "من فضلك ، تسوق آمن!",
-    "sixfeet": "ابق على مسافة 6 أقدام عند التسوق.",
-    "stayhome": "إذا كنت مريضًا ، ابق في المنزل.",
-    "washhands": "اغسل يديك كثيرًا.",
-    "what-do-you-need": "ماذا تحتاج؟",
-    "when-do-you-need-it": "متى تحتاجها؟"
+  "specialSite": {
+    "doorDelivery": "تسليم الباب"
   },
-  "suggest-edit": {
-    "additional-comments": "تعليقات اضافية",
-    "address": "عنوان",
-    "contact": "معلومات للتواصل",
-    "edit": "اقتراح تعديل",
-    "enter-comments": "أدخل التعليقات",
-    "form-submitted": "تم تقديم النموذج. شكرا لمساعدتكم في تحديث الإدخال لـ",
-    "hours": "ساعات",
-    "instructions": "ما يجب تصحيحه لل",
-    "instructions-1": "ما يجب تصحيحه لل",
-    "instructions-2": "قائمة؟",
-    "name": "اسم الموقع",
-    "reset": "إعادة تعيين",
-    "select-checkbox": "يرجى تحديد خانة اختيار واحدة على الأقل",
-    "social": "وسائل التواصل الاجتماعي",
-    "submission-error": "هناك خطأ في التقديم",
-    "submit": "خضع"
-  },
-  "title": "{0} دعم COVID",
-  "zoom": {
-    "no-more-results": "لا يمكنك التصغير أكثر.",
-    "noresults": "لا توجد نتائج في هذا المجال.",
-    "zoomout": "التصغير لمزيد من النتائج."
+  "themeHeaderBar": {
+    "aboutFreeMeals": "حول الوجبات المجانية"
   }
 }

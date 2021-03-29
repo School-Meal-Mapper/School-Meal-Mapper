@@ -1,210 +1,68 @@
 {
-  "about": {
-    "close": "닫기",
-    "contact": "문의하기",
-    "contactus": {
-      "email": "이메일",
-      "info": "이 페이지는 {1}의 {0} 에 의해 제공됩니다. 궁금한 점은 {2}으로 이메일을 통해 문의하시기 바랍니다."
-    },
-    "datahead": "데이터 공유에 대한 참고 사항",
-    "dataprivacy": "NC COVID 지원에 대한 정보는 자원 봉사자가 공개 웹 소스에서 수집하거나 사업자 / 자원 제공자가 입력했습니다. 이 데이터는 COVID-19 전염병 동안 공공, 지역 기업, 정부 파트너 및 비영리 단체를 지원하기 위해 제공됩니다. NC COVID 지원의 명시적인 허가 없이는 상업 벤처 또는 기타 목적으로 데이터를 사용해서는 안됩니다.",
-    "devhelp": {
-      "addbusiness": "사업을 추가하다",
-      "addinfo": "온라인 양식 {0} 또는 {1}에 사용하시면 됩니다.",
-      "ambassadorinfo": "노스 캐롤라이나 전역에 리소스 범위를 넓히도록 도와주세요. 대사관은 지역 정부 및 기업 협회와 협력하여 지역 사회에 NC COVID 지원을 제공 할 것입니다. 도구 및 리소스를 원하시면 {0} 으로 이메일을 보내주십시오.",
-      "becomeambassador": "지역 사회의 대사가 되십시오",
-      "conduct": "행동 강령",
-      "devnote": "개발자-GitHub에서 {0} 와 {1} 을 찾을 수 있습니다.",
-      "dupsite": "다른 주에 계신다면, 당신의 주를 위해 이 사이트를 복사 하셔도 됩니다.",
-      "info": "이 프로젝트는 다른 커뮤니티와 공유하고 확장하기 위해 제작 된 오픈 소스 프로젝트입니다.",
-      "source": "소스 코드",
-      "support": "이웃과 지역 비즈니스를 지원하십시오-우리가 성장하도록 도와주세요!",
-      "updatebusiness": "기존 항목을 업데이트"
-    },
-    "getinvolved": "참여하기",
-    "info": "우리의 리소스 데이터베이스는 다음 조직에서 수집한 정보를 활용 합니다.",
-    "linktext": "회사 소개",
-    "orgs": {
-      "bureau": "채플 힐 / 오렌지 카운티 관광청",
-      "cfa": "미국을위한 코드",
-      "chb": "채플 힐 여단",
-      "localistnc": "#LocalListNC",
-      "partnership": "채플 힐 다운타운 파트너십",
-      "pittsboro-siler": "피츠 보로-실러 시티 컨벤션 뷰로"
-    },
-    "partners": "정보 출처",
-    "title": "이 사이트에 대하여"
+  "FAQs": {
+    "buttonText": "무료 식사 정보",
+    "hyperlinkText": "질문 및 연락처 정보"
   },
-  "category": {
-    "childcare": "육아",
-    "family": "가족 음식 세트",
-    "farm": "농장 & 시장",
-    "food_bev": "전문 음식 및 음료",
-    "grocery": "식료품 점",
-    "meal": "무료 식사",
-    "pet": "애완 용품",
-    "pharmacy": "약국",
-    "restaurant": "레스토랑",
-    "school": "학교 급식"
+  "landingPage": {
+    "aboutUs": "우리에 관해서",
+    "findFreeMealsNearMe": "내 근처에 무료 식사를 찾아라!",
+    "findYourCountyAndSelectProvider": "카운티에서 식사 공급자를 선택합니다.",
+    "pleaseSelectState": "상태를 선택합니다.",
+    "welcomeStatement": "Meals4Families에 오신 것을 환영합니다!",
+    "youMustSelectState": "식사 공급자를 선택하기 전에 상태를 선택해야 합니다."
   },
-  "covidpopup": {
-    "title": "지역 사회를 안전하게 지키십시오."
+  "mapKey": {
+    "closedToday": "오늘 휴무",
+    "mapKeyTitle": "지도 키",
+    "openToday": "오늘 오픈",
+    "searched": "검색",
+    "selected": "선택한"
   },
-  "dayofweek": {
-    "any": "어떤",
+  "mapPrompts": {
+    "backToList": "목록으로 돌아갑니다.",
+    "youCanNotZoomOutMore": "더 많이 축소할 수 없습니다."
+  },
+  "mealSiteCard": {
+    "hours": "시간",
+    "address": "주소:",
+    "closed": "폐쇄",
+    "detailsLastUpdated": "세부 정보 마지막으로 업데이트:",
+    "expandDetails": "세부 정보 확장",
     "friday": "금요일",
+    "getDirections": "길 찾기",
+    "minimizeDetails": "세부 정보 최소화",
     "monday": "월요일",
+    "notes": "노트",
+    "questionsContactInfo": "질문 및 연락처 정보",
     "saturday": "토요일",
+    "shareLocation": "위치 공유",
+    "suggestAnEdit": "편집 제안",
     "sunday": "일요일",
     "thursday": "목요일",
     "tuesday": "화요일",
-    "wednesday": "수요일"
+    "wednesday": "수요일",
+    "weeklyMenu": "주간 메뉴"
   },
-  "faq": {
-    "close": "닫기",
-    "freeMealsAnswer": "지도 도구를 사용하여 가까운 식사를 찾을 수 있습니다. 배포 사이트를 클릭하여 주소와 운영 시간을 본 다음 해당 창에서 무료 식사를 선택하십시오.",
-    "freeMealsQuestion": "무료 식사는 어떻게합니까?",
-    "helpAnswer-end": "필요한만큼 프로그램을 계속 사용할 수 있습니다.",
-    "helpAnswer-organization": "공립학교 재단",
-    "helpAnswer-start": "모든 사람이 우리의 식사에 접근 할 수 있도록 우리가 그 말씀을 널리 알리도록 도와 주면 매우 감사 할 것입니다. 소셜 미디어에서 식사 사이트를 공유하고 친구들에게 문자를 보내십시오!  Food For Students에 대해 모두가 흥분하게하자!\n기부를 고려하십시오 ",
-    "helpQuestion": "내가 어떻게 도움이 될 수 있습니다?",
-    "linktext": "무료 식사에 대해 알려주세요",
-    "staySafeReminder": "픽업 사이트를 방문하거나 자원 봉사자들과 교류 할 때 모두가 안전하게 지낼 수 있도록 마스크를 착용하십시오!",
-    "title": "무료 식사에 대한 정보",
-    "whatWeDoAnswer": "우리는 어린이와 가족을 해당 지역의 식사와 연결하는 데 도움을줍니다.\n 우리는 학교 후원 식 식사가 COVID 위기 동안 많은 어린이와 가족에게 생명선이라는 것을 알고 있습니다. 그리고 학년도가 끝났으므로 많은 학군은 여름 프로그램을 통해 가족에게 무료 식사를 제공하고 있습니다. 우리는 당신이 그들을 찾을 수 있도록 여기 있습니다.\n",
-    "whatWeDoQuestion": "학생들을위한 음식은 무엇을합니까?",
-    "whoQuestion": "",
-    "whoAnswer": "",
-    "registerQuestion": "",
-    "registerAnswer": "",
-    "typeoffoodQuestion": "",
-    "typeoffoodAnswer": "",
-    "preparedmealsQuestion": "",
-    "preparedmealsAnswer": "",
-    "adultavaliabilityQuestion": "",
-    "adultavaliabilityAnswer": "",
-    "childrenpresentQuestion": "",
-    "childrenpresentAnswer": "",
-    "idQuestion": "",
-    "idAnswer": "",
-    "numberofmealsQuestion": "",
-    "numberofmealsAnswer": "",
-    "packagingQuestion": "",
-    "packagingAnswer": "",
-    "vegetarianQuestion": "",
-    "vegetarianAnswer": "",
-    "babyfoodQuestion": "",
-    "babyfoodAnswer": ""
+  "searchBar": {
+    "noResults": "검색과 일치하는 결과가 없습니다. 다시 시도하십시오.",
+    "searchPrompt": "주소 근처 식사 찾기"
   },
-  "getdirections": "",
-  "label": {
-    "address": "주소",
-    "allweek": "일주일",
-    "backtolist": "다시 목록으로",
-    "backtolistmobile": "지도로 나가기",
-    "close": "닫기",
-    "closed": "닫은",
-    "closed-on": "휴무",
-    "closed-today": "오늘 휴무",
-    "closedonday": "휴관일 (현재 선택한 요일)",
-    "curbside": "보도 픽업 레스토랑",
-    "delivery": "배달",
-    "details-last-updated": "마지막 업데이트",
-    "discountmedical": "의료인 할인 장소",
-    "discounts": "",
-    "drivethru": "드라이브스루",
-    "email": "이메일",
-    "email_lowercase": "이메일",
-    "farmersmarket": "농민 시장 | 농민 시장",
-    "farmpick-up": "농장 픽업",
-    "freegroceries": "무료 식료품류 장소",
-    "freemeals": "무료 식사 장소",
-    "freeproduce": "무료 농산물 장소",
-    "instructions": "방법",
-    "locationhelplinktext": "더 알아보기",
-    "mapkey": "지도 키",
-    "maxdetails": "세부 사항 펼치기",
-    "mealpublic": "공개 식사",
-    "mealstudent": "학생 식사",
-    "mindetails": "세부 사항 최소화",
-    "mustpreorder": "선주문 필요",
-    "normalhours": "정상 시간",
-    "notes": "노트",
-    "offers": "서비스",
-    "open": "열다",
-    "openinghours": "개관 시간",
-    "orderonline": "온라인 주문",
-    "phone": "전화",
-    "selectacategory": "카테고리를 선택하십시오 ...",
-    "selected": "선택된",
-    "seniorhours": "노약자 쇼핑 시간",
-    "specialhours": "노약자 쇼핑",
-    "website": "웹 사이트",
-    "searchloc": ""
+  "shareOptions": {
+    "aboutUs": "이 정보는 식사4Family와 협력하여 귀하에게 가져온 것입니다.",
+    "findNearbySites": "이 링크를 사용하여 인근 식사 사이트의 지도를 확인하십시오.",
+    "learnMore": "이 링크를 사용하여 무료 식사에 대해 자세히 알아보십시오.",
+    "mealSiteInfo": "아래 링크를 따라 시간 및 안내를 포함하여 이 식사 사이트에 대한 자세한 내용을 확인하십시오.",
+    "messageIntro": "만 0-18세 의 모든 어린이에게 무료 식사를 제공합니다. 식사를 위해 우리와 함께!",
+    "sendEmail": "이메일 보내기",
+    "sendTextMessage": "문자 메시지 보내기",
+    "share": "공유",
+    "shareInformationAboutMealSite": "이 식사 사이트에 대한 정보를 공유합니다.",
+    "suggestedMealSite": "이 식사 사이트에 관심이 있을 수 있습니다."
   },
-  "languages": {
-    "ar": "아라비아어",
-    "en": "영어",
-    "es": "스페인어",
-    "fr": "프랑스어",
-    "hi": "힌디 어",
-    "ja": "일본어",
-    "ko": "한국어",
-    "ms": "버마어",
-    "vi": "베트남어",
-    "zh": "중국어"
+  "specialSite": {
+    "doorDelivery": "도어 딜리버리"
   },
-  "locationhelp": "",
-  "search": {
-    "address": "주소",
-    "find": "가장 가까운 식사 장소 찾기 ...",
-    "noresults": "검색과 일치하는 결과가 없습니다. 더 많은 정보를 입력하십시오."
-  },
-  "sharelocation": {
-    "copied": "링크 복사",
-    "copy": "복사 링크",
-    "email": "이메일을 보내",
-    "link": "공유 링크 :",
-    "share": "몫",
-    "share-site": "이 식사 장소의 위치를 공유하십시오",
-    "shareloc": "위치 공유",
-    "text": "문자 메시지 보내기"
-  },
-  "sidebar": {
-    "close-panel": "검색 창 닫기",
-    "info-about-us": "현재이 사이트는 채텀 카운티와 노스 캐롤라이나 주 오렌지 카운티를 지원합니다. 와",
-    "info-end-text": "웹사이트를 확장시킬 수 있습니다.",
-    "info-link-text": "당신의 도움으로",
-    "open-panel": "검색 창 열기",
-    "shopsafe": "안전한 쇼핑을 기원합니다!",
-    "sixfeet": "밖에선 사람들과 6피트 (2미터) 정도 떨어져 있으세요.",
-    "stayhome": "아프면 집에 계세요.",
-    "washhands": "손을 자주 씻으세요.",
-    "what-do-you-need": "무엇이 필요합니까?",
-    "when-do-you-need-it": "언제 필요합니까?"
-  },
-  "suggest-edit": {
-    "additional-comments": "추가 댓글",
-    "address": "주소",
-    "contact": "연락처 정보",
-    "edit": "편집 제안",
-    "enter-comments": "의견 입력",
-    "form-submitted": "양식이 제출되었습니다. 에 대한 항목을 업데이트하는 데 도움을 주셔서 감사합니다",
-    "hours": "시간",
-    "instructions": "무엇을 수정해야합니까?",
-    "instructions-1": "무엇을 수정해야합니까?",
-    "instructions-2": "리스팅?",
-    "name": "사이트 이름",
-    "reset": "다시 놓기",
-    "select-checkbox": "하나 이상의 확인란을 선택하십시오",
-    "social": "소셜 미디어",
-    "submission-error": "제출에 오류가 있습니다",
-    "submit": "제출"
-  },
-  "title": "{0} COVID 지원",
-  "zoom": {
-    "no-more-results": "더 축소 할 수 없습니다.",
-    "noresults": "이 영역에는 결과가 없습니다.",
-    "zoomout": "더 많은 결과를 보려면 축소하십시오."
+  "themeHeaderBar": {
+    "aboutFreeMeals": "무료 식사 정보"
   }
 }

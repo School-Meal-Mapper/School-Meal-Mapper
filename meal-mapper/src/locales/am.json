@@ -1,0 +1,68 @@
+{
+  "FAQs": {
+    "buttonText": "ስለ ነፃ ምግቦች",
+    "hyperlinkText": "ጥያቄዎች እና የእውቂያ መረጃ"
+  },
+  "landingPage": {
+    "aboutUs": "ስለ እኛ",
+    "findFreeMealsNearMe": "በአቅራቢያዬ ነፃ ምግቦችን ያግኙ!",
+    "findYourCountyAndSelectProvider": "በአውራጃዎ ውስጥ የምግብ አቅራቢ ይምረጡ።",
+    "pleaseSelectState": "ክልልዎን ይምረጡ ፡፡",
+    "welcomeStatement": "ወደ Meals4Families እንኳን በደህና መጡ!",
+    "youMustSelectState": "የምግብ አቅራቢን ከመምረጥዎ በፊት ክልል መምረጥ አለብዎት ፡፡"
+  },
+  "mapKey": {
+    "closedToday": "ዛሬ ተዘግቷል",
+    "mapKeyTitle": "የካርታ ቁልፍ",
+    "openToday": "ዛሬ ክፍት",
+    "searched": "ፈልጓል",
+    "selected": "ተመርጧል"
+  },
+  "mapPrompts": {
+    "backToList": "ወደ ዝርዝር ተመለስ ፡፡",
+    "youCanNotZoomOutMore": "የበለጠ ማጉላት አይችሉም።"
+  },
+  "mealSiteCard": {
+    "hours": "ሰዓታት",
+    "address": "አድራሻ",
+    "closed": "ዝግ",
+    "detailsLastUpdated": "ዝርዝሮች ለመጨረሻ ጊዜ የዘመኑ",
+    "expandDetails": "ዝርዝሮችን ዘርጋ",
+    "friday": "አርብ",
+    "getDirections": "አቅጣጫዎችን ያግኙ",
+    "minimizeDetails": "ዝርዝሮችን አሳንሱ",
+    "monday": "ሰኞ",
+    "notes": "ማስታወሻዎች",
+    "questionsContactInfo": "ጥያቄዎች እና የእውቂያ መረጃ",
+    "saturday": "ቅዳሜ",
+    "shareLocation": "አካባቢን ያጋሩ",
+    "suggestAnEdit": "አርትዖት ይጠቁሙ",
+    "sunday": "እሁድ",
+    "thursday": "ሐሙስ",
+    "tuesday": "ማክሰኞ",
+    "wednesday": "እሮብ",
+    "weeklyMenu": "ሳምንታዊ ምናሌ"
+  },
+  "searchBar": {
+    "noResults": "ከፍለጋዎ ጋር የሚዛመዱ ውጤቶች የሉም። እባክዎ ዳግም ይሞክሩ.",
+    "searchPrompt": "በአድራሻ አቅራቢያ ምግብ ይፈልጉ"
+  },
+  "shareOptions": {
+    "aboutUs": "ይህ መረጃ በ Meals4Families አማካኝነት በመተባበር ያመጣዎታል",
+    "findNearbySites": "በአቅራቢያ ያሉ የምግብ ጣቢያዎችን ካርታ ለማየት ይህንን አገናኝ ይጠቀሙ-",
+    "learnMore": "ስለ ነፃ ምግቦች የበለጠ ለመረዳት ይህንን አገናኝ ይጠቀሙ-",
+    "mealSiteInfo": "ሰዓታት እና አቅጣጫዎችን ጨምሮ ለዚህ ምግብ ጣቢያ ሙሉ ዝርዝሮችን ለማግኘት ከዚህ በታች ያለውን አገናኝ ይከተሉ-",
+    "messageIntro": "ዕድሜያቸው ከ0-18 ለሆኑ ሕፃናት ሁሉ ነፃ ምግብ ይሰጣል ፡፡ ምግብ ለመመገብ እኛን ይቀላቀሉ!",
+    "sendEmail": "ኢሜይል ላክ",
+    "sendTextMessage": "የጽሑፍ መልእክት ይላኩ",
+    "share": "ያጋሩ",
+    "shareInformationAboutMealSite": "ስለዚህ ምግብ ጣቢያ መረጃ ያጋሩ",
+    "suggestedMealSite": "ለዚህ ምግብ ጣቢያ ፍላጎት ሊኖርዎት ይችላል-"
+  },
+  "specialSite": {
+    "doorDelivery": "በር ማድረስ"
+  },
+  "themeHeaderBar": {
+    "aboutFreeMeals": "ስለ ነፃ ምግቦች"
+  }
+}
