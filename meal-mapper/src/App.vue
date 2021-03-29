@@ -35,6 +35,7 @@
         @location-selected="passLocation"
         @hover-over="passHover"
         @hover-leave="passNoHover"
+        @search="searchLoc"
         :info="info"
         v-if="showList"
         :showResults="showResults"
