@@ -73,12 +73,12 @@ export default {
       return urlParts
     },
     translatedQuestion: function (question, locale) {
-      if (question['gsx$' + locale + 'question'] !== undefined && question['gsx$' + locale + 'question'].$t != '') {
+      if (question['gsx$' + locale + 'question'] !== undefined && question['gsx$' + locale + 'question'].$t !== '') {
         return question['gsx$' + locale + 'question'].$t
       } else return question.gsx$enquestion.$t
     },
     translatedAnswer: function (question, locale) {
-      if (question['gsx$' + locale + 'answer'] !== undefined && question['gsx$' + locale + 'answer'].$t != '') {
+      if (question['gsx$' + locale + 'answer'] !== undefined && question['gsx$' + locale + 'answer'].$t !== '') {
         return question['gsx$' + locale + 'answer'].$t
       } else return question.gsx$enanswer.$t
     }

@@ -49,12 +49,14 @@
 
 <script>
 import { getAddress } from '../utilities'
+import { districtData } from '../themes/MealsForFamilies/districtData'
 export default {
   name: 'share-modal',
   components: {},
   data() {
     return {
-      showText: false
+      showText: false,
+      districtName: districtData.districtName
     }
   },
   props: {
@@ -68,6 +70,17 @@ export default {
       var state = marker.gsx$state.$t.replace(/\s/g, '%20')
       address = address + '%2C%20' + city + '%2C%20' + state + '%20' + marker.gsx$zip.$t
       return address
+    },
+    generateFaqUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = url.search.split('?')[1]
+      if (district == null) {
+        window.location.reload()
+      }
+      console.log(origin + '/#/' + district + '/' + 'faqs')
+      return origin + '/#/' + district + '/' + 'faqs'
     },
     shareLink: function (marker) {
       return 'https://www.google.com/maps/search/?api=1&query=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
@@ -95,16 +108,33 @@ export default {
     }, */
     textMessage: function (marker) {
       var body =
-        'I thought you might be interested in visiting the ' +
+        this.districtName +
+        ' offers free meals for all children aged 0-18. Join us for a meal! You might be interested in this meal site: ' +
         marker.gsx$mealsitename.$t +
-        ' free meal site, located at ' +
+        ' ' +
         getAddress(marker) +
+        '.' /*+ ' Follow the link below to find full details for this meal site including hours and directions: ' +
+{site url} */ +
+        ' Use this link to learn more about free meals: ' +
+        this.generateFaqUrl() +
+        '. Use this link to see a map of nearby meal sites: ' +
+        window.location.href +
+        '.' +
+        ' This information is brought to you by Meals4Families in partnership with ' +
+        this.districtName +
+        '.'
+
+      /*var body =
+        'You might be interested in this meal site ' +
+         +
+        ' free meal site, located at ' +
+         +
         '.' +
         ' Click this link to access the meal site in Google Maps: '
       //var address = encodeURI(this.addressURL(marker))
       //body += this.shareLink(address).replace('&', '%26') + '.'
       body += this.shareLink(marker) + '.'
-      body += ' For more information about free meal sites in this district, visit ' + window.location.href + '.'
+      body += ' For more information about free meal sites in this district, visit ' + window.location.href + '.' */
       return body
     },
     emailLink: function (marker) {
@@ -112,18 +142,19 @@ export default {
       var subject = 'Find free meals for children at ' + marker.gsx$mealsitename.$t
       subject = encodeURI(subject)
       subject += '&body='
-      var body =
+      var body = this.textMessage(marker)
+      /*var body =
         'I thought you might be interested in visiting the ' +
         marker.gsx$mealsitename.$t +
         ' meal site, located at ' +
         getAddress(marker) +
         '. This site provides free meals for children aged 0-18.\n\n' +
-        'Click this link to access the meal site in Google Maps:\n'
+        'Click this link to access the meal site in Google Maps:\n' */
       body = encodeURI(body)
       //var address = encodeURI(this.addressURL(marker))
       //body += this.shareLink(address).replace('&', '%26') + '.'
-      body += this.shareLink(marker).replace('&', '%26') + '.'
-      body += encodeURI('\n\n') + 'For more information about free meal sites in this district, visit ' + window.location.href + '.'
+      /*body += this.shareLink(marker).replace('&', '%26') + '.'
+      body += encodeURI('\n\n') + 'For more information about free meal sites in this district, visit ' + window.location.href + '.' */
       return mailto + subject + body
     },
     getAddress: getAddress

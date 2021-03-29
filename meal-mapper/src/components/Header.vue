@@ -5,7 +5,7 @@
         <b-navbar-brand :href="logoLink" class="left"> <slot></slot> </b-navbar-brand>
       </div>
       <div class="p-2">
-        <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
+        <form class="form-group w-25 center-content right" v-if="districtAbbr != 'mff'">
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
           <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
         </form>
@@ -22,7 +22,7 @@
             <b>{{ $t('FAQs.hyperlinkText') }}</b>
           </b-button>
         </b-nav-item>
-        <b-nav-item right v-if="districtName == 'mff'" href="https://meals4families.community/" target="_blank">
+        <b-nav-item right v-if="districtAbbr == 'mff'" href="https://meals4families.community/" target="_blank">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
             <b>{{ $t('landingPage.aboutUs') }}</b>
@@ -107,7 +107,7 @@ export default {
         width: 0,
         height: 0
       },
-      districtName: districtData.districtName
+      districtAbbr: districtData.districtAbbr
     }
   },
   computed: {

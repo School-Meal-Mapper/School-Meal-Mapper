@@ -8,7 +8,7 @@
       :socialMedia="socialMediaico"
       :hasFaqs="faqs != null"
     >
-      <theme-header :districtName="districtName"></theme-header>
+      <theme-header :districtAbbr="districtAbbr"></theme-header>
     </app-header>
     <faq-modal :questions="faqs" :info="info" />
     <!-- <covid-pop-up /> -->
@@ -166,7 +166,7 @@ export default {
       attribution: null,
       socialMediaico: districtData.socialMedia,
       hoverItem: null,
-      districtName: districtData.districtName,
+      districtAbbr: districtData.districtAbbr,
       zip: '',
       logoLink: null
     }

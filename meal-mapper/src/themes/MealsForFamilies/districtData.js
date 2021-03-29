@@ -6,7 +6,8 @@
   ease of use. If the project scales, our practices for keeping this data should change.
 */
 
-var districtName = 'mff'
+var districtAbbr = 'mff'
+var districtName = 'Meals 4 Families'
 var primaryColor = null
 var bannerColor = null
 var bannerColorDark = null
@@ -36,7 +37,8 @@ var url = new URL(urlString)
 //case 'chapelhill':
 if (url.searchParams.has('chccs')) {
   // district name and theming
-  districtName = 'chapelhill'
+  districtAbbr = 'chapelhill'
+  districtName = 'Chapel Hill-Carrboro City Schools'
   primaryColor = '#0063b1'
   bannerColor = '#00a5ad'
   bannerColorDark = '#0c6364'
@@ -62,7 +64,8 @@ if (url.searchParams.has('chccs')) {
 } /* else if (url.searchParams.has('dps')) {
   //case 'durham':
   // district name and theming
-  districtName = 'durham'
+  districtAbbr = 'durham'
+  districtName = 'Durham Public Schools'
   primaryColor = '#024379'
   bannerColor = '#024379'
   bannerColorDark = '#113858'
@@ -85,7 +88,8 @@ if (url.searchParams.has('chccs')) {
 } else if (url.searchParams.has('cms')) {
   //case 'cms':
   // district name and theming
-  districtName = 'cms'
+  districtAbbr = 'cms'
+  districtName = 'Charlotte-Mecklenburg Schools'
   primaryColor = '#0ba2ae'
   bannerColor = '#04ACD4'
   bannerColorDark = '#015A6E'
@@ -107,7 +111,8 @@ if (url.searchParams.has('chccs')) {
 } else if (url.searchParams.has('rss')) {
   //case 'roanoke':
   // district name and theming
-  districtName = 'roanoke'
+  districtAbbr = 'roanoke'
+  districtName = 'Roanoke Rapids Graded School District'
   primaryColor = '#d59402'
   bannerColor = '#333333'
   bannerColorDark = '#000000'
@@ -131,7 +136,8 @@ if (url.searchParams.has('chccs')) {
 ) {
   //case 'chatham':
   // district name and theming
-  districtName = 'chatham'
+  districtAbbr = 'chatham'
+  districtName = 'Chatham County Schools'
   primaryColor = '#6d375c'
   bannerColor = '#ECE8EF'
   bannerColorDark = '#151414'
@@ -153,7 +159,7 @@ if (url.searchParams.has('chccs')) {
 } else if (url.searchParams.has('wake')) {
   //case 'wake':
   // district name and theming
-  districtName = 'wake'
+  districtAbbr = 'wake'
   primaryColor = '#005498'
   bannerColor = '#005498'
   bannerColorDark = '#002543'
@@ -177,7 +183,8 @@ if (url.searchParams.has('chccs')) {
 ) {
   //case 'wake':
   // district name and theming
-  districtName = 'johnston'
+  districtAbbr = 'johnston'
+  districtName = 'Johnston County Public Schools'
   primaryColor = '#005498'
   bannerColor = '#0e2c6c'
   bannerColorDark = '#0e2c6c'
@@ -203,7 +210,7 @@ if (url.searchParams.has('chccs')) {
   //default:
   // current default is chapel hill (i.e. what happens when you don't type in a query). This should change to nav page.
   // district name and theming
-  districtName = 'mff'
+  districtAbbr = 'mff'
   primaryColor = '#0063b1'
   bannerColor = '#1E5ADC'
   bannerColorDark = '#32325B'
@@ -229,6 +236,7 @@ if (url.searchParams.has('chccs')) {
 // console.log("DEBUG: primary theme color: " +  SCSSvariables.theme-color-primary)
 
 export const districtData = {
+  districtAbbr: districtAbbr,
   districtName: districtName,
   colors: {
     primaryColor: primaryColor,
