@@ -11,6 +11,7 @@
       :info="info"
       v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
+      :hasFaqs="hasFaqs"
     ></BusinessDetails>
 
     <BusinessDetailsMobile
@@ -118,7 +119,8 @@ export default {
       currentBusiness: Object
     },
     showResults: Boolean,
-    selectedDay: Number
+    selectedDay: Number,
+    hasFaqs: Boolean
   },
   watch: {
     location: function (locationVal) {

@@ -24,7 +24,7 @@
             <b>{{ $t('label.description') }}:</b><br />
             {{ 'Additional directions' }}
           </p>
-          <icon-list-item icon="fa fa-directions" :title="$t('mealSiteCard.getDirections')" :link="directionsLink(business.marker)" />
+          <icon-list-item icon="fa fa-directions" :title="$t('mealSiteCard.getDirections')" :link="directionsLink(business.marker)" target="_blank" />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
           <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
             $t('mealSiteCard.shareLocation')
@@ -36,6 +36,14 @@
               icon="fas fa-apple-alt"
               :title="$t('mealSiteCard.weeklyMenu')"
               :link="info[0].gsx$menulink.$t"
+              target="_blank"
+            />
+            <icon-list-item
+              v-if="hasFaqs"
+              icon="fas fa-question-circle"
+              title="Questions and contact information"
+              :link="generateFaqUrl()"
+              target="_self"
             />
           </p>
           <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')"></opening-hours>
@@ -86,7 +94,8 @@ export default {
     infotype: { type: String },
     icon: { type: String },
     business: Object,
-    info: Array
+    info: Array,
+    hasFaqs: Boolean
   },
   methods: {
     addressURL: function (marker) {
@@ -96,6 +105,17 @@ export default {
       var state = marker.gsx$state.$t.replace(/\s/g, '%20')
       address = address + '%2C%20' + city + '%2C%20' + state + '%20' + marker.gsx$zip.$t
       return address
+    },
+    generateFaqUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = url.search.split('?')[1]
+      if (district == null) {
+        window.location.reload()
+      }
+      console.log(origin + '/#/' + district + '/' + 'faqs')
+      return origin + '/#/' + district + '/' + 'faqs'
     },
     directionsLink: function (marker) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
