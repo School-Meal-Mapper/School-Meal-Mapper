@@ -35,12 +35,12 @@
         <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
           <b-card-header header-tag="header" class="p-1" role="tab">
             <b-button block v-b-toggle="'accordion-' + index.toString()" class="font-weight-bold question" variant="info"
-              >{{ question['gsx$' + $i18n.locale + 'question'].$t }}
+              >{{ translatedQuestion(question, $i18n.locale) }}
             </b-button>
           </b-card-header>
           <b-collapse :id="'accordion-' + index.toString()" accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <b-card-text>{{ question['gsx$' + $i18n.locale + 'answer'].$t }}</b-card-text>
+              <b-card-text>{{ translatedAnswer(question, $i18n.locale) }}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
@@ -71,6 +71,16 @@ export default {
     getDomain: function (url) {
       var urlParts = url.replace('http://', '').replace('https://', '').replace('www.', '')
       return urlParts
+    },
+    translatedQuestion: function (question, locale) {
+      if (question['gsx$' + locale + 'question'] !== undefined && question['gsx$' + locale + 'question'].$t != '') {
+        return question['gsx$' + locale + 'question'].$t
+      } else return question.gsx$enquestion.$t
+    },
+    translatedAnswer: function (question, locale) {
+      if (question['gsx$' + locale + 'answer'] !== undefined && question['gsx$' + locale + 'answer'].$t != '') {
+        return question['gsx$' + locale + 'answer'].$t
+      } else return question.gsx$enanswer.$t
     }
   }
 }
