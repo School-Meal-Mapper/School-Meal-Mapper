@@ -14,7 +14,7 @@
       {{ $t('shareOptions.learnMore') }}
       <br />
       <input readonly type="text" :value="shareLink(business.marker)" class="w-50" id="share-link" />
-      <b-button variant="link" @click="copyShareLink()">{{ $t('sharelocation.copy-link') }}</b-button>
+      <b-button variant="link" @click="copyShareLink()">{{ 'COPY LINK' }}</b-button>
       <br />
     </p>
     <div v-if="business !== null">
@@ -40,7 +40,7 @@
             style="height: 200px;"
             rows="4"
           />
-          <b-link @click="copyTextMessage()">{{ $t('sharelocation.copy-message') }}</b-link>
+          <b-link @click="copyTextMessage()">{{ 'Copy message' }}</b-link>
         </p>
       </div>
     </div>

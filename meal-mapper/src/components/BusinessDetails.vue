@@ -22,7 +22,7 @@
 
           <p v-if="business.marker.gsx$additionaldirections != null && business.marker.gsx$additionaldirections.$t !== ''">
             <b>{{ $t('label.description') }}:</b><br />
-            {{ business.marker.gsx$additionaldirections.$t }}
+            {{ 'Additional directions' }}
           </p>
           <icon-list-item icon="fa fa-directions" :title="$t('mealSiteCard.getDirections')" :link="directionsLink(business.marker)" />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
