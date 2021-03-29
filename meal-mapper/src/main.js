@@ -7,6 +7,7 @@
 // ./src/themes/${process.env.VUE_APP_THEME}/SCSS/custom.scss - Our "theme" SCSS //TODO: where is this import? This might help us solve our conditional primary color issue.
 
 import Vue from 'vue'
+import router from './router'
 import { BootstrapVue } from 'bootstrap-vue' // IconsPlugin
 import i18n from './i18n'
 
@@ -36,6 +37,7 @@ Vue.use(BootstrapVue)
 Vue.config.productionTip = true
 
 new Vue({
+  router,
   i18n,
   render: (h) => h(App),
   methods: {

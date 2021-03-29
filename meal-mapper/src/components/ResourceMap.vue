@@ -17,7 +17,7 @@
         <l-control position="topright">
           <div class="mapkey" :class="{ 'show-key': showKey }">
             <div class="title-block">
-              <h6 class="title">{{ $t('label.mapkey') }}</h6>
+              <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
               <i @click="showKey = !showKey" class="fas fa-info-circle" v-if="!showKey" />
               <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
@@ -168,7 +168,7 @@ export default {
     mapKey() {
       return [
         {
-          title: this.$t('label.open'),
+          title: this.$t('mapKey.openToday'),
           icon: ExtraMarkers.icon({
             className: 'markeropen',
             icon: 'na',
@@ -177,7 +177,7 @@ export default {
           })
         },
         {
-          title: this.$t('label.closed-today'),
+          title: this.$t('mapKey.closedToday'),
           icon: ExtraMarkers.icon({
             className: 'markerclosed',
             icon: 'na',
@@ -186,7 +186,7 @@ export default {
           })
         },
         {
-          title: this.$t('label.selected'),
+          title: this.$t('mapKey.selected'),
           icon: ExtraMarkers.icon({
             className: 'markerselected',
             icon: 'na',
@@ -195,7 +195,7 @@ export default {
           })
         },
         {
-          title: this.$t('label.searchloc'),
+          title: this.$t('mapKey.searched'),
           icon: ExtraMarkers.icon({
             markerColor: 'pink',
             icon: 'na',

@@ -1,0 +1,68 @@
+{
+  "FAQs": {
+    "buttonText": "Sobre refeições grátis",
+    "hyperlinkText": "Perguntas e informações de contato"
+  },
+  "landingPage": {
+    "aboutUs": "Quem somos",
+    "findFreeMealsNearMe": "Encontre refeições grátis perto de mim!",
+    "findYourCountyAndSelectProvider": "Selecione um provedor de refeições em seu condado.",
+    "pleaseSelectState": "Selecione seu estado.",
+    "welcomeStatement": "Bem-vindos ao Meals4Families!",
+    "youMustSelectState": "Você deve selecionar um estado antes de escolher um provedor de refeições."
+  },
+  "mapKey": {
+    "closedToday": "fechado hoje",
+    "mapKeyTitle": "Chave do mapa",
+    "openToday": "abrir hoje",
+    "searched": "Procurou",
+    "selected": "Selecionado"
+  },
+  "mapPrompts": {
+    "backToList": "Volte para a lista.",
+    "youCanNotZoomOutMore": "Você não pode diminuir mais o zoom."
+  },
+  "mealSiteCard": {
+    "hours": "horas",
+    "address": "endereço:",
+    "closed": "Fechado",
+    "detailsLastUpdated": "Detalhes atualizados pela última vez:",
+    "expandDetails": "Expandir detalhes",
+    "friday": "Sexta",
+    "getDirections": "Obter direções",
+    "minimizeDetails": "Minimizar detalhes",
+    "monday": "segunda-feira",
+    "notes": "notas",
+    "questionsContactInfo": "Dúvidas e informações de contato",
+    "saturday": "Sábado",
+    "shareLocation": "Compartilhar localização",
+    "suggestAnEdit": "Sugira uma edição",
+    "sunday": "Domingo",
+    "thursday": "Quinta",
+    "tuesday": "Terça",
+    "wednesday": "Quarta",
+    "weeklyMenu": "Cardápio semanal"
+  },
+  "searchBar": {
+    "noResults": "Nenhum resultado bate com sua pesquisa. Por favor, tente de novo.",
+    "searchPrompt": "Encontre refeições perto do endereço"
+  },
+  "shareOptions": {
+    "aboutUs": "Essas informações são trazidas a você pela Meals4Families em parceria com",
+    "findNearbySites": "Use este link para ver um mapa de locais de refeição próximos:",
+    "learnMore": "Use este link para saber mais sobre refeições gratuitas:",
+    "mealSiteInfo": "Siga o link abaixo para encontrar detalhes completos para este site de refeições, incluindo horas e instruções:",
+    "messageIntro": "oferece refeições gratuitas para todas as crianças de 0 a 18 anos. Junte-se a nós para uma refeição!",
+    "sendEmail": "ENVIAR E-MAIL",
+    "sendTextMessage": "Enviar mensagem de texto",
+    "share": "Compartilhar",
+    "shareInformationAboutMealSite": "Compartilhe informações sobre este site de refeições:",
+    "suggestedMealSite": "Você pode estar interessado neste site de refeições:"
+  },
+  "specialSite": {
+    "doorDelivery": "Entrega da porta"
+  },
+  "themeHeaderBar": {
+    "aboutFreeMeals": "Sobre refeições grátis"
+  }
+}

@@ -1,210 +1,68 @@
 {
-  "about": {
-    "close": "बंद करे",
-    "contact": "हमसे संपर्क करें",
-    "contactus": {
-      "email": "ईमेल",
-      "info": "यह पृष्ठ {1}के {0} द्वारा संचालित है। प्रश्नों के लिए, कृपया {2}पर ईमेल के माध्यम से हमसे संपर्क करें।"
-    },
-    "datahead": "",
-    "dataprivacy": "",
-    "devhelp": {
-      "addbusiness": "",
-      "addinfo": "",
-      "ambassadorinfo": "",
-      "becomeambassador": "",
-      "conduct": "",
-      "devnote": "",
-      "dupsite": "",
-      "info": "",
-      "source": "",
-      "support": "",
-      "updatebusiness": ""
-    },
-    "getinvolved": "",
-    "info": "",
-    "linktext": "",
-    "orgs": {
-      "bureau": "चैपल हिल / ऑरेंज काउंटी आगंतुक ब्यूरो",
-      "cfa": "अमेरिका के लिए कोड",
-      "chb": "चैपल हिल ब्रिगेड",
-      "localistnc": "#LocalListNC",
-      "partnership": "चैपल हिल डाउनटाउन पार्टनरशिप",
-      "pittsboro-siler": "पिट्सबोरो-सिलेर सिटी कन्वेंशन और विज़िटर ब्यूरो"
-    },
-    "partners": "",
-    "title": ""
+  "FAQs": {
+    "buttonText": "मुफ्त भोजन के बारे में",
+    "hyperlinkText": "प्रश्न और संपर्क जानकारी"
   },
-  "category": {
-    "childcare": "",
-    "family": "",
-    "farm": "",
-    "food_bev": "",
-    "grocery": "",
-    "meal": "",
-    "pet": "",
-    "pharmacy": "",
-    "restaurant": "",
-    "school": ""
+  "landingPage": {
+    "aboutUs": "हमारे बारे में",
+    "findFreeMealsNearMe": "मेरे पास मुफ्त भोजन का पता लगाएं!",
+    "findYourCountyAndSelectProvider": "अपने काउंटी में एक भोजन प्रदाता का चयन करें।",
+    "pleaseSelectState": "अपने राज्य का चयन करें।",
+    "welcomeStatement": "Meal4Famili में आपका स्वागत है!",
+    "youMustSelectState": "भोजन प्रदाता चुनने से पहले आपको एक राज्य का चयन करना होगा।"
   },
-  "covidpopup": {
-    "title": "हमारे समुदाय को सुरक्षित रखने में मदद करें।"
+  "mapKey": {
+    "closedToday": "आज बंद",
+    "mapKeyTitle": "मैप की",
+    "openToday": "आज खुला",
+    "searched": "खोजा",
+    "selected": "चयनित"
   },
-  "dayofweek": {
-    "any": "कोई भी",
+  "mapPrompts": {
+    "backToList": "सूची में लौटें।",
+    "youCanNotZoomOutMore": "आप अधिक ज़ूम नहीं कर सकते।"
+  },
+  "mealSiteCard": {
+    "hours": "घंटे",
+    "address": "पता:",
+    "closed": "बंद",
+    "detailsLastUpdated": "विवरण अंतिम अपडेट किया गया:",
+    "expandDetails": "विवरण का विस्तार करें",
     "friday": "शुक्रवार",
+    "getDirections": "निर्देश प्राप्त करें",
+    "minimizeDetails": "विवरण कम से कम",
     "monday": "सोमवार",
-    "saturday": "शनिवार",
+    "notes": "नोट्स",
+    "questionsContactInfo": "प्रश्न और संपर्क जानकारी",
+    "saturday": "शानिवार",
+    "shareLocation": "स्थान साझा करें",
+    "suggestAnEdit": "एक संपादन का सुझाव दें",
     "sunday": "रविवार",
     "thursday": "गुरूवार",
     "tuesday": "मंगलवार",
-    "wednesday": "बुधवार"
+    "wednesday": "बुधवार",
+    "weeklyMenu": "साप्ताहिक मेनू"
   },
-  "faq": {
-    "close": "बंद करे",
-    "freeMealsAnswer": "आपके पास भोजन खोजने के लिए आप हमारे मैपिंग टूल का उपयोग कर सकते हैं। एक वितरण साइट पर क्लिक करके उसका पता और संचालन घंटे देखें, फिर उस विंडो में मुफ्त भोजन लें।",
-    "freeMealsQuestion": "मुझे मुफ्त भोजन कैसे मिल सकता है?",
-    "helpAnswer-end": "इसलिए यह कार्यक्रम तब तक जारी रह सकता है जब तक इसकी आवश्यकता है।",
-    "helpAnswer-organization": "पब्लिक स्कूल फाउंडेशन",
-    "helpAnswer-start": "यदि आप इस शब्द को फैलाने में हमारी मदद करेंगे तो सभी को हमारे भोजन तक पहुँच होगी, तो हम बहुत आभारी होंगे। हमारे भोजन स्थल को सोशल मीडिया पर साझा करें और अपने दोस्तों को टेक्स्ट करें!  आइए, हम सभी छात्रों के लिए भोजन के बारे में उत्साहित हों!\nकृपया दान करने पर भी विचार करें ",
-    "helpQuestion": "मैं आपकी कैसे मदद कर सकता हूँ?",
-    "linktext": "मुझे मुफ्त भोजन के बारे में बताओ",
-    "staySafeReminder": "कृपया पिकअप साइट पर जाने या स्वयंसेवकों के साथ बातचीत करने के लिए मास्क पहनना सुनिश्चित करें ताकि हम सभी सुरक्षित रहें!",
-    "title": "मुफ्त भोजन के बारे में जानकारी",
-    "whatWeDoAnswer": "हम बच्चों और परिवारों को उनके क्षेत्र में भोजन से जोड़ने में मदद करते हैं।\n हम जानते हैं कि स्कूल-प्रायोजित भोजन COVID संकट के दौरान कई बच्चों और परिवारों के लिए एक जीवन रेखा है। और अब जब स्कूल वर्ष समाप्त हो गया था, कई स्कूल जिले अपने ग्रीष्मकालीन कार्यक्रम के माध्यम से परिवारों को मुफ्त भोजन दे रहे हैं। हम उन्हें खोजने में आपकी सहायता के लिए यहां हैं।\n",
-    "whatWeDoQuestion": "छात्रों के लिए भोजन क्या करता है?",
-    "whoQuestion": "",
-    "whoAnswer": "",
-    "registerQuestion": "",
-    "registerAnswer": "",
-    "typeoffoodQuestion": "",
-    "typeoffoodAnswer": "",
-    "preparedmealsQuestion": "",
-    "preparedmealsAnswer": "",
-    "adultavaliabilityQuestion": "",
-    "adultavaliabilityAnswer": "",
-    "childrenpresentQuestion": "",
-    "childrenpresentAnswer": "",
-    "idQuestion": "",
-    "idAnswer": "",
-    "numberofmealsQuestion": "",
-    "numberofmealsAnswer": "",
-    "packagingQuestion": "",
-    "packagingAnswer": "",
-    "vegetarianQuestion": "",
-    "vegetarianAnswer": "",
-    "babyfoodQuestion": "",
-    "babyfoodAnswer": ""
+  "searchBar": {
+    "noResults": "कोई परिणाम आपकी खोज से मेल नहीं खाते हैं। कृपया फिर से प्रयास करें।",
+    "searchPrompt": "पते के पास भोजन का पता लगाएं"
   },
-  "getdirections": "",
-  "label": {
-    "address": "पता",
-    "allweek": "",
-    "backtolist": "दोबारा सूची को जाएं",
-    "backtolistmobile": "नक्शे से बाहर निकलें",
-    "close": "बंद करे",
-    "closed": "बन्द है",
-    "closed-on": "",
-    "closed-today": "आज बंद कर दिया",
-    "closedonday": "",
-    "curbside": "",
-    "delivery": "",
-    "details-last-updated": "विवरण अंतिम अद्यतन किया गया",
-    "discountmedical": "",
-    "discounts": "",
-    "drivethru": "",
-    "email": "",
-    "email_lowercase": "",
-    "farmersmarket": "",
-    "farmpick-up": "",
-    "freegroceries": "",
-    "freemeals": "",
-    "freeproduce": "",
-    "instructions": "",
-    "locationhelplinktext": "",
-    "mapkey": "नक्शा कुंजी",
-    "maxdetails": "विवरण का विस्तार करें",
-    "mealpublic": "",
-    "mealstudent": "",
-    "mindetails": "विवरण कम से कम",
-    "mustpreorder": "",
-    "normalhours": "",
-    "notes": "",
-    "offers": "",
-    "open": "खुला",
-    "openinghours": "घंटे",
-    "orderonline": "",
-    "phone": "",
-    "selectacategory": "",
-    "selected": "चयनित",
-    "seniorhours": "",
-    "specialhours": "",
-    "website": "",
-    "searchloc": ""
+  "shareOptions": {
+    "aboutUs": "यह जानकारी के साथ साझेदारी में भोजन 4Families द्वारा आप के लिए लाया जाता है",
+    "findNearbySites": "आस-पास की भोजन साइटों का नक्शा देखने के लिए इस लिंक का उपयोग करें:",
+    "learnMore": "मुफ्त भोजन के बारे में अधिक जानने के लिए इस लिंक का उपयोग करें:",
+    "mealSiteInfo": "घंटे और निर्देश सहित इस भोजन साइट के लिए पूरा विवरण खोजने के लिए नीचे दिए गए लिंक का पालन करें:",
+    "messageIntro": "0-18 आयु वर्ग के सभी बच्चों के लिए मुफ्त भोजन प्रदान करता है। हमें एक भोजन के लिए शामिल हों!",
+    "sendEmail": "ईमेल भेजें",
+    "sendTextMessage": "टेक्स्ट मैसेज भेजें",
+    "share": "साझा",
+    "shareInformationAboutMealSite": "इस भोजन साइट के बारे में जानकारी साझा करें:",
+    "suggestedMealSite": "आप इस भोजन साइट में रुचि हो सकती है:"
   },
-  "languages": {
-    "ar": "अरबी",
-    "en": "अंग्रेज़ी",
-    "es": "स्पेनिश",
-    "fr": "फ्रेंच",
-    "hi": "हिंदी",
-    "ja": "जापानी",
-    "ko": "कोरियाई",
-    "ms": "बर्मी",
-    "vi": "वियतनामी",
-    "zh": "सरलीकृत चीनी"
+  "specialSite": {
+    "doorDelivery": "दरवाजा वितरण"
   },
-  "locationhelp": "",
-  "search": {
-    "address": "पता",
-    "find": "भोजन स्थल को सबसे करीब से जानें ...",
-    "noresults": "कोई भी परिणाम आपकी खोज से मेल नहीं खाता है। कृपया अधिक जानकारी दर्ज करें।"
-  },
-  "sharelocation": {
-    "copied": "लिंक कॉपी किया गया",
-    "copy": "प्रतिरूप जोड़ना",
-    "email": "ईमेल भेजें",
-    "link": "शेयर करने के लिए लिंक:",
-    "share": "शेयर",
-    "share-site": "इस भोजन स्थल का स्थान साझा करें",
-    "shareloc": "स्थान साझा करें",
-    "text": "टेक्स्ट मैसेज भेजें"
-  },
-  "sidebar": {
-    "close-panel": "खोज पैनल बंद करें",
-    "info-about-us": "",
-    "info-end-text": "",
-    "info-link-text": "",
-    "open-panel": "",
-    "shopsafe": "",
-    "sixfeet": "",
-    "stayhome": "",
-    "washhands": "",
-    "what-do-you-need": "",
-    "when-do-you-need-it": ""
-  },
-  "suggest-edit": {
-    "additional-comments": "अतिरिक्त टिप्पणियां",
-    "address": "पता",
-    "contact": "संपर्क जानकारी",
-    "edit": "एक संपादित सुझाव दें",
-    "enter-comments": "टिप्पणी दर्ज करें",
-    "form-submitted": "फॉर्म जमा कर दिया गया है। प्रविष्टि के लिए आपकी मदद के लिए धन्यवाद",
-    "hours": "घंटे",
-    "instructions": "के लिए क्या सही किया जाना चाहिए",
-    "instructions-1": "के लिए क्या सही किया जाना चाहिए",
-    "instructions-2": "लिस्टिंग?",
-    "name": "साइट का नाम",
-    "reset": "रीसेट",
-    "select-checkbox": "कृपया कम से कम एक चेकबॉक्स चुनें",
-    "social": "सामाजिक मीडिया",
-    "submission-error": "प्रस्तुत करने में कोई त्रुटि है",
-    "submit": "जमा करें"
-  },
-  "title": "",
-  "zoom": {
-    "no-more-results": "आप अधिक ज़ूम नहीं कर सकते।",
-    "noresults": "इस क्षेत्र में कोई परिणाम नहीं।",
-    "zoomout": "अधिक परिणामों के लिए ज़ूम आउट करें।"
+  "themeHeaderBar": {
+    "aboutFreeMeals": "मुफ्त भोजन के बारे में"
   }
 }

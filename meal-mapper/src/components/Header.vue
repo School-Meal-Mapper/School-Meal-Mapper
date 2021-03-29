@@ -4,10 +4,10 @@
       <div>
         <b-navbar-brand :href="logoLink" class="left"> <slot></slot> </b-navbar-brand>
       </div>
-      <div class="p-2">
-        <form class="form-group w-25 center-content right" v-if="districtName != 'mff'">
-          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
+      <div class="p-2" v-if="!onFaqPage()">
+        <form class="form-group w-25 center-content right" v-if="districtAbbr != 'mff'">
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
         </form>
       </div>
     </div>
@@ -16,16 +16,22 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right v-if="hasFaqs">
-          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" @click="$bvModal.show('faq')">
+        <b-nav-item right v-if="hasFaqs && !onFaqPage()">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateFaqUrl()">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b>{{ $t('faq.linktext') }}</b>
+            <b>{{ $t('FAQs.hyperlinkText') }}</b>
+          </b-button>
+        </b-nav-item>
+        <b-nav-item right v-if="hasFaqs && onFaqPage()">
+          <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateMapUrl()">
+            <i class="fas info-plus-circle" aria-hidden="true"></i>
+            <b>Back to Map</b>
           </b-button>
         </b-nav-item>
         <b-nav-item right v-if="districtName == 'mff'" href="https://meals4families.community/" target="_blank">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b>{{ $t('about.linktext') }}</b>
+            <b>{{ $t('landingPage.aboutUs') }}</b>
           </b-button>
         </b-nav-item>
 
@@ -90,14 +96,24 @@ export default {
         { iso: 'zh', name: '中文' },
         { iso: 'ms', name: 'ဗမာ' },
         { iso: 'hi', name: 'हिंदी' },
-        { iso: 'vi', name: 'tiếng việt' }
+        { iso: 'vi', name: 'tiếng việt' },
+        { iso: 'bn', name: 'bn' },
+        { iso: 'hmn', name: 'hmn' },
+        { iso: 'my', name: 'my' },
+        { iso: 'ne', name: 'ne' },
+        { iso: 'pl', name: 'pl' },
+        { iso: 'pt', name: 'pt' },
+        { iso: 'ru', name: 'ru' },
+        { iso: 'rw', name: 'rw' },
+        { iso: 'so', name: 'so' },
+        { iso: 'ur', name: 'ur' }
       ],
       text: '',
       window: {
         width: 0,
         height: 0
       },
-      districtName: districtData.districtName
+      districtAbbr: districtData.districtAbbr
     }
   },
   computed: {
@@ -115,6 +131,7 @@ export default {
   created() {
     window.addEventListener('resize', this.handleResize)
     this.handleResize()
+    console.log(this.$route)
   },
   methods: {
     search(event) {
@@ -122,6 +139,27 @@ export default {
         event.preventDefault()
         this.$emit('search', this.text)
       }
+    },
+    generateFaqUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = url.search.split('?')[1]
+      if (district == null) {
+        window.location.reload()
+      }
+      console.log(origin + '/#/' + district + '/' + 'faqs')
+      window.location.href = origin + '/#/' + district + '/' + 'faqs'
+    },
+    generateMapUrl() {
+      var urlString = window.location.href
+      var url = new URL(urlString)
+      const origin = url.origin
+      const district = this.$route.params.district
+      window.location.href = origin + '/?' + district
+    },
+    onFaqPage() {
+      return this.$route.path.includes('faqs')
     },
     handleResize() {
       this.window.width = window.innerWidth

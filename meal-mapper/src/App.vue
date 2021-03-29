@@ -6,27 +6,29 @@
       @search="searchLoc"
       @language-selected="changeLanguage"
       :socialMedia="socialMediaico"
-      :hasFaqs="faqs != null"
+      :hasFaqs="faqUrl != null"
     >
-      <theme-header :districtName="districtName"></theme-header>
+      <theme-header :districtAbbr="districtAbbr"></theme-header>
     </app-header>
-    <faq-modal :questions="faqs" :info="info" />
+    <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->
-    <div class="d-flex" v-if="!checkParam">
+    <div class="d-flex" v-if="checkParam">
       <div class="district-buttons">
-        <p class="intro">{{ this.$t('home.intro') }}</p>
+        <p class="intro">{{ this.$t('landingPage.welcomeStatement') }}</p>
         <p>
-          <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
+          <b-form-select v-model="selectedState" :options="states">{{ this.$t('landingPage.pleaseSelectState') }}</b-form-select>
           <br />
           <br />
           <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
-            this.$t('home.select-district')
+            this.$t('landingPage.findYourCountyAndSelectProvider')
           }}</b-form-select>
         </p>
-        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
+        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{
+          this.$t('landingPage.findFreeMealsNearMe')
+        }}</b-button>
       </div>
     </div>
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && checkParam">
+    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -37,6 +39,7 @@
         v-if="showList"
         :showResults="showResults"
         :selected-day="day"
+        :hasFaqs="faqUrl != null"
       />
       <share-modal :business="locationData.currentBusiness" />
       <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
@@ -58,6 +61,7 @@
         />
       </div>
     </div>
+    <router-view />
   </div>
 </template>
 <!-- 
@@ -72,9 +76,8 @@ import AppHeader from './components/Header.vue'
 import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
-import FaqModal from './components/FAQ.vue'
+//import Faq from './components/FAQ.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
-
 import ResultsList from './components/ResultsList.vue'
 
 import { latLng } from 'leaflet'
@@ -116,13 +119,13 @@ export default {
   },
   created() {
     this.fetchData()
-    this.states.unshift({ value: null, text: this.$t('home.select-state') })
+    this.states.unshift({ value: null, text: this.$t('landingPage.pleaseSelectState') })
   },
   components: {
     ShareModal,
     SuggestEditModal,
     AppHeader,
-    FaqModal,
+    //Faq,
     //CovidPopUp,
     ResourceMap,
     ThemeHeader,
@@ -132,7 +135,7 @@ export default {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     return {
       entries: null,
-      faqs: null,
+      faqUrl: null,
       provInfo: null,
       need: 'none',
       day: dayAny,
@@ -164,7 +167,7 @@ export default {
       attribution: null,
       socialMediaico: districtData.socialMedia,
       hoverItem: null,
-      districtName: districtData.districtName,
+      districtAbbr: districtData.districtAbbr,
       zip: '',
       logoLink: null
     }
@@ -225,10 +228,11 @@ export default {
       const res = await fetch(districtData.data.spreadsheetUrl)
       console.log(res)
       if (districtData.data.faqUrl != null) {
-        const res2 = await fetch(districtData.data.faqUrl)
+        this.faqUrl = districtData.data.faqUrl
+        /*const res2 = await fetch(districtData.data.faqUrl)
         const faqs = await res2.json()
         this.faqs = faqs.feed.entry
-        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20
+        this.faqs = this.faqs.slice(0, 20) // don't want a district to have more than 20*/
       }
       if (districtData.data.providerinfoUrl != null) {
         const res3 = await fetch(districtData.data.providerinfoUrl)
@@ -343,15 +347,20 @@ export default {
         return districts[this.selectedState]
       }
       if (this.selectedState == null) {
-        return [{ value: null, text: this.$t('home.no-state') }]
+        return [{ value: null, text: this.$t('landingPage.youMustSelectState') }]
       } else {
-        return [{ value: null, text: this.$t('home.no-data') }]
+        return [{ value: null, text: this.$t('landingPage.youMustSelectState') }]
       }
     },
     checkParam() {
       var urlString = window.location.href
       //var url = new URL(urlString)
       //console.log(url.searchParams.has('d'))
+      console.log(this.$route.path)
+      return this.$route.path == '/' && !urlString.includes('?')
+    },
+    showMap() {
+      var urlString = window.location.href
       return urlString.includes('?')
     },
     filteredMarkers() {

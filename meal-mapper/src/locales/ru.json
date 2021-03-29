@@ -1,0 +1,68 @@
+{
+  "FAQs": {
+    "buttonText": "О бесплатном питании",
+    "hyperlinkText": "Вопросы и контактная информация"
+  },
+  "landingPage": {
+    "aboutUs": "О нас",
+    "findFreeMealsNearMe": "Найдите бесплатное питание рядом со мной!",
+    "findYourCountyAndSelectProvider": "Выберите поставщика питания в вашем округе.",
+    "pleaseSelectState": "Выберите свой штат.",
+    "welcomeStatement": "Добро пожаловать в Meals4Families!",
+    "youMustSelectState": "Вы должны выбрать штат, прежде чем выбирать поставщика питания."
+  },
+  "mapKey": {
+    "closedToday": "закрыто сегодня",
+    "mapKeyTitle": "Ключ карты",
+    "openToday": "открыт сегодня",
+    "searched": "искал",
+    "selected": "выбранный"
+  },
+  "mapPrompts": {
+    "backToList": "Вернуться к списку.",
+    "youCanNotZoomOutMore": "Уменьшить больше нельзя."
+  },
+  "mealSiteCard": {
+    "hours": "часов",
+    "address": "Адрес:",
+    "closed": "Закрыто",
+    "detailsLastUpdated": "Подробности обновлены в последний раз:",
+    "expandDetails": "Развернуть детали",
+    "friday": "пятница",
+    "getDirections": "Получить указания",
+    "minimizeDetails": "Свернуть детали",
+    "monday": "понедельник",
+    "notes": "Заметки",
+    "questionsContactInfo": "Вопросы и контактная информация",
+    "saturday": "суббота",
+    "shareLocation": "Поделиться местоположением",
+    "suggestAnEdit": "Предложить правку",
+    "sunday": "воскресенье",
+    "thursday": "четверг",
+    "tuesday": "вторник",
+    "wednesday": "среда",
+    "weeklyMenu": "Еженедельное меню"
+  },
+  "searchBar": {
+    "noResults": "По вашему запросу ничего не найдено. Пожалуйста, попробуйте еще раз.",
+    "searchPrompt": "Найти еду рядом с адресом"
+  },
+  "shareOptions": {
+    "aboutUs": "Эта информация предоставлена вам Meals4Families в партнерстве с",
+    "findNearbySites": "Воспользуйтесь этой ссылкой, чтобы увидеть карту близлежащих мест, где можно поесть:",
+    "learnMore": "Воспользуйтесь этой ссылкой, чтобы узнать больше о бесплатном питании:",
+    "mealSiteInfo": "Перейдите по ссылке ниже, чтобы найти полную информацию об этом сайте питания, включая часы работы и дорогу:",
+    "messageIntro": "предлагает бесплатное питание для всех детей в возрасте от 0 до 18 лет. Присоединяйтесь к нам за обедом!",
+    "sendEmail": "Отправить сообщение",
+    "sendTextMessage": "Отправить текстовое сообщение",
+    "share": "Поделиться",
+    "shareInformationAboutMealSite": "Поделитесь информацией об этом сайте еды:",
+    "suggestedMealSite": "Возможно, вас заинтересует этот сайт о еде:"
+  },
+  "specialSite": {
+    "doorDelivery": "Доставка дверей"
+  },
+  "themeHeaderBar": {
+    "aboutFreeMeals": "О бесплатном питании"
+  }
+}

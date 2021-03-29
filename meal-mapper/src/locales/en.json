@@ -1,216 +1,69 @@
 {
-  "about": {
-    "close": "Close",
-    "contact": "Contact Us",
-    "contactus": {
-      "email": "email",
-      "info": "This page is powered by the {0} of {1}. For questions, please contact us via email at {2}."
-    },
-    "datahead": "NOTE ON DATA SHARING",
-    "dataprivacy": "The information on NC COVID Support has been gathered from public web sources by volunteers or entered by business owners/resource providers. The data are provided to assist the public, local businesses, government partners, and non-profits during the COVID-19 pandemic. The data should not be used for commercial ventures or other purposes without the express permission of NC COVID Support.",
-    "devhelp": {
-      "addbusiness": "add a business",
-      "addinfo": "Use our online forms to {0} or {1}.",
-      "ambassadorinfo": "Help us expand coverage across North Carolina. Ambassadors will work with local government and business associations to bring NC COVID Support to their community. Email us at {0} for tools and resources to get started.",
-      "becomeambassador": "Become a community ambassador",
-      "conduct": "Code of Conduct",
-      "devnote": "Developers - find our {0} and {1} on GitHub.",
-      "dupsite": "Use our code to build a site for your state or region:",
-      "info": "This is an open-source project, built to share and expand to other communities.",
-      "source": "source code",
-      "support": "Support your neighbors and local businesses - help us grow!",
-      "updatebusiness": "update an existing entry"
-    },
-    "getinvolved": "Get Involved",
-    "info": "Our database of resources benefits from information collected by these organizations:",
-    "linktext": "About us",
-    "orgs": {
-      "bureau": "Chapel Hill/Orange County Visitors Bureau",
-      "cfa": "Code for America",
-      "chb": "Chapel Hill Brigade",
-      "localistnc": "#LocalListNC",
-      "partnership": "Chapel Hill Downtown Partnership",
-      "pittsboro-siler": "Pittsboro-Siler City Convention & Visitors Bureau"
-    },
-    "partners": "Info Sources",
-    "title": "About this site"
+  "FAQs": {
+    "buttonText": "About free meals",
+    "hyperlinkText": "Questions and contact information"
   },
-  "home": {
-    "intro": "Welcome to Meals for Families! Select a state and a school district to find free meal sites in your area.",
-    "btn": "Find free meals near me!",
-    "select-state": "Please select a state.",
-    "select-district": "Please select a school district.",
-    "no-state": "You must select a state in order to select a district.",
-    "no-data": "There is currently no data available for the selected state."
+  "landingPage": {
+    "aboutUs": "About us",
+    "findFreeMealsNearMe": "Find free meals near me!",
+    "findYourCountyAndSelectProvider": "Select a meal provider in your county.",
+    "pleaseSelectState": "Select your state.",
+    "welcomeStatement": "Welcome to Meals4Families!",
+    "youMustSelectState": "You must select a state before choosing a meal provider."
   },
-  "category": {
-    "childcare": "Child care",
-    "family": "Prepared family meals",
-    "meal": "Free meals",
-    "school": "School meals"
+  "mapKey": {
+    "closedToday": "closed today",
+    "mapKeyTitle": "Map Key",
+    "openToday": "open today",
+    "searched": "searched",
+    "selected": "selected"
   },
-  "covidpopup": {
-    "title": "Help keep our community safe."
+  "mapPrompts": {
+    "backToList": "Return to list.",
+    "youCanNotZoomOutMore": "You can not zoom out more."
   },
-  "dayofweek": {
-    "any": "Any",
+  "mealSiteCard": {
+    "hours": "Hours",
+    "address": "Address:",
+    "closed": "Closed",
+    "detailsLastUpdated": "Details last updated:",
+    "expandDetails": "Expand details",
     "friday": "Friday",
+    "getDirections": "Get directions",
+    "minimizeDetails": "Minimize details",
     "monday": "Monday",
+    "notes": "Notes",
+    "questionsContactInfo": "Questions and contact information",
     "saturday": "Saturday",
+    "shareLocation": "Share location",
+    "suggestAnEdit": "Suggest an edit",
     "sunday": "Sunday",
     "thursday": "Thursday",
     "tuesday": "Tuesday",
-    "wednesday": "Wednesday"
+    "wednesday": "Wednesday",
+    "weeklyMenu": "Weekly menu"
   },
-  "faq": {
-    "close": "Close",
-    "freeMealsAnswer": "Use our interactive site to find meals close to you. Click on a distribution site to view its address and operating hours, then pick up free meals in that window.",
-    "freeMealsQuestion": "How can I get free meals?",
-    "helpAnswer-end": " so the program can continue as long as it is needed.",
-    "helpAnswer-organization": "Public School Foundation",
-    "helpAnswer-start": "Share our meal site on social media and text your friends! Every tweet and facebook post allows us to help more families. Let's get everyone excited about Meals For Families!\nPlease also consider donating to the ",
-    "helpQuestion": "How can I help?",
-    "linktext": "Frequently Asked Questions",
-    "staySafeReminder": "Please be sure to wear a mask when visiting a pickup site or interacting with volunteers to help us all stay safe!",
-    "title": "Frequently Asked Questions",
-    "whatWeDoAnswer": "We help to connect kids and families with meals in their area.\n We know that School-sponsored meals are a lifeline for many kids and families during the COVID crisis. We're here to help you find them.\n",
-    "whatWeDoQuestion": "What does Meals For Families do?",
-    "whoQuestion": "Who can receive free meals?",
-    "whoAnswer": "Free meals are available to any child aged 0-18 years. In some programs, adults may receive meals free or at a reduced price. Call your local meal sites to learn about their policies.",
-    "registerQuestion": "Does my child have to be registered with the Free & Reduced Lunch program at school to receive a meal?",
-    "registerAnswer": "No, meals are available to any child aged 0-18 years. No registration is required. However, to help the school district receive funding the meals, eligbile families are encouraged to register for free and reduced priced meals through the USDA’s National School Lunch & School Breakfast Programs. Applications for the UDSA program can be found at lunchapplication.com. You, your children, or other household members do not have to be U.S. citizens to apply for free or reduced price meals.",
-    "typeoffoodQuestion": "What type of food is provided?",
-    "typeoffoodAnswer": "Meal sites provide meals to support any child in need. Meals include a healthy lunch, a snack, and a breakfast for the next morning.",
-    "preparedmealsQuestion": "Are prepared meals the only type of food available?",
-    "preparedmealsAnswer": "Your local schools often partner with local food pantries to provide families with boxes of produce and non-perishable foods when possible. Call the number associated with a meal site and ask!",
-    "adultavaliabilityQuestion": "Are meals available for adults?",
-    "adultavaliabilityAnswer": "In general, children are the only ones eligible for meals. However, your local meal sites may have different policies. Call a meal site at the number provided to get more specific information.",
-    "childrenpresentQuestion": "Do children have to be present to pick up meals?",
-    "childrenpresentAnswer": "No, children do not have to be present to pick up meals. Parents and guardians may pick up meals on behalf of the children.",
-    "idQuestion": "Do I have to show an ID to pick up meals?",
-    "idAnswer": "No ID is needed to receive a meal. Meal sites will NOT ask for your name, address, or any other identifying information.",
-    "numberofmealsQuestion": "How many meals are available at each site?",
-    "numberofmealsAnswer": "Meals are served on a first come, first served basis.",
-    "packagingQuestion": "How are the meals served/packaged?",
-    "packagingAnswer": "Meals are packaged in individually wrapped containers for your safety.",
-    "vegetarianQuestion": "Do meal sites offer vegetarian meals or meals for special diets?",
-    "vegetarianAnswer": "Yes, many meal sites offer a vegetarian option for each meal.",
-    "babyfoodQuestion": "Do meal sites offer baby food?",
-    "babyfoodAnswer": "Usually, no. Call the meal sites closest to you to ask about their specific policies."
+  "searchBar": {
+    "noResults": "No results match your search. Please try again.",
+    "searchPrompt": "Find meals near address",
+    "otherDistrict": "Or find meals in another district"
   },
-  "getdirections": "Get directions",
-  "label": {
-    "address": "Address",
-    "allweek": "All week",
-    "backtolist": "Back to list",
-    "backtolistmobile": "Exit to map",
-    "close": "Close",
-    "closed": "Closed",
-    "closed-on": "Closed on",
-    "closed-today": "Closed Today",
-    "closedonday": "Closed (on the current selected day)",
-    "curbside": "Curbside pick-up",
-    "delivery": "Delivery",
-    "details-last-updated": "Details last updated",
-    "description": "Additional directions",
-    "discountmedical": "Medical worker discount|Medical worker discounts",
-    "discounts": "",
-    "drivethru": "Drive thru",
-    "email": "Email",
-    "email_lowercase": "email",
-    "farmersmarket": "Farmers' market|Farmers' markets",
-    "farmpick-up": "On-farm pick-up",
-    "freegroceries": "Free grocery location|Free grocery locations",
-    "freemeals": "Free meal location|Free meal locations",
-    "freeproduce": "Free produce location|Free produce locations",
-    "instructions": "Instructions",
-    "locationhelplinktext": "Learn more",
-    "mapkey": "Map Key",
-    "maxdetails": "Expand Details",
-    "mealpublic": "Meals open to public",
-    "mealstudent": "Meals for students",
-    "mindetails": "Minimize Details",
-    "mustpreorder": "Must pre-order",
-    "normalhours": "Normal hours",
-    "notes": "Notes",
-    "offers": "Offers",
-    "open": "Open Today",
-    "openinghours": "Hours",
-    "orderonline": "Order & pay online",
-    "phone": "Phone",
-    "selectacategory": "Select a category...",
-    "selected": "Selected",
-    "seniorhours": "Senior hours",
-    "specialhours": "Senior shopping hours",
-    "website": "Website",
-    "searchloc": "Searched"
-  },
-  "languages": {
-    "ar": "Arabic",
-    "en": "English",
-    "es": "Spanish",
-    "fr": "French",
-    "hi": "Hindi",
-    "ja": "Japanese",
-    "ko": "Korean",
-    "ms": "Burmese",
-    "vi": "Vietnamese",
-    "zh": "Simplified Chinese"
-  },
-  "locationhelp": "Please make sure your device location is enabled",
-  "menu": "Weekly menu",
-  "search": {
-    "prompt": "Find meals near address...",
-    "find": "Find the meal site closest to...",
-    "noresults": "No results match your search. Please enter more information.",
-    "other-district": "Or find meals in another district"
-  },
-  "sharelocation": {
-    "copied": "Copied",
-    "copy-link": "COPY LINK",
-    "copy-message": "Copy Message",
-    "email": "Send email",
-    "link": "Link to share:",
+  "shareOptions": {
+    "aboutUs": "This information is brought to you by Meals4Families in partnership with",
+    "findNearbySites": "Use this link to see a map of nearby meal sites:",
+    "learnMore": "Use this link to learn more about free meals:",
+    "mealSiteInfo": "Follow the link below to find full details for this meal site including hours and directions:",
+    "messageIntro": "offers free meals for all children aged 0-18. Join us for a meal!",
+    "sendEmail": "Send email",
+    "sendTextMessage": "Send text message",
     "share": "Share",
-    "share-site": "Share the location of this meal site",
-    "shareloc": "Share location",
-    "text": "Send text message"
+    "shareInformationAboutMealSite": "Share information about this meal site:",
+    "suggestedMealSite": "You might be interested in this meal site:"
   },
-  "sidebar": {
-    "close-panel": "Close search panel",
-    "info-about-us": "Currently, this site supports Chatham County and Orange County, NC. With",
-    "info-end-text": ", we can expand our coverage.",
-    "info-link-text": "your help",
-    "open-panel": "Open search panel",
-    "shopsafe": "Please, SHOP SAFE!",
-    "sixfeet": "Stay 6 ft. apart when shopping.",
-    "stayhome": "If you are sick, stay home.",
-    "washhands": "Wash your hands often.",
-    "what-do-you-need": "What do you need?",
-    "when-do-you-need-it": "When do you need it?"
+  "specialSite": {
+    "doorDelivery": "Door Delivery"
   },
-  "suggest-edit": {
-    "additional-comments": "Additional comments",
-    "address": "Address",
-    "contact": "Contact information",
-    "edit": "Suggest an edit",
-    "enter-comments": "Enter comments",
-    "form-submitted": "The form has been submitted. Thank you for your help updating the entry for ",
-    "hours": "Hours",
-    "instructions": "",
-    "instructions-1": "What needs to be corrected for the ",
-    "instructions-2": "listing?",
-    "name": "Site name",
-    "reset": "Reset",
-    "select-checkbox": "Please select at least one checkbox",
-    "social": "Social media",
-    "submission-error": "There is an error with the submission",
-    "submit": "Submit"
-  },
-  "title": "{0} COVID Support",
-  "zoom": {
-    "no-more-results": "You can not zoom out more.",
-    "noresults": "No results in this area.",
-    "zoomout": "Zoom out for more results."
+  "themeHeaderBar": {
+    "aboutFreeMeals": "About Free Meals"
   }
 }
