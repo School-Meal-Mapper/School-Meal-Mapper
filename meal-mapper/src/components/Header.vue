@@ -6,7 +6,7 @@
       </div>
       <div class="p-2" v-if="!onFaqPage()">
         <form class="form-group w-25 center-content right" v-if="districtAbbr != 'mff'">
-          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.prompt')"></b-form-input>
+          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
           <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
         </form>
       </div>
