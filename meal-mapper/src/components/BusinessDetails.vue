@@ -3,7 +3,7 @@
     <b-list-group class="list-group-flush">
       <b-list-group-item variant="sideNav" button class="backtolist" id="back-to-list-nav" @click="$emit('close-details')">
         <i class="fas fa-arrow-left" />
-        {{ $t('label.backtolist') }}
+        {{ $t('mapPrompts.backToList') }}
       </b-list-group-item>
     </b-list-group>
     <b-list-group class="list-group-flush business-details" id="business-details-nav">
@@ -15,25 +15,31 @@
             </div>
           </div>
           <p v-if="getAddress(business.marker) !== ''">
-            <b>{{ $t('label.address') }}:</b><br />
+            <b>{{ $t('mealSiteCard.address') }}</b
+            ><br />
             {{ getAddress(business.marker) }}
           </p>
 
           <p v-if="business.marker.gsx$additionaldirections != null && business.marker.gsx$additionaldirections.$t !== ''">
             <b>{{ $t('label.description') }}:</b><br />
-            {{ business.marker.gsx$additionaldirections.$t }}
+            {{ 'Additional directions' }}
           </p>
-          <icon-list-item icon="fa fa-directions" :title="$t('getdirections')" :link="directionsLink(business.marker)" target="_blank" />
+          <icon-list-item
+            icon="fa fa-directions"
+            :title="$t('mealSiteCard.getDirections')"
+            :link="directionsLink(business.marker)"
+            target="_blank"
+          />
           <i class="fas fa-share-alt fa-lg" id="share-icon" aria-hidden="true" />
           <b-button variant="link" class="share-button" @click="$bvModal.show('share-location')">{{
-            $t('sharelocation.shareloc')
+            $t('mealSiteCard.shareLocation')
           }}</b-button>
 
           <p>
             <icon-list-item
               v-if="info != null && info[0].gsx$menulink !== undefined && !!info[0].gsx$menulink.$t"
               icon="fas fa-apple-alt"
-              :title="$t('menu')"
+              :title="$t('mealSiteCard.weeklyMenu')"
               :link="info[0].gsx$menulink.$t"
               target="_blank"
             />
@@ -45,21 +51,21 @@
               target="_self"
             />
           </p>
-          <opening-hours :business="business.marker" :title="$t('label.openinghours')"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
-              <b>{{ $t('label.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
+              <b>{{ $t('mealSiteCard.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
             </p>
           </template>
 
           <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
-            {{ $t('label.details-last-updated') }}: {{ getLastUpdatedDate }}
+            {{ $t('mealSiteCard.detailsLastUpdated') }} {{ getLastUpdatedDate }}
           </p>
 
           <p>
             <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
-              {{ $t('suggest-edit.edit') }}
+              {{ $t('mealSiteCard.suggestAnEdit') }}
             </b-button>
           </p>
         </div>

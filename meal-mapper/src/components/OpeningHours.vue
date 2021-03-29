@@ -35,7 +35,7 @@ export default {
 
       if (this.senior) {
         seniorDayFilters.forEach((attr, index) => {
-          var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`)
+          var dayName = this.$t(`mealSiteCard.${weekdayHours[index].day}`)
           switch (this.business[attr].$t.length) {
             case 0:
               // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
@@ -43,7 +43,7 @@ export default {
               break
             case 1:
               // if (this.business[attr].$t == '0') {
-              //   myDays.push({ name: dayName, val: this.$t('label.closed') })
+              //   myDays.push({ name: dayName, val: this.$t('mealSiteCard.closed') })
               // } else {
               //   // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
               //   // cnt++
@@ -60,7 +60,7 @@ export default {
         })
       } else {
         dayFilters.forEach((attr, index) => {
-          var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`)
+          var dayName = this.$t(`mealSiteCard.${weekdayHours[index].day}`)
           switch (this.business[attr].$t.length) {
             case 0:
               // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
@@ -70,7 +70,7 @@ export default {
               if (this.business[attr].$t == 0) {
                 myDays.push({
                   name: dayName,
-                  val: this.$t('label.closed'),
+                  val: this.$t('mealSiteCard.closed'),
                   class: 'closed'
                 })
               } else {

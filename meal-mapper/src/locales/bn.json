@@ -1,0 +1,68 @@
+{
+  "FAQs": {
+    "buttonText": "বিনামূল্যে খাবার সম্পর্কে",
+    "hyperlinkText": "প্রশ্ন এবং যোগাযোগের তথ্য"
+  },
+  "landingPage": {
+    "aboutUs": "আমাদের সম্পর্কে",
+    "findFreeMealsNearMe": "আমার কাছাকাছি বিনামূল্যে খাবার সন্ধান করুন!",
+    "findYourCountyAndSelectProvider": "আপনার কাউন্টিতে একটি খাবার সরবরাহকারী নির্বাচন করুন।",
+    "pleaseSelectState": "আপনার রাষ্ট্র নির্বাচন করুন।",
+    "welcomeStatement": "Meals4Famille স্বাগতম!",
+    "youMustSelectState": "খাবার সরবরাহকারী নির্বাচনের আগে আপনাকে অবশ্যই একটি রাষ্ট্র নির্বাচন করতে হবে।"
+  },
+  "mapKey": {
+    "closedToday": "আজ বন্ধ",
+    "mapKeyTitle": "",
+    "openToday": "আজ খোলা",
+    "searched": "অনুসন্ধান",
+    "selected": "নির্বাচিত"
+  },
+  "mapPrompts": {
+    "backToList": "তালিকায় ফিরে আসুন।",
+    "youCanNotZoomOutMore": "আপনি আরও জুম আউট করতে পারবেন না।"
+  },
+  "mealSiteCard": {
+    "hours": "ঘন্টার",
+    "address": "ঠিকানা:",
+    "closed": "বন্ধ",
+    "detailsLastUpdated": "বিশদ সর্বশেষ আপডেট হয়েছে:",
+    "expandDetails": "বিশদ বিস্তৃত করুন",
+    "friday": "শুক্রবার",
+    "getDirections": "দিকনির্দেশ পান",
+    "minimizeDetails": "বিশদটি ছোট করুন",
+    "monday": "সোমবার",
+    "notes": "নোট",
+    "questionsContactInfo": "প্রশ্ন এবং যোগাযোগের তথ্য",
+    "saturday": "শনিবার",
+    "shareLocation": "অবস্থান জানানো",
+    "suggestAnEdit": "একটি সম্পাদনার পরামর্শ দিন",
+    "sunday": "রবিবার",
+    "thursday": "বৃহস্পতিবার",
+    "tuesday": "মঙ্গলবার",
+    "wednesday": "বুধবার",
+    "weeklyMenu": "সাপ্তাহিক মেনু"
+  },
+  "searchBar": {
+    "noResults": "আপনার অনুসন্ধানের সাথে কোনও ফলাফল মিলছে না। অনুগ্রহপূর্বক আবার চেষ্টা করুন.",
+    "searchPrompt": "ঠিকানার নিকটে খাবার সন্ধান করুন"
+  },
+  "shareOptions": {
+    "aboutUs": "অংশীদারিত্বের সাথে এই তথ্যটি আপনাকে খাবার 4 ফ্যামিলি দ্বারা আনা হয়েছে",
+    "findNearbySites": "কাছাকাছি খাবারের সাইটের মানচিত্র দেখতে এই লিঙ্কটি ব্যবহার করুন:",
+    "learnMore": "বিনামূল্যে খাবার সম্পর্কে আরও জানতে এই লিঙ্কটি ব্যবহার করুন:",
+    "mealSiteInfo": "ঘন্টা এবং দিকনির্দেশ সহ এই খাবার সাইটের সম্পূর্ণ বিশদ জানতে নীচের লিঙ্কটি অনুসরণ করুন:",
+    "messageIntro": "0-18 বছর বয়সী সমস্ত বাচ্চাদের জন্য বিনামূল্যে খাবার সরবরাহ করে। খাওয়ার জন্য আমাদের সাথে যোগ দিন!",
+    "sendEmail": "ইমেইল পাঠান",
+    "sendTextMessage": "লিখিত সংবাদ পাঠাও",
+    "share": "ভাগ",
+    "shareInformationAboutMealSite": "এই খাবারের সাইট সম্পর্কে তথ্য ভাগ করুন:",
+    "suggestedMealSite": "আপনি এই খাবারের সাইটে আগ্রহী হতে পারেন:"
+  },
+  "specialSite": {
+    "doorDelivery": "ডোর ডেলিভারি"
+  },
+  "themeHeaderBar": {
+    "aboutFreeMeals": "বিনামূল্যে খাবার সম্পর্কে"
+  }
+}

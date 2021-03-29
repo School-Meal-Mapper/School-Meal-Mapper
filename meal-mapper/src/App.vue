@@ -8,22 +8,24 @@
       :socialMedia="socialMediaico"
       :hasFaqs="faqUrl != null"
     >
-      <theme-header :districtName="districtName"></theme-header>
+      <theme-header :districtAbbr="districtAbbr"></theme-header>
     </app-header>
     <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->
     <div class="d-flex" v-if="checkParam">
       <div class="district-buttons">
-        <p class="intro">{{ this.$t('home.intro') }}</p>
+        <p class="intro">{{ this.$t('landingPage.welcomeStatement') }}</p>
         <p>
-          <b-form-select v-model="selectedState" :options="states">{{ this.$t('home.select-state') }}</b-form-select>
+          <b-form-select v-model="selectedState" :options="states">{{ this.$t('landingPage.pleaseSelectState') }}</b-form-select>
           <br />
           <br />
           <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
-            this.$t('home.select-district')
+            this.$t('landingPage.findYourCountyAndSelectProvider')
           }}</b-form-select>
         </p>
-        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{ this.$t('home.btn') }}</b-button>
+        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{
+          this.$t('landingPage.findFreeMealsNearMe')
+        }}</b-button>
       </div>
     </div>
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
@@ -117,7 +119,7 @@ export default {
   },
   created() {
     this.fetchData()
-    this.states.unshift({ value: null, text: this.$t('home.select-state') })
+    this.states.unshift({ value: null, text: this.$t('landingPage.pleaseSelectState') })
   },
   components: {
     ShareModal,
@@ -165,7 +167,7 @@ export default {
       attribution: null,
       socialMediaico: districtData.socialMedia,
       hoverItem: null,
-      districtName: districtData.districtName,
+      districtAbbr: districtData.districtAbbr,
       zip: '',
       logoLink: null
     }
@@ -345,9 +347,9 @@ export default {
         return districts[this.selectedState]
       }
       if (this.selectedState == null) {
-        return [{ value: null, text: this.$t('home.no-state') }]
+        return [{ value: null, text: this.$t('landingPage.youMustSelectState') }]
       } else {
-        return [{ value: null, text: this.$t('home.no-data') }]
+        return [{ value: null, text: this.$t('landingPage.youMustSelectState') }]
       }
     },
     checkParam() {
