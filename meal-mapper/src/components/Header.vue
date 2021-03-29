@@ -28,7 +28,7 @@
             <b>Back to Map</b>
           </b-button>
         </b-nav-item>
-        <b-nav-item right v-if="districtName == 'mff'" href="https://meals4families.community/" target="_blank">
+        <b-nav-item right v-if="districtAbbr == 'mff'" href="https://meals4families.community/" target="_blank">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
             <b>{{ $t('landingPage.aboutUs') }}</b>
