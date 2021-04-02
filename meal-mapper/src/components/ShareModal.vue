@@ -10,12 +10,15 @@
       <b> {{ business.marker.gsx$mealsitename.$t }} </b>
       <br />
       {{ getAddress(business.marker) }} <br />
+      <!--
       <br />
+      
       {{ $t('shareOptions.learnMore') }}
       <br />
+     
       <input readonly type="text" :value="shareLink(business.marker)" class="w-50" id="share-link" />
-      <b-button variant="link" @click="copyShareLink()">{{ 'COPY LINK' }}</b-button>
-      <br />
+      <b-button variant="link" @click="copyShareLink()">{{ 'COPY LINK' }}</b-button> 
+      <br /> -->
     </p>
     <div v-if="business !== null">
       <div>
