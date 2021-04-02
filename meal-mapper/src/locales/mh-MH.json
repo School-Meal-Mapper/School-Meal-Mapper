@@ -1,0 +1,112 @@
+{
+	"Meals4Families": {
+		"FAQs": {
+			"buttonText": "",
+			"forMoreInformation": "",
+			"hyperlinkText": ""
+		},
+		"landingPage": {
+			"aboutUs": "",
+			"findFreeMealsNearMe": "",
+			"findYourCountyAndSelectProvider": "",
+			"pleaseSelectState": "",
+			"welcomeStatement": "",
+			"youMustSelectState": ""
+		},
+		"langauges": {
+			"Amharic": "",
+			"Arabic": "",
+			"Bengali": "",
+			"Burmese": "",
+			"Chinese": "",
+			"English": "",
+			"Filipino": "",
+			"French": "",
+			"Hindi": "",
+			"Hmong": "",
+			"Japanese": "",
+			"Korean": "",
+			"Malay": "",
+			"Marshallese": "",
+			"Nepali": "",
+			"Polish": "",
+			"Portuguese": "",
+			"Russian": "",
+			"Somali": "",
+			"Spanish": "",
+			"Tagalog": "",
+			"Urdu": "",
+			"Vietnamese": ""
+		},
+		"mapKey": {
+			"closedToday": "",
+			"mapKeyTitle": "",
+			"openToday": "",
+			"searched": "",
+			"selected": ""
+		},
+		"mapPrompts": {
+			"backToList": "",
+			"youCanNotZoomOutMore": "",
+			"zoomOut": ""
+		},
+		"mealSiteCard": {
+			"Hours": "",
+			"additionalDirections": "",
+			"address": "",
+			"closed": "",
+			"detailsLastUpdated": "",
+			"expandDetails": "",
+			"friday": "",
+			"getDirections": "",
+			"minimizeDetails": "",
+			"monday": "",
+			"notes": "",
+			"questionsContactInfo": "",
+			"saturday": "",
+			"shareLocation": "",
+			"suggestAnEdit": "",
+			"sunday": "",
+			"thursday": "",
+			"tuesday": "",
+			"wednesday": "",
+			"weeklyMenu": ""
+		},
+		"searchBar": {
+			"noResults": "",
+			"searchAnotherMealProvider": "",
+			"searchPrompt": ""
+		},
+		"shareOptions": {
+			"aboutUs": "",
+			"copyLink": "",
+			"copyMessage": "",
+			"findNearbySites": "",
+			"learnMore": "",
+			"mealSiteInfo": "",
+			"messageIntro": "",
+			"sendEmail": "",
+			"sendTextMessage": "",
+			"share": "",
+			"shareInformationAboutMealSite": "",
+			"suggestedMealSite": ""
+		},
+		"specialSite": {
+			"doorDelivery": ""
+		},
+		"suggestEdit": {
+			"additionalComments": "",
+			"address": "",
+			"enterCommentsPrompt": "",
+			"hours": "",
+			"resetButton": "",
+			"siteName": "",
+			"submitForm": "",
+			"weeklyMenu": "",
+			"whatNeedsCorrecting": ""
+		},
+		"themeHeaderBar": {
+			"AboutFreeMeals": ""
+		}
+	}
+}

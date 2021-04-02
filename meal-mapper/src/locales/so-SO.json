@@ -1,0 +1,112 @@
+{
+	"Meals4Families": {
+		"FAQs": {
+			"buttonText": "Ku saabsan Cunnooyinka Bilaashka ah",
+			"forMoreInformation": "La xiriir bixiyaha cuntada ee deegaankaaga si aad u hesho macluumaad dheeraad ah oo ku saabsan cuntada bilaashka ah.",
+			"hyperlinkText": "Su'aalaha iyo macluumaadka xiriirka"
+		},
+		"landingPage": {
+			"aboutUs": "Nagu saabsan",
+			"findFreeMealsNearMe": "Raadi cunto bilaash ah aniga agtayda!",
+			"findYourCountyAndSelectProvider": "Xullo bixiye cunno ee degmadaada.",
+			"pleaseSelectState": "Xulo gobolkaaga.",
+			"welcomeStatement": "Ku soo dhowow Meals4Families!",
+			"youMustSelectState": "Waa inaad doorataa gobol kahor intaadan dooran bixiyaha cuntada."
+		},
+		"langauges": {
+			"Amharic": "Amxaar",
+			"Arabic": "Carabi",
+			"Bengali": "Bengaali",
+			"Burmese": "Burma",
+			"Chinese": "Shiineys",
+			"English": "Ingiriis",
+			"Filipino": "Filibiin",
+			"French": "Faransiis",
+			"Hindi": "Hindi",
+			"Hmong": "Hmong",
+			"Japanese": "Jabbaan",
+			"Korean": "Kuuriyaan",
+			"Malay": "Malaay",
+			"Marshallese": "Marshallese",
+			"Nepali": "Nepali",
+			"Polish": "Boolish",
+			"Portuguese": "Boortaqiis",
+			"Russian": "Ruush",
+			"Somali": "Soomaali",
+			"Spanish": "Isbaanish",
+			"Tagalog": "Tagalog",
+			"Urdu": "Urdu",
+			"Vietnamese": "Fiyatnaamiis"
+		},
+		"mapKey": {
+			"closedToday": "xiran maanta",
+			"mapKeyTitle": "Furaha Khariidada",
+			"openToday": "fur maanta",
+			"searched": "raadiyey",
+			"selected": "la xushay"
+		},
+		"mapPrompts": {
+			"backToList": "Ku noqo liiska.",
+			"youCanNotZoomOutMore": "Ma fogeyn kartid wax intaa ka badan.",
+			"zoomOut": "Ka fogee natiijooyin dheeri ah."
+		},
+		"mealSiteCard": {
+			"Hours": "Saacado",
+			"additionalDirections": "Halka laga helo",
+			"address": "Cinwaanka:",
+			"closed": "Xidhan",
+			"detailsLastUpdated": "Faahfaahinta markii ugu dambeysay ee la cusbooneysiiyay:",
+			"expandDetails": "Fidi faahfaahinta",
+			"friday": "Jimcaha",
+			"getDirections": "Hel tilmaamo",
+			"minimizeDetails": "Yaree faahfaahinta",
+			"monday": "Isniinta",
+			"notes": "Xusuusin",
+			"questionsContactInfo": "Su'aalaha iyo macluumaadka xiriirka",
+			"saturday": "Sabti",
+			"shareLocation": "La wadaag goobta",
+			"suggestAnEdit": "Soo jeedi wax ka bedel",
+			"sunday": "Axad",
+			"thursday": "Khamiis",
+			"tuesday": "Talaado",
+			"wednesday": "Arbaco",
+			"weeklyMenu": "Liistada toddobaadlaha ah"
+		},
+		"searchBar": {
+			"noResults": "Majiraan natiijooyin u dhigma raadintaada. Fadlan iskuday markale.",
+			"searchAnotherMealProvider": "Ama raashin ka hel meel ka baxsan khariidadan.",
+			"searchPrompt": "Raadi cunno u dhow cinwaanka"
+		},
+		"shareOptions": {
+			"aboutUs": "Macluumaadkan waxaa kuu keenay Meals4Families oo kaashanaysa",
+			"copyLink": "Nuqul xiriiriyaha",
+			"copyMessage": "Nuqul fariin ah",
+			"findNearbySites": "U adeegso xiriiriyehan si aad u aragto khariiddada goobaha cuntada ee ku dhow:",
+			"learnMore": "U adeegso xiriiriyehan si aad wax badan uga ogaato cuntada bilaashka ah:",
+			"mealSiteInfo": "Raac xiriirka hoose si aad u hesho faahfaahin buuxda oo ku saabsan goobtan cuntada oo ay ku jiraan saacadaha iyo tilmaamaha:",
+			"messageIntro": "waxay siisaa cunto bilaash ah dhammaan carruurta da'doodu tahay 0-18. Nagala soo qaybgal cunto!",
+			"sendEmail": "U dir email",
+			"sendTextMessage": "U dir fariin qoraal ah",
+			"share": "La wadaag",
+			"shareInformationAboutMealSite": "La wadaag macluumaadka ku saabsan goobtan cuntada:",
+			"suggestedMealSite": "Waxaad xiiseyn kartaa bartan cunnada:"
+		},
+		"specialSite": {
+			"doorDelivery": "Bixinta Albaabka"
+		},
+		"suggestEdit": {
+			"additionalComments": "Faallooyin dheeraad ah",
+			"address": "Cinwaanka",
+			"enterCommentsPrompt": "Qeex macluumaad qaldan ama maqan.",
+			"hours": "Saacado",
+			"resetButton": "Foom cad",
+			"siteName": "Magaca goobta cuntada",
+			"submitForm": "Gudbi",
+			"weeklyMenu": "Ku xidhnow liiska toddobaadlaha ah",
+			"whatNeedsCorrecting": "Macluumaad noocee ah ayaan ugu baahan nahay inaan ku saxno goobtan cuntada?"
+		},
+		"themeHeaderBar": {
+			"AboutFreeMeals": "Ku saabsan Cunnooyinka Bilaashka ah"
+		}
+	}
+}

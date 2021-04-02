@@ -1,0 +1,112 @@
+{
+	"Meals4Families": {
+		"FAQs": {
+			"buttonText": "အခမဲ့အစားအစာများအကြောင်း",
+			"forMoreInformation": "အခမဲ့အစားအစာများအကြောင်းပိုမိုသိရှိလိုပါကသင်၏ဒေသဆိုင်ရာအစားအစာပေးသူနှင့်ဆက်သွယ်ပါ။",
+			"hyperlinkText": "မေးခွန်းများနှင့်ဆက်သွယ်ရန်အချက်အလက်"
+		},
+		"landingPage": {
+			"aboutUs": "ကြှနျုပျတို့အကွောငျး",
+			"findFreeMealsNearMe": "ငါ့အနားမှာအခမဲ့အစားအစာရှာပါ။",
+			"findYourCountyAndSelectProvider": "သင့်ခရိုင်ရှိအစားအစာပေးသူကိုရွေးချယ်ပါ။",
+			"pleaseSelectState": "သင့်ပြည်နယ်ကိုရွေးပါ။",
+			"welcomeStatement": "Meals4Families မှကြိုဆိုပါသည်။",
+			"youMustSelectState": "သင်ကအစားအစာပေးသူကိုရွေးချယ်ခြင်းမပြုမီပြည်နယ်တစ်ခုကိုရွေးချယ်ရမည်။"
+		},
+		"langauges": {
+			"Amharic": "အမ်ဟာရစ်",
+			"Arabic": "အာရဗီ",
+			"Bengali": "ဘင်္ဂလီ",
+			"Burmese": "ဗမာ",
+			"Chinese": "တရုတ်",
+			"English": "အင်္ဂလိပ်",
+			"Filipino": "ဖိလစ်ပိုင်",
+			"French": "ပြင်သစ်",
+			"Hindi": "ဟိန္ဒီ",
+			"Hmong": "မုံ",
+			"Japanese": "ဂျပန်",
+			"Korean": "ကိုရီးယား",
+			"Malay": "မလေး",
+			"Marshallese": "Marshallese",
+			"Nepali": "နီပေါ",
+			"Polish": "ပိုလန်",
+			"Portuguese": "ပေါ်တူဂီ",
+			"Russian": "ရုရှား",
+			"Somali": "ဆိုမာလီ",
+			"Spanish": "စပိန်ဘာသာစကား",
+			"Tagalog": "တဂါးလော့ဂ်",
+			"Urdu": "အူဒူ",
+			"Vietnamese": "ဗီယက်နမ်လူမျိုး"
+		},
+		"mapKey": {
+			"closedToday": "ဒီနေ့ပိတ်လိုက်တယ်",
+			"mapKeyTitle": "မြေပုံကီး",
+			"openToday": "ဒီနေ့ဖွင့်ပါ",
+			"searched": "ရှာဖွေခဲ့သည်",
+			"selected": "ရွေးချယ်ထား"
+		},
+		"mapPrompts": {
+			"backToList": "စာရင်းသို့ပြန်သွားသည်။",
+			"youCanNotZoomOutMore": "သင်ပိုမိုချဲ့လို့မရပါ။",
+			"zoomOut": "နောက်ထပ်ရလဒ်များအတွက်ချုံ့ပါ။"
+		},
+		"mealSiteCard": {
+			"Hours": "နာရီ",
+			"additionalDirections": "ငါတို့ကိုဘယ်မှာရှာရမလဲ",
+			"address": "လိပ်စာ:",
+			"closed": "ပိတ်သိမ်း",
+			"detailsLastUpdated": "နောက်ဆုံးပြင်ဆင်ထားသောအသေးစိတ်အချက်အလက်များ -",
+			"expandDetails": "အသေးစိတ်ကိုချဲ့ပါ",
+			"friday": "သောကြာနေ့",
+			"getDirections": "လမ်းညွှန်ချက်ရယူပါ",
+			"minimizeDetails": "အသေးစိတ်အချက်အလက်များ",
+			"monday": "တနင်္လာနေ့",
+			"notes": "မှတ်စုများ",
+			"questionsContactInfo": "မေးခွန်းများနှင့်ဆက်သွယ်ရန်အချက်အလက်",
+			"saturday": "စနေနေ့",
+			"shareLocation": "တည်နေရာကိုမျှဝေပါ",
+			"suggestAnEdit": "တည်းဖြတ်ရန်အကြံပြုသည်",
+			"sunday": "တနင်္ဂနွေနေ့",
+			"thursday": "ကြာသပတေးနေ့",
+			"tuesday": "အင်္ဂါနေ့",
+			"wednesday": "ဗုဒ္ဓဟူးနေ့",
+			"weeklyMenu": "အပတ်စဉ်မီနူး"
+		},
+		"searchBar": {
+			"noResults": "သင်၏ရှာဖွေမှုနှင့်ကိုက်ညီသောရလဒ်မရှိပါ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ",
+			"searchAnotherMealProvider": "သို့မဟုတ်ဤမြေပုံပြင်ပရှိအစားအစာများကိုရှာပါ။",
+			"searchPrompt": "လိပ်စာအနီးရှိအစားအစာများကိုရှာပါ"
+		},
+		"shareOptions": {
+			"aboutUs": "ဤအချက်အလက်ကို Meals4Families မှသင့်အားမိတ်ဆက်ပေးသည်",
+			"copyLink": "Link ကိုကူးပါ",
+			"copyMessage": "မက်ဆေ့ခ်ျကိုကူးယူပါ",
+			"findNearbySites": "အနီးအနားရှိစားသောက်ဆိုင်များ၏မြေပုံကိုကြည့်ရန်ဤ link ကိုသုံးပါ။",
+			"learnMore": "အခမဲ့အစားအစာများအကြောင်းပိုမိုလေ့လာရန်ဤ link ကိုအသုံးပြုပါ။",
+			"mealSiteInfo": "နာရီနှင့်လမ်းညွှန်များအပါအ ၀ င်ဤမုန့်ညက်ပါ ၀ င်သည့်နေရာအတွက်အသေးစိတ်အချက်အလက်များကိုသိရှိနိုင်ရန်အောက်ပါ link သို့သွားပါ။",
+			"messageIntro": "၀ မှ ၁၈ နှစ်အတွင်းရှိကလေးအားလုံးအတွက်အခမဲ့အစားအစာများကိုပေးသည်။ အစာစားရန်ကျွန်တော်တို့ကို join!",
+			"sendEmail": "အီးမေးလ်ပို။ ပါ",
+			"sendTextMessage": "စာသားမက်ဆေ့ခ်ျပို့ပါ",
+			"share": "မျှဝေပါ",
+			"shareInformationAboutMealSite": "ဒီအစားအစာ site ကိုနှင့်ပတ်သက်။ သတင်းအချက်အလက်မျှဝေပါ:",
+			"suggestedMealSite": "သင်ဤမုန့်ညက် site ကိုစိတ်ဝင်စားလိမ့်မယ်:"
+		},
+		"specialSite": {
+			"doorDelivery": "တံခါးပို့ခြင်း"
+		},
+		"suggestEdit": {
+			"additionalComments": "အပိုဆောင်းမှတ်ချက်များ",
+			"address": "လိပ်စာ",
+			"enterCommentsPrompt": "မမှန်ကန်သောသို့မဟုတ်ပျောက်ဆုံးနေသတင်းအချက်အလက်ဖော်ပြပါ။",
+			"hours": "နာရီ",
+			"resetButton": "ပုံစံရှင်းရန်",
+			"siteName": "အစားအစာ site name ကို",
+			"submitForm": "တင်သွင်းပါ",
+			"weeklyMenu": "အပတ်စဉ်မီနူးသို့လင့်ခ်",
+			"whatNeedsCorrecting": "ဒီအစားအစာ site အတွက်ဘယ်အချက်အလက်တွေကိုပြင်ဆင်ရမလဲ။"
+		},
+		"themeHeaderBar": {
+			"AboutFreeMeals": "အခမဲ့အစားအစာများအကြောင်း"
+		}
+	}
+}

@@ -121,6 +121,10 @@ export default {
   created() {
     this.fetchData()
     this.states.unshift({ value: null, text: this.$t('landingPage.pleaseSelectState') })
+    var urlString = window.location.href
+    //var url = new URL(urlString)
+    console.log('testing')
+    console.log(urlString)
   },
   components: {
     ShareModal,
@@ -354,11 +358,11 @@ export default {
       }
     },
     checkParam() {
-      var urlString = window.location.href
+      //var urlString = window.location.href
       //var url = new URL(urlString)
       //console.log(url.searchParams.has('d'))
       console.log(this.$route.path)
-      return this.$route.path == '/' && !urlString.includes('?')
+      return this.$route.path == '/' && this.districtAbbr == 'mff'
     },
     showMap() {
       var urlString = window.location.href
