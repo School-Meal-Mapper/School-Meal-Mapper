@@ -5,6 +5,10 @@
         <i class="fas fa-arrow-left" />
         {{ $t('mapPrompts.backToList') }}
       </b-list-group-item>
+      <b-list-group-item variant="sideNav" button class="backtolistmobile" id="back-to-list-nav" @click="$emit('close-details')">
+        <i class="fas fa-arrow-left" />
+        {{ 'Return to map' }}
+      </b-list-group-item>
     </b-list-group>
     <b-list-group class="list-group-flush business-details" id="business-details-nav">
       <b-list-group-item variant="sideNav" :class="infotype">
@@ -35,7 +39,7 @@
             $t('mealSiteCard.shareLocation')
           }}</b-button>
 
-          <p>
+          <p v-if="maxDetails">
             <icon-list-item
               v-if="info != null && info[0].gsx$menulink !== undefined && !!info[0].gsx$menulink.$t"
               icon="fas fa-apple-alt"
@@ -51,7 +55,7 @@
               target="_self"
             />
           </p>
-          <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')" v-if="maxDetails"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
             <p>
@@ -59,15 +63,21 @@
             </p>
           </template>
 
-          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date'">
+          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && maxDetails">
             {{ $t('mealSiteCard.detailsLastUpdated') }} {{ getLastUpdatedDate }}
           </p>
 
-          <p>
+          <p v-if="maxDetails">
             <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
               {{ $t('mealSiteCard.suggestAnEdit') }}
             </b-button>
           </p>
+          <b-button variant="outline-primary" class="details" v-if="!maxDetails" @click="showMaximizeDetails()">{{
+            $t('label.maxdetails')
+          }}</b-button>
+          <b-button variant="outline-primary" class="details" v-if="maxDetails" @click="showMinimizeDetails()">{{
+            $t('label.mindetails')
+          }}</b-button>
         </div>
       </b-list-group-item>
     </b-list-group>
@@ -93,7 +103,9 @@ export default {
     IconListItem
   },
   data() {
-    return {}
+    return {
+      maxDetails: false
+    }
   },
   props: {
     infotype: { type: String },
@@ -125,6 +137,12 @@ export default {
     directionsLink: function (marker) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
     },
+    showMaximizeDetails: function () {
+      this.maxDetails = true
+    },
+    showMinimizeDetails: function () {
+      this.maxDetails = false
+    },
     getAddress: getAddress
   },
   computed: {
@@ -148,6 +166,16 @@ export default {
   max-height: calc(100vh - 86px - 62px);
   overflow-y: auto;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    bottom: 0;
+    text-align: auto;
+    width: 100%;
+    @media (max-height: 550px) {
+      max-height: 400px;
+    }
+  }
 }
 .backtolist {
   font-size: 0.8rem;
@@ -156,36 +184,67 @@ export default {
   i {
     margin-right: 0.375rem;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
 
-  // &:hover {
-  //   background: rgba(0, 0, 0, 0.05) !important;
-  //   cursor: pointer;
-  // }
+.backtolistmobile {
+  font-size: 0.8rem;
+  padding-top: 30px;
+
+  i {
+    margin-right: 0.375rem;
+  }
+  @media (min-width: 769px) {
+    display: none;
+  }
 }
 
 .title {
   margin: 0 0 0.75rem 0;
   display: inline-block;
-
-  i {
-    font-size: 3rem;
-    //color: theme-color('quinary');
-    margin: 7px 10px 7px 0;
-    float: left;
+  @media (min-width: 769px) {
+    i {
+      font-size: 3rem;
+      //color: theme-color('quinary');
+      margin: 7px 10px 7px 0;
+      float: left;
+    }
+  }
+  @media (max-width: 768px) {
+    i {
+      font-size: 1.8rem;
+      margin: 7px 10px 7px 0;
+      float: left;
+    }
   }
 }
 
 .busName {
   margin-left: 0px;
-  width: 208px;
+
+  @media (min-width: 769px) {
+    width: 208px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .green {
   font-size: 0.8rem;
   // color: #666;
-
-  & > div {
-    width: 243px;
+  @media (min-width: 769px) {
+    & > div {
+      width: 243px;
+    }
+  }
+  @media (max-width: 768px) {
+    & > div {
+      width: 100%;
+    }
   }
 }
 
@@ -213,16 +272,22 @@ export default {
 
 .share-button {
   font-size: 0.8rem;
-  padding: 0.375rem 1rem;
   color: #007bff;
+
+  @media (min-width: 769px) {
+    padding: 0.375rem 1rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0.175rem 1rem;
+  }
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   #business-details-nav {
     display: none;
   }
   #back-to-list-nav {
     display: none;
   }
-}
+}*/
 </style>

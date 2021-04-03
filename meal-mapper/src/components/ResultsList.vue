@@ -19,7 +19,7 @@
         :hasFaqs="hasFaqs"
       ></BusinessDetails>
     </div>
-
+    <!--
     <BusinessDetailsMobile
       :infotype="'green'"
       :icon="'fa-tractor'"
@@ -27,7 +27,7 @@
       :closedMessage="getClosedMessage()"
       v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
-    ></BusinessDetailsMobile>
+    ></BusinessDetailsMobile>-->
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
@@ -97,7 +97,7 @@ import { days } from '../constants'
 import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
 import { districtData } from '../themes/MealsForFamilies/districtData' // Hardcoded in to Meals For Families theme.
-import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
+//import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
 
 export default {
   name: 'ResultsList',
@@ -113,8 +113,8 @@ export default {
     }
   },
   components: {
-    BusinessDetails,
-    BusinessDetailsMobile
+    BusinessDetails
+    //BusinessDetailsMobile
   },
   props: {
     filteredMarkers: Array,

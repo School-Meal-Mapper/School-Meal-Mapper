@@ -43,7 +43,8 @@
         -->
         <b-navbar-nav v-if="window.width > 991">
           <b-nav-item href="#" v-for="item in filteredLangs" v-bind:key="item.iso" class="d-lg-block d-xl-block">
-            <span :title="$t('languages.' + item.iso)">
+            <!--<span :title="$t('languages.' + item.iso)">-->
+            <span :title="item.name">
               <div
                 v-html="item.name"
                 :lang="item.iso"
@@ -59,7 +60,8 @@
             <span v-if="window.width < 991" v-html="language" class="language" />
           </template>
           <b-dropdown-item href="#" v-for="item in selectLangs" v-bind:key="item.iso">
-            <span :title="$t('languages.' + item.iso)">
+            <!-- <span :title="$t('languages.' + item.iso)"> -->
+            <span :title="item.name">
               <div v-html="item.name" :lang="item.iso" @click="$emit('language-selected', item)"></div>
             </span>
           </b-dropdown-item>
