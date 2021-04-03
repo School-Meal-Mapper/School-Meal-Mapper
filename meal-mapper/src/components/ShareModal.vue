@@ -4,7 +4,7 @@
       {{ $t('shareOptions.share') }}
     </template>
     <p v-if="business !== null">
-      {{ $t('shareOptions.shareInformationAboutMealSite') }}:
+      {{ $t('shareOptions.shareInformationAboutMealSite') }}
       <br />
       <br />
       <b> {{ business.marker.gsx$mealsitename.$t }} </b>
