@@ -5,13 +5,11 @@
         <i class="fas fa-arrow-left" />
         {{ $t('mapPrompts.backToList') }}
       </b-list-group-item>
-      <b-list-group-item variant="sideNav" button class="backtolistmobile" id="back-to-list-nav" @click="$emit('close-details')">
-        <i class="fas fa-arrow-left" />
-        {{ 'Return to map' }}
-      </b-list-group-item>
     </b-list-group>
     <b-list-group class="list-group-flush business-details" id="business-details-nav">
       <b-list-group-item variant="sideNav" :class="infotype">
+        <!--<b-button @click="$emit('close-details')" class="close-button">Close</b-button>-->
+        <i @click="$emit('close-details')" class="fas fa-times-circle close-button" />
         <div>
           <div class="title">
             <div class="busName">
@@ -250,6 +248,14 @@ export default {
 
 .updated {
   color: #aaa;
+}
+
+.close-button {
+  @media (min-width: 769px) {
+    display: none;
+  }
+  float: right;
+  font-size: 2rem;
 }
 
 .btn-outline-primary {
