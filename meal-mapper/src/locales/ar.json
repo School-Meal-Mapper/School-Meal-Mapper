@@ -1,114 +1,114 @@
 {
-	"FAQs": {
-		"buttonText": "حول الوجبات المجانية",
-		"forMoreInformation": "تواصل مع مزود الوجبات المحلي للحصول على مزيد من المعلومات حول الوجبات المجانية.",
-		"hyperlinkText": "أسئلة ومعلومات الاتصال"
-	},
-	"landingPage": {
-		"aboutUs": "معلومات عنا",
-		"findFreeMealsNearMe": "البحث عن وجبات مجانية بالقرب مني!",
-		"findYourCountyAndSelectProvider": "حدد مزود وجبة في مقاطعتك.",
-		"pleaseSelectState": "حدد ولايتك.",
-		"welcomeStatement": "مرحبا بكم في Meals4Families!",
-		"youMustSelectState": "يجب عليك تحديد الولاية قبل اختيار مقدم الوجبات."
-	},
-	"langauges": {
-		"am": "الأمهرية",
-		"ar": "عربى",
-		"bn": "بنغالي",
-		"en": "الإنجليزية",
-		"fil": "الفلبينية",
-		"fr": "الفرنسية",
-		"hi": "الهندية",
-		"hmn": "همونغ",
-		"ja": "اليابانية",
-		"ko": "الكورية",
-		"mh": "مارشال",
-		"ms": "لغة الملايو",
-		"my": "البورمية",
-		"ne": "النيبالية",
-		"pl": "البولندي",
-		"pt": "البرتغالية",
-		"ru": "الروسية",
-		"so": "الصومالية",
-		"sp": "الأسبانية",
-		"tg": "تاغالوغ",
-		"ur": "الأردية",
-		"vi": "الفيتنامية",
-		"zh": "صينى"
-	},
-	"mapKey": {
-		"closedToday": "مغلق اليوم",
-		"mapKeyTitle": "مفتاح الخريطة",
-		"openToday": "مفتوح اليوم",
-		"searched": "فتشت",
-		"selected": "المحدد"
-	},
-	"mapPrompts": {
-		"backToList": "العودة إلى القائمة.",
-		"youCanNotZoomOutMore": "لا يمكنك التصغير أكثر.",
-		"zoomOut": "التصغير لمزيد من النتائج."
-	},
-	"mealSiteCard": {
-		"Hours": "ساعات",
-		"additionalDirections": "أين تجدنا",
-		"address": "عنوان:",
-		"closed": "مغلق",
-		"detailsLastUpdated": "آخر تحديث للتفاصيل:",
-		"doorDelivery": "تسليم الباب",
-		"expandDetails": "قم بتوسيع التفاصيل",
-		"friday": "يوم الجمعة",
-		"getDirections": "احصل على الاتجاهات",
-		"hideDetails": "أخف التفاصيل",
-		"minimizeDetails": "تقليل التفاصيل",
-		"monday": "الإثنين",
-		"moreDetails": "المزيد من التفاصيل",
-		"notes": "ملاحظات",
-		"questionsContactInfo": "أسئلة ومعلومات الاتصال",
-		"saturday": "يوم السبت",
-		"shareLocation": "مشاركة الموقع",
-		"suggestAnEdit": "اقتراح تعديل",
-		"sunday": "الأحد",
-		"thursday": "الخميس",
-		"tuesday": "الثلاثاء",
-		"wednesday": "الأربعاء",
-		"weeklyMenu": "قائمة أسبوعية"
-	},
-	"searchBar": {
-		"noResults": "لا توجد نتائج تطابق بحثك. حاول مرة اخرى.",
-		"searchAnotherMealProvider": "أو ابحث عن وجبات خارج منطقة الخريطة هذه.",
-		"searchPrompt": "البحث عن وجبات بالقرب من العنوان"
-	},
-	"shareOptions": {
-		"aboutUs": "يتم تقديم هذه المعلومات إليك من خلال Meals4Families بالشراكة مع",
-		"copyLink": "انسخ الرابط",
-		"copyMessage": "انسخ الرسالة",
-		"findNearbySites": "استخدم هذا الارتباط لمشاهدة خريطة مواقع الوجبات القريبة:",
-		"learnMore": "استخدم هذا الرابط لمعرفة المزيد عن الوجبات المجانية:",
-		"mealSiteInfo": "اتبع الرابط أدناه للعثور على التفاصيل الكاملة لموقع الوجبة هذا بما في ذلك الساعات والاتجاهات:",
-		"messageIntro": "يقدم وجبات مجانية لجميع الأطفال الذين تتراوح أعمارهم بين 0 و 18 عامًا. انضم إلينا لتناول وجبة!",
-		"sendEmail": "ارسل بريد الكتروني",
-		"sendTextMessage": "ابعت رسالة نصية",
-		"share": "شارك",
-		"shareInformationAboutMealSite": "شارك المعلومات حول موقع الوجبة هذا:",
-		"suggestedMealSite": "قد تكون مهتمًا بموقع الوجبات هذا:"
-	},
-	"specialSite": {
-		"doorDelivery": "تسليم الباب"
-	},
-	"suggestEdit": {
-		"additionalComments": "تعليقات اضافية",
-		"address": "عنوان",
-		"enterCommentsPrompt": "وصف المعلومات غير الصحيحة أو المفقودة.",
-		"hours": "ساعات",
-		"resetButton": "شكل واضح",
-		"siteName": "اسم موقع الوجبة",
-		"submitForm": "خضع",
-		"suggestEditTitle": "اقتراح تعديل",
-		"weeklyMenu": "رابط إلى القائمة الأسبوعية",
-		"whatNeedsCorrecting": "ما المعلومات التي نحتاجها لتصحيح موقع الوجبة هذا؟"
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "حول الوجبات المجانية"
-	}
+  "FAQs": {
+    "buttonText": "حول الوجبات المجانية",
+    "forMoreInformation": "تواصل مع مزود الوجبات المحلي للحصول على مزيد من المعلومات حول الوجبات المجانية.",
+    "hyperlinkText": "أسئلة ومعلومات الاتصال"
+  },
+  "landingPage": {
+    "aboutUs": "معلومات عنا",
+    "findFreeMealsNearMe": "البحث عن وجبات مجانية بالقرب مني!",
+    "findYourCountyAndSelectProvider": "حدد مزود وجبة في مقاطعتك.",
+    "pleaseSelectState": "حدد ولايتك.",
+    "welcomeStatement": "مرحبا بكم في Meals4Families!",
+    "youMustSelectState": "يجب عليك تحديد الولاية قبل اختيار مقدم الوجبات."
+  },
+  "langauges": {
+    "am": "الأمهرية",
+    "ar": "عربى",
+    "bn": "بنغالي",
+    "en": "الإنجليزية",
+    "fil": "الفلبينية",
+    "fr": "الفرنسية",
+    "hi": "الهندية",
+    "hmn": "همونغ",
+    "ja": "اليابانية",
+    "ko": "الكورية",
+    "mh": "مارشال",
+    "ms": "لغة الملايو",
+    "my": "البورمية",
+    "ne": "النيبالية",
+    "pl": "البولندي",
+    "pt": "البرتغالية",
+    "ru": "الروسية",
+    "so": "الصومالية",
+    "sp": "الأسبانية",
+    "tg": "تاغالوغ",
+    "ur": "الأردية",
+    "vi": "الفيتنامية",
+    "zh": "صينى"
+  },
+  "mapKey": {
+    "closedToday": "مغلق اليوم",
+    "mapKeyTitle": "مفتاح الخريطة",
+    "openToday": "مفتوح اليوم",
+    "searched": "فتشت",
+    "selected": "المحدد"
+  },
+  "mapPrompts": {
+    "backToList": "العودة إلى القائمة.",
+    "youCanNotZoomOutMore": "لا يمكنك التصغير أكثر.",
+    "zoomOut": "التصغير لمزيد من النتائج."
+  },
+  "mealSiteCard": {
+    "Hours": "ساعات",
+    "additionalDirections": "أين تجدنا",
+    "address": "عنوان:",
+    "closed": "مغلق",
+    "detailsLastUpdated": "آخر تحديث للتفاصيل:",
+    "doorDelivery": "تسليم الباب",
+    "expandDetails": "قم بتوسيع التفاصيل",
+    "friday": "يوم الجمعة",
+    "getDirections": "احصل على الاتجاهات",
+    "hideDetails": "أخف التفاصيل",
+    "minimizeDetails": "تقليل التفاصيل",
+    "monday": "الإثنين",
+    "moreDetails": "المزيد من التفاصيل",
+    "notes": "ملاحظات",
+    "questionsContactInfo": "أسئلة ومعلومات الاتصال",
+    "saturday": "يوم السبت",
+    "shareLocation": "مشاركة الموقع",
+    "suggestAnEdit": "اقتراح تعديل",
+    "sunday": "الأحد",
+    "thursday": "الخميس",
+    "tuesday": "الثلاثاء",
+    "wednesday": "الأربعاء",
+    "weeklyMenu": "قائمة أسبوعية"
+  },
+  "searchBar": {
+    "noResults": "لا توجد نتائج تطابق بحثك. حاول مرة اخرى.",
+    "searchAnotherMealProvider": "أو ابحث عن وجبات خارج منطقة الخريطة هذه.",
+    "searchPrompt": "البحث عن وجبات بالقرب من العنوان"
+  },
+  "shareOptions": {
+    "aboutUs": "يتم تقديم هذه المعلومات إليك من خلال Meals4Families بالشراكة مع",
+    "copyLink": "انسخ الرابط",
+    "copyMessage": "انسخ الرسالة",
+    "findNearbySites": "استخدم هذا الارتباط لمشاهدة خريطة مواقع الوجبات القريبة:",
+    "learnMore": "استخدم هذا الرابط لمعرفة المزيد عن الوجبات المجانية:",
+    "mealSiteInfo": "اتبع الرابط أدناه للعثور على التفاصيل الكاملة لموقع الوجبة هذا بما في ذلك الساعات والاتجاهات:",
+    "messageIntro": "يقدم وجبات مجانية لجميع الأطفال الذين تتراوح أعمارهم بين 0 و 18 عامًا. انضم إلينا لتناول وجبة!",
+    "sendEmail": "ارسل بريد الكتروني",
+    "sendTextMessage": "ابعت رسالة نصية",
+    "share": "شارك",
+    "shareInformationAboutMealSite": "شارك المعلومات حول موقع الوجبة هذا:",
+    "suggestedMealSite": "قد تكون مهتمًا بموقع الوجبات هذا:"
+  },
+  "specialSite": {
+    "doorDelivery": "تسليم الباب"
+  },
+  "suggestEdit": {
+    "additionalComments": "تعليقات اضافية",
+    "address": "عنوان",
+    "enterCommentsPrompt": "وصف المعلومات غير الصحيحة أو المفقودة.",
+    "hours": "ساعات",
+    "resetButton": "شكل واضح",
+    "siteName": "اسم موقع الوجبة",
+    "submitForm": "خضع",
+    "suggestEditTitle": "اقتراح تعديل",
+    "weeklyMenu": "رابط إلى القائمة الأسبوعية",
+    "whatNeedsCorrecting": "ما المعلومات التي نحتاجها لتصحيح موقع الوجبة هذا؟"
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "حول الوجبات المجانية"
+  }
 }

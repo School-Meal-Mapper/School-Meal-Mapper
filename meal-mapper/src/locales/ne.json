@@ -1,114 +1,114 @@
 {
-	"FAQs": {
-		"buttonText": "नि: शुल्क भोजनको बारेमा",
-		"forMoreInformation": "नि: शुल्क भोजनमा अधिक जानकारीको लागि तपाईंको स्थानीय खाना प्रदायकसँग कनेक्ट गर्नुहोस्।",
-		"hyperlinkText": "प्रश्न र सम्पर्क जानकारी"
-	},
-	"landingPage": {
-		"aboutUs": "हाम्रोबारे",
-		"findFreeMealsNearMe": "मेरो नजिक निःशुल्क खाना खोज्नुहोस्!",
-		"findYourCountyAndSelectProvider": "तपाईंको काउन्टीमा खाना प्रदायक छान्नुहोस्।",
-		"pleaseSelectState": "तपाईंको राज्य छान्नुहोस्।",
-		"welcomeStatement": "Meals4Famille मा स्वागत छ!",
-		"youMustSelectState": "तपाईंले खाना प्रदायक छनौट गर्नु अघि राज्य चुन्नु पर्छ।"
-	},
-	"langauges": {
-		"am": "अम्हारिक",
-		"ar": "अरबी",
-		"bn": "बंगाली",
-		"en": "अंग्रेजी",
-		"fil": "फिलिपिनो",
-		"fr": "फ्रेन्च",
-		"hi": "हिन्दी",
-		"hmn": "ह्मोong",
-		"ja": "जापानी",
-		"ko": "कोरियाली",
-		"mh": "मार्शललिस",
-		"ms": "मलाय",
-		"my": "बर्मी",
-		"ne": "नेपाली",
-		"pl": "पोलिस",
-		"pt": "पोर्तुगाली",
-		"ru": "रुसी",
-		"so": "सोमाली",
-		"sp": "स्पेनिश",
-		"tg": "तागालोग",
-		"ur": "उर्दू",
-		"vi": "भियतनामी",
-		"zh": "चीनियाँ"
-	},
-	"mapKey": {
-		"closedToday": "आज बन्द छ",
-		"mapKeyTitle": "नक्शा कुञ्जी",
-		"openToday": "आज खोल्नुहोस्",
-		"searched": "खोजी गरियो",
-		"selected": "चयनित"
-	},
-	"mapPrompts": {
-		"backToList": "सूचीमा फर्कनुहोस्।",
-		"youCanNotZoomOutMore": "तपाई बढि जुम गर्न सक्नुहुन्न।",
-		"zoomOut": "अधिक परिणामहरूको लागि जुम आउट गर्नुहोस्।"
-	},
-	"mealSiteCard": {
-		"Hours": "घण्टा",
-		"additionalDirections": "हामीलाई कहाँ भेट्टाउने",
-		"address": "ठेगाना:",
-		"closed": "बन्द छ",
-		"detailsLastUpdated": "विवरण अन्तिम पटक अपडेट गरिएको:",
-		"doorDelivery": "ढोका डेलिभरी",
-		"expandDetails": "विवरणहरू विस्तार गर्नुहोस्",
-		"friday": "शुक्रवार",
-		"getDirections": "दिशाहरू पाउनुहोस्",
-		"hideDetails": "विवरण लुकाउनुहोस्",
-		"minimizeDetails": "विवरण न्यूनतम गर्नुहोस्",
-		"monday": "सोमबार",
-		"moreDetails": "थप विवरण",
-		"notes": "नोटहरू",
-		"questionsContactInfo": "प्रश्न र सम्पर्क जानकारी",
-		"saturday": "शनिबार",
-		"shareLocation": "स्थान साझेदारी गर्नुहोस्",
-		"suggestAnEdit": "सम्पादन सुझाव दिनुहोस्",
-		"sunday": "आइतवार",
-		"thursday": "बिहीबार",
-		"tuesday": "मंगलबार",
-		"wednesday": "बुधवार",
-		"weeklyMenu": "साप्ताहिक मेनू"
-	},
-	"searchBar": {
-		"noResults": "तपाईको खोजसँग कुनै परिणाम मिल्दैन। फेरि प्रयास गर्नुहोस।",
-		"searchAnotherMealProvider": "वा यस नक्सा क्षेत्र बाहिर खाना खोज्नुहोस्।",
-		"searchPrompt": "ठेगानाको नजिक भोजन खोज्नुहोस्"
-	},
-	"shareOptions": {
-		"aboutUs": "यो जानकारी तपाईलाई Meals4Famille ले साझेदारीमा ल्याएको हो",
-		"copyLink": "लिंक प्रतिलिपि गर्नुहोस्",
-		"copyMessage": "सन्देश प्रतिलिपि गर्नुहोस्",
-		"findNearbySites": "नजिकको खाना साइटहरूको नक्सा हेर्न यो लिंक प्रयोग गर्नुहोस्:",
-		"learnMore": "नि: शुल्क खानाको बारेमा बढि जान्नको लागि यो लिंक प्रयोग गर्नुहोस्।",
-		"mealSiteInfo": "घण्टा र दिशाहरू सहित यो खाना साइट को लागी पूरा विवरण पाउन तलको लिंक अनुसरण गर्नुहोस्:",
-		"messageIntro": "०-१-18 उमेरका सबै बच्चाहरूको लागि निःशुल्क भोजन प्रस्ताव गर्दछ। खानाको लागि हामीसँग सामेल हुनुहोस्!",
-		"sendEmail": "ईमेल पठाउनुहोस्",
-		"sendTextMessage": "पाठ सन्देश पठाउनुहोस्",
-		"share": "सेयर गर्नुहोस्",
-		"shareInformationAboutMealSite": "यो खाना साइट को बारे मा जानकारी साझा गर्नुहोस्:",
-		"suggestedMealSite": "तपाइँ यस खाना साइट मा रुचि हुन सक्छ:"
-	},
-	"specialSite": {
-		"doorDelivery": "ढोका डेलिभरी"
-	},
-	"suggestEdit": {
-		"additionalComments": "थप टिप्पणीहरू",
-		"address": "ठेगाना",
-		"enterCommentsPrompt": "गलत वा हराइरहेको जानकारी वर्णन गर्नुहोस्।",
-		"hours": "घण्टा",
-		"resetButton": "फारम खाली गर्नुहोस्",
-		"siteName": "खाना साइट नाम",
-		"submitForm": "बुझाउनुहोस्",
-		"suggestEditTitle": "सम्पादन सुझाव दिनुहोस्",
-		"weeklyMenu": "साप्ताहिक मेनूमा लिंक",
-		"whatNeedsCorrecting": "यस खाना साइटका लागि हामीलाई कुन जानकारी सुधार गर्न आवश्यक छ?"
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "नि: शुल्क भोजनको बारेमा"
-	}
+  "FAQs": {
+    "buttonText": "नि: शुल्क भोजनको बारेमा",
+    "forMoreInformation": "नि: शुल्क भोजनमा अधिक जानकारीको लागि तपाईंको स्थानीय खाना प्रदायकसँग कनेक्ट गर्नुहोस्।",
+    "hyperlinkText": "प्रश्न र सम्पर्क जानकारी"
+  },
+  "landingPage": {
+    "aboutUs": "हाम्रोबारे",
+    "findFreeMealsNearMe": "मेरो नजिक निःशुल्क खाना खोज्नुहोस्!",
+    "findYourCountyAndSelectProvider": "तपाईंको काउन्टीमा खाना प्रदायक छान्नुहोस्।",
+    "pleaseSelectState": "तपाईंको राज्य छान्नुहोस्।",
+    "welcomeStatement": "Meals4Famille मा स्वागत छ!",
+    "youMustSelectState": "तपाईंले खाना प्रदायक छनौट गर्नु अघि राज्य चुन्नु पर्छ।"
+  },
+  "langauges": {
+    "am": "अम्हारिक",
+    "ar": "अरबी",
+    "bn": "बंगाली",
+    "en": "अंग्रेजी",
+    "fil": "फिलिपिनो",
+    "fr": "फ्रेन्च",
+    "hi": "हिन्दी",
+    "hmn": "ह्मोong",
+    "ja": "जापानी",
+    "ko": "कोरियाली",
+    "mh": "मार्शललिस",
+    "ms": "मलाय",
+    "my": "बर्मी",
+    "ne": "नेपाली",
+    "pl": "पोलिस",
+    "pt": "पोर्तुगाली",
+    "ru": "रुसी",
+    "so": "सोमाली",
+    "sp": "स्पेनिश",
+    "tg": "तागालोग",
+    "ur": "उर्दू",
+    "vi": "भियतनामी",
+    "zh": "चीनियाँ"
+  },
+  "mapKey": {
+    "closedToday": "आज बन्द छ",
+    "mapKeyTitle": "नक्शा कुञ्जी",
+    "openToday": "आज खोल्नुहोस्",
+    "searched": "खोजी गरियो",
+    "selected": "चयनित"
+  },
+  "mapPrompts": {
+    "backToList": "सूचीमा फर्कनुहोस्।",
+    "youCanNotZoomOutMore": "तपाई बढि जुम गर्न सक्नुहुन्न।",
+    "zoomOut": "अधिक परिणामहरूको लागि जुम आउट गर्नुहोस्।"
+  },
+  "mealSiteCard": {
+    "Hours": "घण्टा",
+    "additionalDirections": "हामीलाई कहाँ भेट्टाउने",
+    "address": "ठेगाना:",
+    "closed": "बन्द छ",
+    "detailsLastUpdated": "विवरण अन्तिम पटक अपडेट गरिएको:",
+    "doorDelivery": "ढोका डेलिभरी",
+    "expandDetails": "विवरणहरू विस्तार गर्नुहोस्",
+    "friday": "शुक्रवार",
+    "getDirections": "दिशाहरू पाउनुहोस्",
+    "hideDetails": "विवरण लुकाउनुहोस्",
+    "minimizeDetails": "विवरण न्यूनतम गर्नुहोस्",
+    "monday": "सोमबार",
+    "moreDetails": "थप विवरण",
+    "notes": "नोटहरू",
+    "questionsContactInfo": "प्रश्न र सम्पर्क जानकारी",
+    "saturday": "शनिबार",
+    "shareLocation": "स्थान साझेदारी गर्नुहोस्",
+    "suggestAnEdit": "सम्पादन सुझाव दिनुहोस्",
+    "sunday": "आइतवार",
+    "thursday": "बिहीबार",
+    "tuesday": "मंगलबार",
+    "wednesday": "बुधवार",
+    "weeklyMenu": "साप्ताहिक मेनू"
+  },
+  "searchBar": {
+    "noResults": "तपाईको खोजसँग कुनै परिणाम मिल्दैन। फेरि प्रयास गर्नुहोस।",
+    "searchAnotherMealProvider": "वा यस नक्सा क्षेत्र बाहिर खाना खोज्नुहोस्।",
+    "searchPrompt": "ठेगानाको नजिक भोजन खोज्नुहोस्"
+  },
+  "shareOptions": {
+    "aboutUs": "यो जानकारी तपाईलाई Meals4Famille ले साझेदारीमा ल्याएको हो",
+    "copyLink": "लिंक प्रतिलिपि गर्नुहोस्",
+    "copyMessage": "सन्देश प्रतिलिपि गर्नुहोस्",
+    "findNearbySites": "नजिकको खाना साइटहरूको नक्सा हेर्न यो लिंक प्रयोग गर्नुहोस्:",
+    "learnMore": "नि: शुल्क खानाको बारेमा बढि जान्नको लागि यो लिंक प्रयोग गर्नुहोस्।",
+    "mealSiteInfo": "घण्टा र दिशाहरू सहित यो खाना साइट को लागी पूरा विवरण पाउन तलको लिंक अनुसरण गर्नुहोस्:",
+    "messageIntro": "०-१-18 उमेरका सबै बच्चाहरूको लागि निःशुल्क भोजन प्रस्ताव गर्दछ। खानाको लागि हामीसँग सामेल हुनुहोस्!",
+    "sendEmail": "ईमेल पठाउनुहोस्",
+    "sendTextMessage": "पाठ सन्देश पठाउनुहोस्",
+    "share": "सेयर गर्नुहोस्",
+    "shareInformationAboutMealSite": "यो खाना साइट को बारे मा जानकारी साझा गर्नुहोस्:",
+    "suggestedMealSite": "तपाइँ यस खाना साइट मा रुचि हुन सक्छ:"
+  },
+  "specialSite": {
+    "doorDelivery": "ढोका डेलिभरी"
+  },
+  "suggestEdit": {
+    "additionalComments": "थप टिप्पणीहरू",
+    "address": "ठेगाना",
+    "enterCommentsPrompt": "गलत वा हराइरहेको जानकारी वर्णन गर्नुहोस्।",
+    "hours": "घण्टा",
+    "resetButton": "फारम खाली गर्नुहोस्",
+    "siteName": "खाना साइट नाम",
+    "submitForm": "बुझाउनुहोस्",
+    "suggestEditTitle": "सम्पादन सुझाव दिनुहोस्",
+    "weeklyMenu": "साप्ताहिक मेनूमा लिंक",
+    "whatNeedsCorrecting": "यस खाना साइटका लागि हामीलाई कुन जानकारी सुधार गर्न आवश्यक छ?"
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "नि: शुल्क भोजनको बारेमा"
+  }
 }

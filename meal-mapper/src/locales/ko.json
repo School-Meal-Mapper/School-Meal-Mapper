@@ -1,114 +1,114 @@
 {
-	"FAQs": {
-		"buttonText": "무료 식사 정보",
-		"forMoreInformation": "무료 식사에 대한 자세한 정보는 지역 식사 제공 업체에 문의하십시오.",
-		"hyperlinkText": "질문 및 연락처 정보"
-	},
-	"landingPage": {
-		"aboutUs": "우리에 관해서",
-		"findFreeMealsNearMe": "내 근처에 무료 식사를 찾아라!",
-		"findYourCountyAndSelectProvider": "카운티에서 식사 공급자를 선택합니다.",
-		"pleaseSelectState": "상태를 선택합니다.",
-		"welcomeStatement": "Meals4Families에 오신 것을 환영합니다!",
-		"youMustSelectState": "식사 공급자를 선택하기 전에 상태를 선택해야 합니다."
-	},
-	"langauges": {
-		"am": "암하라 어",
-		"ar": "아라비아 말",
-		"bn": "벵골 사람",
-		"en": "영어",
-		"fil": "필리핀",
-		"fr": "프랑스 국민",
-		"hi": "힌디 어",
-		"hmn": "몽",
-		"ja": "일본어",
-		"ko": "한국어",
-		"mh": "마샬",
-		"ms": "말레이 사람",
-		"my": "버마 사람",
-		"ne": "네팔어",
-		"pl": "광택",
-		"pt": "포르투갈 인",
-		"ru": "러시아인",
-		"so": "소말리아",
-		"sp": "스페인 사람",
-		"tg": "타갈로그어",
-		"ur": "우르두어",
-		"vi": "베트남어",
-		"zh": "중국말"
-	},
-	"mapKey": {
-		"closedToday": "오늘 휴무",
-		"mapKeyTitle": "지도 키",
-		"openToday": "오늘 오픈",
-		"searched": "검색",
-		"selected": "선택한"
-	},
-	"mapPrompts": {
-		"backToList": "목록으로 돌아갑니다.",
-		"youCanNotZoomOutMore": "더 많이 축소할 수 없습니다.",
-		"zoomOut": "더 많은 결과를 보려면 축소하십시오."
-	},
-	"mealSiteCard": {
-		"Hours": "시간",
-		"additionalDirections": "우리를 찾을 수있는 곳",
-		"address": "주소:",
-		"closed": "폐쇄",
-		"detailsLastUpdated": "세부 정보 마지막으로 업데이트:",
-		"doorDelivery": "문 배달",
-		"expandDetails": "세부 정보 확장",
-		"friday": "금요일",
-		"getDirections": "길 찾기",
-		"hideDetails": "세부 사항 숨기기",
-		"minimizeDetails": "세부 정보 최소화",
-		"monday": "월요일",
-		"moreDetails": "자세한 내용은",
-		"notes": "노트",
-		"questionsContactInfo": "질문 및 연락처 정보",
-		"saturday": "토요일",
-		"shareLocation": "위치 공유",
-		"suggestAnEdit": "편집 제안",
-		"sunday": "일요일",
-		"thursday": "목요일",
-		"tuesday": "화요일",
-		"wednesday": "수요일",
-		"weeklyMenu": "주간 메뉴"
-	},
-	"searchBar": {
-		"noResults": "검색과 일치하는 결과가 없습니다. 다시 시도하십시오.",
-		"searchAnotherMealProvider": "또는이지도 영역 밖에서 식사를 찾으십시오.",
-		"searchPrompt": "주소 근처 식사 찾기"
-	},
-	"shareOptions": {
-		"aboutUs": "이 정보는 식사4Family와 협력하여 귀하에게 가져온 것입니다.",
-		"copyLink": "복사 링크",
-		"copyMessage": "메시지 복사",
-		"findNearbySites": "이 링크를 사용하여 인근 식사 사이트의 지도를 확인하십시오.",
-		"learnMore": "이 링크를 사용하여 무료 식사에 대해 자세히 알아보십시오.",
-		"mealSiteInfo": "아래 링크를 따라 시간 및 안내를 포함하여 이 식사 사이트에 대한 자세한 내용을 확인하십시오.",
-		"messageIntro": "만 0-18세 의 모든 어린이에게 무료 식사를 제공합니다. 식사를 위해 우리와 함께!",
-		"sendEmail": "이메일 보내기",
-		"sendTextMessage": "문자 메시지 보내기",
-		"share": "공유",
-		"shareInformationAboutMealSite": "이 식사 사이트에 대한 정보를 공유합니다.",
-		"suggestedMealSite": "이 식사 사이트에 관심이 있을 수 있습니다."
-	},
-	"specialSite": {
-		"doorDelivery": "도어 딜리버리"
-	},
-	"suggestEdit": {
-		"additionalComments": "추가 댓글",
-		"address": "주소",
-		"enterCommentsPrompt": "부정확하거나 누락 된 정보를 설명하십시오.",
-		"hours": "시간",
-		"resetButton": "명확한 형태",
-		"siteName": "식사 장소 이름",
-		"submitForm": "제출",
-		"suggestEditTitle": "편집 제안",
-		"weeklyMenu": "주간 메뉴 링크",
-		"whatNeedsCorrecting": "이 식사 장소를 수정하려면 어떤 정보가 필요합니까?"
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "무료 식사 정보"
-	}
+  "FAQs": {
+    "buttonText": "무료 식사 정보",
+    "forMoreInformation": "무료 식사에 대한 자세한 정보는 지역 식사 제공 업체에 문의하십시오.",
+    "hyperlinkText": "질문 및 연락처 정보"
+  },
+  "landingPage": {
+    "aboutUs": "우리에 관해서",
+    "findFreeMealsNearMe": "내 근처에 무료 식사를 찾아라!",
+    "findYourCountyAndSelectProvider": "카운티에서 식사 공급자를 선택합니다.",
+    "pleaseSelectState": "상태를 선택합니다.",
+    "welcomeStatement": "Meals4Families에 오신 것을 환영합니다!",
+    "youMustSelectState": "식사 공급자를 선택하기 전에 상태를 선택해야 합니다."
+  },
+  "langauges": {
+    "am": "암하라 어",
+    "ar": "아라비아 말",
+    "bn": "벵골 사람",
+    "en": "영어",
+    "fil": "필리핀",
+    "fr": "프랑스 국민",
+    "hi": "힌디 어",
+    "hmn": "몽",
+    "ja": "일본어",
+    "ko": "한국어",
+    "mh": "마샬",
+    "ms": "말레이 사람",
+    "my": "버마 사람",
+    "ne": "네팔어",
+    "pl": "광택",
+    "pt": "포르투갈 인",
+    "ru": "러시아인",
+    "so": "소말리아",
+    "sp": "스페인 사람",
+    "tg": "타갈로그어",
+    "ur": "우르두어",
+    "vi": "베트남어",
+    "zh": "중국말"
+  },
+  "mapKey": {
+    "closedToday": "오늘 휴무",
+    "mapKeyTitle": "지도 키",
+    "openToday": "오늘 오픈",
+    "searched": "검색",
+    "selected": "선택한"
+  },
+  "mapPrompts": {
+    "backToList": "목록으로 돌아갑니다.",
+    "youCanNotZoomOutMore": "더 많이 축소할 수 없습니다.",
+    "zoomOut": "더 많은 결과를 보려면 축소하십시오."
+  },
+  "mealSiteCard": {
+    "Hours": "시간",
+    "additionalDirections": "우리를 찾을 수있는 곳",
+    "address": "주소:",
+    "closed": "폐쇄",
+    "detailsLastUpdated": "세부 정보 마지막으로 업데이트:",
+    "doorDelivery": "문 배달",
+    "expandDetails": "세부 정보 확장",
+    "friday": "금요일",
+    "getDirections": "길 찾기",
+    "hideDetails": "세부 사항 숨기기",
+    "minimizeDetails": "세부 정보 최소화",
+    "monday": "월요일",
+    "moreDetails": "자세한 내용은",
+    "notes": "노트",
+    "questionsContactInfo": "질문 및 연락처 정보",
+    "saturday": "토요일",
+    "shareLocation": "위치 공유",
+    "suggestAnEdit": "편집 제안",
+    "sunday": "일요일",
+    "thursday": "목요일",
+    "tuesday": "화요일",
+    "wednesday": "수요일",
+    "weeklyMenu": "주간 메뉴"
+  },
+  "searchBar": {
+    "noResults": "검색과 일치하는 결과가 없습니다. 다시 시도하십시오.",
+    "searchAnotherMealProvider": "또는이지도 영역 밖에서 식사를 찾으십시오.",
+    "searchPrompt": "주소 근처 식사 찾기"
+  },
+  "shareOptions": {
+    "aboutUs": "이 정보는 식사4Family와 협력하여 귀하에게 가져온 것입니다.",
+    "copyLink": "복사 링크",
+    "copyMessage": "메시지 복사",
+    "findNearbySites": "이 링크를 사용하여 인근 식사 사이트의 지도를 확인하십시오.",
+    "learnMore": "이 링크를 사용하여 무료 식사에 대해 자세히 알아보십시오.",
+    "mealSiteInfo": "아래 링크를 따라 시간 및 안내를 포함하여 이 식사 사이트에 대한 자세한 내용을 확인하십시오.",
+    "messageIntro": "만 0-18세 의 모든 어린이에게 무료 식사를 제공합니다. 식사를 위해 우리와 함께!",
+    "sendEmail": "이메일 보내기",
+    "sendTextMessage": "문자 메시지 보내기",
+    "share": "공유",
+    "shareInformationAboutMealSite": "이 식사 사이트에 대한 정보를 공유합니다.",
+    "suggestedMealSite": "이 식사 사이트에 관심이 있을 수 있습니다."
+  },
+  "specialSite": {
+    "doorDelivery": "도어 딜리버리"
+  },
+  "suggestEdit": {
+    "additionalComments": "추가 댓글",
+    "address": "주소",
+    "enterCommentsPrompt": "부정확하거나 누락 된 정보를 설명하십시오.",
+    "hours": "시간",
+    "resetButton": "명확한 형태",
+    "siteName": "식사 장소 이름",
+    "submitForm": "제출",
+    "suggestEditTitle": "편집 제안",
+    "weeklyMenu": "주간 메뉴 링크",
+    "whatNeedsCorrecting": "이 식사 장소를 수정하려면 어떤 정보가 필요합니까?"
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "무료 식사 정보"
+  }
 }
