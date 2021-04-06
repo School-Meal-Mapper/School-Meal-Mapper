@@ -524,9 +524,13 @@ div.markeropen svg path {
 .location-alert {
   position: absolute;
   bottom: 0px;
+  top: 45px;
   left: calc(50% - 175px);
   width: 350px;
   z-index: 1000;
+  @media (max-width: 768px) {
+    z-index: 50000000;
+  }
 }
 .leaflet-bottom .leaflet-control-zoom {
   margin-bottom: 26px !important;
