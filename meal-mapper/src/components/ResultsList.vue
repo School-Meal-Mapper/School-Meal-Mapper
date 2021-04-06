@@ -4,7 +4,7 @@
       <b-list-group-item variant="sideNav">
         <form>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.searchAnotherMealProvider') }}</a>
         </form>
       </b-list-group-item>
     </b-list-group>

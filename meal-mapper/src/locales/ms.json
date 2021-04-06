@@ -1,68 +1,113 @@
 {
-  "FAQs": {
-    "buttonText": "Mengenai Makanan Percuma",
-    "hyperlinkText": "Soalan dan maklumat hubungan"
-  },
-  "landingPage": {
-    "aboutUs": "tentang kami",
-    "findFreeMealsNearMe": "Cari makanan percuma berhampiran saya!",
-    "findYourCountyAndSelectProvider": "Pilih pembekal makanan di daerah anda.",
-    "pleaseSelectState": "Pilih keadaan anda.",
-    "welcomeStatement": "Selamat Datang di Meals4Families!",
-    "youMustSelectState": "Anda mesti memilih keadaan sebelum memilih pembekal makanan."
-  },
-  "mapKey": {
-    "closedToday": "ditutup hari ini",
-    "mapKeyTitle": "Kekunci Peta",
-    "openToday": "dibuka hari ini",
-    "searched": "Digelintar",
-    "selected": "Dipilih"
-  },
-  "mapPrompts": {
-    "backToList": "Kembali ke senarai.",
-    "youCanNotZoomOutMore": "Anda tidak boleh zum keluar lebih."
-  },
-  "mealSiteCard": {
-    "hours": "Jam",
-    "address": "Alamat:",
-    "closed": "ditutup",
-    "detailsLastUpdated": "Butiran terakhir dikemaskini:",
-    "expandDetails": "Kembangkan Butiran",
-    "friday": "Jumaat",
-    "getDirections": "Dapatkan arahan",
-    "minimizeDetails": "Minimumkan Butiran",
-    "monday": "Isnin",
-    "notes": "Nota",
-    "questionsContactInfo": "Pertanyaan dan maklumat hubungan",
-    "saturday": "Sabtu",
-    "shareLocation": "Berkongsi lokasi",
-    "suggestAnEdit": "Cadangkan edit",
-    "sunday": "Ahad",
-    "thursday": "Khamis",
-    "tuesday": "Selasa",
-    "wednesday": "Rabu",
-    "weeklyMenu": "Menu mingguan"
-  },
-  "searchBar": {
-    "noResults": "Tiada keputusan yang sepadan dengan carian anda. Sila cuba lagi.",
-    "searchPrompt": "Cari makanan berhampiran alamat"
-  },
-  "shareOptions": {
-    "aboutUs": "Maklumat ini dibawa kepada anda oleh Meals4Families dengan kerjasama",
-    "findNearbySites": "Gunakan pautan ini untuk melihat peta tapak makan berdekatan:",
-    "learnMore": "Gunakan pautan ini untuk mengetahui lebih lanjut tentang makanan percuma:",
-    "mealSiteInfo": "Ikuti pautan di bawah untuk mencari butiran penuh untuk tapak makan ini termasuk jam dan arah:",
-    "messageIntro": "menawarkan makanan percuma untuk semua kanak-kanak berumur 0-18 tahun. Sertai kami untuk makan!",
-    "sendEmail": "Hantar e-mel",
-    "sendTextMessage": "Hantar mesej teks",
-    "share": "Berkongsi",
-    "shareInformationAboutMealSite": "Kongsi maklumat tentang tapak makan ini:",
-    "suggestedMealSite": "Anda mungkin berminat dengan tapak makan ini:"
-  },
-  "specialSite": {
-    "doorDelivery": "Penghantaran Pintu"
-  },
-  "themeHeaderBar": {
-    "aboutFreeMeals": "Mengenai Makanan Percuma"
-  }
+	"FAQs": {
+		"buttonText": "Mengenai Makanan Percuma",
+		"forMoreInformation": "Berhubung dengan penyedia makanan tempatan anda untuk maklumat lebih lanjut mengenai makanan percuma.",
+		"hyperlinkText": "Soalan dan maklumat hubungan"
+	},
+	"landingPage": {
+		"aboutUs": "tentang kami",
+		"findFreeMealsNearMe": "Cari makanan percuma berhampiran saya!",
+		"findYourCountyAndSelectProvider": "Pilih pembekal makanan di daerah anda.",
+		"pleaseSelectState": "Pilih keadaan anda.",
+		"welcomeStatement": "Selamat Datang di Meals4Families!",
+		"youMustSelectState": "Anda mesti memilih keadaan sebelum memilih pembekal makanan."
+	},
+	"langauges": {
+		"am": "Bahasa Amharic",
+		"ar": "Bahasa Arab",
+		"bn": "Bengali",
+		"en": "Bahasa Inggeris",
+		"fil": "Orang Filipina",
+		"fr": "Perancis",
+		"hi": "Hindi",
+		"hmn": "Hmong",
+		"ja": "Jepun",
+		"ko": "Korea",
+		"mh": "Marshallese",
+		"ms": "Melayu",
+		"my": "Burma",
+		"ne": "Orang Nepal",
+		"pl": "Poland",
+		"pt": "Portugis",
+		"ru": "Rusia",
+		"so": "Orang Somalia",
+		"sp": "Sepanyol",
+		"tg": "Bahasa Tagalog",
+		"ur": "Urdu",
+		"vi": "Vietnam",
+		"zh": "Cina"
+	},
+	"mapKey": {
+		"closedToday": "ditutup hari ini",
+		"mapKeyTitle": "Kekunci Peta",
+		"openToday": "dibuka hari ini",
+		"searched": "Digelintar",
+		"selected": "Dipilih"
+	},
+	"mapPrompts": {
+		"backToList": "Kembali ke senarai.",
+		"youCanNotZoomOutMore": "Anda tidak boleh zum keluar lebih.",
+		"zoomOut": "Zum keluar untuk mendapatkan lebih banyak hasil."
+	},
+	"mealSiteCard": {
+		"Hours": "Jam",
+		"additionalDirections": "Di mana untuk mencari kami",
+		"address": "Alamat:",
+		"closed": "ditutup",
+		"detailsLastUpdated": "Butiran terakhir dikemaskini:",
+		"doorDelivery": "Penghantaran Pintu",
+		"expandDetails": "Kembangkan Butiran",
+		"friday": "Jumaat",
+		"getDirections": "Dapatkan arahan",
+		"hideDetails": "Sembunyikan butiran",
+		"minimizeDetails": "Minimumkan Butiran",
+		"monday": "Isnin",
+		"moreDetails": "Maklumat lanjut",
+		"notes": "Nota",
+		"questionsContactInfo": "Pertanyaan dan maklumat hubungan",
+		"saturday": "Sabtu",
+		"shareLocation": "Berkongsi lokasi",
+		"suggestAnEdit": "Cadangkan edit",
+		"sunday": "Ahad",
+		"thursday": "Khamis",
+		"tuesday": "Selasa",
+		"wednesday": "Rabu",
+		"weeklyMenu": "Menu mingguan"
+	},
+	"searchBar": {
+		"noResults": "Tiada keputusan yang sepadan dengan carian anda. Sila cuba lagi.",
+		"searchAnotherMealProvider": "Atau cari makanan di luar kawasan peta ini.",
+		"searchPrompt": "Cari makanan berhampiran alamat"
+	},
+	"shareOptions": {
+		"aboutUs": "Maklumat ini dibawa kepada anda oleh Meals4Families dengan kerjasama",
+		"copyLink": "SALIN PAUTAN",
+		"copyMessage": "Salin mesej",
+		"findNearbySites": "Gunakan pautan ini untuk melihat peta tapak makan berdekatan:",
+		"learnMore": "Gunakan pautan ini untuk mengetahui lebih lanjut tentang makanan percuma:",
+		"mealSiteInfo": "Ikuti pautan di bawah untuk mencari butiran penuh untuk tapak makan ini termasuk jam dan arah:",
+		"messageIntro": "menawarkan makanan percuma untuk semua kanak-kanak berumur 0-18 tahun. Sertai kami untuk makan!",
+		"sendEmail": "Hantar e-mel",
+		"sendTextMessage": "Hantar mesej teks",
+		"share": "Berkongsi",
+		"shareInformationAboutMealSite": "Kongsi maklumat tentang tapak makan ini:",
+		"suggestedMealSite": "Anda mungkin berminat dengan tapak makan ini:"
+	},
+	"specialSite": {
+		"doorDelivery": "Penghantaran Pintu"
+	},
+	"suggestEdit": {
+		"additionalComments": "Komen tambahan",
+		"address": "Alamat",
+		"enterCommentsPrompt": "Huraikan maklumat yang salah atau tidak ada.",
+		"hours": "Jam",
+		"resetButton": "Bentuk yang jelas",
+		"siteName": "Nama laman web makanan",
+		"submitForm": "mengemukakan",
+		"weeklyMenu": "Pautan ke menu mingguan",
+		"whatNeedsCorrecting": "Maklumat apa yang perlu kita betulkan untuk laman makan ini?"
+	},
+	"themeHeaderBar": {
+		"AboutFreeMeals": "Mengenai Makanan Percuma"
+	}
 }

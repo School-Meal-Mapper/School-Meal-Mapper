@@ -37,7 +37,7 @@
             $t('mealSiteCard.shareLocation')
           }}</b-button>
 
-          <p v-if="maxDetails">
+          <p v-if="showFullDetails()">
             <icon-list-item
               v-if="info != null && info[0].gsx$menulink !== undefined && !!info[0].gsx$menulink.$t"
               icon="fas fa-apple-alt"
@@ -53,28 +53,30 @@
               target="_self"
             />
           </p>
-          <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')" v-if="maxDetails"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')" v-if="showFullDetails()"></opening-hours>
 
-          <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t">
+          <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t && showFullDetails()">
             <p>
               <b>{{ $t('mealSiteCard.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
             </p>
           </template>
 
-          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && maxDetails">
+          <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && showFullDetails()">
             {{ $t('mealSiteCard.detailsLastUpdated') }} {{ getLastUpdatedDate }}
           </p>
 
-          <p v-if="maxDetails">
+          <p v-if="showFullDetails()">
             <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">
               {{ $t('mealSiteCard.suggestAnEdit') }}
             </b-button>
           </p>
-          <b-button variant="outline-primary" class="details" v-if="!maxDetails" @click="showMaximizeDetails()">{{
-            $t('label.maxdetails')
+          <br v-if="!showFullDetails()" />
+          <br v-if="!showFullDetails()" />
+          <b-button variant="outline-primary" class="details" v-if="!showFullDetails()" @click="showMaximizeDetails()">{{
+            $t('mealSiteCard.expandDetails')
           }}</b-button>
           <b-button variant="outline-primary" class="details" v-if="maxDetails" @click="showMinimizeDetails()">{{
-            $t('label.mindetails')
+            $t('mealSiteCard.minimizeDetails')
           }}</b-button>
         </div>
       </b-list-group-item>
@@ -135,6 +137,9 @@ export default {
     directionsLink: function (marker) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
     },
+    showFullDetails: function () {
+      return (this.maxDetails == true && window.screen.width < 769) || window.screen.width >= 769
+    },
     showMaximizeDetails: function () {
       this.maxDetails = true
     },
@@ -183,18 +188,6 @@ export default {
     margin-right: 0.375rem;
   }
   @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-.backtolistmobile {
-  font-size: 0.8rem;
-  padding-top: 30px;
-
-  i {
-    margin-right: 0.375rem;
-  }
-  @media (min-width: 769px) {
     display: none;
   }
 }

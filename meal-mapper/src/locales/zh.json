@@ -1,68 +1,113 @@
 {
-  "FAQs": {
-    "buttonText": "关于免费餐食",
-    "hyperlinkText": "问题和联系信息"
-  },
-  "landingPage": {
-    "aboutUs": "关于我们",
-    "findFreeMealsNearMe": "在我附近找到免费餐点！",
-    "findYourCountyAndSelectProvider": "在您县选择膳食供应商。",
-    "pleaseSelectState": "选择您的状态。",
-    "welcomeStatement": "欢迎来到餐食4家庭！",
-    "youMustSelectState": "在选择膳食提供商之前，您必须选择状态。"
-  },
-  "mapKey": {
-    "closedToday": "今天休息",
-    "mapKeyTitle": "地图密钥",
-    "openToday": "今天开放",
-    "searched": "搜索",
-    "selected": "选择"
-  },
-  "mapPrompts": {
-    "backToList": "返回列表。",
-    "youCanNotZoomOutMore": "您无法缩小更多。"
-  },
-  "mealSiteCard": {
-    "hours": "小时",
-    "address": "地址：:",
-    "closed": "关闭",
-    "detailsLastUpdated": "上次更新的详细信息：",
-    "expandDetails": "扩展详细信息",
-    "friday": "星期五",
-    "getDirections": "获取路线",
-    "minimizeDetails": "最小化详细信息",
-    "monday": "星期一",
-    "notes": "笔记",
-    "questionsContactInfo": "问题和联系方式",
-    "saturday": "星期六",
-    "shareLocation": "定位共享",
-    "suggestAnEdit": "建议编辑",
-    "sunday": "星期天",
-    "thursday": "星期四",
-    "tuesday": "星期二",
-    "wednesday": "星期三",
-    "weeklyMenu": "每周菜单"
-  },
-  "searchBar": {
-    "noResults": "没有结果与您的搜索匹配。请重试。",
-    "searchPrompt": "在地址附近查找餐食"
-  },
-  "shareOptions": {
-    "aboutUs": "此信息由膳食 4 家庭合作带给您",
-    "findNearbySites": "使用此链接查看附近的用餐地点地图：",
-    "learnMore": "使用此链接了解更多有关免费餐食的了解：",
-    "mealSiteInfo": "请按照下面的链接查找此用餐网站的完整详细信息，包括时间和方向：",
-    "messageIntro": "为所有0-18岁的儿童提供免费餐食。和我们一起吃饭吧！",
-    "sendEmail": "发送电子邮件",
-    "sendTextMessage": "发送短信",
-    "share": "共享",
-    "shareInformationAboutMealSite": "分享有关此餐点的信息：",
-    "suggestedMealSite": "您可能对此用餐网站感兴趣："
-  },
-  "specialSite": {
-    "doorDelivery": "送货上门"
-  },
-  "themeHeaderBar": {
-    "aboutFreeMeals": "关于免费餐食"
-  }
+	"FAQs": {
+		"buttonText": "",
+		"forMoreInformation": "",
+		"hyperlinkText": ""
+	},
+	"landingPage": {
+		"aboutUs": "",
+		"findFreeMealsNearMe": "",
+		"findYourCountyAndSelectProvider": "",
+		"pleaseSelectState": "",
+		"welcomeStatement": "",
+		"youMustSelectState": ""
+	},
+	"langauges": {
+		"am": "",
+		"ar": "",
+		"bn": "",
+		"en": "",
+		"fil": "",
+		"fr": "",
+		"hi": "",
+		"hmn": "",
+		"ja": "",
+		"ko": "",
+		"mh": "",
+		"ms": "",
+		"my": "",
+		"ne": "",
+		"pl": "",
+		"pt": "",
+		"ru": "",
+		"so": "",
+		"sp": "",
+		"tg": "",
+		"ur": "",
+		"vi": "",
+		"zh": ""
+	},
+	"mapKey": {
+		"closedToday": "",
+		"mapKeyTitle": "",
+		"openToday": "",
+		"searched": "",
+		"selected": ""
+	},
+	"mapPrompts": {
+		"backToList": "",
+		"youCanNotZoomOutMore": "",
+		"zoomOut": ""
+	},
+	"mealSiteCard": {
+		"Hours": "",
+		"additionalDirections": "",
+		"address": "",
+		"closed": "",
+		"detailsLastUpdated": "",
+		"doorDelivery": "送货上门",
+		"expandDetails": "",
+		"friday": "",
+		"getDirections": "",
+		"hideDetails": "隐藏细节",
+		"minimizeDetails": "",
+		"monday": "",
+		"moreDetails": "更多细节",
+		"notes": "",
+		"questionsContactInfo": "",
+		"saturday": "",
+		"shareLocation": "",
+		"suggestAnEdit": "",
+		"sunday": "",
+		"thursday": "",
+		"tuesday": "",
+		"wednesday": "",
+		"weeklyMenu": ""
+	},
+	"searchBar": {
+		"noResults": "",
+		"searchAnotherMealProvider": "",
+		"searchPrompt": ""
+	},
+	"shareOptions": {
+		"aboutUs": "",
+		"copyLink": "",
+		"copyMessage": "",
+		"findNearbySites": "",
+		"learnMore": "",
+		"mealSiteInfo": "",
+		"messageIntro": "",
+		"sendEmail": "",
+		"sendTextMessage": "",
+		"share": "",
+		"shareInformationAboutMealSite": "",
+		"suggestedMealSite": ""
+	},
+	"specialSite": {
+		"doorDelivery": ""
+	},
+	"suggestEdit": {
+		"additionalComments": "",
+		"address": "",
+		"enterCommentsPrompt": "",
+		"hours": "",
+		"resetButton": "",
+		"siteName": "",
+		"submitForm": "",
+		"weeklyMenu": "",
+		"whatNeedsCorrecting": ""
+	},
+	"themeHeaderBar": {
+		"AboutFreeMeals": ""
+	}
 }
