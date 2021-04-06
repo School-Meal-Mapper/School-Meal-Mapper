@@ -148,6 +148,10 @@ export default {
     eventManager.$on('zoomOut', (zoomAmount) => {
       this.zoom -= zoomAmount
     })
+    window.addEventListener('resize', this.handleResize)
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
   },
   data() {
     return {
@@ -283,6 +287,9 @@ export default {
           this.$refs.useLocation.classList.add('disabled')
         }
       })
+    },
+    handleResize() {
+      location.reload()
     },
     editZoomControl() {
       const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
