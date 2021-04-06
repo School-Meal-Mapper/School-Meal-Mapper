@@ -53,7 +53,7 @@
               target="_self"
             />
           </p>
-          <opening-hours :business="business.marker" :title="$t('mealSiteCard.hours')" v-if="showFullDetails()"></opening-hours>
+          <opening-hours :business="business.marker" :title="$t('mealSiteCard.Hours')" v-if="showFullDetails()"></opening-hours>
 
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t && showFullDetails()">
             <p>
@@ -138,7 +138,8 @@ export default {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + marker.gsx$lat.$t + ',' + marker.gsx$lon.$t
     },
     showFullDetails: function () {
-      return (this.maxDetails == true && window.screen.width < 769) || window.screen.width >= 769
+      var mobile = window.matchMedia('(max-width: 768px)').matches
+      return (this.maxDetails == true && mobile) || !mobile
     },
     showMaximizeDetails: function () {
       this.maxDetails = true
