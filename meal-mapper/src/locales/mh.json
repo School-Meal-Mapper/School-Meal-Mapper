@@ -1,114 +1,115 @@
 {
-  "FAQs": {
-    "buttonText": "",
-    "forMoreInformation": "",
-    "hyperlinkText": ""
-  },
-  "landingPage": {
-    "aboutUs": "",
-    "findFreeMealsNearMe": "",
-    "findYourCountyAndSelectProvider": "",
-    "pleaseSelectState": "",
-    "welcomeStatement": "",
-    "youMustSelectState": ""
-  },
-  "langauges": {
-    "am": "",
-    "ar": "",
-    "bn": "",
-    "en": "",
-    "fil": "",
-    "fr": "",
-    "hi": "",
-    "hmn": "",
-    "ja": "",
-    "ko": "",
-    "mh": "",
-    "ms": "",
-    "my": "",
-    "ne": "",
-    "pl": "",
-    "pt": "",
-    "ru": "",
-    "so": "",
-    "sp": "",
-    "tg": "",
-    "ur": "",
-    "vi": "",
-    "zh": ""
-  },
-  "mapKey": {
-    "closedToday": "",
-    "mapKeyTitle": "",
-    "openToday": "",
-    "searched": "",
-    "selected": ""
-  },
-  "mapPrompts": {
-    "backToList": "",
-    "youCanNotZoomOutMore": "",
-    "zoomOut": ""
-  },
-  "mealSiteCard": {
-    "Hours": "",
-    "additionalDirections": "",
-    "address": "",
-    "closed": "",
-    "detailsLastUpdated": "",
-    "doorDelivery": "",
-    "expandDetails": "",
-    "friday": "",
-    "getDirections": "",
-    "hideDetails": "",
-    "minimizeDetails": "",
-    "monday": "",
-    "moreDetails": "",
-    "notes": "",
-    "questionsContactInfo": "",
-    "saturday": "",
-    "shareLocation": "",
-    "suggestAnEdit": "",
-    "sunday": "",
-    "thursday": "",
-    "tuesday": "",
-    "wednesday": "",
-    "weeklyMenu": ""
-  },
-  "searchBar": {
-    "noResults": "",
-    "searchAnotherMealProvider": "",
-    "searchPrompt": ""
-  },
-  "shareOptions": {
-    "aboutUs": "",
-    "copyLink": "",
-    "copyMessage": "",
-    "findNearbySites": "",
-    "learnMore": "",
-    "mealSiteInfo": "",
-    "messageIntro": "",
-    "sendEmail": "",
-    "sendTextMessage": "",
-    "share": "",
-    "shareInformationAboutMealSite": "",
-    "suggestedMealSite": ""
-  },
-  "specialSite": {
-    "doorDelivery": ""
-  },
-  "suggestEdit": {
-    "additionalComments": "",
-    "address": "",
-    "enterCommentsPrompt": "",
-    "hours": "",
-    "resetButton": "",
-    "siteName": "",
-    "submitForm": "",
-    "suggestEditTitle": "",
-    "weeklyMenu": "",
-    "whatNeedsCorrecting": ""
-  },
-  "themeHeaderBar": {
-    "AboutFreeMeals": ""
-  }
+	"FAQs": {
+		"buttonText": "",
+		"forMoreInformation": "",
+		"hyperlinkText": ""
+	},
+	"landingPage": {
+		"aboutUs": "",
+		"findFreeMealsNearMe": "",
+		"findYourCountyAndSelectProvider": "",
+		"pleaseSelectState": "",
+		"welcomeStatement": "",
+		"youMustSelectState": ""
+	},
+	"languages": {
+		"am": "",
+		"ar": "",
+		"bn": "",
+		"en": "",
+		"es": "",
+		"fil": "",
+		"fr": "",
+		"hi": "",
+		"hmn": "",
+		"ja": "",
+		"ko": "",
+		"mh": "",
+		"ms": "",
+		"my": "",
+		"ne": "",
+		"pl": "",
+		"pt": "",
+		"ru": "",
+		"so": "",
+		"sp": "",
+		"tg": "",
+		"ur": "",
+		"vi": "",
+		"zh": ""
+	},
+	"mapKey": {
+		"closedToday": "",
+		"mapKeyTitle": "",
+		"openToday": "",
+		"searched": "",
+		"selected": ""
+	},
+	"mapPrompts": {
+		"backToList": "",
+		"youCanNotZoomOutMore": "",
+		"zoomOut": ""
+	},
+	"mealSiteCard": {
+		"Hours": "",
+		"additionalDirections": "",
+		"address": "",
+		"closed": "",
+		"detailsLastUpdated": "",
+		"doorDelivery": "",
+		"expandDetails": "",
+		"friday": "",
+		"getDirections": "",
+		"hideDetails": "",
+		"minimizeDetails": "",
+		"monday": "",
+		"moreDetails": "",
+		"notes": "",
+		"questionsContactInfo": "",
+		"saturday": "",
+		"shareLocation": "",
+		"suggestAnEdit": "",
+		"sunday": "",
+		"thursday": "",
+		"tuesday": "",
+		"wednesday": "",
+		"weeklyMenu": ""
+	},
+	"searchBar": {
+		"noResults": "",
+		"searchAnotherMealProvider": "",
+		"searchPrompt": ""
+	},
+	"shareOptions": {
+		"aboutUs": "",
+		"copyLink": "",
+		"copyMessage": "",
+		"findNearbySites": "",
+		"learnMore": "",
+		"mealSiteInfo": "",
+		"messageIntro": "",
+		"sendEmail": "",
+		"sendTextMessage": "",
+		"share": "",
+		"shareInformationAboutMealSite": "",
+		"suggestedMealSite": ""
+	},
+	"specialSite": {
+		"doorDelivery": ""
+	},
+	"suggestEdit": {
+		"additionalComments": "",
+		"address": "",
+		"enterCommentsPrompt": "",
+		"hours": "",
+		"resetButton": "",
+		"siteName": "",
+		"submitForm": "",
+		"suggestEditTitle": "",
+		"weeklyMenu": "",
+		"whatNeedsCorrecting": ""
+	},
+	"themeHeaderBar": {
+		"AboutFreeMeals": ""
+	}
 }

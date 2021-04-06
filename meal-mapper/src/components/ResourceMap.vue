@@ -286,7 +286,8 @@ export default {
     },
     editZoomControl() {
       const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
-      if (window.screen.width >= 769) {
+      var mobile = window.matchMedia('(max-width: 768px)').matches
+      if (!mobile) {
         zoomControl.className = 'leaflet-bottom leaflet-right'
       } else {
         zoomControl.className = 'leaflet-bottom leaflet-left'
