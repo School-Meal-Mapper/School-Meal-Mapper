@@ -1,6 +1,7 @@
 {
   "FAQs": {
     "buttonText": "मुफ्त भोजन के बारे में",
+    "forMoreInformation": "मुफ्त भोजन के बारे में अधिक जानकारी के लिए अपने स्थानीय भोजन प्रदाता से जुड़ें।",
     "hyperlinkText": "प्रश्न और संपर्क जानकारी"
   },
   "landingPage": {
@@ -11,6 +12,32 @@
     "welcomeStatement": "Meal4Famili में आपका स्वागत है!",
     "youMustSelectState": "भोजन प्रदाता चुनने से पहले आपको एक राज्य का चयन करना होगा।"
   },
+  "languages": {
+    "am": "अम्हारिक्",
+    "ar": "अरबी",
+    "bn": "बंगाली",
+    "en": "अंग्रेज़ी",
+    "es": "स्पेनिश",
+    "fil": "फिलिपिनो",
+    "fr": "फ्रेंच",
+    "hi": "हिंदी",
+    "hmn": "हमोंग",
+    "ja": "जापानी",
+    "ko": "कोरियाई",
+    "mh": "मार्शलीज़",
+    "ms": "मलायी",
+    "my": "बर्मी",
+    "ne": "नेपाली",
+    "pl": "पोलिश",
+    "pt": "पुर्तगाली",
+    "ru": "रूसी",
+    "so": "सोमाली",
+    "sp": "स्पेनिश",
+    "tg": "तागालोग",
+    "ur": "उर्दू",
+    "vi": "वियतनामी",
+    "zh": "चीनी"
+  },
   "mapKey": {
     "closedToday": "आज बंद",
     "mapKeyTitle": "मैप की",
@@ -20,18 +47,23 @@
   },
   "mapPrompts": {
     "backToList": "सूची में लौटें।",
-    "youCanNotZoomOutMore": "आप अधिक ज़ूम नहीं कर सकते।"
+    "youCanNotZoomOutMore": "आप अधिक ज़ूम नहीं कर सकते।",
+    "zoomOut": "अधिक परिणामों के लिए ज़ूम आउट करें।"
   },
   "mealSiteCard": {
-    "hours": "घंटे",
+    "Hours": "घंटे",
+    "additionalDirections": "हमें कहां खोजना है",
     "address": "पता:",
     "closed": "बंद",
     "detailsLastUpdated": "विवरण अंतिम अपडेट किया गया:",
+    "doorDelivery": "डोर डिलीवरी",
     "expandDetails": "विवरण का विस्तार करें",
     "friday": "शुक्रवार",
     "getDirections": "निर्देश प्राप्त करें",
+    "hideDetails": "जानकारी छिपाएँ",
     "minimizeDetails": "विवरण कम से कम",
     "monday": "सोमवार",
+    "moreDetails": "अधिक जानकारी",
     "notes": "नोट्स",
     "questionsContactInfo": "प्रश्न और संपर्क जानकारी",
     "saturday": "शानिवार",
@@ -45,10 +77,13 @@
   },
   "searchBar": {
     "noResults": "कोई परिणाम आपकी खोज से मेल नहीं खाते हैं। कृपया फिर से प्रयास करें।",
+    "searchAnotherMealProvider": "या इस मानचित्र क्षेत्र के बाहर भोजन खोजें।",
     "searchPrompt": "पते के पास भोजन का पता लगाएं"
   },
   "shareOptions": {
     "aboutUs": "यह जानकारी के साथ साझेदारी में भोजन 4Families द्वारा आप के लिए लाया जाता है",
+    "copyLink": "प्रतिरूप जोड़ना",
+    "copyMessage": "संदेश की प्रतिलिपि बनाएँ",
     "findNearbySites": "आस-पास की भोजन साइटों का नक्शा देखने के लिए इस लिंक का उपयोग करें:",
     "learnMore": "मुफ्त भोजन के बारे में अधिक जानने के लिए इस लिंक का उपयोग करें:",
     "mealSiteInfo": "घंटे और निर्देश सहित इस भोजन साइट के लिए पूरा विवरण खोजने के लिए नीचे दिए गए लिंक का पालन करें:",
@@ -62,7 +97,19 @@
   "specialSite": {
     "doorDelivery": "दरवाजा वितरण"
   },
+  "suggestEdit": {
+    "additionalComments": "अतिरिक्त टिप्पणियां",
+    "address": "पता",
+    "enterCommentsPrompt": "गलत या गुम जानकारी का वर्णन करें।",
+    "hours": "घंटे",
+    "resetButton": "स्पष्ट प्रपत्र",
+    "siteName": "भोजन स्थल का नाम",
+    "submitForm": "जमा करें",
+    "suggestEditTitle": "एक संपादित सुझाव दें",
+    "weeklyMenu": "साप्ताहिक मेनू से लिंक करें",
+    "whatNeedsCorrecting": "इस भोजन स्थल को सही करने के लिए हमें क्या जानकारी चाहिए?"
+  },
   "themeHeaderBar": {
-    "aboutFreeMeals": "मुफ्त भोजन के बारे में"
+    "AboutFreeMeals": "मुफ्त भोजन के बारे में"
   }
 }

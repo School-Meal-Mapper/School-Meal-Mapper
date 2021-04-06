@@ -1,6 +1,7 @@
 {
   "FAQs": {
     "buttonText": "Mengenai Makanan Percuma",
+    "forMoreInformation": "Berhubung dengan penyedia makanan tempatan anda untuk maklumat lebih lanjut mengenai makanan percuma.",
     "hyperlinkText": "Soalan dan maklumat hubungan"
   },
   "landingPage": {
@@ -11,6 +12,32 @@
     "welcomeStatement": "Selamat Datang di Meals4Families!",
     "youMustSelectState": "Anda mesti memilih keadaan sebelum memilih pembekal makanan."
   },
+  "languages": {
+    "am": "Bahasa Amharic",
+    "ar": "Bahasa Arab",
+    "bn": "Bengali",
+    "en": "Bahasa Inggeris",
+    "es": "Sepanyol",
+    "fil": "Orang Filipina",
+    "fr": "Perancis",
+    "hi": "Hindi",
+    "hmn": "Hmong",
+    "ja": "Jepun",
+    "ko": "Korea",
+    "mh": "Marshallese",
+    "ms": "Melayu",
+    "my": "Burma",
+    "ne": "Orang Nepal",
+    "pl": "Poland",
+    "pt": "Portugis",
+    "ru": "Rusia",
+    "so": "Orang Somalia",
+    "sp": "Sepanyol",
+    "tg": "Bahasa Tagalog",
+    "ur": "Urdu",
+    "vi": "Vietnam",
+    "zh": "Cina"
+  },
   "mapKey": {
     "closedToday": "ditutup hari ini",
     "mapKeyTitle": "Kekunci Peta",
@@ -20,18 +47,23 @@
   },
   "mapPrompts": {
     "backToList": "Kembali ke senarai.",
-    "youCanNotZoomOutMore": "Anda tidak boleh zum keluar lebih."
+    "youCanNotZoomOutMore": "Anda tidak boleh zum keluar lebih.",
+    "zoomOut": "Zum keluar untuk mendapatkan lebih banyak hasil."
   },
   "mealSiteCard": {
-    "hours": "Jam",
+    "Hours": "Jam",
+    "additionalDirections": "Di mana untuk mencari kami",
     "address": "Alamat:",
     "closed": "ditutup",
     "detailsLastUpdated": "Butiran terakhir dikemaskini:",
+    "doorDelivery": "Penghantaran Pintu",
     "expandDetails": "Kembangkan Butiran",
     "friday": "Jumaat",
     "getDirections": "Dapatkan arahan",
+    "hideDetails": "Sembunyikan butiran",
     "minimizeDetails": "Minimumkan Butiran",
     "monday": "Isnin",
+    "moreDetails": "Maklumat lanjut",
     "notes": "Nota",
     "questionsContactInfo": "Pertanyaan dan maklumat hubungan",
     "saturday": "Sabtu",
@@ -45,10 +77,13 @@
   },
   "searchBar": {
     "noResults": "Tiada keputusan yang sepadan dengan carian anda. Sila cuba lagi.",
+    "searchAnotherMealProvider": "Atau cari makanan di luar kawasan peta ini.",
     "searchPrompt": "Cari makanan berhampiran alamat"
   },
   "shareOptions": {
     "aboutUs": "Maklumat ini dibawa kepada anda oleh Meals4Families dengan kerjasama",
+    "copyLink": "SALIN PAUTAN",
+    "copyMessage": "Salin mesej",
     "findNearbySites": "Gunakan pautan ini untuk melihat peta tapak makan berdekatan:",
     "learnMore": "Gunakan pautan ini untuk mengetahui lebih lanjut tentang makanan percuma:",
     "mealSiteInfo": "Ikuti pautan di bawah untuk mencari butiran penuh untuk tapak makan ini termasuk jam dan arah:",
@@ -62,7 +97,19 @@
   "specialSite": {
     "doorDelivery": "Penghantaran Pintu"
   },
+  "suggestEdit": {
+    "additionalComments": "Komen tambahan",
+    "address": "Alamat",
+    "enterCommentsPrompt": "Huraikan maklumat yang salah atau tidak ada.",
+    "hours": "Jam",
+    "resetButton": "Bentuk yang jelas",
+    "siteName": "Nama laman web makanan",
+    "submitForm": "mengemukakan",
+    "suggestEditTitle": "Cadangkan pengeditan",
+    "weeklyMenu": "Pautan ke menu mingguan",
+    "whatNeedsCorrecting": "Maklumat apa yang perlu kita betulkan untuk laman makan ini?"
+  },
   "themeHeaderBar": {
-    "aboutFreeMeals": "Mengenai Makanan Percuma"
+    "AboutFreeMeals": "Mengenai Makanan Percuma"
   }
 }

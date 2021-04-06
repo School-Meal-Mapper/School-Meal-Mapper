@@ -1,6 +1,7 @@
 {
   "FAQs": {
     "buttonText": "À propos des repas gratuits",
+    "forMoreInformation": "Contactez votre fournisseur de repas local pour plus d'informations sur les repas gratuits.",
     "hyperlinkText": "Questions et coordonnées"
   },
   "landingPage": {
@@ -11,6 +12,32 @@
     "welcomeStatement": "Bienvenue à Meals4Families!",
     "youMustSelectState": "Vous devez sélectionner un état avant de choisir un fournisseur de repas."
   },
+  "languages": {
+    "am": "Amharique",
+    "ar": "Arabe",
+    "bn": "bengali",
+    "en": "Anglais",
+    "es": "Espanol",
+    "fil": "Philippin",
+    "fr": "français",
+    "hi": "Hindi",
+    "hmn": "Hmong",
+    "ja": "japonais",
+    "ko": "coréen",
+    "mh": "Marshallese",
+    "ms": "malais",
+    "my": "birman",
+    "ne": "Népalais",
+    "pl": "polonais",
+    "pt": "Portugais",
+    "ru": "russe",
+    "so": "Somali",
+    "sp": "Espanol",
+    "tg": "tagalog",
+    "ur": "Ourdou",
+    "vi": "vietnamien",
+    "zh": "chinois"
+  },
   "mapKey": {
     "closedToday": "fermé aujourd’hui",
     "mapKeyTitle": "Clé de carte",
@@ -20,35 +47,43 @@
   },
   "mapPrompts": {
     "backToList": "Retour à la liste.",
-    "youCanNotZoomOutMore": "Vous ne pouvez pas effectuer de zoom arrière plus."
+    "youCanNotZoomOutMore": "Vous ne pouvez pas effectuer de zoom arrière plus.",
+    "zoomOut": "Zoom arrière pour plus de résultats."
   },
   "mealSiteCard": {
-    "hours": "heures",
+    "Hours": "heures",
+    "additionalDirections": "Où nous trouver",
     "address": "Adresse:",
     "closed": "Fermé",
     "detailsLastUpdated": "Détails dernière mise à jour:",
+    "doorDelivery": "Livraison à la porte",
     "expandDetails": "Détails d’expansion",
     "friday": "Vendredi",
     "getDirections": "Obtenir des directions",
+    "hideDetails": "cacher les détails",
     "minimizeDetails": "Minimiser les détails",
     "monday": "Lundi",
+    "moreDetails": "Plus de détails",
     "notes": "Notes",
     "questionsContactInfo": "Questions et coordonnées",
     "saturday": "samedi",
     "shareLocation": "Emplacement partagé",
     "suggestAnEdit": "Suggérer une modification",
     "sunday": "dimanche",
-    "thursday": "jeudi",
-    "tuesday": "mardi",
-    "wednesday": "mercredi",
+    "thursday": "JEUDI",
+    "tuesday": "Mardi",
+    "wednesday": "Mercredi",
     "weeklyMenu": "Menu de la semaine"
   },
   "searchBar": {
     "noResults": "Aucun résultat ne correspond à votre recherche. S’ll vous plaît, réessaiez.",
+    "searchAnotherMealProvider": "Ou trouvez des repas en dehors de cette zone de la carte.",
     "searchPrompt": "Trouver des repas près de l’adresse"
   },
   "shareOptions": {
     "aboutUs": "Ces informations vous sont fournies par Meals4Families en partenariat avec",
+    "copyLink": "Copier le lien",
+    "copyMessage": "Copier le message",
     "findNearbySites": "Utilisez ce lien pour voir une carte des sites de repas à proximité :",
     "learnMore": "Utilisez ce lien pour en savoir plus sur les repas gratuits :",
     "mealSiteInfo": "Suivez le lien ci-dessous pour trouver tous les détails pour ce site de repas, y compris les heures et les directions:",
@@ -62,7 +97,19 @@
   "specialSite": {
     "doorDelivery": "Livraison de porte"
   },
+  "suggestEdit": {
+    "additionalComments": "Commentaires supplémentaires",
+    "address": "Adresse",
+    "enterCommentsPrompt": "Décrivez les informations incorrectes ou manquantes.",
+    "hours": "heures",
+    "resetButton": "Forme claire",
+    "siteName": "Nom du site de repas",
+    "submitForm": "Soumettre",
+    "suggestEditTitle": "Suggérer une modification",
+    "weeklyMenu": "Lien vers le menu hebdomadaire",
+    "whatNeedsCorrecting": "Quelles informations devons-nous corriger pour ce site de repas?"
+  },
   "themeHeaderBar": {
-    "aboutFreeMeals": "À propos des repas gratuits"
+    "AboutFreeMeals": "À propos des repas gratuits"
   }
 }

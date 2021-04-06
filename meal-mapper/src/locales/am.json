@@ -1,6 +1,7 @@
 {
   "FAQs": {
     "buttonText": "ስለ ነፃ ምግቦች",
+    "forMoreInformation": "በነፃ ምግቦች ላይ የበለጠ መረጃ ለማግኘት ከአከባቢዎ ምግብ አቅራቢ ጋር ይገናኙ።",
     "hyperlinkText": "ጥያቄዎች እና የእውቂያ መረጃ"
   },
   "landingPage": {
@@ -11,6 +12,32 @@
     "welcomeStatement": "ወደ Meals4Families እንኳን በደህና መጡ!",
     "youMustSelectState": "የምግብ አቅራቢን ከመምረጥዎ በፊት ክልል መምረጥ አለብዎት ፡፡"
   },
+  "languages": {
+    "am": "አማርኛ",
+    "ar": "አረብኛ",
+    "bn": "ቤንጋሊ",
+    "en": "እንግሊዝኛ",
+    "es": "ስፓንኛ",
+    "fil": "ፊሊፒንስ",
+    "fr": "ፈረንሳይኛ",
+    "hi": "ሂንዲ",
+    "hmn": "ሕሞንግ",
+    "ja": "ጃፓንኛ",
+    "ko": "ኮሪያኛ",
+    "mh": "Marshallese",
+    "ms": "ማላይ",
+    "my": "በርሚስ",
+    "ne": "ኔፓሊ",
+    "pl": "ፖሊሽ",
+    "pt": "ፖርቹጋልኛ",
+    "ru": "ራሺያኛ",
+    "so": "ሶማሌ",
+    "sp": "ስፓንኛ",
+    "tg": "ታንጋሎግ",
+    "ur": "ኡርዱ",
+    "vi": "ቪትናሜሴ",
+    "zh": "ቻይንኛ"
+  },
   "mapKey": {
     "closedToday": "ዛሬ ተዘግቷል",
     "mapKeyTitle": "የካርታ ቁልፍ",
@@ -20,18 +47,23 @@
   },
   "mapPrompts": {
     "backToList": "ወደ ዝርዝር ተመለስ ፡፡",
-    "youCanNotZoomOutMore": "የበለጠ ማጉላት አይችሉም።"
+    "youCanNotZoomOutMore": "የበለጠ ማጉላት አይችሉም።",
+    "zoomOut": "ለተጨማሪ ውጤቶች ያጉሉ።"
   },
   "mealSiteCard": {
-    "hours": "ሰዓታት",
+    "Hours": "ሰዓታት",
+    "additionalDirections": "እኛን ለማግኘት የት",
     "address": "አድራሻ",
     "closed": "ዝግ",
     "detailsLastUpdated": "ዝርዝሮች ለመጨረሻ ጊዜ የዘመኑ",
+    "doorDelivery": "በር ማድረስ",
     "expandDetails": "ዝርዝሮችን ዘርጋ",
     "friday": "አርብ",
     "getDirections": "አቅጣጫዎችን ያግኙ",
+    "hideDetails": "ዝርዝሮችን ደብቅ",
     "minimizeDetails": "ዝርዝሮችን አሳንሱ",
     "monday": "ሰኞ",
+    "moreDetails": "ተጨማሪ ዝርዝሮች",
     "notes": "ማስታወሻዎች",
     "questionsContactInfo": "ጥያቄዎች እና የእውቂያ መረጃ",
     "saturday": "ቅዳሜ",
@@ -45,10 +77,13 @@
   },
   "searchBar": {
     "noResults": "ከፍለጋዎ ጋር የሚዛመዱ ውጤቶች የሉም። እባክዎ ዳግም ይሞክሩ.",
+    "searchAnotherMealProvider": "ወይም ከዚህ ካርታ አካባቢ ውጭ ምግብ ይፈልጉ ፡፡",
     "searchPrompt": "በአድራሻ አቅራቢያ ምግብ ይፈልጉ"
   },
   "shareOptions": {
     "aboutUs": "ይህ መረጃ በ Meals4Families አማካኝነት በመተባበር ያመጣዎታል",
+    "copyLink": "አገናኝ ቅዳ",
+    "copyMessage": "መልእክት ቅዳ",
     "findNearbySites": "በአቅራቢያ ያሉ የምግብ ጣቢያዎችን ካርታ ለማየት ይህንን አገናኝ ይጠቀሙ-",
     "learnMore": "ስለ ነፃ ምግቦች የበለጠ ለመረዳት ይህንን አገናኝ ይጠቀሙ-",
     "mealSiteInfo": "ሰዓታት እና አቅጣጫዎችን ጨምሮ ለዚህ ምግብ ጣቢያ ሙሉ ዝርዝሮችን ለማግኘት ከዚህ በታች ያለውን አገናኝ ይከተሉ-",
@@ -62,7 +97,19 @@
   "specialSite": {
     "doorDelivery": "በር ማድረስ"
   },
+  "suggestEdit": {
+    "additionalComments": "ተጨማሪ አስተያየቶች",
+    "address": "አድራሻ",
+    "enterCommentsPrompt": "የተሳሳተ ወይም የጠፋ መረጃ ይግለጹ ፡፡",
+    "hours": "ሰዓታት",
+    "resetButton": "ቅጽ ይጥረጉ",
+    "siteName": "የምግብ ጣቢያ ስም",
+    "submitForm": "ያስገቡ",
+    "suggestEditTitle": "አርትዖት ይጠቁሙ",
+    "weeklyMenu": "ወደ ሳምንታዊ ምናሌ አገናኝ",
+    "whatNeedsCorrecting": "ለዚህ ምግብ ጣቢያ ለማስተካከል ምን መረጃ ያስፈልገናል?"
+  },
   "themeHeaderBar": {
-    "aboutFreeMeals": "ስለ ነፃ ምግቦች"
+    "AboutFreeMeals": "ስለ ነፃ ምግቦች"
   }
 }

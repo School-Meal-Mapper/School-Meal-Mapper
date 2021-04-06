@@ -14,7 +14,19 @@
         @update:zoom="zoomUpdated"
         @update:bounds="boundsUpdated"
       >
-        <l-control position="topright">
+        <l-control position="topright" class="hideMobile">
+          <div class="mapkey" :class="{ 'show-key': showKey }">
+            <div class="title-block">
+              <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
+              <i @click="showKey = !showKey" class="fas fa-info-circle" v-if="!showKey" />
+              <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
+            </div>
+            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
+              <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
+            </div>
+          </div>
+        </l-control>
+        <l-control position="bottomright" class="showMobile">
           <div class="mapkey" :class="{ 'show-key': showKey }">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
@@ -68,7 +80,12 @@
             "
           ></l-marker>
         </v-marker-cluster>
-        <l-control position="bottomright" class="user-location-button">
+        <l-control position="bottomright" class="hideMobile user-location-button">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
+            <i class="fas fa-location-arrow"></i>
+          </a>
+        </l-control>
+        <l-control position="bottomleft" class="showMobile user-location-button">
           <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
             <i class="fas fa-location-arrow"></i>
           </a>
@@ -131,6 +148,10 @@ export default {
     eventManager.$on('zoomOut', (zoomAmount) => {
       this.zoom -= zoomAmount
     })
+    window.addEventListener('resize', this.handleResize)
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
   },
   data() {
     return {
@@ -227,6 +248,7 @@ export default {
       })
       return icon
     },
+
     locationIcon() {
       const icon = ExtraMarkers.icon({
         markerColor: 'pink',
@@ -266,9 +288,17 @@ export default {
         }
       })
     },
+    handleResize() {
+      location.reload()
+    },
     editZoomControl() {
       const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
-      zoomControl.className = 'leaflet-bottom leaflet-right'
+      var mobile = window.matchMedia('(max-width: 768px)').matches
+      if (!mobile) {
+        zoomControl.className = 'leaflet-bottom leaflet-right'
+      } else {
+        zoomControl.className = 'leaflet-bottom leaflet-left'
+      }
     },
     circleRadius() {
       var radius = 8
@@ -375,7 +405,25 @@ export default {
   fill-opacity: 1;
   cursor: grab !important;
 }
+.hideMobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
 
+.showMobile {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.zoom {
+  @media (min-width: 769px) {
+    margin-right: 0px !important;
+  }
+  @media (max-width: 768px) {
+    margin-left: 0px !important;
+  }
+}
 .alert-warning {
   @media (prefers-color-scheme: dark) {
     background-color: theme-color-level('warning', 2) !important;
@@ -484,9 +532,13 @@ div.markeropen svg path {
 .location-alert {
   position: absolute;
   bottom: 0px;
+  top: 45px;
   left: calc(50% - 175px);
   width: 350px;
   z-index: 1000;
+  @media (max-width: 768px) {
+    z-index: 50000000;
+  }
 }
 .leaflet-bottom .leaflet-control-zoom {
   margin-bottom: 26px !important;
@@ -503,11 +555,13 @@ div.markeropen svg path {
     background-color: $gray-300 !important;
   }
 }
+
 .user-location-button {
   bottom: 68px !important;
   right: 2px !important;
-  @media (min-width: 768px) {
-    right: 0px !important;
+  @media (max-width: 768px) {
+    bottom: 82px !important;
+    left: 2px !important;
   }
 }
 .user-location-link {

@@ -1,23 +1,22 @@
 <template>
   <b-modal id="suggest-edit" size="lg" dialog-class="m-0 m-md-auto" centered scrollable>
     <template v-slot:modal-title>
-      {{ $t('suggest-edit.edit') }}
+      {{ $t('suggestEdit.suggestEditTitle') }}
     </template>
     <p v-if="currentBusiness !== null">
-      {{ $t('suggest-edit.instructions-1') }} <b>{{ currentBusiness.marker.gsx$mealsitename.$t }}</b>
-      {{ $t('suggest-edit.instructions-2') }}
+      {{ $t('suggestEdit.whatNeedsCorrecting') }}
     </p>
     <div>
       <b-form-group>
         <b-form-checkbox-group id="checkbox-group-1" v-model="selected" :options="options" name="flavour-1"></b-form-checkbox-group>
       </b-form-group>
-      {{ $t('suggest-edit.additional-comments') }}
-      <b-form-input v-model="text" :placeholder="$t('suggest-edit.enter-comments')"></b-form-input>
+      {{ $t('suggestEdit.additionalComments') }}
+      <b-form-input v-model="text" :placeholder="$t('suggestEdit.enterCommentsPrompt')"></b-form-input>
     </div>
     <template v-slot:modal-footer>
       <div class="w-100">
-        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">{{ $t('suggest-edit.submit') }}</b-button>
-        <b-button variant="danger" class="float-left" @click="reset()">{{ $t('suggest-edit.reset') }}</b-button>
+        <b-button variant="primary" class="float-right" @click="submitForm(currentBusiness)">{{ $t('suggestEdit.submitForm') }}</b-button>
+        <b-button variant="danger" class="float-left" @click="reset()">{{ $t('suggestEdit.resetButton') }}</b-button>
       </div>
     </template>
   </b-modal>
@@ -33,11 +32,12 @@ export default {
     return {
       selected: [],
       options: [
-        { text: this.$tc('suggest-edit.name'), value: 'name' },
-        { text: this.$tc('suggest-edit.address'), value: 'address' },
+        { text: this.$tc('suggestEdit.siteName'), value: 'name' },
+        { text: this.$tc('suggestEdit.address'), value: 'address' },
+        /*
         { text: this.$tc('suggest-edit.contact'), value: 'contact' },
-        { text: this.$tc('suggest-edit.social'), value: 'social' },
-        { text: this.$tc('suggest-edit.hours'), value: 'hours' }
+        { text: this.$tc('suggestedit.social'), value: 'social' },*/
+        { text: this.$tc('suggestEdit.hours'), value: 'hours' }
       ],
       text: ''
     }

@@ -79,7 +79,7 @@
 
           <p v-if="maxDetails">
             <b-button variant="outline-primary" size="sm" class="suggest-edit" @click="$bvModal.show('suggest-edit')">{{
-              $t('suggest-edit.edit')
+              $t('suggestEdit.suggestEditTitle')
             }}</b-button>
           </p>
 

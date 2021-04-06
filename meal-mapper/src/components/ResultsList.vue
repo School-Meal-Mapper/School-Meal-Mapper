@@ -4,7 +4,7 @@
       <b-list-group-item variant="sideNav">
         <form>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.otherDistrict') }}</a>
+          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.searchAnotherMealProvider') }}</a>
         </form>
       </b-list-group-item>
     </b-list-group>
@@ -19,7 +19,7 @@
         :hasFaqs="hasFaqs"
       ></BusinessDetails>
     </div>
-
+    <!--
     <BusinessDetailsMobile
       :infotype="'green'"
       :icon="'fa-tractor'"
@@ -27,7 +27,7 @@
       :closedMessage="getClosedMessage()"
       v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
-    ></BusinessDetailsMobile>
+    ></BusinessDetailsMobile>-->
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
@@ -97,7 +97,7 @@ import { days } from '../constants'
 import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
 import { districtData } from '../themes/MealsForFamilies/districtData' // Hardcoded in to Meals For Families theme.
-import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
+//import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
 
 export default {
   name: 'ResultsList',
@@ -113,8 +113,8 @@ export default {
     }
   },
   components: {
-    BusinessDetails,
-    BusinessDetailsMobile
+    BusinessDetails
+    //BusinessDetailsMobile
   },
   props: {
     filteredMarkers: Array,
