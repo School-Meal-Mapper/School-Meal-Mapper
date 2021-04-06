@@ -1,7 +1,7 @@
 <template>
   <b-modal id="suggest-edit" size="lg" dialog-class="m-0 m-md-auto" centered scrollable>
     <template v-slot:modal-title>
-      {{ $t('suggest-edit.edit') }}
+      {{ $t('suggestEdit.suggestEditTitle') }}
     </template>
     <p v-if="currentBusiness !== null">
       {{ $t('suggestEdit.whatNeedsCorrecting') }}
