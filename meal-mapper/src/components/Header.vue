@@ -43,8 +43,7 @@
         -->
         <b-navbar-nav v-if="window.width > 991">
           <b-nav-item href="#" v-for="item in filteredLangs" v-bind:key="item.iso" class="d-lg-block d-xl-block">
-            <!--<span :title="$t('languages.' + item.iso)">-->
-            <span :title="item.name">
+            <span :title="$t('languages.' + item.iso)">
               <div
                 v-html="item.name"
                 :lang="item.iso"
@@ -99,16 +98,16 @@ export default {
         { iso: 'ms', name: 'ဗမာ' },
         { iso: 'hi', name: 'हिंदी' },
         { iso: 'vi', name: 'tiếng việt' },
-        { iso: 'bn', name: 'bn' },
-        { iso: 'hmn', name: 'hmn' },
-        { iso: 'my', name: 'my' },
-        { iso: 'ne', name: 'ne' },
-        { iso: 'pl', name: 'pl' },
-        { iso: 'pt', name: 'pt' },
-        { iso: 'ru', name: 'ru' },
-        { iso: 'rw', name: 'rw' },
-        { iso: 'so', name: 'so' },
-        { iso: 'ur', name: 'ur' }
+        { iso: 'bn', name: 'বাংলা' },
+        { iso: 'hmn', name: 'Hmong' },
+        { iso: 'am', name: 'አማርኛ' },
+        { iso: 'my', name: 'ဗမာ' },
+        { iso: 'ne', name: 'नेपाली' },
+        { iso: 'pl', name: 'Polskie' },
+        { iso: 'pt', name: 'português' },
+        { iso: 'ru', name: 'русский' },
+        { iso: 'so', name: 'Soomaali' },
+        { iso: 'ur', name: 'اردو' }
       ],
       text: '',
       window: {
