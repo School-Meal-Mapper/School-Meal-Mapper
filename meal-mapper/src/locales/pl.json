@@ -1,115 +1,115 @@
 {
-	"FAQs": {
-		"buttonText": "O darmowych posiłkach",
-		"forMoreInformation": "Skontaktuj się z lokalnym dostawcą posiłków, aby uzyskać więcej informacji na temat bezpłatnych posiłków.",
-		"hyperlinkText": "Pytania i dane kontaktowe"
-	},
-	"landingPage": {
-		"aboutUs": "O nas",
-		"findFreeMealsNearMe": "Znajdź darmowe posiłki w pobliżu!",
-		"findYourCountyAndSelectProvider": "Wybierz dostawcę posiłków w swoim powiecie.",
-		"pleaseSelectState": "Wybierz swój stan.",
-		"welcomeStatement": "Witamy w Meals4Families!",
-		"youMustSelectState": "Przed wybraniem dostawcy posiłku należy wybrać stan."
-	},
-	"languages": {
-		"am": "amharski",
-		"ar": "arabski",
-		"bn": "bengalski",
-		"en": "język angielski",
-		"es": "hiszpański",
-		"fil": "Filipiński",
-		"fr": "Francuski",
-		"hi": "hinduski",
-		"hmn": "Hmong",
-		"ja": "język japoński",
-		"ko": "koreański",
-		"mh": "Marshallese",
-		"ms": "malajski",
-		"my": "Birmańczyk",
-		"ne": "Nepalski",
-		"pl": "Polskie",
-		"pt": "portugalski",
-		"ru": "rosyjski",
-		"so": "Somalijski",
-		"sp": "hiszpański",
-		"tg": "Tagalog",
-		"ur": "Urdu",
-		"vi": "wietnamski",
-		"zh": "chiński"
-	},
-	"mapKey": {
-		"closedToday": "zamknięte dzisiaj",
-		"mapKeyTitle": "Klucz mapy",
-		"openToday": "otwarte dzisiaj",
-		"searched": "Przeszukiwane",
-		"selected": "Wybrane"
-	},
-	"mapPrompts": {
-		"backToList": "Powrót do listy.",
-		"youCanNotZoomOutMore": "Nie można pomniejszyć więcej.",
-		"zoomOut": "Pomniejsz, aby uzyskać więcej wyników."
-	},
-	"mealSiteCard": {
-		"Hours": "Godzin",
-		"additionalDirections": "Gdzie nas znaleźć",
-		"address": "adres:",
-		"closed": "Zamknięta",
-		"detailsLastUpdated": "Szczegóły ostatnio aktualizowane:",
-		"doorDelivery": "Dostawa do drzwi",
-		"expandDetails": "Rozwiń szczegóły",
-		"friday": "piątek",
-		"getDirections": "Dojazd",
-		"hideDetails": "Ukryj szczegóły",
-		"minimizeDetails": "Minimalizowanie szczegółów",
-		"monday": "poniedziałek",
-		"moreDetails": "Więcej szczegółów",
-		"notes": "Notatki",
-		"questionsContactInfo": "Pytania i dane kontaktowe",
-		"saturday": "sobota",
-		"shareLocation": "Udostępnij lokalizację",
-		"suggestAnEdit": "Zaproponuj edycję",
-		"sunday": "niedziela",
-		"thursday": "czwartek",
-		"tuesday": "wtorek",
-		"wednesday": "środa",
-		"weeklyMenu": "Cotygodniowe menu"
-	},
-	"searchBar": {
-		"noResults": "Brak wyników dopasowanych do wyszukiwania. Spróbuj ponownie.",
-		"searchAnotherMealProvider": "Lub znajdź posiłki poza tym obszarem mapy.",
-		"searchPrompt": "Znajdź posiłki w pobliżu adresu"
-	},
-	"shareOptions": {
-		"aboutUs": "Informacje te są przenoszone przez Meals4Families we współpracy z",
-		"copyLink": "Skopiuj link",
-		"copyMessage": "Skopiuj wiadomość",
-		"findNearbySites": "Użyj tego linku, aby wyświetlić mapę pobliskich witryn posiłków:",
-		"learnMore": "Skorzystaj z tego linku, aby dowiedzieć się więcej o darmowych posiłkach:",
-		"mealSiteInfo": "Skorzystaj z poniższego linku, aby znaleźć szczegółowe informacje na temat tej strony posiłku, w tym godziny i wskazówki:",
-		"messageIntro": "oferuje bezpłatne posiłki dla wszystkich dzieci w wieku od 0 do 18 lat. Dołącz do nas na posiłek!",
-		"sendEmail": "Wyślij e-mail",
-		"sendTextMessage": "Wyślij wiadomość tekstową",
-		"share": "Udostępnij",
-		"shareInformationAboutMealSite": "Podziel się informacjami o tej stronie posiłku:",
-		"suggestedMealSite": "Możesz być zainteresowany w tej stronie posiłek:"
-	},
-	"specialSite": {
-		"doorDelivery": "Dostawa drzwi"
-	},
-	"suggestEdit": {
-		"additionalComments": "dodatkowe komentarze",
-		"address": "Adres",
-		"enterCommentsPrompt": "Opisz nieprawidłowe lub brakujące informacje.",
-		"hours": "godziny",
-		"resetButton": "Czysta forma",
-		"siteName": "Nazwa miejsca posiłku",
-		"submitForm": "Zatwierdź",
-		"suggestEditTitle": "Zaproponuj zmianę",
-		"weeklyMenu": "Link do cotygodniowego menu",
-		"whatNeedsCorrecting": "Jakie informacje musimy poprawić w tej witrynie z posiłkami?"
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "O darmowych posiłkach"
-	}
+  "FAQs": {
+    "buttonText": "O darmowych posiłkach",
+    "forMoreInformation": "Skontaktuj się z lokalnym dostawcą posiłków, aby uzyskać więcej informacji na temat bezpłatnych posiłków.",
+    "hyperlinkText": "Pytania i dane kontaktowe"
+  },
+  "landingPage": {
+    "aboutUs": "O nas",
+    "findFreeMealsNearMe": "Znajdź darmowe posiłki w pobliżu!",
+    "findYourCountyAndSelectProvider": "Wybierz dostawcę posiłków w swoim powiecie.",
+    "pleaseSelectState": "Wybierz swój stan.",
+    "welcomeStatement": "Witamy w Meals4Families!",
+    "youMustSelectState": "Przed wybraniem dostawcy posiłku należy wybrać stan."
+  },
+  "languages": {
+    "am": "amharski",
+    "ar": "arabski",
+    "bn": "bengalski",
+    "en": "język angielski",
+    "es": "hiszpański",
+    "fil": "Filipiński",
+    "fr": "Francuski",
+    "hi": "hinduski",
+    "hmn": "Hmong",
+    "ja": "język japoński",
+    "ko": "koreański",
+    "mh": "Marshallese",
+    "ms": "malajski",
+    "my": "Birmańczyk",
+    "ne": "Nepalski",
+    "pl": "Polskie",
+    "pt": "portugalski",
+    "ru": "rosyjski",
+    "so": "Somalijski",
+    "sp": "hiszpański",
+    "tg": "Tagalog",
+    "ur": "Urdu",
+    "vi": "wietnamski",
+    "zh": "chiński"
+  },
+  "mapKey": {
+    "closedToday": "zamknięte dzisiaj",
+    "mapKeyTitle": "Klucz mapy",
+    "openToday": "otwarte dzisiaj",
+    "searched": "Przeszukiwane",
+    "selected": "Wybrane"
+  },
+  "mapPrompts": {
+    "backToList": "Powrót do listy.",
+    "youCanNotZoomOutMore": "Nie można pomniejszyć więcej.",
+    "zoomOut": "Pomniejsz, aby uzyskać więcej wyników."
+  },
+  "mealSiteCard": {
+    "Hours": "Godzin",
+    "additionalDirections": "Gdzie nas znaleźć",
+    "address": "adres:",
+    "closed": "Zamknięta",
+    "detailsLastUpdated": "Szczegóły ostatnio aktualizowane:",
+    "doorDelivery": "Dostawa do drzwi",
+    "expandDetails": "Rozwiń szczegóły",
+    "friday": "piątek",
+    "getDirections": "Dojazd",
+    "hideDetails": "Ukryj szczegóły",
+    "minimizeDetails": "Minimalizowanie szczegółów",
+    "monday": "poniedziałek",
+    "moreDetails": "Więcej szczegółów",
+    "notes": "Notatki",
+    "questionsContactInfo": "Pytania i dane kontaktowe",
+    "saturday": "sobota",
+    "shareLocation": "Udostępnij lokalizację",
+    "suggestAnEdit": "Zaproponuj edycję",
+    "sunday": "niedziela",
+    "thursday": "czwartek",
+    "tuesday": "wtorek",
+    "wednesday": "środa",
+    "weeklyMenu": "Cotygodniowe menu"
+  },
+  "searchBar": {
+    "noResults": "Brak wyników dopasowanych do wyszukiwania. Spróbuj ponownie.",
+    "searchAnotherMealProvider": "Lub znajdź posiłki poza tym obszarem mapy.",
+    "searchPrompt": "Znajdź posiłki w pobliżu adresu"
+  },
+  "shareOptions": {
+    "aboutUs": "Informacje te są przenoszone przez Meals4Families we współpracy z",
+    "copyLink": "Skopiuj link",
+    "copyMessage": "Skopiuj wiadomość",
+    "findNearbySites": "Użyj tego linku, aby wyświetlić mapę pobliskich witryn posiłków:",
+    "learnMore": "Skorzystaj z tego linku, aby dowiedzieć się więcej o darmowych posiłkach:",
+    "mealSiteInfo": "Skorzystaj z poniższego linku, aby znaleźć szczegółowe informacje na temat tej strony posiłku, w tym godziny i wskazówki:",
+    "messageIntro": "oferuje bezpłatne posiłki dla wszystkich dzieci w wieku od 0 do 18 lat. Dołącz do nas na posiłek!",
+    "sendEmail": "Wyślij e-mail",
+    "sendTextMessage": "Wyślij wiadomość tekstową",
+    "share": "Udostępnij",
+    "shareInformationAboutMealSite": "Podziel się informacjami o tej stronie posiłku:",
+    "suggestedMealSite": "Możesz być zainteresowany w tej stronie posiłek:"
+  },
+  "specialSite": {
+    "doorDelivery": "Dostawa drzwi"
+  },
+  "suggestEdit": {
+    "additionalComments": "dodatkowe komentarze",
+    "address": "Adres",
+    "enterCommentsPrompt": "Opisz nieprawidłowe lub brakujące informacje.",
+    "hours": "godziny",
+    "resetButton": "Czysta forma",
+    "siteName": "Nazwa miejsca posiłku",
+    "submitForm": "Zatwierdź",
+    "suggestEditTitle": "Zaproponuj zmianę",
+    "weeklyMenu": "Link do cotygodniowego menu",
+    "whatNeedsCorrecting": "Jakie informacje musimy poprawić w tej witrynie z posiłkami?"
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "O darmowych posiłkach"
+  }
 }
