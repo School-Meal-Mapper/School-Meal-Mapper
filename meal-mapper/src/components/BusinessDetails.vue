@@ -23,8 +23,7 @@
           </p>
 
           <p v-if="business.marker.gsx$additionaldirections != null && business.marker.gsx$additionaldirections.$t !== ''">
-            <b>{{ $t('label.description') }}:</b><br />
-            {{ 'Additional directions' }}
+            <b>{{ $t('mealSiteCard.additionalDirections') }}:</b><br />
           </p>
           <icon-list-item
             icon="fa fa-directions"
@@ -48,7 +47,7 @@
             <icon-list-item
               v-if="hasFaqs"
               icon="fas fa-question-circle"
-              title="Questions and contact information"
+              :title="$t('mealSiteCard.questionsContactInfo')"
               :link="generateFaqUrl()"
               target="_self"
             />

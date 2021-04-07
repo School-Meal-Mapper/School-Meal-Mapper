@@ -1,115 +1,116 @@
 {
-  "FAQs": {
-    "buttonText": "無料の食事について",
-    "forMoreInformation": "無料の食事の詳細については、地元の食事提供者に連絡してください。",
-    "hyperlinkText": "質問と連絡先情報"
-  },
-  "landingPage": {
-    "aboutUs": "我々について",
-    "findFreeMealsNearMe": "私の近くで無料の食事を見つける!",
-    "findYourCountyAndSelectProvider": "お住いの国の食事の提供者を選択します。",
-    "pleaseSelectState": "状態を選択します。",
-    "welcomeStatement": "Meals4Familiesへようこそ！",
-    "youMustSelectState": "食事の提供者を選択する前に、状態を選択する必要があります。"
-  },
-  "languages": {
-    "am": "アムハラ語",
-    "ar": "アラビア語",
-    "bn": "ベンガル語",
-    "en": "英語",
-    "es": "スペイン語",
-    "fil": "フィリピン人",
-    "fr": "フランス語",
-    "hi": "ヒンディー語",
-    "hmn": "モン族",
-    "ja": "日本人",
-    "ko": "韓国語",
-    "mh": "マーシャル",
-    "ms": "マレー語",
-    "my": "ビルマ語",
-    "ne": "ネパール語",
-    "pl": "研磨",
-    "pt": "ポルトガル",
-    "ru": "ロシア",
-    "so": "ソマリア",
-    "sp": "スペイン語",
-    "tg": "タガログ語",
-    "ur": "ウルドゥー語",
-    "vi": "ベトナム人",
-    "zh": "中国語"
-  },
-  "mapKey": {
-    "closedToday": "本日は休業",
-    "mapKeyTitle": "マップ キー",
-    "openToday": "今日オープン",
-    "searched": "検索",
-    "selected": "選択"
-  },
-  "mapPrompts": {
-    "backToList": "リストに戻ります。",
-    "youCanNotZoomOutMore": "あなたはより多くのズームアウトすることはできません。",
-    "zoomOut": "より多くの結果を表示するにはズームアウトしてください。"
-  },
-  "mealSiteCard": {
-    "Hours": "時間",
-    "additionalDirections": "私たちを見つける場所",
-    "address": "アドレス：",
-    "closed": "閉鎖",
-    "detailsLastUpdated": "最終更新日の詳細:",
-    "doorDelivery": "ドアデリバリー",
-    "expandDetails": "詳細を展開する",
-    "friday": "金曜日",
-    "getDirections": "道順を取得する",
-    "hideDetails": "詳細を非表示",
-    "minimizeDetails": "詳細を最小限に抑える",
-    "monday": "月曜日",
-    "moreDetails": "詳細",
-    "notes": "ノート",
-    "questionsContactInfo": "質問と連絡先情報",
-    "saturday": "土曜日",
-    "shareLocation": "共有場所",
-    "suggestAnEdit": "編集の提案",
-    "sunday": "日曜日",
-    "thursday": "木曜日",
-    "tuesday": "火曜日",
-    "wednesday": "水曜日",
-    "weeklyMenu": "ウィークリーメニュー"
-  },
-  "searchBar": {
-    "noResults": "検索結果に一致する結果はありません。もう一度やり直してください。",
-    "searchAnotherMealProvider": "または、このマップエリアの外で食事を見つけてください。",
-    "searchPrompt": "住所の近くで食事を探す"
-  },
-  "shareOptions": {
-    "aboutUs": "この情報は、食事によってもたらされる4家族と提携して",
-    "copyLink": "リンクをコピーする",
-    "copyMessage": "メッセージをコピーする",
-    "findNearbySites": "近くの食事サイトの地図を見るためにこのリンクを使用してください:",
-    "learnMore": "無料の食事の詳細については、このリンクを使用してください。",
-    "mealSiteInfo": "時間と道順を含むこの食事サイトの完全な詳細を見つけるために、以下のリンクに従ってください:",
-    "messageIntro": "0~18歳の子供のための無料の食事を提供しています。食事に参加!",
-    "sendEmail": "メールを送信する",
-    "sendTextMessage": "テキストメッセージを送信する",
-    "share": "共有",
-    "shareInformationAboutMealSite": "この食事サイトに関する情報を共有します。",
-    "suggestedMealSite": "あなたはこの食事のサイトに興味があるかもしれません:"
-  },
-  "specialSite": {
-    "doorDelivery": "ドア配達"
-  },
-  "suggestEdit": {
-    "additionalComments": "追加コメント",
-    "address": "住所",
-    "enterCommentsPrompt": "間違った情報や不足している情報を説明してください。",
-    "hours": "時間",
-    "resetButton": "明確な形",
-    "siteName": "食事サイト名",
-    "submitForm": "提出する",
-    "suggestEditTitle": "編集を提案する",
-    "weeklyMenu": "ウィークリーメニューへのリンク",
-    "whatNeedsCorrecting": "この食事場所についてどのような情報を修正する必要がありますか？"
-  },
-  "themeHeaderBar": {
-    "AboutFreeMeals": "無料の食事について"
-  }
+	"FAQs": {
+		"backToMap": "地図に戻る",
+		"buttonText": "無料の食事について",
+		"forMoreInformation": "無料の食事の詳細については、地元の食事提供者に連絡してください。",
+		"hyperlinkText": "質問と連絡先情報"
+	},
+	"landingPage": {
+		"aboutUs": "我々について",
+		"findFreeMealsNearMe": "私の近くで無料の食事を見つける!",
+		"findYourCountyAndSelectProvider": "お住いの国の食事の提供者を選択します。",
+		"pleaseSelectState": "状態を選択します。",
+		"welcomeStatement": "Meals4Familiesへようこそ！",
+		"youMustSelectState": "食事の提供者を選択する前に、状態を選択する必要があります。"
+	},
+	"languages": {
+		"am": "アムハラ語",
+		"ar": "アラビア語",
+		"bn": "ベンガル語",
+		"en": "英語",
+		"es": "スペイン語",
+		"fil": "フィリピン人",
+		"fr": "フランス語",
+		"hi": "ヒンディー語",
+		"hmn": "モン族",
+		"ja": "日本人",
+		"ko": "韓国語",
+		"mh": "マーシャル",
+		"ms": "マレー語",
+		"my": "ビルマ語",
+		"ne": "ネパール語",
+		"pl": "研磨",
+		"pt": "ポルトガル",
+		"ru": "ロシア",
+		"so": "ソマリア",
+		"sp": "スペイン語",
+		"tg": "タガログ語",
+		"ur": "ウルドゥー語",
+		"vi": "ベトナム人",
+		"zh": "中国語"
+	},
+	"mapKey": {
+		"closedToday": "本日は休業",
+		"mapKeyTitle": "マップ キー",
+		"openToday": "今日オープン",
+		"searched": "検索",
+		"selected": "選択"
+	},
+	"mapPrompts": {
+		"backToList": "リストに戻ります。",
+		"youCanNotZoomOutMore": "あなたはより多くのズームアウトすることはできません。",
+		"zoomOut": "より多くの結果を表示するにはズームアウトしてください。"
+	},
+	"mealSiteCard": {
+		"Hours": "時間",
+		"additionalDirections": "私たちを見つける場所",
+		"address": "アドレス：",
+		"closed": "閉鎖",
+		"detailsLastUpdated": "最終更新日の詳細:",
+		"doorDelivery": "ドアデリバリー",
+		"expandDetails": "詳細を展開する",
+		"friday": "金曜日",
+		"getDirections": "道順を取得する",
+		"hideDetails": "詳細を非表示",
+		"minimizeDetails": "詳細を最小限に抑える",
+		"monday": "月曜日",
+		"moreDetails": "詳細",
+		"notes": "ノート",
+		"questionsContactInfo": "質問と連絡先情報",
+		"saturday": "土曜日",
+		"shareLocation": "共有場所",
+		"suggestAnEdit": "編集の提案",
+		"sunday": "日曜日",
+		"thursday": "木曜日",
+		"tuesday": "火曜日",
+		"wednesday": "水曜日",
+		"weeklyMenu": "ウィークリーメニュー"
+	},
+	"searchBar": {
+		"noResults": "検索結果に一致する結果はありません。もう一度やり直してください。",
+		"searchAnotherMealProvider": "または、このマップエリアの外で食事を見つけてください。",
+		"searchPrompt": "住所の近くで食事を探す"
+	},
+	"shareOptions": {
+		"aboutUs": "この情報は、食事によってもたらされる4家族と提携して",
+		"copyLink": "リンクをコピーする",
+		"copyMessage": "メッセージをコピーする",
+		"findNearbySites": "近くの食事サイトの地図を見るためにこのリンクを使用してください:",
+		"learnMore": "無料の食事の詳細については、このリンクを使用してください。",
+		"mealSiteInfo": "時間と道順を含むこの食事サイトの完全な詳細を見つけるために、以下のリンクに従ってください:",
+		"messageIntro": "0~18歳の子供のための無料の食事を提供しています。食事に参加!",
+		"sendEmail": "メールを送信する",
+		"sendTextMessage": "テキストメッセージを送信する",
+		"share": "共有",
+		"shareInformationAboutMealSite": "この食事サイトに関する情報を共有します。",
+		"suggestedMealSite": "あなたはこの食事のサイトに興味があるかもしれません:"
+	},
+	"specialSite": {
+		"doorDelivery": "ドア配達"
+	},
+	"suggestEdit": {
+		"additionalComments": "追加コメント",
+		"address": "住所",
+		"enterCommentsPrompt": "間違った情報や不足している情報を説明してください。",
+		"hours": "時間",
+		"resetButton": "明確な形",
+		"siteName": "食事サイト名",
+		"submitForm": "提出する",
+		"suggestEditTitle": "編集を提案する",
+		"weeklyMenu": "ウィークリーメニューへのリンク",
+		"whatNeedsCorrecting": "この食事場所についてどのような情報を修正する必要がありますか？"
+	},
+	"themeHeaderBar": {
+		"AboutFreeMeals": "無料の食事について"
+	}
 }

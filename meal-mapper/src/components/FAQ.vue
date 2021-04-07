@@ -2,7 +2,7 @@
   <div id="faqs">
     <h3>{{ $t('FAQs.buttonText') }}</h3>
     <p v-if="info != null">
-      For more information, check out the following resources:
+      {{ $t('FAQs.forMoreInformation') }}
       <icon-list-item
         v-if="info[0].gsx$contactname !== undefined && !!info[0].gsx$contactname.$t"
         icon="fas fa-phone-alt"

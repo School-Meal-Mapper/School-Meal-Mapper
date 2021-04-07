@@ -83,7 +83,7 @@
         @click="setZoom"
         id="resultslistnav"
       >
-        {{ 'Zoom out for more results.' }}</b-card
+        {{ $t('mapPrompts.zoomOut') }}</b-card
       >
       <b-card hover height="100%" class="no-zoom-card bottom" v-if="filteredMarkers.length && this.zoom == this.minZoom">
         {{ this.$t('mapPrompts.youCanNotZoomOutMore') }}</b-card

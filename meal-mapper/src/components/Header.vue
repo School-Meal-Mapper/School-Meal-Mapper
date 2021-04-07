@@ -25,7 +25,7 @@
         <b-nav-item right v-if="hasFaqs && onFaqPage()">
           <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateMapUrl()">
             <i class="fas info-plus-circle" aria-hidden="true"></i>
-            <b>Back to Map</b>
+            <b>{{ $t('FAQs.backToMap') }}</b>
           </b-button>
         </b-nav-item>
         <b-nav-item right v-if="districtAbbr == 'mff'" href="https://meals4families.community/" target="_blank">
