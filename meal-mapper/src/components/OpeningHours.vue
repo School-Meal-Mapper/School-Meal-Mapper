@@ -80,10 +80,17 @@ export default {
               cnt++
               break
             default:
-              myDays.push({
-                name: dayName,
-                val: this.business[attr].$t.replace(',', '<br/>')
-              })
+              if (this.business[attr].$t == 'Door Delivery') {
+                myDays.push({
+                  name: dayName,
+                  val: this.$t('mealSiteCard.doorDelivery')
+                })
+              } else {
+                myDays.push({
+                  name: dayName,
+                  val: this.business[attr].$t.replace(',', '<br/>')
+                })
+              }
               cnt++
               break
           }
