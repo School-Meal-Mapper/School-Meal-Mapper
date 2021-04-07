@@ -6,7 +6,7 @@
       <icon-list-item
         v-if="info[0].gsx$contactname !== undefined && !!info[0].gsx$contactname.$t"
         icon="fas fa-phone-alt"
-        :title="info[0].gsx$contactname.$t"
+        :title="(info[0].gsx$contactname.$t + ', ' + info[0].gsx$contactphone.$t)"
         :link="'tel:' + info[0].gsx$contactphone.$t"
         target="_blank"
       />

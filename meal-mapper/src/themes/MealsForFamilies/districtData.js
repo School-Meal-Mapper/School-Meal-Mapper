@@ -215,6 +215,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // current default is chapel hill (i.e. what happens when you don't type in a query). This should change to nav page.
   // district name and theming
   districtAbbr = 'mff'
+  districtName = 'Meals 4 Families'
   primaryColor = '#0063b1'
   bannerColor = '#1E5ADC'
   bannerColorDark = '#32325B'

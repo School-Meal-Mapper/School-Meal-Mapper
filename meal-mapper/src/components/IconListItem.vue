@@ -7,7 +7,7 @@
           <i class="fas" v-bind:class="icon" v-if="icon != ''"></i>
           <img :src="image" v-if="icon == null || icon == ''" />
         </div>
-        <div class="ilTitle">
+        <div>
           <a :href="link" :target="target" v-if="link != null && link != ''">
             <span class="title">{{ title }}</span>
           </a>
@@ -95,6 +95,6 @@ export default {
 }
 
 .ilTitle {
-  width: 210px;
+  width: 280px;
 }
 </style>
