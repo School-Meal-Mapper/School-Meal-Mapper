@@ -297,7 +297,7 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           if (data.length === 0) {
-            alert(this.$t('search.noresults'))
+            alert(this.$t('searchBar.noResults'))
             return
           }
           var location = null
@@ -310,7 +310,7 @@ export default {
             }
           }
           if (location == null) {
-            alert(this.$t('search.noresults'))
+            alert(this.$t('searchBar.noResults'))
             return
           }
           this.searchLocData = latLng(location.lat, location.lon)
