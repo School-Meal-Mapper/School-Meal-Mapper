@@ -66,6 +66,7 @@
             </span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item right href="/"><i class="fas fa-home" aria-hidden="true" /></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
