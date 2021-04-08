@@ -1,116 +1,118 @@
 {
-  "FAQs": {
-    "backToMap": "回到地图",
-    "buttonText": "",
-    "forMoreInformation": "",
-    "hyperlinkText": ""
-  },
-  "landingPage": {
-    "aboutUs": "",
-    "findFreeMealsNearMe": "",
-    "findYourCountyAndSelectProvider": "",
-    "pleaseSelectState": "",
-    "welcomeStatement": "",
-    "youMustSelectState": ""
-  },
-  "languages": {
-    "am": "",
-    "ar": "",
-    "bn": "",
-    "en": "",
-    "es": "西班牙语",
-    "fil": "",
-    "fr": "",
-    "hi": "",
-    "hmn": "",
-    "ja": "",
-    "ko": "",
-    "mh": "",
-    "ms": "",
-    "my": "",
-    "ne": "",
-    "pl": "",
-    "pt": "",
-    "ru": "",
-    "so": "",
-    "sp": "",
-    "tg": "",
-    "ur": "",
-    "vi": "",
-    "zh": ""
-  },
-  "mapKey": {
-    "closedToday": "",
-    "mapKeyTitle": "",
-    "openToday": "",
-    "searched": "",
-    "selected": ""
-  },
-  "mapPrompts": {
-    "backToList": "",
-    "youCanNotZoomOutMore": "",
-    "zoomOut": ""
-  },
-  "mealSiteCard": {
-    "Hours": "",
-    "additionalDirections": "",
-    "address": "",
-    "closed": "",
-    "detailsLastUpdated": "",
-    "doorDelivery": "送货上门",
-    "expandDetails": "",
-    "friday": "",
-    "getDirections": "",
-    "hideDetails": "隐藏细节",
-    "minimizeDetails": "",
-    "monday": "",
-    "moreDetails": "更多细节",
-    "notes": "",
-    "questionsContactInfo": "",
-    "saturday": "",
-    "shareLocation": "",
-    "suggestAnEdit": "",
-    "sunday": "",
-    "thursday": "",
-    "tuesday": "",
-    "wednesday": "",
-    "weeklyMenu": ""
-  },
-  "searchBar": {
-    "noResults": "",
-    "searchAnotherMealProvider": "",
-    "searchPrompt": ""
-  },
-  "shareOptions": {
-    "aboutUs": "",
-    "copyLink": "",
-    "copyMessage": "",
-    "findNearbySites": "",
-    "learnMore": "",
-    "mealSiteInfo": "",
-    "messageIntro": "",
-    "sendEmail": "",
-    "sendTextMessage": "",
-    "share": "",
-    "shareInformationAboutMealSite": "",
-    "suggestedMealSite": ""
-  },
-  "specialSite": {
-    "doorDelivery": ""
-  },
-  "suggestEdit": {
-    "additionalComments": "",
-    "address": "",
-    "enterCommentsPrompt": "",
-    "hours": "",
-    "resetButton": "",
-    "siteName": "",
-    "submitForm": "",
-    "suggestEditTitle": "提出修改建议",
-    "weeklyMenu": "",
-    "whatNeedsCorrecting": ""
-  },
-  "themeHeaderBar": {
-    "AboutFreeMeals": ""
-  }
+	"FAQs": {
+		"backToMap": "回到地图",
+		"buttonText": "",
+		"forMoreInformation": "与您当地的餐饮服务提供商联系，以获取有关免费膳食的更多信息。",
+		"hyperlinkText": ""
+	},
+	"landingPage": {
+		"aboutUs": "",
+		"findFreeMealsNearMe": "",
+		"findYourCountyAndSelectProvider": "",
+		"pleaseSelectState": "",
+		"welcomeStatement": "",
+		"youMustSelectState": ""
+	},
+	"languages": {
+		"am": "",
+		"ar": "",
+		"bn": "",
+		"en": "",
+		"es": "西班牙语",
+		"fil": "",
+		"fr": "",
+		"hi": "",
+		"hmn": "",
+		"ja": "",
+		"ko": "",
+		"mh": "",
+		"ms": "",
+		"my": "",
+		"ne": "",
+		"pl": "",
+		"pt": "",
+		"ru": "",
+		"so": "",
+		"sp": "",
+		"tg": "",
+		"ur": "",
+		"vi": "",
+		"zh": ""
+	},
+	"mapKey": {
+		"closedToday": "",
+		"mapKeyTitle": "",
+		"openToday": "",
+		"searched": "",
+		"selected": ""
+	},
+	"mapPrompts": {
+		"backToList": "",
+		"youCanNotZoomOutMore": "",
+		"zoomOut": ""
+	},
+	"mealSiteCard": {
+		"Hours": "",
+		"additionalDirections": "",
+		"address": "",
+		"closed": "",
+		"detailsLastUpdated": "",
+		"doorDelivery": "送货上门",
+		"expandDetails": "",
+		"friday": "",
+		"getDirections": "",
+		"hideDetails": "隐藏细节",
+		"minimizeDetails": "",
+		"monday": "",
+		"moreDetails": "更多细节",
+		"notes": "",
+		"questionsContactInfo": "",
+		"saturday": "",
+		"shareLocation": "",
+		"suggestAnEdit": "",
+		"sunday": "",
+		"thursday": "",
+		"tuesday": "",
+		"wednesday": "",
+		"weeklyMenu": ""
+	},
+	"searchBar": {
+		"cantFindCloseSite": "找不到您附近的网站？",
+		"findDeliveryOptions": "找出您是否符合送餐的资格。",
+		"noResults": "",
+		"searchPrompt": "",
+		"trySearchingOtherProviders": "浏览您附近的其他餐饮服务提供商。"
+	},
+	"shareOptions": {
+		"aboutUs": "",
+		"copyLink": "",
+		"copyMessage": "",
+		"findNearbySites": "",
+		"learnMore": "",
+		"mealSiteInfo": "",
+		"messageIntro": "",
+		"sendEmail": "",
+		"sendTextMessage": "",
+		"share": "",
+		"shareInformationAboutMealSite": "",
+		"suggestedMealSite": ""
+	},
+	"specialSite": {
+		"doorDelivery": ""
+	},
+	"suggestEdit": {
+		"additionalComments": "",
+		"address": "",
+		"enterCommentsPrompt": "",
+		"hours": "",
+		"resetButton": "",
+		"siteName": "",
+		"submitForm": "",
+		"suggestEditTitle": "提出修改建议",
+		"weeklyMenu": "",
+		"whatNeedsCorrecting": ""
+	},
+	"themeHeaderBar": {
+		"AboutFreeMeals": ""
+	}
 }

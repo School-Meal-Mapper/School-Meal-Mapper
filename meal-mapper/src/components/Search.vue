@@ -3,7 +3,8 @@
     <b-list-group horizontal class="need-location-group">
       <div class="searchDropdown">
         <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('search.prompt')"></b-form-input>
-        <a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>
+        {{ $t('searchBar.cantFindCloseSite') }}
+        <!--<a href="/" style="font-size: 0.7rem;">{{ $t('search.other-district') }}</a>-->
       </div>
       <b-button type="submit" variant="primary" class="search-btn"><i class="fas fa-search"></i></b-button>
     </b-list-group>

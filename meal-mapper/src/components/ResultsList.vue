@@ -4,7 +4,10 @@
       <b-list-group-item variant="sideNav">
         <form>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.searchAnotherMealProvider') }}</a>
+          <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">
+            {{ $t('searchBar.cantFindCloseSite') }}
+            <b-button href="/" style="font-size: 0.7rem;">{{ $t('searchBar.trySearchingOtherProviders') }}</b-button>
+          </p>
         </form>
       </b-list-group-item>
     </b-list-group>
@@ -310,7 +313,7 @@ export default {
 }
 
 .resultList {
-  max-height: calc(100vh - 105px);
+  max-height: calc(100vh - 145px);
   overflow-y: overlay;
   padding-bottom: 10px;
   //padding-top: 20px;
