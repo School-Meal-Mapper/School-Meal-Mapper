@@ -4,13 +4,13 @@
       <b-list-group-item variant="sideNav">
         <form>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">
+          <p style="font-size: 0.9rem; text-align: center; margin-top: 5px;">
             {{ $t('searchBar.cantFindCloseSite') }}
-            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.7rem;">{{
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
               $t('searchBar.trySearchingOtherProviders')
             }}</b-button>
             OR
-            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.7rem;">{{
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
               'See if you qualify for meal delivery'
             }}</b-button>
           </p>
@@ -345,7 +345,7 @@ export default {
 }
 
 .resultList {
-  max-height: calc(100vh - 195px);
+  max-height: calc(100vh - 215px);
   overflow-y: overlay;
   padding-bottom: 10px;
   //padding-top: 20px;
