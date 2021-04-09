@@ -6,7 +6,13 @@
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
           <p style="font-size: 0.7rem; text-align: center; margin-top: 5px;">
             {{ $t('searchBar.cantFindCloseSite') }}
-            <b-button href="/" style="font-size: 0.7rem;">{{ $t('searchBar.trySearchingOtherProviders') }}</b-button>
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.7rem;">{{
+              $t('searchBar.trySearchingOtherProviders')
+            }}</b-button>
+            OR
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.7rem;">{{
+              'See if you qualify for meal delivery'
+            }}</b-button>
           </p>
         </form>
       </b-list-group-item>
@@ -201,13 +207,22 @@ export default {
   --nav-link-light: '#F8F8F8';
   --nav-link-dark: '#F8F8F8';
 }
-.btn:hover {
+.btn {
   color: var(--nav-link-light) !important;
   background-color: var(--banner-light) !important;
   @media (prefers-color-scheme: dark) {
     color: var(--nav-link-dark) !important;
     background-color: var(--banner-dark) !important;
   }
+}
+.btn:hover {
+  opacity: 0.5;
+  /*color: var(--nav-link-light) !important;
+  background-color: var(--banner-light) !important;
+  @media (prefers-color-scheme: dark) {
+    color: var(--nav-link-dark) !important;
+    background-color: var(--banner-dark) !important;
+  } */
 }
 .resultWrapper {
   scrollbar-color: $gray-900 $gray-700;
@@ -330,7 +345,7 @@ export default {
 }
 
 .resultList {
-  max-height: calc(100vh - 145px);
+  max-height: calc(100vh - 195px);
   overflow-y: overlay;
   padding-bottom: 10px;
   //padding-top: 20px;
