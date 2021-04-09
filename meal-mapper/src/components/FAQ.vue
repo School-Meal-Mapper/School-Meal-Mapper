@@ -175,7 +175,7 @@ export default {
   padding: 100px 24px 24px;
   margin: 0 auto;
   text-align: center;
-  max-height: 100vh;
   overflow-y: overlay;
+  max-height: 100vh;
 }
 </style>

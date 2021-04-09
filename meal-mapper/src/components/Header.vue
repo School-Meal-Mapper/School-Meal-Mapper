@@ -97,7 +97,7 @@ export default {
         { iso: 'ar', name: 'عربى' },
         { iso: 'ja', name: '日本人' },
         { iso: 'zh', name: '中文' },
-        { iso: 'ms', name: 'ဗမာ' },
+        { iso: 'ms', name: 'Melayu' },
         { iso: 'hi', name: 'हिंदी' },
         { iso: 'vi', name: 'tiếng việt' },
         { iso: 'bn', name: 'বাংলা' },
