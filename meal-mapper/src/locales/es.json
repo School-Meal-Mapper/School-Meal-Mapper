@@ -1,118 +1,118 @@
 {
-	"FAQs": {
-		"backToMap": "Volver al mapa",
-		"buttonText": "Acerca de las comidas gratis",
-		"forMoreInformation": "Comuníquese con su proveedor de comidas local para obtener más información sobre comidas gratuitas.",
-		"hyperlinkText": "Preguntas e información de contacto"
-	},
-	"landingPage": {
-		"aboutUs": "Sobre nosotros",
-		"findFreeMealsNearMe": "¡Encuentra comidas gratis cerca de mí!",
-		"findYourCountyAndSelectProvider": "Seleccione un proveedor de comidas en su condado.",
-		"pleaseSelectState": "Seleccione su estado.",
-		"welcomeStatement": "¡Bienvenido a Meals4Families!",
-		"youMustSelectState": "Debe seleccionar un estado antes de elegir un proveedor de comidas."
-	},
-	"languages": {
-		"am": "Amárico",
-		"ar": "Arábica",
-		"bn": "bengalí",
-		"en": "Inglés",
-		"es": "español",
-		"fil": "Filipino",
-		"fr": "francés",
-		"hi": "hindi",
-		"hmn": "Hmong",
-		"ja": "japonés",
-		"ko": "coreano",
-		"mh": "Marshallese",
-		"ms": "malayo",
-		"my": "birmano",
-		"ne": "Nepalí",
-		"pl": "polaco",
-		"pt": "portugués",
-		"ru": "ruso",
-		"so": "somalí",
-		"sp": "español",
-		"tg": "Tagalo",
-		"ur": "Urdu",
-		"vi": "vietnamita",
-		"zh": "chino"
-	},
-	"mapKey": {
-		"closedToday": "Cerrado hoy",
-		"mapKeyTitle": "Clave de mapa",
-		"openToday": "abierto hoy",
-		"searched": "buscado",
-		"selected": "Seleccionado"
-	},
-	"mapPrompts": {
-		"backToList": "Vuelve a la lista.",
-		"youCanNotZoomOutMore": "No se puede alejar más.",
-		"zoomOut": "Alejar para obtener más resultados."
-	},
-	"mealSiteCard": {
-		"Hours": "horas",
-		"additionalDirections": "Dónde encontrarnos",
-		"address": "Dirección:",
-		"closed": "Cerrado",
-		"detailsLastUpdated": "Detalles actualizados por última vez:",
-		"doorDelivery": "Entrega de puerta",
-		"expandDetails": "Ampliar detalles",
-		"friday": "viernes",
-		"getDirections": "Obtener indicaciones",
-		"hideDetails": "Ocultar detalles",
-		"minimizeDetails": "Minimizar los detalles",
-		"monday": "lunes",
-		"moreDetails": "Más detalles",
-		"notes": "Notas",
-		"questionsContactInfo": "Preguntas e información de contacto",
-		"saturday": "sábado",
-		"shareLocation": "Comparte ubicacion",
-		"suggestAnEdit": "Sugerir una edición",
-		"sunday": "domingo",
-		"thursday": "jueves",
-		"tuesday": "martes",
-		"wednesday": "miércoles",
-		"weeklyMenu": "Menú semanal"
-	},
-	"searchBar": {
-		"cantFindCloseSite": "¿No puede encontrar un sitio cerca de usted?",
-		"findDeliveryOptions": "Averigüe si califica para la entrega de comidas.",
-		"noResults": "Ningún resultado coincide con tu búsqueda. Por favor, inténtelo de nuevo.",
-		"searchPrompt": "Encuentra comidas cerca de la dirección",
-		"trySearchingOtherProviders": "Busque otros proveedores de comidas cerca de usted."
-	},
-	"shareOptions": {
-		"aboutUs": "Meals4Families le trae esta información en asociación con",
-		"copyLink": "Copiar link",
-		"copyMessage": "Copiar mensaje",
-		"findNearbySites": "Utilice este enlace para ver un mapa de los sitios de comidas cercanos:",
-		"learnMore": "Utilice este enlace para obtener más información sobre las comidas gratuitas:",
-		"mealSiteInfo": "Siga el siguiente enlace para encontrar los detalles completos de este sitio de comidas, incluyendo horas e instrucciones:",
-		"messageIntro": "ofrece comidas gratuitas para todos los niños de 0 a 18 años. ¡Únete a nosotros para una comida!",
-		"sendEmail": "Enviar correo electrónico",
-		"sendTextMessage": "Enviar mensaje de texto",
-		"share": "Compartir",
-		"shareInformationAboutMealSite": "Comparta información sobre este sitio de comidas:",
-		"suggestedMealSite": "Es posible que esté interesado en este sitio de comidas:"
-	},
-	"specialSite": {
-		"doorDelivery": "Entrega de puertas"
-	},
-	"suggestEdit": {
-		"additionalComments": "Comentarios adicionales",
-		"address": "Dirección",
-		"enterCommentsPrompt": "Describe la información incorrecta o faltante.",
-		"hours": "horas",
-		"resetButton": "Forma clara",
-		"siteName": "Nombre del sitio de comidas",
-		"submitForm": "Enviar",
-		"suggestEditTitle": "Sugerir una edición",
-		"weeklyMenu": "Enlace al menú semanal",
-		"whatNeedsCorrecting": "¿Qué información necesitamos corregir para este sitio de comida?"
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "Acerca de las comidas gratis"
-	}
+  "FAQs": {
+    "backToMap": "Volver al mapa",
+    "buttonText": "Acerca de las comidas gratis",
+    "forMoreInformation": "Comuníquese con su proveedor de comidas local para obtener más información sobre comidas gratuitas.",
+    "hyperlinkText": "Preguntas e información de contacto"
+  },
+  "landingPage": {
+    "aboutUs": "Sobre nosotros",
+    "findFreeMealsNearMe": "¡Encuentra comidas gratis cerca de mí!",
+    "findYourCountyAndSelectProvider": "Seleccione un proveedor de comidas en su condado.",
+    "pleaseSelectState": "Seleccione su estado.",
+    "welcomeStatement": "¡Bienvenido a Meals4Families!",
+    "youMustSelectState": "Debe seleccionar un estado antes de elegir un proveedor de comidas."
+  },
+  "languages": {
+    "am": "Amárico",
+    "ar": "Arábica",
+    "bn": "bengalí",
+    "en": "Inglés",
+    "es": "español",
+    "fil": "Filipino",
+    "fr": "francés",
+    "hi": "hindi",
+    "hmn": "Hmong",
+    "ja": "japonés",
+    "ko": "coreano",
+    "mh": "Marshallese",
+    "ms": "malayo",
+    "my": "birmano",
+    "ne": "Nepalí",
+    "pl": "polaco",
+    "pt": "portugués",
+    "ru": "ruso",
+    "so": "somalí",
+    "sp": "español",
+    "tg": "Tagalo",
+    "ur": "Urdu",
+    "vi": "vietnamita",
+    "zh": "chino"
+  },
+  "mapKey": {
+    "closedToday": "Cerrado hoy",
+    "mapKeyTitle": "Clave de mapa",
+    "openToday": "abierto hoy",
+    "searched": "buscado",
+    "selected": "Seleccionado"
+  },
+  "mapPrompts": {
+    "backToList": "Vuelve a la lista.",
+    "youCanNotZoomOutMore": "No se puede alejar más.",
+    "zoomOut": "Alejar para obtener más resultados."
+  },
+  "mealSiteCard": {
+    "Hours": "horas",
+    "additionalDirections": "Dónde encontrarnos",
+    "address": "Dirección:",
+    "closed": "Cerrado",
+    "detailsLastUpdated": "Detalles actualizados por última vez:",
+    "doorDelivery": "Entrega de puerta",
+    "expandDetails": "Ampliar detalles",
+    "friday": "viernes",
+    "getDirections": "Obtener indicaciones",
+    "hideDetails": "Ocultar detalles",
+    "minimizeDetails": "Minimizar los detalles",
+    "monday": "lunes",
+    "moreDetails": "Más detalles",
+    "notes": "Notas",
+    "questionsContactInfo": "Preguntas e información de contacto",
+    "saturday": "sábado",
+    "shareLocation": "Comparte ubicacion",
+    "suggestAnEdit": "Sugerir una edición",
+    "sunday": "domingo",
+    "thursday": "jueves",
+    "tuesday": "martes",
+    "wednesday": "miércoles",
+    "weeklyMenu": "Menú semanal"
+  },
+  "searchBar": {
+    "cantFindCloseSite": "¿No puede encontrar un sitio cerca de usted?",
+    "findDeliveryOptions": "Averigüe si califica para la entrega de comidas.",
+    "noResults": "Ningún resultado coincide con tu búsqueda. Por favor, inténtelo de nuevo.",
+    "searchPrompt": "Buscar por sitio o dirección",
+    "trySearchingOtherProviders": "Busque otros proveedores de comidas cerca de usted."
+  },
+  "shareOptions": {
+    "aboutUs": "Meals4Families le trae esta información en asociación con",
+    "copyLink": "Copiar link",
+    "copyMessage": "Copiar mensaje",
+    "findNearbySites": "Utilice este enlace para ver un mapa de los sitios de comidas cercanos:",
+    "learnMore": "Utilice este enlace para obtener más información sobre las comidas gratuitas:",
+    "mealSiteInfo": "Siga el siguiente enlace para encontrar los detalles completos de este sitio de comidas, incluyendo horas e instrucciones:",
+    "messageIntro": "ofrece comidas gratuitas para todos los niños de 0 a 18 años. ¡Únete a nosotros para una comida!",
+    "sendEmail": "Enviar correo electrónico",
+    "sendTextMessage": "Enviar mensaje de texto",
+    "share": "Compartir",
+    "shareInformationAboutMealSite": "Comparta información sobre este sitio de comidas:",
+    "suggestedMealSite": "Es posible que esté interesado en este sitio de comidas:"
+  },
+  "specialSite": {
+    "doorDelivery": "Entrega de puertas"
+  },
+  "suggestEdit": {
+    "additionalComments": "Comentarios adicionales",
+    "address": "Dirección",
+    "enterCommentsPrompt": "Describe la información incorrecta o faltante.",
+    "hours": "horas",
+    "resetButton": "Forma clara",
+    "siteName": "Nombre del sitio de comidas",
+    "submitForm": "Enviar",
+    "suggestEditTitle": "Sugerir una edición",
+    "weeklyMenu": "Enlace al menú semanal",
+    "whatNeedsCorrecting": "¿Qué información necesitamos corregir para este sitio de comida?"
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "Acerca de las comidas gratis"
+  }
 }

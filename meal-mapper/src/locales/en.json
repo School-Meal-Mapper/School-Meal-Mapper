@@ -1,118 +1,118 @@
 {
-	"FAQs": {
-		"backToMap": "Back to Map",
-		"buttonText": "About free meals",
-		"forMoreInformation": "Connect with your local meal provider for more information about free meals.",
-		"hyperlinkText": "Questions and contact information"
-	},
-	"landingPage": {
-		"aboutUs": "About us",
-		"findFreeMealsNearMe": "Find free meals near me!",
-		"findYourCountyAndSelectProvider": "Select a meal provider in your county.",
-		"pleaseSelectState": "Select your state.",
-		"welcomeStatement": "Welcome to Meals4Families!",
-		"youMustSelectState": "You must select a state before choosing a meal provider."
-	},
-	"languages": {
-		"am": "Amharic",
-		"ar": "Arabic",
-		"bn": "Bengali",
-		"en": "English",
-		"es": "Spanish",
-		"fil": "Filipino",
-		"fr": "French",
-		"hi": "Hindi",
-		"hmn": "Hmong",
-		"ja": "Japanese",
-		"ko": "Korean",
-		"mh": "Marshallese",
-		"ms": "Malay",
-		"my": "Burmese",
-		"ne": "Nepali",
-		"pl": "Polish",
-		"pt": "Portuguese",
-		"ru": "Russian",
-		"so": "Somali",
-		"sp": "Spanish",
-		"tg": "Tagalog",
-		"ur": "Urdu",
-		"vi": "Vietnamese",
-		"zh": "Chinese"
-	},
-	"mapKey": {
-		"closedToday": "closed today",
-		"mapKeyTitle": "Map Key",
-		"openToday": "open today",
-		"searched": "searched",
-		"selected": "selected"
-	},
-	"mapPrompts": {
-		"backToList": "Return to list.",
-		"youCanNotZoomOutMore": "You can not zoom out more.",
-		"zoomOut": "Zoom out for more results."
-	},
-	"mealSiteCard": {
-		"Hours": "Hours",
-		"additionalDirections": "Where to find us",
-		"address": "Address:",
-		"closed": "Closed",
-		"detailsLastUpdated": "Details last updated:",
-		"doorDelivery": "Door Delivery",
-		"expandDetails": "Expand details",
-		"friday": "Friday",
-		"getDirections": "Get directions",
-		"hideDetails": "Hide details",
-		"minimizeDetails": "Minimize details",
-		"monday": "Monday",
-		"moreDetails": "More details",
-		"notes": "Notes",
-		"questionsContactInfo": "Questions and contact information",
-		"saturday": "Saturday",
-		"shareLocation": "Share location",
-		"suggestAnEdit": "Suggest an edit",
-		"sunday": "Sunday",
-		"thursday": "Thursday",
-		"tuesday": "Tuesday",
-		"wednesday": "Wednesday",
-		"weeklyMenu": "Weekly menu"
-	},
-	"searchBar": {
-		"cantFindCloseSite": "Can't find a site close to you? ",
-		"findDeliveryOptions": "Find out if you qualify for meal delivery.",
-		"noResults": "No results match your search. Please try again.",
-		"searchPrompt": "Find meals near address",
-		"trySearchingOtherProviders": "Browse other meal providers near you."
-	},
-	"shareOptions": {
-		"aboutUs": "This information is brought to you by Meals4Families in partnership with",
-		"copyLink": "Copy link",
-		"copyMessage": "Copy message",
-		"findNearbySites": "Use this link to see a map of nearby meal sites:",
-		"learnMore": "Use this link to learn more about free meals:",
-		"mealSiteInfo": "Follow the link below to find full details for this meal site including hours and directions:",
-		"messageIntro": "offers free meals for all children aged 0-18. Join us for a meal!",
-		"sendEmail": "Send email",
-		"sendTextMessage": "Send text message",
-		"share": "Share",
-		"shareInformationAboutMealSite": "Share information about this meal site:",
-		"suggestedMealSite": "You might be interested in this meal site:"
-	},
-	"specialSite": {
-		"doorDelivery": "Door Delivery"
-	},
-	"suggestEdit": {
-		"additionalComments": "Additional comments",
-		"address": "Address",
-		"enterCommentsPrompt": "Describe incorrect or missing information.",
-		"hours": "Hours",
-		"resetButton": "Clear form",
-		"siteName": "Meal site name",
-		"submitForm": "Submit",
-		"suggestEditTitle": "Suggest an edit",
-		"weeklyMenu": "Link to weekly menu",
-		"whatNeedsCorrecting": "What information do we need to correct for this meal site? "
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "About Free Meals"
-	}
+  "FAQs": {
+    "backToMap": "Back to Map",
+    "buttonText": "About free meals",
+    "forMoreInformation": "Connect with your local meal provider for more information about free meals.",
+    "hyperlinkText": "Questions and contact information"
+  },
+  "landingPage": {
+    "aboutUs": "About us",
+    "findFreeMealsNearMe": "Find free meals near me!",
+    "findYourCountyAndSelectProvider": "Select a meal provider in your county.",
+    "pleaseSelectState": "Select your state.",
+    "welcomeStatement": "Welcome to Meals4Families!",
+    "youMustSelectState": "You must select a state before choosing a meal provider."
+  },
+  "languages": {
+    "am": "Amharic",
+    "ar": "Arabic",
+    "bn": "Bengali",
+    "en": "English",
+    "es": "Spanish",
+    "fil": "Filipino",
+    "fr": "French",
+    "hi": "Hindi",
+    "hmn": "Hmong",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "mh": "Marshallese",
+    "ms": "Malay",
+    "my": "Burmese",
+    "ne": "Nepali",
+    "pl": "Polish",
+    "pt": "Portuguese",
+    "ru": "Russian",
+    "so": "Somali",
+    "sp": "Spanish",
+    "tg": "Tagalog",
+    "ur": "Urdu",
+    "vi": "Vietnamese",
+    "zh": "Chinese"
+  },
+  "mapKey": {
+    "closedToday": "closed today",
+    "mapKeyTitle": "Map Key",
+    "openToday": "open today",
+    "searched": "searched",
+    "selected": "selected"
+  },
+  "mapPrompts": {
+    "backToList": "Return to list.",
+    "youCanNotZoomOutMore": "You can not zoom out more.",
+    "zoomOut": "Zoom out for more results."
+  },
+  "mealSiteCard": {
+    "Hours": "Hours",
+    "additionalDirections": "Where to find us",
+    "address": "Address:",
+    "closed": "Closed",
+    "detailsLastUpdated": "Details last updated:",
+    "doorDelivery": "Door Delivery",
+    "expandDetails": "Expand details",
+    "friday": "Friday",
+    "getDirections": "Get directions",
+    "hideDetails": "Hide details",
+    "minimizeDetails": "Minimize details",
+    "monday": "Monday",
+    "moreDetails": "More details",
+    "notes": "Notes",
+    "questionsContactInfo": "Questions and contact information",
+    "saturday": "Saturday",
+    "shareLocation": "Share location",
+    "suggestAnEdit": "Suggest an edit",
+    "sunday": "Sunday",
+    "thursday": "Thursday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "weeklyMenu": "Weekly menu"
+  },
+  "searchBar": {
+    "cantFindCloseSite": "Can't find a site close to you? ",
+    "findDeliveryOptions": "Find out if you qualify for meal delivery.",
+    "noResults": "No results match your search. Please try again.",
+    "searchPrompt": "Search by site or address",
+    "trySearchingOtherProviders": "Browse other meal providers near you."
+  },
+  "shareOptions": {
+    "aboutUs": "This information is brought to you by Meals4Families in partnership with",
+    "copyLink": "Copy link",
+    "copyMessage": "Copy message",
+    "findNearbySites": "Use this link to see a map of nearby meal sites:",
+    "learnMore": "Use this link to learn more about free meals:",
+    "mealSiteInfo": "Follow the link below to find full details for this meal site including hours and directions:",
+    "messageIntro": "offers free meals for all children aged 0-18. Join us for a meal!",
+    "sendEmail": "Send email",
+    "sendTextMessage": "Send text message",
+    "share": "Share",
+    "shareInformationAboutMealSite": "Share information about this meal site:",
+    "suggestedMealSite": "You might be interested in this meal site:"
+  },
+  "specialSite": {
+    "doorDelivery": "Door Delivery"
+  },
+  "suggestEdit": {
+    "additionalComments": "Additional comments",
+    "address": "Address",
+    "enterCommentsPrompt": "Describe incorrect or missing information.",
+    "hours": "Hours",
+    "resetButton": "Clear form",
+    "siteName": "Meal site name",
+    "submitForm": "Submit",
+    "suggestEditTitle": "Suggest an edit",
+    "weeklyMenu": "Link to weekly menu",
+    "whatNeedsCorrecting": "What information do we need to correct for this meal site? "
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "About Free Meals"
+  }
 }

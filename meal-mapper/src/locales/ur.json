@@ -1,118 +1,118 @@
 {
-	"FAQs": {
-		"backToMap": "نقشہ پر واپس جائیں",
-		"buttonText": "مفت کھانے کے بارے میں",
-		"forMoreInformation": "مفت کھانے پر مزید معلومات کے ل for اپنے مقامی کھانے فراہم کرنے والے سے رابطہ کریں۔",
-		"hyperlinkText": "سوالات اور رابطے کی معلومات"
-	},
-	"landingPage": {
-		"aboutUs": "ہمارے بارے میں",
-		"findFreeMealsNearMe": "میرے قریب مفت کھانا تلاش کریں!",
-		"findYourCountyAndSelectProvider": "اپنے کاؤنٹی میں کھانے فراہم کرنے والے کو منتخب کریں۔",
-		"pleaseSelectState": "اپنی ریاست منتخب کریں۔",
-		"welcomeStatement": "میلز 4 فیملیز میں آپ کا استقبال ہے!",
-		"youMustSelectState": "کھانا فراہم کرنے والے کا انتخاب کرنے سے پہلے آپ کو ریاست کا انتخاب کرنا چاہئے۔"
-	},
-	"languages": {
-		"am": "امہاری",
-		"ar": "عربی",
-		"bn": "بنگالی",
-		"en": "انگریزی",
-		"es": "ہسپانوی",
-		"fil": "فلپائنی",
-		"fr": "فرانسیسی",
-		"hi": "ہندی",
-		"hmn": "ہمونگ",
-		"ja": "جاپانی",
-		"ko": "کورین",
-		"mh": "مارشللیز",
-		"ms": "مالائی",
-		"my": "برمی",
-		"ne": "نیپالی",
-		"pl": "پولش",
-		"pt": "پرتگالی",
-		"ru": "روسی",
-		"so": "صومالی",
-		"sp": "ہسپانوی",
-		"tg": "تگالگ",
-		"ur": "اردو",
-		"vi": "ویتنامی",
-		"zh": "چینی"
-	},
-	"mapKey": {
-		"closedToday": "آج بند",
-		"mapKeyTitle": "نقشہ کی کلید",
-		"openToday": "آج کھلا",
-		"searched": "تلاش",
-		"selected": "منتخب شدہ"
-	},
-	"mapPrompts": {
-		"backToList": "فہرست میں واپس جائیں۔",
-		"youCanNotZoomOutMore": "آپ زیادہ سے زیادہ زوم نہیں کرسکتے ہیں۔",
-		"zoomOut": "مزید نتائج کے لئے زوم آؤٹ کریں۔"
-	},
-	"mealSiteCard": {
-		"Hours": "اوقات",
-		"additionalDirections": "ہمیں کہاں ڈھونڈنا ہے",
-		"address": "پتہ:",
-		"closed": "بند",
-		"detailsLastUpdated": "آخری بار تازہ کاری کی تفصیلات:",
-		"doorDelivery": "دروازے کی فراہمی",
-		"expandDetails": "تفصیلات میں اضافہ کریں",
-		"friday": "جمعہ",
-		"getDirections": "ہدایات حاصل کریں",
-		"hideDetails": "تفصیلات چھپائیں",
-		"minimizeDetails": "تفصیلات کم سے کم کریں",
-		"monday": "پیر",
-		"moreDetails": "مزید تفصیلات",
-		"notes": "نوٹ",
-		"questionsContactInfo": "سوالات اور رابطے کی معلومات",
-		"saturday": "ہفتہ",
-		"shareLocation": "شیئر لوکیشن",
-		"suggestAnEdit": "ترمیم کی تجویز کریں",
-		"sunday": "اتوار",
-		"thursday": "جمعرات",
-		"tuesday": "منگل",
-		"wednesday": "بدھ",
-		"weeklyMenu": "ہفتہ وار مینو"
-	},
-	"searchBar": {
-		"cantFindCloseSite": "آپ کے قریب کی کوئی سائٹ نہیں مل سکتی؟",
-		"findDeliveryOptions": "معلوم کریں کہ کیا آپ کھانے کی ترسیل کے اہل ہیں یا نہیں۔",
-		"noResults": "کوئی نتیجہ آپ کی تلاش سے مماثل نہیں ہے۔ دوبارہ کوشش کریں.",
-		"searchPrompt": "پتے کے قریب کھانا تلاش کریں",
-		"trySearchingOtherProviders": "اپنے آس پاس کے دوسرے کھانے فراہم کرنے والوں کو براؤز کریں۔"
-	},
-	"shareOptions": {
-		"aboutUs": "یہ معلومات آپ کے پاس شراکت کے مطابق میلز 4 فیملیز کے ذریعہ لائے ہیں",
-		"copyLink": "لنک کاپی کریں",
-		"copyMessage": "پیغام کاپی کریں",
-		"findNearbySites": "قریبی کھانے کی سائٹس کا نقشہ دیکھنے کے لئے اس لنک کا استعمال کریں:",
-		"learnMore": "مفت کھانے کے بارے میں مزید معلومات کے ل this اس لنک کو استعمال کریں:",
-		"mealSiteInfo": "اس کھانے کی سائٹ کے بارے میں پوری تفصیلات جاننے کے لئے نیچے دیئے گئے لنک پر عمل کریں جس میں گھنٹے اور ہدایات شامل ہیں:",
-		"messageIntro": "0-18 سال کی عمر کے تمام بچوں کے لئے مفت کھانا پیش کرتا ہے۔ کھانے کے لئے ہمارے ساتھ شامل ہوں!",
-		"sendEmail": "ای میل بھیجیں",
-		"sendTextMessage": "ٹیکسٹ میسج بھیجیں",
-		"share": "بانٹیں",
-		"shareInformationAboutMealSite": "اس کھانے کی سائٹ کے بارے میں معلومات بانٹیں:",
-		"suggestedMealSite": "آپ اس کھانے کی سائٹ میں دلچسپی لے سکتے ہیں:"
-	},
-	"specialSite": {
-		"doorDelivery": "دروازے کی فراہمی"
-	},
-	"suggestEdit": {
-		"additionalComments": "اضافی تبصرے",
-		"address": "پتہ",
-		"enterCommentsPrompt": "غلط یا گمشدہ معلومات کی وضاحت کریں۔",
-		"hours": "اوقات",
-		"resetButton": "صاف فارم",
-		"siteName": "کھانا سائٹ کا نام",
-		"submitForm": "جمع کرائیں",
-		"suggestEditTitle": "ترمیم کی تجویز کریں",
-		"weeklyMenu": "ہفتہ وار مینو سے لنک کریں",
-		"whatNeedsCorrecting": "ہمیں کھانے کی اس سائٹ کے ل What کس معلومات کو درست کرنے کی ضرورت ہے؟"
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": "مفت کھانے کے بارے میں"
-	}
+  "FAQs": {
+    "backToMap": "نقشہ پر واپس جائیں",
+    "buttonText": "مفت کھانے کے بارے میں",
+    "forMoreInformation": "مفت کھانے پر مزید معلومات کے ل for اپنے مقامی کھانے فراہم کرنے والے سے رابطہ کریں۔",
+    "hyperlinkText": "سوالات اور رابطے کی معلومات"
+  },
+  "landingPage": {
+    "aboutUs": "ہمارے بارے میں",
+    "findFreeMealsNearMe": "میرے قریب مفت کھانا تلاش کریں!",
+    "findYourCountyAndSelectProvider": "اپنے کاؤنٹی میں کھانے فراہم کرنے والے کو منتخب کریں۔",
+    "pleaseSelectState": "اپنی ریاست منتخب کریں۔",
+    "welcomeStatement": "میلز 4 فیملیز میں آپ کا استقبال ہے!",
+    "youMustSelectState": "کھانا فراہم کرنے والے کا انتخاب کرنے سے پہلے آپ کو ریاست کا انتخاب کرنا چاہئے۔"
+  },
+  "languages": {
+    "am": "امہاری",
+    "ar": "عربی",
+    "bn": "بنگالی",
+    "en": "انگریزی",
+    "es": "ہسپانوی",
+    "fil": "فلپائنی",
+    "fr": "فرانسیسی",
+    "hi": "ہندی",
+    "hmn": "ہمونگ",
+    "ja": "جاپانی",
+    "ko": "کورین",
+    "mh": "مارشللیز",
+    "ms": "مالائی",
+    "my": "برمی",
+    "ne": "نیپالی",
+    "pl": "پولش",
+    "pt": "پرتگالی",
+    "ru": "روسی",
+    "so": "صومالی",
+    "sp": "ہسپانوی",
+    "tg": "تگالگ",
+    "ur": "اردو",
+    "vi": "ویتنامی",
+    "zh": "چینی"
+  },
+  "mapKey": {
+    "closedToday": "آج بند",
+    "mapKeyTitle": "نقشہ کی کلید",
+    "openToday": "آج کھلا",
+    "searched": "تلاش",
+    "selected": "منتخب شدہ"
+  },
+  "mapPrompts": {
+    "backToList": "فہرست میں واپس جائیں۔",
+    "youCanNotZoomOutMore": "آپ زیادہ سے زیادہ زوم نہیں کرسکتے ہیں۔",
+    "zoomOut": "مزید نتائج کے لئے زوم آؤٹ کریں۔"
+  },
+  "mealSiteCard": {
+    "Hours": "اوقات",
+    "additionalDirections": "ہمیں کہاں ڈھونڈنا ہے",
+    "address": "پتہ:",
+    "closed": "بند",
+    "detailsLastUpdated": "آخری بار تازہ کاری کی تفصیلات:",
+    "doorDelivery": "دروازے کی فراہمی",
+    "expandDetails": "تفصیلات میں اضافہ کریں",
+    "friday": "جمعہ",
+    "getDirections": "ہدایات حاصل کریں",
+    "hideDetails": "تفصیلات چھپائیں",
+    "minimizeDetails": "تفصیلات کم سے کم کریں",
+    "monday": "پیر",
+    "moreDetails": "مزید تفصیلات",
+    "notes": "نوٹ",
+    "questionsContactInfo": "سوالات اور رابطے کی معلومات",
+    "saturday": "ہفتہ",
+    "shareLocation": "شیئر لوکیشن",
+    "suggestAnEdit": "ترمیم کی تجویز کریں",
+    "sunday": "اتوار",
+    "thursday": "جمعرات",
+    "tuesday": "منگل",
+    "wednesday": "بدھ",
+    "weeklyMenu": "ہفتہ وار مینو"
+  },
+  "searchBar": {
+    "cantFindCloseSite": "آپ کے قریب کی کوئی سائٹ نہیں مل سکتی؟",
+    "findDeliveryOptions": "معلوم کریں کہ کیا آپ کھانے کی ترسیل کے اہل ہیں یا نہیں۔",
+    "noResults": "کوئی نتیجہ آپ کی تلاش سے مماثل نہیں ہے۔ دوبارہ کوشش کریں.",
+    "searchPrompt": "سائٹ یا پتے کے ذریعہ تلاش کریں",
+    "trySearchingOtherProviders": "اپنے آس پاس کے دوسرے کھانے فراہم کرنے والوں کو براؤز کریں۔"
+  },
+  "shareOptions": {
+    "aboutUs": "یہ معلومات آپ کے پاس شراکت کے مطابق میلز 4 فیملیز کے ذریعہ لائے ہیں",
+    "copyLink": "لنک کاپی کریں",
+    "copyMessage": "پیغام کاپی کریں",
+    "findNearbySites": "قریبی کھانے کی سائٹس کا نقشہ دیکھنے کے لئے اس لنک کا استعمال کریں:",
+    "learnMore": "مفت کھانے کے بارے میں مزید معلومات کے ل this اس لنک کو استعمال کریں:",
+    "mealSiteInfo": "اس کھانے کی سائٹ کے بارے میں پوری تفصیلات جاننے کے لئے نیچے دیئے گئے لنک پر عمل کریں جس میں گھنٹے اور ہدایات شامل ہیں:",
+    "messageIntro": "0-18 سال کی عمر کے تمام بچوں کے لئے مفت کھانا پیش کرتا ہے۔ کھانے کے لئے ہمارے ساتھ شامل ہوں!",
+    "sendEmail": "ای میل بھیجیں",
+    "sendTextMessage": "ٹیکسٹ میسج بھیجیں",
+    "share": "بانٹیں",
+    "shareInformationAboutMealSite": "اس کھانے کی سائٹ کے بارے میں معلومات بانٹیں:",
+    "suggestedMealSite": "آپ اس کھانے کی سائٹ میں دلچسپی لے سکتے ہیں:"
+  },
+  "specialSite": {
+    "doorDelivery": "دروازے کی فراہمی"
+  },
+  "suggestEdit": {
+    "additionalComments": "اضافی تبصرے",
+    "address": "پتہ",
+    "enterCommentsPrompt": "غلط یا گمشدہ معلومات کی وضاحت کریں۔",
+    "hours": "اوقات",
+    "resetButton": "صاف فارم",
+    "siteName": "کھانا سائٹ کا نام",
+    "submitForm": "جمع کرائیں",
+    "suggestEditTitle": "ترمیم کی تجویز کریں",
+    "weeklyMenu": "ہفتہ وار مینو سے لنک کریں",
+    "whatNeedsCorrecting": "ہمیں کھانے کی اس سائٹ کے ل What کس معلومات کو درست کرنے کی ضرورت ہے؟"
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": "مفت کھانے کے بارے میں"
+  }
 }

@@ -1,118 +1,118 @@
 {
-	"FAQs": {
-		"backToMap": "Quay lại bản đồ",
-		"buttonText": "",
-		"forMoreInformation": "Kết nối với nhà cung cấp bữa ăn địa phương của bạn để biết thêm thông tin về các bữa ăn miễn phí.",
-		"hyperlinkText": ""
-	},
-	"landingPage": {
-		"aboutUs": "",
-		"findFreeMealsNearMe": "",
-		"findYourCountyAndSelectProvider": "",
-		"pleaseSelectState": "",
-		"welcomeStatement": "",
-		"youMustSelectState": ""
-	},
-	"languages": {
-		"am": "",
-		"ar": "",
-		"bn": "",
-		"en": "",
-		"es": "người Tây Ban Nha",
-		"fil": "",
-		"fr": "",
-		"hi": "",
-		"hmn": "",
-		"ja": "",
-		"ko": "",
-		"mh": "",
-		"ms": "",
-		"my": "",
-		"ne": "",
-		"pl": "",
-		"pt": "",
-		"ru": "",
-		"so": "",
-		"sp": "",
-		"tg": "",
-		"ur": "",
-		"vi": "",
-		"zh": ""
-	},
-	"mapKey": {
-		"closedToday": "",
-		"mapKeyTitle": "",
-		"openToday": "",
-		"searched": "",
-		"selected": ""
-	},
-	"mapPrompts": {
-		"backToList": "",
-		"youCanNotZoomOutMore": "",
-		"zoomOut": ""
-	},
-	"mealSiteCard": {
-		"Hours": "",
-		"additionalDirections": "",
-		"address": "",
-		"closed": "",
-		"detailsLastUpdated": "",
-		"doorDelivery": "Giao hàng tận nơi",
-		"expandDetails": "",
-		"friday": "",
-		"getDirections": "",
-		"hideDetails": "Ẩn chi tiết",
-		"minimizeDetails": "",
-		"monday": "",
-		"moreDetails": "Thêm chi tiết",
-		"notes": "",
-		"questionsContactInfo": "",
-		"saturday": "",
-		"shareLocation": "",
-		"suggestAnEdit": "",
-		"sunday": "",
-		"thursday": "",
-		"tuesday": "",
-		"wednesday": "",
-		"weeklyMenu": ""
-	},
-	"searchBar": {
-		"cantFindCloseSite": "Không thể tìm thấy một trang web gần với bạn?",
-		"findDeliveryOptions": "Tìm hiểu xem bạn có đủ điều kiện để giao bữa ăn không.",
-		"noResults": "",
-		"searchPrompt": "",
-		"trySearchingOtherProviders": "Duyệt qua các nhà cung cấp bữa ăn khác gần bạn."
-	},
-	"shareOptions": {
-		"aboutUs": "",
-		"copyLink": "",
-		"copyMessage": "",
-		"findNearbySites": "",
-		"learnMore": "",
-		"mealSiteInfo": "",
-		"messageIntro": "",
-		"sendEmail": "",
-		"sendTextMessage": "",
-		"share": "",
-		"shareInformationAboutMealSite": "",
-		"suggestedMealSite": ""
-	},
-	"specialSite": {
-		"doorDelivery": ""
-	},
-	"suggestEdit": {
-		"additionalComments": "",
-		"address": "",
-		"enterCommentsPrompt": "",
-		"hours": "",
-		"resetButton": "",
-		"siteName": "",
-		"submitForm": "",
-		"suggestEditTitle": "Đề nghị chỉnh sửa",
-		"weeklyMenu": "",
-		"whatNeedsCorrecting": ""
-	},
-	"themeHeaderBar": {
-		"AboutFreeMeals": ""
-	}
+  "FAQs": {
+    "backToMap": "Quay lại bản đồ",
+    "buttonText": "",
+    "forMoreInformation": "Kết nối với nhà cung cấp bữa ăn địa phương của bạn để biết thêm thông tin về các bữa ăn miễn phí.",
+    "hyperlinkText": ""
+  },
+  "landingPage": {
+    "aboutUs": "",
+    "findFreeMealsNearMe": "",
+    "findYourCountyAndSelectProvider": "",
+    "pleaseSelectState": "",
+    "welcomeStatement": "",
+    "youMustSelectState": ""
+  },
+  "languages": {
+    "am": "",
+    "ar": "",
+    "bn": "",
+    "en": "",
+    "es": "người Tây Ban Nha",
+    "fil": "",
+    "fr": "",
+    "hi": "",
+    "hmn": "",
+    "ja": "",
+    "ko": "",
+    "mh": "",
+    "ms": "",
+    "my": "",
+    "ne": "",
+    "pl": "",
+    "pt": "",
+    "ru": "",
+    "so": "",
+    "sp": "",
+    "tg": "",
+    "ur": "",
+    "vi": "",
+    "zh": ""
+  },
+  "mapKey": {
+    "closedToday": "",
+    "mapKeyTitle": "",
+    "openToday": "",
+    "searched": "",
+    "selected": ""
+  },
+  "mapPrompts": {
+    "backToList": "",
+    "youCanNotZoomOutMore": "",
+    "zoomOut": ""
+  },
+  "mealSiteCard": {
+    "Hours": "",
+    "additionalDirections": "",
+    "address": "",
+    "closed": "",
+    "detailsLastUpdated": "",
+    "doorDelivery": "Giao hàng tận nơi",
+    "expandDetails": "",
+    "friday": "",
+    "getDirections": "",
+    "hideDetails": "Ẩn chi tiết",
+    "minimizeDetails": "",
+    "monday": "",
+    "moreDetails": "Thêm chi tiết",
+    "notes": "",
+    "questionsContactInfo": "",
+    "saturday": "",
+    "shareLocation": "",
+    "suggestAnEdit": "",
+    "sunday": "",
+    "thursday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "weeklyMenu": ""
+  },
+  "searchBar": {
+    "cantFindCloseSite": "Không thể tìm thấy một trang web gần với bạn?",
+    "findDeliveryOptions": "Tìm hiểu xem bạn có đủ điều kiện để giao bữa ăn không.",
+    "noResults": "",
+    "searchPrompt": "Tìm kiếm theo trang web hoặc địa chỉ",
+    "trySearchingOtherProviders": "Duyệt qua các nhà cung cấp bữa ăn khác gần bạn."
+  },
+  "shareOptions": {
+    "aboutUs": "",
+    "copyLink": "",
+    "copyMessage": "",
+    "findNearbySites": "",
+    "learnMore": "",
+    "mealSiteInfo": "",
+    "messageIntro": "",
+    "sendEmail": "",
+    "sendTextMessage": "",
+    "share": "",
+    "shareInformationAboutMealSite": "",
+    "suggestedMealSite": ""
+  },
+  "specialSite": {
+    "doorDelivery": ""
+  },
+  "suggestEdit": {
+    "additionalComments": "",
+    "address": "",
+    "enterCommentsPrompt": "",
+    "hours": "",
+    "resetButton": "",
+    "siteName": "",
+    "submitForm": "",
+    "suggestEditTitle": "Đề nghị chỉnh sửa",
+    "weeklyMenu": "",
+    "whatNeedsCorrecting": ""
+  },
+  "themeHeaderBar": {
+    "AboutFreeMeals": ""
+  }
 }
