@@ -4,7 +4,16 @@
       <b-list-group-item variant="sideNav">
         <form>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <a href="/" style="font-size: 0.7rem;">{{ $t('searchBar.searchAnotherMealProvider') }}</a>
+          <p style="font-size: 0.9rem; text-align: center; margin-top: 5px;">
+            {{ $t('searchBar.cantFindCloseSite') }}
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
+              $t('searchBar.trySearchingOtherProviders')
+            }}</b-button>
+            OR
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
+              'See if you qualify for meal delivery'
+            }}</b-button>
+          </p>
         </form>
       </b-list-group-item>
     </b-list-group>
@@ -98,7 +107,9 @@ import { eventManager } from '../main'
 import BusinessDetails from './BusinessDetails.vue'
 import { districtData } from '../themes/MealsForFamilies/districtData' // Hardcoded in to Meals For Families theme.
 //import BusinessDetailsMobile from './BusinessDetailsMobile.vue'
-
+document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
+document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
+document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
 export default {
   name: 'ResultsList',
   data() {
@@ -188,7 +199,31 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+.root {
+  --primary-color: blue;
+  --banner-light: '#E9ECEF';
+  --banner-dark: '#212529';
+  --nav-link-light: '#F8F8F8';
+  --nav-link-dark: '#F8F8F8';
+}
+.btn {
+  color: var(--nav-link-light) !important;
+  background-color: var(--banner-light) !important;
+  @media (prefers-color-scheme: dark) {
+    color: var(--nav-link-dark) !important;
+    background-color: var(--banner-dark) !important;
+  }
+}
+.btn:hover {
+  opacity: 0.5;
+  /*color: var(--nav-link-light) !important;
+  background-color: var(--banner-light) !important;
+  @media (prefers-color-scheme: dark) {
+    color: var(--nav-link-dark) !important;
+    background-color: var(--banner-dark) !important;
+  } */
+}
 .resultWrapper {
   scrollbar-color: $gray-900 $gray-700;
 }
@@ -310,7 +345,7 @@ export default {
 }
 
 .resultList {
-  max-height: calc(100vh - 105px);
+  max-height: calc(100vh - 215px);
   overflow-y: overlay;
   padding-bottom: 10px;
   //padding-top: 20px;

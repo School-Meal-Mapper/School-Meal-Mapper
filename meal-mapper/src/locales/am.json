@@ -77,9 +77,11 @@
     "weeklyMenu": "ሳምንታዊ ምናሌ"
   },
   "searchBar": {
+    "cantFindCloseSite": "ለእርስዎ የቀረበ ጣቢያ ማግኘት አልተቻለም?",
+    "findDeliveryOptions": "ለምግብ አቅርቦት ብቁ መሆንዎን ይወቁ ፡፡",
     "noResults": "ከፍለጋዎ ጋር የሚዛመዱ ውጤቶች የሉም። እባክዎ ዳግም ይሞክሩ.",
-    "searchAnotherMealProvider": "ወይም ከዚህ ካርታ አካባቢ ውጭ ምግብ ይፈልጉ ፡፡",
-    "searchPrompt": "በአድራሻ አቅራቢያ ምግብ ይፈልጉ"
+    "searchPrompt": "በጣቢያ ወይም በአድራሻ ይፈልጉ",
+    "trySearchingOtherProviders": "በአቅራቢያዎ ያሉ ሌሎች የምግብ አቅራቢዎችን ያስሱ።"
   },
   "shareOptions": {
     "aboutUs": "ይህ መረጃ በ Meals4Families አማካኝነት በመተባበር ያመጣዎታል",

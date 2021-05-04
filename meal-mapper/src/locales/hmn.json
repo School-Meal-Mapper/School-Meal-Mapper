@@ -77,9 +77,11 @@
     "weeklyMenu": "Cov zaub mov txhua lub limtiam"
   },
   "searchBar": {
+    "cantFindCloseSite": "Puas tuaj yeem tsis pom lub vev xaib nyob ze koj?",
+    "findDeliveryOptions": "Kuaj seb koj puas muaj feem tau txais zaub mov noj.",
     "noResults": "Tsis muaj qhov tshwm sim txuam nrog koj tshawb. Thov koj sim dua.",
-    "searchAnotherMealProvider": "Lossis nrhiav pluas mov noj sab nraud ntawm daim duab qhia chaw no.",
-    "searchPrompt": "Nrhiav pluas noj nyob ze chaw nyob"
+    "searchPrompt": "Tshawb ntawm lub xaib lossis chaw nyob",
+    "trySearchingOtherProviders": "Nrhiav lwm cov chaw muab zaub mov nyob ze koj."
   },
   "shareOptions": {
     "aboutUs": "Cov ntaub ntawv no tau coj tuaj rau koj los ntawm Meals4Families hauv kev koom tes nrog",

@@ -66,6 +66,7 @@
             </span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item right href="/"><i class="fas fa-home fa-lg" aria-hidden="true" /></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -96,7 +97,7 @@ export default {
         { iso: 'ar', name: 'عربى' },
         { iso: 'ja', name: '日本人' },
         { iso: 'zh', name: '中文' },
-        { iso: 'ms', name: 'ဗမာ' },
+        { iso: 'ms', name: 'Melayu' },
         { iso: 'hi', name: 'हिंदी' },
         { iso: 'vi', name: 'tiếng việt' },
         { iso: 'bn', name: 'বাংলা' },

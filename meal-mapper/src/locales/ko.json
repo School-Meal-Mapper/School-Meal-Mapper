@@ -77,9 +77,11 @@
     "weeklyMenu": "주간 메뉴"
   },
   "searchBar": {
+    "cantFindCloseSite": "가까운 사이트를 찾을 수 없습니까?",
+    "findDeliveryOptions": "식사 배달 자격이 있는지 알아보십시오.",
     "noResults": "검색과 일치하는 결과가 없습니다. 다시 시도하십시오.",
-    "searchAnotherMealProvider": "또는이지도 영역 밖에서 식사를 찾으십시오.",
-    "searchPrompt": "주소 근처 식사 찾기"
+    "searchPrompt": "사이트 또는 주소로 검색",
+    "trySearchingOtherProviders": "가까운 다른 식사 제공 업체를 찾아보십시오."
   },
   "shareOptions": {
     "aboutUs": "이 정보는 식사4Family와 협력하여 귀하에게 가져온 것입니다.",

@@ -77,9 +77,11 @@
     "weeklyMenu": "Cotygodniowe menu"
   },
   "searchBar": {
+    "cantFindCloseSite": "Nie możesz znaleźć witryny w pobliżu?",
+    "findDeliveryOptions": "Dowiedz się, czy kwalifikujesz się do dostawy posiłków.",
     "noResults": "Brak wyników dopasowanych do wyszukiwania. Spróbuj ponownie.",
-    "searchAnotherMealProvider": "Lub znajdź posiłki poza tym obszarem mapy.",
-    "searchPrompt": "Znajdź posiłki w pobliżu adresu"
+    "searchPrompt": "Szukaj według witryny lub adresu",
+    "trySearchingOtherProviders": "Przeglądaj innych dostawców posiłków w Twojej okolicy."
   },
   "shareOptions": {
     "aboutUs": "Informacje te są przenoszone przez Meals4Families we współpracy z",

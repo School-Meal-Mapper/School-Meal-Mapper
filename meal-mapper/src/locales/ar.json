@@ -77,9 +77,11 @@
     "weeklyMenu": "قائمة أسبوعية"
   },
   "searchBar": {
+    "cantFindCloseSite": "لا يمكن العثور على موقع قريب منك؟",
+    "findDeliveryOptions": "اكتشف ما إذا كنت مؤهلاً لتوصيل الوجبات.",
     "noResults": "لا توجد نتائج تطابق بحثك. حاول مرة اخرى.",
-    "searchAnotherMealProvider": "أو ابحث عن وجبات خارج منطقة الخريطة هذه.",
-    "searchPrompt": "البحث عن وجبات بالقرب من العنوان"
+    "searchPrompt": "البحث عن طريق الموقع أو العنوان",
+    "trySearchingOtherProviders": "تصفح مقدمي الوجبات الآخرين بالقرب منك."
   },
   "shareOptions": {
     "aboutUs": "يتم تقديم هذه المعلومات إليك من خلال Meals4Families بالشراكة مع",

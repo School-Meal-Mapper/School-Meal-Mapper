@@ -2,7 +2,7 @@
   "FAQs": {
     "backToMap": "回到地图",
     "buttonText": "",
-    "forMoreInformation": "",
+    "forMoreInformation": "与您当地的餐饮服务提供商联系，以获取有关免费膳食的更多信息。",
     "hyperlinkText": ""
   },
   "landingPage": {
@@ -77,9 +77,11 @@
     "weeklyMenu": ""
   },
   "searchBar": {
+    "cantFindCloseSite": "找不到您附近的网站？",
+    "findDeliveryOptions": "找出您是否符合送餐的资格。",
     "noResults": "",
-    "searchAnotherMealProvider": "",
-    "searchPrompt": ""
+    "searchPrompt": "按网站或地址搜索",
+    "trySearchingOtherProviders": "浏览您附近的其他餐饮服务提供商。"
   },
   "shareOptions": {
     "aboutUs": "",

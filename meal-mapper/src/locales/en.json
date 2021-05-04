@@ -2,7 +2,7 @@
   "FAQs": {
     "backToMap": "Back to Map",
     "buttonText": "About free meals",
-    "forMoreInformation": "Connect with your local meal provider for more information on free meals.",
+    "forMoreInformation": "Connect with your local meal provider for more information about free meals.",
     "hyperlinkText": "Questions and contact information"
   },
   "landingPage": {
@@ -77,9 +77,11 @@
     "weeklyMenu": "Weekly menu"
   },
   "searchBar": {
+    "cantFindCloseSite": "Can't find a site close to you? ",
+    "findDeliveryOptions": "Find out if you qualify for meal delivery.",
     "noResults": "No results match your search. Please try again.",
-    "searchAnotherMealProvider": "Or find meals outside of this map area.",
-    "searchPrompt": "Find meals near address"
+    "searchPrompt": "Search by site or address",
+    "trySearchingOtherProviders": "Browse other meal providers near you."
   },
   "shareOptions": {
     "aboutUs": "This information is brought to you by Meals4Families in partnership with",

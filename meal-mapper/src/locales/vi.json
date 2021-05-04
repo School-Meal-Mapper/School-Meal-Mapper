@@ -2,7 +2,7 @@
   "FAQs": {
     "backToMap": "Quay lại bản đồ",
     "buttonText": "",
-    "forMoreInformation": "",
+    "forMoreInformation": "Kết nối với nhà cung cấp bữa ăn địa phương của bạn để biết thêm thông tin về các bữa ăn miễn phí.",
     "hyperlinkText": ""
   },
   "landingPage": {
@@ -77,9 +77,11 @@
     "weeklyMenu": ""
   },
   "searchBar": {
+    "cantFindCloseSite": "Không thể tìm thấy một trang web gần với bạn?",
+    "findDeliveryOptions": "Tìm hiểu xem bạn có đủ điều kiện để giao bữa ăn không.",
     "noResults": "",
-    "searchAnotherMealProvider": "",
-    "searchPrompt": ""
+    "searchPrompt": "Tìm kiếm theo trang web hoặc địa chỉ",
+    "trySearchingOtherProviders": "Duyệt qua các nhà cung cấp bữa ăn khác gần bạn."
   },
   "shareOptions": {
     "aboutUs": "",

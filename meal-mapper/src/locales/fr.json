@@ -77,9 +77,11 @@
     "weeklyMenu": "Menu de la semaine"
   },
   "searchBar": {
+    "cantFindCloseSite": "Vous ne trouvez pas de site près de chez vous?",
+    "findDeliveryOptions": "Découvrez si vous êtes admissible à la livraison de repas.",
     "noResults": "Aucun résultat ne correspond à votre recherche. S’ll vous plaît, réessaiez.",
-    "searchAnotherMealProvider": "Ou trouvez des repas en dehors de cette zone de la carte.",
-    "searchPrompt": "Trouver des repas près de l’adresse"
+    "searchPrompt": "Recherche par site ou par adresse",
+    "trySearchingOtherProviders": "Parcourez d'autres fournisseurs de repas près de chez vous."
   },
   "shareOptions": {
     "aboutUs": "Ces informations vous sont fournies par Meals4Families en partenariat avec",

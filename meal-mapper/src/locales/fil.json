@@ -77,9 +77,11 @@
     "weeklyMenu": ""
   },
   "searchBar": {
+    "cantFindCloseSite": "",
+    "findDeliveryOptions": "",
     "noResults": "",
-    "searchAnotherMealProvider": "",
-    "searchPrompt": ""
+    "searchPrompt": "",
+    "trySearchingOtherProviders": ""
   },
   "shareOptions": {
     "aboutUs": "",

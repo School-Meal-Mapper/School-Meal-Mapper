@@ -77,9 +77,11 @@
     "weeklyMenu": "ウィークリーメニュー"
   },
   "searchBar": {
+    "cantFindCloseSite": "お近くのサイトが見つかりませんか？",
+    "findDeliveryOptions": "あなたが食事の配達の資格があるかどうか調べてください。",
     "noResults": "検索結果に一致する結果はありません。もう一度やり直してください。",
-    "searchAnotherMealProvider": "または、このマップエリアの外で食事を見つけてください。",
-    "searchPrompt": "住所の近くで食事を探す"
+    "searchPrompt": "サイトまたはアドレスで検索",
+    "trySearchingOtherProviders": "お近くの他の食事提供者を閲覧します。"
   },
   "shareOptions": {
     "aboutUs": "この情報は、食事によってもたらされる4家族と提携して",

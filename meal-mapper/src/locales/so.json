@@ -77,9 +77,11 @@
     "weeklyMenu": "Liistada toddobaadlaha ah"
   },
   "searchBar": {
+    "cantFindCloseSite": "Ma heli karaa degel kuu dhow?",
+    "findDeliveryOptions": "Ogow haddii aad u-qalanto gaarsiinta cuntada.",
     "noResults": "Majiraan natiijooyin u dhigma raadintaada. Fadlan iskuday markale.",
-    "searchAnotherMealProvider": "Ama raashin ka hel meel ka baxsan khariidadan.",
-    "searchPrompt": "Raadi cunno u dhow cinwaanka"
+    "searchPrompt": "Ka raadi bogga ama cinwaanka",
+    "trySearchingOtherProviders": "Raadso bixiyeyaasha kale ee cuntada kuu dhow."
   },
   "shareOptions": {
     "aboutUs": "Macluumaadkan waxaa kuu keenay Meals4Families oo kaashanaysa",

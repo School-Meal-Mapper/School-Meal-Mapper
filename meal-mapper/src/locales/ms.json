@@ -77,9 +77,11 @@
     "weeklyMenu": "Menu mingguan"
   },
   "searchBar": {
+    "cantFindCloseSite": "Tidak menemui laman web yang berdekatan dengan anda?",
+    "findDeliveryOptions": "Ketahui sama ada anda layak untuk penghantaran makanan.",
     "noResults": "Tiada keputusan yang sepadan dengan carian anda. Sila cuba lagi.",
-    "searchAnotherMealProvider": "Atau cari makanan di luar kawasan peta ini.",
-    "searchPrompt": "Cari makanan berhampiran alamat"
+    "searchPrompt": "Cari mengikut laman web atau alamat",
+    "trySearchingOtherProviders": "Lihat penyedia makanan lain yang berdekatan dengan anda."
   },
   "shareOptions": {
     "aboutUs": "Maklumat ini dibawa kepada anda oleh Meals4Families dengan kerjasama",
