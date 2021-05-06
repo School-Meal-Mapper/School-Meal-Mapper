@@ -209,7 +209,35 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-}  */ else {
+} */ else if (
+  url.searchParams.has('stock') ||
+  hash == 'stock'
+) {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'stockton'
+  districtName = 'Stockton Unifed School District'
+  primaryColor = '#c6e2ff'
+  bannerColor = '#c6e2ff'
+  bannerColorDark = '#c6e2ff'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.3844741
+  initialMapCenterLng = -121.940021
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ofywXRlE8BxQ64zn2R-6rKnBtNaJags8S42huw3BcPI/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1ofywXRlE8BxQ64zn2R-6rKnBtNaJags8S42huw3BcPI/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1ofywXRlE8BxQ64zn2R-6rKnBtNaJags8S42huw3BcPI/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else {
   if (urlString.includes('?')) {
     location.href = '/'
   }

@@ -90,9 +90,17 @@ export const states = [
   { value: 'wy', text: 'Wyoming' }
 ]
 
-export const nc = [{ value: 'nc', text: 'North Carolina' }]
+export const ca = [{ value: 'ca', text: 'California' }]
 
 export const districts = {
+  ca: [
+    { value: null, text: 'Please select a school district.' },
+    { value: 'acal', text: 'Acalances Union High School District' },
+    { value: 'elk', text: 'Elk Grove Unified School District' },
+    { value: 'sanramon', text: 'San Ramon Valley Unified School District' },
+    { value: 'sanfran', text: 'San Francisco Unified School District' },
+    { value: 'stock', text: 'Stockton Unified School District' }
+  ],
   nc: [
     { value: null, text: 'Please select a school district.' },
     { value: 'chccs', text: 'Chapel Hill-Carrboro City Schools' }

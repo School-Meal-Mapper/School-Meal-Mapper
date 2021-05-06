@@ -19,7 +19,7 @@
           <b-form-select v-model="selectedState" :options="states">{{ this.$t('landingPage.pleaseSelectState') }}</b-form-select>
           <br />
           <br />
-          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
+          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'ca'">{{
             this.$t('landingPage.findYourCountyAndSelectProvider')
           }}</b-form-select>
         </p>
@@ -84,7 +84,7 @@ import ResultsList from './components/ResultsList.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
-import { dayFilters, booleanFilters, dayAny, nc, districts } from './constants'
+import { dayFilters, booleanFilters, dayAny, ca, districts } from './constants'
 
 import { districtData } from './themes/MealsForFamilies/districtData'
 import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
@@ -154,7 +154,7 @@ export default {
       },
       selectedState: null,
       selectedDistrict: null,
-      states: nc,
+      states: ca,
       districts: districts,
       searchLocData: false,
       showList: false,
@@ -348,7 +348,7 @@ export default {
   },
   computed: {
     districtOptions() {
-      if (this.selectedState == 'nc') {
+      if (this.selectedState == 'ca') {
         return districts[this.selectedState]
       }
       if (this.selectedState == null) {
