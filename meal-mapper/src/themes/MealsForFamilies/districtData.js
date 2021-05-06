@@ -217,9 +217,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'acalances'
   districtName = 'Acalances Unifed High School District'
-  primaryColor = '#c6e2ff'
-  bannerColor = '#c6e2ff'
-  bannerColorDark = '#c6e2ff'
+  primaryColor = '#333354'
+  bannerColor = '#333354'
+  bannerColorDark = '#333354'
   // map settings for district-specific page
   initialMapCenterLat = 37.867039
   initialMapCenterLng = -122.101
@@ -242,9 +242,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'elkgrove'
   districtName = 'Elk Grove Unifed School District'
-  primaryColor = '#c6e2ff'
-  bannerColor = '#c6e2ff'
-  bannerColorDark = '#c6e2ff'
+  primaryColor = '#808080'
+  bannerColor = '#808080'
+  bannerColorDark = '#808080'
   // map settings for district-specific page
   initialMapCenterLat = 37.3930292
   initialMapCenterLng = -121.769379
@@ -267,9 +267,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'sanramonvalley'
   districtName = 'San Ramon Valley Unifed School District'
-  primaryColor = '#c6e2ff'
-  bannerColor = '#c6e2ff'
-  bannerColorDark = '#c6e2ff'
+  primaryColor = '#144c84'
+  bannerColor = '#144c84'
+  bannerColorDark = '#144c84'
   // map settings for district-specific page
   initialMapCenterLat = 37.1339975
   initialMapCenterLng = -121.764933
@@ -317,9 +317,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'stockton'
   districtName = 'Stockton Unifed School District'
-  primaryColor = '#c6e2ff'
-  bannerColor = '#c6e2ff'
-  bannerColorDark = '#c6e2ff'
+  primaryColor = '#283474'
+  bannerColor = '#283474'
+  bannerColorDark = '#283474'
   // map settings for district-specific page
   initialMapCenterLat = 37.3844741
   initialMapCenterLng = -121.940021
