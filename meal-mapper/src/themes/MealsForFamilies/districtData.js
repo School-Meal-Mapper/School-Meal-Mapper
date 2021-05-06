@@ -210,9 +210,109 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 } */ else if (
-  url.searchParams.has('stock') ||
-  hash == 'stock'
+  url.searchParams.has('acal') ||
+  hash == 'acal'
 ) {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'acalances'
+  districtName = 'Acalances Unifed High School District'
+  primaryColor = '#c6e2ff'
+  bannerColor = '#c6e2ff'
+  bannerColorDark = '#c6e2ff'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.867039
+  initialMapCenterLng = -122.101
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1um1VHTahw4O5_IfaHoRVMDN5TyYKVT7S9SG09-_9Ni4/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1um1VHTahw4O5_IfaHoRVMDN5TyYKVT7S9SG09-_9Ni4/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1um1VHTahw4O5_IfaHoRVMDN5TyYKVT7S9SG09-_9Ni4/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('elk') || hash == 'elk') {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'elkgrove'
+  districtName = 'Elk Grove Unifed School District'
+  primaryColor = '#c6e2ff'
+  bannerColor = '#c6e2ff'
+  bannerColorDark = '#c6e2ff'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.3930292
+  initialMapCenterLng = -121.769379
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1oP_VIomg6pdqLCTinu6uPGfFrgEUzDKvFg2D0KmDEMg/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1oP_VIomg6pdqLCTinu6uPGfFrgEUzDKvFg2D0KmDEMg/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1oP_VIomg6pdqLCTinu6uPGfFrgEUzDKvFg2D0KmDEMg/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('sanramon') || hash == 'sanramon') {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'sanramonvalley'
+  districtName = 'San Ramon Valley Unifed School District'
+  primaryColor = '#c6e2ff'
+  bannerColor = '#c6e2ff'
+  bannerColorDark = '#c6e2ff'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.1339975
+  initialMapCenterLng = -121.764933
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1nwvKNlsxQyqrxKGtazSnKAwzFURE_GVOtBdD62dZDoQ/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1nwvKNlsxQyqrxKGtazSnKAwzFURE_GVOtBdD62dZDoQ/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1nwvKNlsxQyqrxKGtazSnKAwzFURE_GVOtBdD62dZDoQ/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('sanfran') || hash == 'sanfran') {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'sanfranciso'
+  districtName = 'San Francisco Unifed School District'
+  primaryColor = '#c6e2ff'
+  bannerColor = '#c6e2ff'
+  bannerColorDark = '#c6e2ff'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.4606612
+  initialMapCenterLng = -121.850278
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1c3zSPGpa01KueGhRauuo4cmIkD69E1wlapSHOSsuPCY/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1c3zSPGpa01KueGhRauuo4cmIkD69E1wlapSHOSsuPCY/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1c3zSPGpa01KueGhRauuo4cmIkD69E1wlapSHOSsuPCY/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('stock') || hash == 'stock') {
   //case 'wake':
   // district name and theming
   districtAbbr = 'stockton'
