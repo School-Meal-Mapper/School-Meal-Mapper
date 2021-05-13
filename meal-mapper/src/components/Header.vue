@@ -78,6 +78,7 @@ document.documentElement.style.setProperty('--banner-light', districtData.colors
 document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
 document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLink)
 document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
+document.documentElement.style.setProperty('--accentColor', districtData.colors.accentColor)
 
 export default {
   name: 'app-header',
@@ -226,6 +227,7 @@ export default {
 }
 
 .btn-buttons {
+  background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: light) {
     color: $button-text !important;
   }
