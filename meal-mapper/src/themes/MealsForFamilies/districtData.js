@@ -222,7 +222,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#1D6363'
   bannerColorDark = '#1B3C65'
   accentColor = '#ffec60'
-  navLink = '#313639'
+  navLink = '#f8f8ff'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page
   initialMapCenterLat = 35.943068
