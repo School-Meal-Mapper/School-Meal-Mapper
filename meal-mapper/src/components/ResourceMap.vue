@@ -218,7 +218,7 @@ export default {
         {
           title: this.$t('mapKey.searched'),
           icon: ExtraMarkers.icon({
-            markerColor: 'pink',
+            className: 'markersearched',
             icon: 'na',
             prefix: 'fa',
             svg: true
@@ -251,7 +251,7 @@ export default {
 
     locationIcon() {
       const icon = ExtraMarkers.icon({
-        markerColor: 'pink',
+        className: 'markersearched',
         icon: 'fas fa-map-pin',
         prefix: 'fa',
         svg: true
@@ -444,6 +444,10 @@ export default {
 
 .markerselected svg path {
   fill: $marker-selected;
+}
+
+.markersearched svg path {
+  fill: $marker-searched;
 }
 
 div.markeropen svg path {
