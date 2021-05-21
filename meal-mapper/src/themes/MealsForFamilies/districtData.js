@@ -297,9 +297,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#89cbe1'
   bannerColorDark = '#7794a7'
   // map settings for district-specific page
-  initialMapCenterLat = 37.4606612
-  initialMapCenterLng = -121.850278
-  initialMapZoom = 10
+  initialMapCenterLat = 37.75515
+  initialMapCenterLng = -122.49179
+  initialMapZoom = 12
   clusterZoom = 12
   maxZoom = 17
   minZoom = 10
