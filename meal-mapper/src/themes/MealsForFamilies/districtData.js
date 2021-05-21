@@ -11,6 +11,7 @@ var districtName = 'Meals 4 Families'
 var primaryColor = null
 var bannerColor = null
 var bannerColorDark = null
+var accentColor = null
 var initialMapCenterLat = null
 var initialMapCenterLng = null
 var initialMapZoom = null
@@ -42,10 +43,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   districtAbbr = 'chapelhill'
   districtName = 'Chapel Hill-Carrboro City Schools'
   primaryColor = '#0063b1'
-  //bannerColor = '#00a5ad'
   bannerColor = '0051BA'
   bannerColorDark = '#00224f'
-  //bannerColorDark = '#0c6364'
+  accentColor = '#7cba3e'
   navLink = '#313639'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page
@@ -56,9 +56,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   maxZoom = 17
   minZoom = 12
   // data source urls and attributions
-  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/1/public/values?alt=json'
-  faqUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/2/public/values?alt=json'
-  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1DTbNqqclTQ6_RqVKc2chMoomz5HZxVv1owW2h67qWro/3/public/values?alt=json'
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1suJY9SWEYxrQIBfb9VYl33cKNbWwBcxMaJc-hOCKVyY/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1suJY9SWEYxrQIBfb9VYl33cKNbWwBcxMaJc-hOCKVyY/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1suJY9SWEYxrQIBfb9VYl33cKNbWwBcxMaJc-hOCKVyY/3/public/values?alt=json'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -346,10 +346,11 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'mff'
   districtName = 'Meals 4 Families'
-  primaryColor = '#0063b1'
-  bannerColor = '#1E5ADC'
-  bannerColorDark = '#32325B'
-  navLink = '#313639'
+  primaryColor = '#1D6363'
+  bannerColor = '#1D6363'
+  bannerColorDark = '#1B3C65'
+  accentColor = '#ffec60'
+  navLink = '#f8f8ff'
   navLinkDark = '#f8f8ff'
   // map settings for district-specific page
   initialMapCenterLat = 35.943068
@@ -377,6 +378,7 @@ export const districtData = {
     primaryColor: primaryColor,
     bannerColor: bannerColor,
     bannerColorDark: bannerColorDark,
+    accentColor: accentColor,
     navLink: navLink,
     navLinkDark: navLinkDark
   },

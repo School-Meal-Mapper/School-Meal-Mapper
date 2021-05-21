@@ -110,6 +110,7 @@ import { districtData } from '../themes/MealsForFamilies/districtData' // Hardco
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
 document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
 document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
+document.documentElement.style.setProperty('--accentColor', districtData.colors.accentColor)
 export default {
   name: 'ResultsList',
   data() {
@@ -209,7 +210,7 @@ export default {
 }
 .btn {
   color: var(--nav-link-light) !important;
-  background-color: var(--banner-light) !important;
+  background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: dark) {
     color: var(--nav-link-dark) !important;
     background-color: var(--banner-dark) !important;
@@ -289,7 +290,7 @@ export default {
 .special-badge {
   display: inline-block;
   border-radius: 100px;
-  background-color: #9c9100;
+  background-color: $user-marker;
   border: 1px solid $gray-400;
   color: $gray-100;
   padding: 2px 6px;
