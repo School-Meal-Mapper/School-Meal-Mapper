@@ -292,9 +292,10 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'sanfranciso'
   districtName = 'San Francisco Unifed School District'
-  primaryColor = '#c6e2ff'
-  bannerColor = '#c6e2ff'
-  bannerColorDark = '#c6e2ff'
+  primaryColor = '#7794a7'
+  bannerColor = '#7794a7'
+  accentColor = '#89cbe1'
+  bannerColorDark = '#7794a7'
   // map settings for district-specific page
   initialMapCenterLat = 37.4606612
   initialMapCenterLng = -121.850278
