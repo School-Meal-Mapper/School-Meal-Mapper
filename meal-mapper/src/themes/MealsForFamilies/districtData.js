@@ -36,6 +36,8 @@ var hash = url.hash.split('/')[1]
 
 //const county = urlString.split('/')[3]
 
+console.log(secrets.ACCESS_TOKEN)
+
 //switch (district) {
 //case 'chapelhill':
 if (url.searchParams.has('chccs') || hash == 'chccs') {
