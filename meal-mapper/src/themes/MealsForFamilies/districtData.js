@@ -40,7 +40,7 @@ var hash = url.hash.split('/')[1]
 //case 'chapelhill':
 if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
-  districtAbbr = 'chapelhill'
+  districtAbbr = 'chccs'
   districtName = 'Chapel Hill-Carrboro City Schools'
   primaryColor = '#0063b1'
   bannerColor = '#0051BA'
@@ -68,7 +68,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
 } else if (url.searchParams.has('dps') || hash == 'dps') {
   //case 'durham':
   // district name and theming
-  districtAbbr = 'durham'
+  districtAbbr = 'dps'
   districtName = 'Durham Public Schools'
   primaryColor = '#024379'
   bannerColor = '#024379'
@@ -116,7 +116,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
 } else if (url.searchParams.has('rss')) {
   //case 'roanoke':
   // district name and theming
-  districtAbbr = 'roanoke'
+  districtAbbr = 'rss'
   districtName = 'Roanoke Rapids Graded School District'
   primaryColor = '#d59402'
   bannerColor = '#333333'
@@ -137,12 +137,12 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }  else if (
-  url.searchParams.has('chatham') ||
-  hash == 'chatham'
+  url.searchParams.has('ccs') ||
+  hash == 'ccs'
 ) {
   //case 'chatham':
   // district name and theming
-  districtAbbr = 'chatham'
+  districtAbbr = 'ccs'
   districtName = 'Chatham County Schools'
   primaryColor = '#6d375c'
   bannerColor = '#ECE8EF'
@@ -162,10 +162,11 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('wake') || hash == 'wake') {
+} else if (url.searchParams.has('wcpss') || hash == 'wcpss') {
   //case 'wake':
   // district name and theming
-  districtAbbr = 'wake'
+  districtAbbr = 'wcpss'
+  districtName = 'Wake County Public School System'
   primaryColor = '#005498'
   bannerColor = '#005498'
   bannerColorDark = '#002543'
@@ -190,7 +191,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
 ) {
   //case 'wake':
   // district name and theming
-  districtAbbr = 'johnston'
+  districtAbbr = 'jcps'
   districtName = 'Johnston County Public Schools'
   primaryColor = '#005498'
   bannerColor = '#0e2c6c'
@@ -211,12 +212,12 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }  */ else if (
-  url.searchParams.has('sanfran') ||
-  hash == 'sanfran'
+  url.searchParams.has('sfusd') ||
+  hash == 'sfusd'
 ) {
   //case 'wake':
   // district name and theming
-  districtAbbr = 'sanfranciso'
+  districtAbbr = 'sfusd'
   districtName = 'San Francisco Unifed School District'
   primaryColor = '#7794a7'
   bannerColor = '#7794a7'
