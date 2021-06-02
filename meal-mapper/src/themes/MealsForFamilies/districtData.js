@@ -65,7 +65,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} /* else if (url.searchParams.has('dps') || hash == 'dps') {
+} else if (url.searchParams.has('dps') || hash == 'dps') {
   //case 'durham':
   // district name and theming
   districtAbbr = 'durham'
@@ -89,7 +89,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('cms') || hash == 'cms') {
+} /* else if (url.searchParams.has('cms') || hash == 'cms') {
   //case 'cms':
   // district name and theming
   districtAbbr = 'cms'
@@ -209,7 +209,36 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-}  */ else {
+}  */ else if (
+  url.searchParams.has('sanfran') ||
+  hash == 'sanfran'
+) {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'sanfranciso'
+  districtName = 'San Francisco Unifed School District'
+  primaryColor = '#7794a7'
+  bannerColor = '#7794a7'
+  accentColor = '#89cbe1'
+  bannerColorDark = '#7794a7'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.75515
+  initialMapCenterLng = -122.49179
+  initialMapZoom = 12
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1c3zSPGpa01KueGhRauuo4cmIkD69E1wlapSHOSsuPCY/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1c3zSPGpa01KueGhRauuo4cmIkD69E1wlapSHOSsuPCY/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1c3zSPGpa01KueGhRauuo4cmIkD69E1wlapSHOSsuPCY/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else {
   if (urlString.includes('?')) {
     location.href = '/'
   }
