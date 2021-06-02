@@ -212,10 +212,10 @@ export default {
 }
 
 .navbar-nav > li > .dropdown-menu {
-  background-color: $nav-dropdown-bg;
+  background-color: var(--banner-light);
   text-align: right;
   @media (prefers-color-scheme: dark) {
-    background-color: $nav-dropdown-bg-dark;
+    background-color: var(--banner-dark);
   }
 }
 
