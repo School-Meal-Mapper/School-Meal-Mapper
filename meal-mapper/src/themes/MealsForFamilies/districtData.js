@@ -77,7 +77,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // map settings for district-specific page
   initialMapCenterLat = 35.994
   initialMapCenterLng = -78.8986
-  initialMapZoom = 11
+  initialMapZoom = 12
   clusterZoom = 13
   maxZoom = 17
   minZoom = 11
