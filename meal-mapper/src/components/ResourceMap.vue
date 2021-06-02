@@ -108,6 +108,9 @@ import { businessIcon } from '../utilities'
 import { districtData } from '../themes/MealsForFamilies/districtData'
 import { eventManager } from '../main'
 
+document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
+document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
+
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
 console.log('Resource Map ran')
 
@@ -371,25 +374,15 @@ export default {
     margin-right: 8px; */
 }
 
-.marker-cluster-small {
-  background-color: #7eb0e6 !important;
+.marker-cluster {
+  color: #ffffff !important;
+  background-color: #808080 !important;
 }
-.marker-cluster-small div {
-  background-color: #4196f2 !important;
-}
-
-.marker-cluster-medium {
-  background-color: #7eb0e6 !important;
-}
-.marker-cluster-medium div {
-  background-color: #4196f2 !important;
-}
-
-.marker-cluster-large {
-  background-color: #7eb0e6 !important;
-}
-.marker-cluster-large div {
-  background-color: #4196f2 !important;
+.marker-cluster div {
+  background-color: var(--banner-light) !important;
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--banner-dark) !important;
+  }
 }
 
 .locAccuracy {
