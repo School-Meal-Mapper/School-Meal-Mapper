@@ -43,11 +43,11 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   districtAbbr = 'chapelhill'
   districtName = 'Chapel Hill-Carrboro City Schools'
   primaryColor = '#0063b1'
-  bannerColor = '0051BA'
+  bannerColor = '#0051BA'
   bannerColorDark = '#00224f'
   accentColor = '#7cba3e'
-  navLink = '#313639'
-  navLinkDark = '#f8f8ff'
+  navLink = '#f8f8f8'
+  navLinkDark = '#f8f8f8'
   // map settings for district-specific page
   initialMapCenterLat = 35.943068
   initialMapCenterLng = -79.097216
@@ -73,6 +73,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#024379'
   bannerColor = '#024379'
   bannerColorDark = '#113858'
+  accentColor = '#fcaf17'
   // map settings for district-specific page
   initialMapCenterLat = 35.994
   initialMapCenterLng = -78.8986

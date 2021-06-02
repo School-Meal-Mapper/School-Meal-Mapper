@@ -210,7 +210,7 @@ export default {
 }
 .btn {
   color: var(--nav-link-light) !important;
-  background-color: var(--accentColor) !important;
+  background-color: var(--banner-light) !important;
   @media (prefers-color-scheme: dark) {
     color: var(--nav-link-dark) !important;
     background-color: var(--banner-dark) !important;
@@ -218,12 +218,6 @@ export default {
 }
 .btn:hover {
   opacity: 0.5;
-  /*color: var(--nav-link-light) !important;
-  background-color: var(--banner-light) !important;
-  @media (prefers-color-scheme: dark) {
-    color: var(--nav-link-dark) !important;
-    background-color: var(--banner-dark) !important;
-  } */
 }
 .resultWrapper {
   scrollbar-color: $gray-900 $gray-700;
