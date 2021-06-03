@@ -10,9 +10,7 @@
               $t('searchBar.trySearchingOtherProviders')
             }}</b-button>
             OR
-            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
-              'See if you qualify for meal delivery'
-            }}</b-button>
+            <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{ $t('searchBar.findDeliveryOptions') }}</b-button>
           </p>
         </form>
       </b-list-group-item>
