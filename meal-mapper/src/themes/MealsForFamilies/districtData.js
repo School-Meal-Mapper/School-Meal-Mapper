@@ -65,10 +65,38 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('dps') || hash == 'dps') {
+} else if (url.searchParams.has('ecps') || hash == 'ecps') {
+  //case 'edgecombe':
+  // district name and theming
+  districtAbbr = 'ecps' //DONE
+  districtName = 'Edgecombe County Public Schools' //DONE
+  primaryColor = '#008385' //DONE
+  bannerColor = '#FFFFFF' //DONE
+  bannerColorDark = '#001134' //DONE
+  accentColor = '#fcaf17' //DONE
+  navLink = '##001134' //DONE 
+  navLinkDark = '#FFFFFF' //DONE 
+  // map settings for district-specific page
+  initialMapCenterLat = 35.716218
+  initialMapCenterLng = -77.791288
+  initialMapZoom = 12
+  clusterZoom = 13
+  maxZoom = 17
+  minZoom = 11
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/1/public/full?alt=json' //DONE
+  faqUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/2/public/full?alt=json' //DONE
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/3/public/full?alt=json' //DONE
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png' //KEPTSAME 
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png' //KEPTSAME 
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors' //KEPTSAME 
+}else if (url.searchParams.has('dps') || hash == 'dps') {
   //case 'durham':
   // district name and theming
-  districtAbbr = 'dps'
+  districtAbbr = 'dps' 
   districtName = 'Durham Public Schools'
   primaryColor = '#024379'
   bannerColor = '#024379'
