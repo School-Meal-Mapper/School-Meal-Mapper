@@ -68,14 +68,14 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
 } else if (url.searchParams.has('ecps') || hash == 'ecps') {
   //case 'edgecombe':
   // district name and theming
-  districtAbbr = 'ecps' //DONE
-  districtName = 'Edgecombe County Public Schools' //DONE
-  primaryColor = '#008385' //DONE
-  bannerColor = '#FFFFFF' //DONE
-  bannerColorDark = '#001134' //DONE
-  accentColor = '#fcaf17' //DONE
-  navLink = '##001134' //DONE 
-  navLinkDark = '#FFFFFF' //DONE 
+  districtAbbr = 'ecps' 
+  districtName = 'Edgecombe County Public Schools'  
+  primaryColor = '#008385'  
+  bannerColor = '#FFFFFF'  
+  bannerColorDark = '#001134'  
+  accentColor = '#fcaf17'  
+  navLink = '##001134'   
+  navLinkDark = '#FFFFFF'   
   // map settings for district-specific page
   initialMapCenterLat = 35.716218
   initialMapCenterLng = -77.791288
@@ -84,9 +84,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   maxZoom = 17
   minZoom = 11
   // data source urls and attributions
-  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/1/public/full?alt=json' //DONE
-  faqUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/2/public/full?alt=json' //DONE
-  providerinfoUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/3/public/full?alt=json' //DONE
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/1/public/values?alt=json'  
+  faqUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/2/public/values?alt=json'  
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/cells/1QT5OhxEA3gkvvppm6RO7Ekg9rWH6NH7l0pXk2_ar774/3/public/values?alt=json'  
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png' //KEPTSAME 
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
