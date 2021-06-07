@@ -116,7 +116,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} else if (url.searchParams.has('rss')) {
+} /* else if (url.searchParams.has('rss')) {
   //case 'roanoke':
   // district name and theming
   districtAbbr = 'rss'
@@ -208,7 +208,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} /* else if (url.searchParams.has('cms') || hash == 'cms') {
+} else if (url.searchParams.has('cms') || hash == 'cms') {
   //case 'cms':
   // district name and theming
   districtAbbr = 'cms'
