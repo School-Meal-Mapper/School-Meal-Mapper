@@ -91,14 +91,14 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 } else if (url.searchParams.has('dublinusd') || hash == 'dublinusd') {
-  //case 'dusd':
+  //case 'dublinusd':
   // district name and theming
   districtAbbr = 'dublinusd'
   districtName = 'Dublin Unified School District'
   primaryColor = '#005cba'
   bannerColor = '#005cba'
   bannerColorDark = '#005cba' // how do you get to dark mode?
-  accentColor = '#3e783a'
+  accentColor = '#5dba00'
   navLink = '#f8f8f8'
   navLinkDark = '#f8f8f8'
   // map settings for district-specific page
@@ -109,9 +109,9 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   maxZoom = 17
   minZoom = 11
   // data source urls and attributions
-  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1RxoLqeU-W785OZJICHMBD3tvZiTSL2vmRHtGE7-n29s/1/public/values?alt=json'
-  faqUrl = 'https://spreadsheets.google.com/feeds/list/1RxoLqeU-W785OZJICHMBD3tvZiTSL2vmRHtGE7-n29s/2/public/values?alt=json'
-  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1RxoLqeU-W785OZJICHMBD3tvZiTSL2vmRHtGE7-n29s/3/public/values?alt=json'
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/3/public/values?alt=json'
   lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
   lightAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
