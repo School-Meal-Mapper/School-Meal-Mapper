@@ -71,15 +71,15 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   districtAbbr = 'ecps'
   districtName = 'Edgecombe County Public Schools'
   primaryColor = '#008385'
-  bannerColor = '#FFFFFF'
+  bannerColor = '#4fadff'
   bannerColorDark = '#001134'
   accentColor = '#fcaf17'
   navLink = '#001134'
   navLinkDark = '#FFFFFF'
   // map settings for district-specific page
-  initialMapCenterLat = 35.716218
-  initialMapCenterLng = -77.791288
-  initialMapZoom = 12
+  initialMapCenterLat = 35.9382
+  initialMapCenterLng = -77.7905
+  initialMapZoom = 8
   clusterZoom = 13
   maxZoom = 17
   minZoom = 11
