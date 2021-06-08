@@ -112,6 +112,12 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/1/public/values?alt=json'
   faqUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/2/public/values?alt=json'
   providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 } else if (url.searchParams.has('wcs') || hash == 'wcs') {
   //case 'wcs':
   // district name and theming
