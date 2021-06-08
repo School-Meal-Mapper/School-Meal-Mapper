@@ -95,13 +95,13 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   // district name and theming
   districtAbbr = 'wcs'
   districtName = 'Wilson County Schools'
-  primaryColor = '#0A3367'
-  bannerColor = '#0A3367'
-  accentColor = '#ECEDB1'
-  bannerColorDark = '#0A3367'
+  primaryColor = '#000142'
+  bannerColor = '#000142'
+  accentColor = '#5cae53'
+  bannerColorDark = '#000142'
   // map settings for district-specific page
-  initialMapCenterLat = 36.21323
-  initialMapCenterLng = -86.42677
+  initialMapCenterLat = 35.73597
+  initialMapCenterLng = -77.90853
   initialMapZoom = 12
   clusterZoom = 12
   maxZoom = 17
