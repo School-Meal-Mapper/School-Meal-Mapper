@@ -99,8 +99,8 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#005cba'
   bannerColorDark = '#005cba' // how do you get to dark mode?
   accentColor = '#5dba00'
-  navLink = '#f8f8f8'
-  navLinkDark = '#f8f8f8'
+  navLink = '#fdfdfd'
+  navLinkDark = '#fdfdfd'
   // map settings for district-specific page
   initialMapCenterLat = 37.713974
   initialMapCenterLng = -121.920405
