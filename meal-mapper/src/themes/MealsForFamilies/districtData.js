@@ -118,7 +118,153 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
   darkAttribution =
     '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-} /* else if (url.searchParams.has('cms') || hash == 'cms') {
+} else if (url.searchParams.has('dublinusd') || hash == 'dublinusd') {
+  //case 'dublinusd':
+  // district name and theming
+  districtAbbr = 'dublinusd'
+  districtName = 'Dublin Unified School District'
+  primaryColor = '#005cba'
+  bannerColor = '#005cba'
+  bannerColorDark = '#005cba' // how do you get to dark mode?
+  accentColor = '#5dba00'
+  navLink = '#fdfdfd'
+  navLinkDark = '#fdfdfd'
+  // map settings for district-specific page
+  initialMapCenterLat = 37.713974
+  initialMapCenterLng = -121.920405
+  initialMapZoom = 12
+  clusterZoom = 13
+  maxZoom = 17
+  minZoom = 11
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1ZQFr4W9LDPUHL81bRuh-nGgjJwpDBF4mN979zkVMdME/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('wcs') || hash == 'wcs') {
+  //case 'wcs':
+  // district name and theming
+  districtAbbr = 'wcs'
+  districtName = 'Wilson County Schools'
+  primaryColor = '#000142'
+  bannerColor = '#000142'
+  accentColor = '#5cae53'
+  bannerColorDark = '#000142'
+  // map settings for district-specific page
+  initialMapCenterLat = 35.73597
+  initialMapCenterLng = -77.90853
+  initialMapZoom = 12
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1J9Ac8MNpugt12cAWHDU8SmEjnYT6RlRBwya26Co6Lyo/1/public/values?alt=json'
+  faqUrl = 'https://spreadsheets.google.com/feeds/list/1J9Ac8MNpugt12cAWHDU8SmEjnYT6RlRBwya26Co6Lyo/2/public/values?alt=json'
+  providerinfoUrl = 'https://spreadsheets.google.com/feeds/list/1J9Ac8MNpugt12cAWHDU8SmEjnYT6RlRBwya26Co6Lyo/3/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} /* else if (url.searchParams.has('rss')) {
+  //case 'roanoke':
+  // district name and theming
+  districtAbbr = 'rss'
+  districtName = 'Roanoke Rapids Graded School District'
+  primaryColor = '#d59402'
+  bannerColor = '#333333'
+  bannerColorDark = '#000000'
+  // map settings for district-specific page
+  initialMapCenterLat = 36.4615
+  initialMapCenterLng = -77.6541
+  initialMapZoom = 14
+  clusterZoom = 14
+  maxZoom = 17
+  minZoom = 14
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1d6kgVHTBBsSnG7dzx51iPPrbnkxS0MUewwTC1KB0tCQ/1/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('ccs') || hash == 'ccs') {
+  //case 'chatham':
+  // district name and theming
+  districtAbbr = 'ccs'
+  districtName = 'Chatham County Schools'
+  primaryColor = '#6d375c'
+  bannerColor = '#ECE8EF'
+  bannerColorDark = '#151414'
+  // map settings for district-specific page
+  initialMapCenterLat = 35.7235
+  initialMapCenterLng = -79.4622
+  initialMapZoom = 11
+  clusterZoom = 14
+  maxZoom = 17
+  minZoom = 11
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1r6uyEPzmiPzdb77niHbgHzSoPGth9Pzt1FiriviJkyU/1/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('wcpss') || hash == 'wcpss') {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'wcpss'
+  districtName = 'Wake County Public School System'
+  primaryColor = '#005498'
+  bannerColor = '#005498'
+  bannerColorDark = '#002543'
+  // map settings for district-specific page
+  initialMapCenterLat = 35.7796
+  initialMapCenterLng = -78.6382
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1JYqkJR8BtNC71Uerg0PTOPdr3KCz6NW4N0kbFiSBHOU/1/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('jcps') || hash == 'jcps') {
+  //case 'wake':
+  // district name and theming
+  districtAbbr = 'jcps'
+  districtName = 'Johnston County Public Schools'
+  primaryColor = '#005498'
+  bannerColor = '#0e2c6c'
+  bannerColorDark = '#0e2c6c'
+  // map settings for district-specific page
+  initialMapCenterLat = 35.56928878
+  initialMapCenterLng = -78.42296134
+  initialMapZoom = 10
+  clusterZoom = 12
+  maxZoom = 17
+  minZoom = 10
+  // data source urls and attributions
+  spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1ldO41Qh93H-C9jZ4Y2SkAbdz1vfTdxQVup7GTVz-6I8/1/public/values?alt=json'
+  lightUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+  lightAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  darkUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
+  darkAttribution =
+    '&copy; <a href="https://carto.com/">Carto</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+} else if (url.searchParams.has('cms') || hash == 'cms') {
   //case 'cms':
   // district name and theming
   districtAbbr = 'cms'
