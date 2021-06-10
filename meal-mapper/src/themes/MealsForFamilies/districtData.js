@@ -76,6 +76,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#fcaf17'
   navLink = '#001134'
   navLinkDark = '#FFFFFF'
+  $nav-dropdown = '#008385'
   // map settings for district-specific page
   initialMapCenterLat = 35.9382
   initialMapCenterLng = -77.7905
