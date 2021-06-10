@@ -380,8 +380,10 @@ export default {
 }
 .marker-cluster div {
   background-color: var(--banner-light) !important;
+  color: var(--nav-link-light);
   @media (prefers-color-scheme: dark) {
     background-color: var(--banner-dark) !important;
+    color: var(--nav-link-dark);
   }
 }
 
