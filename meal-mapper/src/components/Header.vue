@@ -79,6 +79,7 @@ document.documentElement.style.setProperty('--banner-dark', districtData.colors.
 document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLink)
 document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
 document.documentElement.style.setProperty('--accentColor', districtData.colors.accentColor)
+document.documentElement.style.setProperty('--dropDownText', districtData.colors.dropDownText)
 
 export default {
   name: 'app-header',
@@ -220,7 +221,7 @@ export default {
 }
 
 .navbar-nav > li > .dropdown-menu a {
-  color: $nav-dropdown;
+  color: var(--dropDownText);
   @media (prefers-color-scheme: dark) {
     color: $nav-dropdown-dark;
   }

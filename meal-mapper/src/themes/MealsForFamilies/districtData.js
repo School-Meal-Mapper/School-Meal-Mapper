@@ -27,6 +27,7 @@ var darkUrl = null
 var darkAttribution = null
 var navLink = '#f8f8ff'
 var navLinkDark = '#f8f8ff'
+var dropDownText = '#ffffff'
 
 var urlString = window.location.href
 var url = new URL(urlString)
@@ -48,6 +49,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#7cba3e'
   navLink = '#f8f8f8'
   navLinkDark = '#f8f8f8'
+  dropDownText = '#ffffff'
   // map settings for district-specific page
   initialMapCenterLat = 35.943068
   initialMapCenterLng = -79.097216
@@ -76,7 +78,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#fcaf17'
   navLink = '#001134'
   navLinkDark = '#FFFFFF'
-  $nav-dropdown = '#008385'
+  dropDownText = '#000000'
   // map settings for district-specific page
   initialMapCenterLat = 35.9382
   initialMapCenterLng = -77.7905
@@ -103,6 +105,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#024379'
   bannerColorDark = '#113858'
   accentColor = '#fcaf17'
+  dropDownText = '#ffffff'
   // map settings for district-specific page
   initialMapCenterLat = 35.994
   initialMapCenterLng = -78.8986
@@ -252,6 +255,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#7794a7'
   accentColor = '#89cbe1'
   bannerColorDark = '#7794a7'
+  dropDownText = '#ffffff'
   // map settings for district-specific page
   initialMapCenterLat = 37.75515
   initialMapCenterLng = -122.49179
@@ -312,7 +316,8 @@ export const districtData = {
     bannerColorDark: bannerColorDark,
     accentColor: accentColor,
     navLink: navLink,
-    navLinkDark: navLinkDark
+    navLinkDark: navLinkDark,
+    dropDownText: dropDownText
   },
   settings: {
     initialMapCenter: {
