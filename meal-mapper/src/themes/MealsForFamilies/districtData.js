@@ -315,7 +315,6 @@ export const districtData = {
     accentColor: accentColor,
     navLink: navLink,
     navLinkDark: navLinkDark,
-    dropDownText: dropDownText
   },
   settings: {
     initialMapCenter: {
