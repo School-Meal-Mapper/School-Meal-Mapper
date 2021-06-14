@@ -502,8 +502,10 @@ div.markeropen svg path {
 
 .title-block {
   width: 100%;
-  text-align: right;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mapkey .title {
