@@ -80,6 +80,18 @@
             "
           ></l-marker>
         </v-marker-cluster>
+        <!-- below -->
+        <l-control position="bottomright" class="hideMobile user-location-button">
+          <a href="#" @click="setDefaultMapView" class="user-location-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </l-control>
+        <l-control position="bottomleft" class="showMobile user-location-button">
+          <a href="#" @click="setDefaultMapView" class="user-location-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </l-control>
+        <!-- above -->
         <l-control position="bottomright" class="hideMobile user-location-button">
           <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
             <i class="fas fa-location-arrow"></i>
@@ -290,6 +302,10 @@ export default {
           this.$refs.useLocation.classList.add('disabled')
         }
       })
+    },
+    setDefaultMapView() {
+      const map = this.$refs.covidMap.mapObject
+      map.setView(districtData.settings.initialMapCenter, districtData.settings.initialMapZoom)
     },
     handleResize() {
       location.reload()
