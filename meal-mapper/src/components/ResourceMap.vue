@@ -81,12 +81,12 @@
           ></l-marker>
         </v-marker-cluster>
         <!-- below -->
-        <l-control position="bottomright" class="hideMobile user-location-button">
+        <l-control position="bottomright" class="hideMobile user-location-button default-location-button">
           <a href="#" @click="setDefaultMapView" class="user-location-link">
             <i class="fas fa-home"></i>
           </a>
         </l-control>
-        <l-control position="bottomleft" class="showMobile user-location-button">
+        <l-control position="bottomleft" class="showMobile user-location-button default-location-button">
           <a href="#" @click="setDefaultMapView" class="user-location-link">
             <i class="fas fa-home"></i>
           </a>
@@ -572,11 +572,17 @@ div.markeropen svg path {
 }
 
 .user-location-button {
-  bottom: 68px !important;
-  right: 2px !important;
+  bottom: 62px !important;
+  right: 0px !important;
   @media (max-width: 768px) {
-    bottom: 82px !important;
+    bottom: 86px !important;
     left: 2px !important;
+  }
+}
+.default-location-button {
+  bottom: 62px !important;
+  @media (max-width: 768px) {
+    bottom: 88px !important;
   }
 }
 .user-location-link {
