@@ -56,7 +56,7 @@
         </b-navbar-nav>
         <b-nav-item-dropdown right>
           <template v-slot:button-content>
-            <i class="fas fa-language" aria-hidden="true" />
+            <i class="fas fa-language fa-xlg" aria-hidden="true" />
             <span v-if="window.width < 991" v-html="language" class="language" />
           </template>
           <b-dropdown-item href="#" v-for="item in selectLangs" v-bind:key="item.iso">
@@ -200,6 +200,12 @@ export default {
 
 .language {
   padding: 0 5px;
+}
+
+.fa-xlg {
+  font-size: 1.66666666em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
 }
 
 .navbar-nav {
