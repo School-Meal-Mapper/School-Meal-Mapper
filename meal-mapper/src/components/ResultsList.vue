@@ -208,10 +208,10 @@ export default {
 }
 .btn {
   color: var(--nav-link-light) !important;
-  background-color: var(--banner-light) !important;
+  background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: dark) {
     color: var(--nav-link-dark) !important;
-    background-color: var(--banner-dark) !important;
+    background-color: var(--accentColor) !important;
   }
 }
 .btn:hover {
