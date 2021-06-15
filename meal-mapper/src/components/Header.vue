@@ -229,7 +229,7 @@ export default {
 .btn-buttons {
   background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: light) {
-    color: var(--navLink) !important;
+    color: $button-text !important;
   }
 }
 
