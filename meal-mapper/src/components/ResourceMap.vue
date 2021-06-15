@@ -381,10 +381,10 @@ export default {
 }
 .marker-cluster div {
   background-color: var(--accentColor) !important;
-  color: var(--nav-link-light);
+  color: $button-text;
   @media (prefers-color-scheme: dark) {
     background-color: var(--accentColor) !important;
-    color: var(--nav-link-dark);
+    color: $button-text;
   }
 }
 
