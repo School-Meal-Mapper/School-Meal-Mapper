@@ -1,6 +1,10 @@
 <template>
   <span class="pagetitle">
-    <picture>
+    <picture v-if="SVGLogo">
+      <source :srcset="require(`@/districtLogos/${districtAbbr}-logo-dark.svg`)" media="(prefers-color-scheme: dark)" />
+      <img :src="require(`@/districtLogos/${districtAbbr}-logo.svg`)" height="80" alt="District Logo" class="image" />
+    </picture>
+    <picture v-else>
       <source :srcset="require(`@/districtLogos/${districtAbbr}-logo-dark.png`)" media="(prefers-color-scheme: dark)" />
       <img :src="require(`@/districtLogos/${districtAbbr}-logo.png`)" height="80" alt="District Logo" class="image" />
     </picture>
@@ -9,7 +13,12 @@
 <script>
 export default {
   name: 'theme-header',
-  props: ['districtAbbr']
+  props: ['districtAbbr', 'SVGLogo'],
+  data: function(){
+      return {
+        useSVG: SVGLogo 
+      }
+  }
 }
 </script>
 <style lang="scss">
