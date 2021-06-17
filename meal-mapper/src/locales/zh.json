@@ -1,17 +1,17 @@
 {
   "FAQs": {
     "backToMap": "回到地图",
-    "buttonText": "",
+    "buttonText": "关于免费餐",
     "forMoreInformation": "与您当地的餐饮服务提供商联系，以获取有关免费膳食的更多信息。",
-    "hyperlinkText": ""
+    "hyperlinkText": "常问问题和联系信息"
   },
   "landingPage": {
-    "aboutUs": "",
-    "findFreeMealsNearMe": "",
-    "findYourCountyAndSelectProvider": "",
-    "pleaseSelectState": "",
-    "welcomeStatement": "",
-    "youMustSelectState": ""
+    "aboutUs": "关于我们",
+    "findFreeMealsNearMe": "找靠近免费的食物！",
+    "findYourCountyAndSelectProvider": "请您选您的县",
+    "pleaseSelectState": "请您选州",
+    "welcomeStatement": "欢迎来到Meals4Families!",
+    "youMustSelectState": "请您先选州再选食物供应商"
   },
   "languages": {
     "am": "",
@@ -40,79 +40,79 @@
     "zh": ""
   },
   "mapKey": {
-    "closedToday": "",
-    "mapKeyTitle": "",
-    "openToday": "",
-    "searched": "",
-    "selected": ""
+    "closedToday": "休息",
+    "mapKeyTitle": "图例",
+    "openToday": "开门",
+    "searched": "搜索到",
+    "selected": "选中"
   },
   "mapPrompts": {
-    "backToList": "",
-    "youCanNotZoomOutMore": "",
-    "zoomOut": ""
+    "backToList": "回到结果",
+    "youCanNotZoomOutMore": "不能再缩小",
+    "zoomOut": "请你缩小才能看更多结果"
   },
   "mealSiteCard": {
-    "Hours": "",
-    "additionalDirections": "",
-    "address": "",
-    "closed": "",
-    "detailsLastUpdated": "",
+    "Hours": "时间",
+    "additionalDirections": "怎么到地点",
+    "address": "地址",
+    "closed": "休息",
+    "detailsLastUpdated": "上次更新",
     "doorDelivery": "送货上门",
-    "expandDetails": "",
-    "friday": "",
-    "getDirections": "",
+    "expandDetails": "更多",
+    "friday": "星期五",
+    "getDirections": "怎么到地点",
     "hideDetails": "隐藏细节",
-    "minimizeDetails": "",
-    "monday": "",
+    "minimizeDetails": "更少",
+    "monday": "星期一",
     "moreDetails": "更多细节",
-    "notes": "",
-    "questionsContactInfo": "",
-    "saturday": "",
-    "shareLocation": "",
-    "suggestAnEdit": "",
-    "sunday": "",
-    "thursday": "",
-    "tuesday": "",
-    "wednesday": "",
-    "weeklyMenu": ""
+    "notes": "注解",
+    "questionsContactInfo": "常问问题和联系信息",
+    "saturday": "星期六",
+    "shareLocation": "分享地址",
+    "suggestAnEdit": "写建议",
+    "sunday": "星期日",
+    "thursday": "星期四",
+    "tuesday": "星期二",
+    "wednesday": "星期三",
+    "weeklyMenu": "每周菜单"
   },
   "searchBar": {
     "cantFindCloseSite": "找不到您附近的网站？",
     "findDeliveryOptions": "找出您是否符合送餐的资格。",
-    "noResults": "",
+    "noResults": "地址找不到",
     "searchPrompt": "按网站或地址搜索",
     "trySearchingOtherProviders": "浏览您附近的其他餐饮服务提供商。"
   },
   "shareOptions": {
-    "aboutUs": "",
-    "copyLink": "",
-    "copyMessage": "",
-    "findNearbySites": "",
-    "learnMore": "",
-    "mealSiteInfo": "",
-    "messageIntro": "",
-    "sendEmail": "",
-    "sendTextMessage": "",
-    "share": "",
-    "shareInformationAboutMealSite": "",
-    "suggestedMealSite": ""
+    "aboutUs": "这个网站的资料是从Meals4Families跟",
+    "copyLink": "复制网址",
+    "copyMessage": "复制资料",
+    "findNearbySites": "去这个网业可以找别的附近的地点：",
+    "learnMore": "去这个网业可以对免费餐学更多：",
+    "mealSiteInfo": "去这个网业可以学更多，比如开门时间，或者GPS指引：",
+    "messageIntro": "对每个小朋友0-18岁提供免费的餐。请您也更我们吃！",
+    "sendEmail": "发邮件",
+    "sendTextMessage": "发信息",
+    "share": "分享",
+    "shareInformationAboutMealSite": "分享地点的资料",
+    "suggestedMealSite": "这个地点可能适合您："
   },
   "specialSite": {
-    "doorDelivery": ""
+    "doorDelivery": "送餐"
   },
   "suggestEdit": {
-    "additionalComments": "",
-    "address": "",
-    "enterCommentsPrompt": "",
-    "hours": "",
-    "resetButton": "",
-    "siteName": "",
-    "submitForm": "",
+    "additionalComments": "更多建议",
+    "address": "地址",
+    "enterCommentsPrompt": "请您写什么资料没有还是不对",
+    "hours": "营业中",
+    "resetButton": "清零",
+    "siteName": "地点名字",
+    "submitForm": "提交",
     "suggestEditTitle": "提出修改建议",
-    "weeklyMenu": "",
-    "whatNeedsCorrecting": ""
+    "weeklyMenu": "每周菜单",
+    "whatNeedsCorrecting": "请说我们需要改什么？"
   },
   "themeHeaderBar": {
-    "AboutFreeMeals": ""
+    "AboutFreeMeals": "关于免费餐"
   }
 }
