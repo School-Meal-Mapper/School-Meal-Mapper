@@ -80,6 +80,18 @@
             "
           ></l-marker>
         </v-marker-cluster>
+        <!-- below -->
+        <l-control position="bottomright" class="hideMobile user-location-button default-location-button">
+          <a href="#" @click="setDefaultMapView" class="user-location-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </l-control>
+        <l-control position="bottomleft" class="showMobile user-location-button default-location-button">
+          <a href="#" @click="setDefaultMapView" class="user-location-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </l-control>
+        <!-- above -->
         <l-control position="bottomright" class="hideMobile user-location-button">
           <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
             <i class="fas fa-location-arrow"></i>
@@ -290,6 +302,10 @@ export default {
           this.$refs.useLocation.classList.add('disabled')
         }
       })
+    },
+    setDefaultMapView() {
+      const map = this.$refs.covidMap.mapObject
+      map.setView(districtData.settings.initialMapCenter, districtData.settings.initialMapZoom)
     },
     handleResize() {
       location.reload()
@@ -502,8 +518,10 @@ div.markeropen svg path {
 
 .title-block {
   width: 100%;
-  text-align: right;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mapkey .title {
@@ -554,11 +572,17 @@ div.markeropen svg path {
 }
 
 .user-location-button {
-  bottom: 68px !important;
-  right: 2px !important;
+  bottom: 62px !important;
+  right: 0px !important;
   @media (max-width: 768px) {
-    bottom: 82px !important;
+    bottom: 86px !important;
     left: 2px !important;
+  }
+}
+.default-location-button {
+  bottom: 62px !important;
+  @media (max-width: 768px) {
+    bottom: 88px !important;
   }
 }
 .user-location-link {
