@@ -8,8 +8,7 @@
       :socialMedia="socialMediaico"
       :hasFaqs="faqUrl != null"
     >
-      <theme-header :districtAbbr="districtAbbr"></theme-header>
-      <theme-header :logoFormat="logoFormat"></theme-header>
+      <theme-header :districtAbbr="districtAbbr" :logoFormat="logoFormat"></theme-header>
     </app-header>
     <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->

@@ -9,7 +9,15 @@
 <script>
 export default {
   name: 'theme-header',
-  props: "['districtAbbr', 'logoFormat']"
+  props: {
+    districtAbbr: {
+      type: String
+    },
+    logoFormat: {
+      default: 'png',
+      type: String
+    }
+  }
 }
 </script>
 <style lang="scss">
