@@ -117,7 +117,8 @@ export default {
         width: 0,
         height: 0
       },
-      districtAbbr: districtData.districtAbbr
+      districtAbbr: districtData.districtAbbr,
+      logoFormat: districtData.logoFormat
     }
   },
   computed: {

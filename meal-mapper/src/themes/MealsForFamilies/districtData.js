@@ -27,7 +27,7 @@ var darkUrl = null
 var darkAttribution = null
 var navLink = '#f8f8ff'
 var navLinkDark = '#f8f8ff'
-var SVGLogo = true
+var logoFormat = 'png'
 
 var urlString = window.location.href
 var url = new URL(urlString)
@@ -49,7 +49,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#7cba3e'
   navLink = '#f8f8f8'
   navLinkDark = '#f8f8f8'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.943068
   initialMapCenterLng = -79.097216
@@ -78,7 +78,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#fcaf17'
   navLink = '#001134'
   navLinkDark = '#FFFFFF'
-  SVGLogo = true
+  logoFormat = 'svg'
   // map settings for district-specific page
   initialMapCenterLat = 35.9382
   initialMapCenterLng = -77.7905
@@ -105,7 +105,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#024379'
   bannerColorDark = '#113858'
   accentColor = '#fcaf17'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.994
   initialMapCenterLng = -78.8986
@@ -133,7 +133,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#5dba00'
   navLink = '#fdfdfd'
   navLinkDark = '#fdfdfd'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 37.713974
   initialMapCenterLng = -121.920405
@@ -160,7 +160,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#000142'
   accentColor = '#5cae53'
   bannerColorDark = '#000142'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.73597
   initialMapCenterLng = -77.90853
@@ -186,7 +186,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#d59402'
   bannerColor = '#333333'
   bannerColorDark = '#000000'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 36.4615
   initialMapCenterLng = -77.6541
@@ -210,7 +210,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#6d375c'
   bannerColor = '#ECE8EF'
   bannerColorDark = '#151414'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.7235
   initialMapCenterLng = -79.4622
@@ -234,7 +234,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#005498'
   bannerColor = '#005498'
   bannerColorDark = '#002543'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.7796
   initialMapCenterLng = -78.6382
@@ -258,7 +258,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#005498'
   bannerColor = '#0e2c6c'
   bannerColorDark = '#0e2c6c'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.56928878
   initialMapCenterLng = -78.42296134
@@ -282,7 +282,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#0ba2ae'
   bannerColor = '#04ACD4'
   bannerColorDark = '#015A6E'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.2271
   initialMapCenterLng = -80.8431
@@ -306,7 +306,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#d59402'
   bannerColor = '#333333'
   bannerColorDark = '#000000'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 36.4615
   initialMapCenterLng = -77.6541
@@ -333,7 +333,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#6d375c'
   bannerColor = '#ECE8EF'
   bannerColorDark = '#151414'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.7235
   initialMapCenterLng = -79.4622
@@ -357,7 +357,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#005498'
   bannerColor = '#005498'
   bannerColorDark = '#002543'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.7796
   initialMapCenterLng = -78.6382
@@ -384,7 +384,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   primaryColor = '#005498'
   bannerColor = '#0e2c6c'
   bannerColorDark = '#0e2c6c'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.56928878
   initialMapCenterLng = -78.42296134 
@@ -412,7 +412,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#7794a7'
   accentColor = '#89cbe1'
   bannerColorDark = '#7794a7'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 37.75515
   initialMapCenterLng = -122.49179
@@ -445,7 +445,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   accentColor = '#ffec60'
   navLink = '#f8f8ff'
   navLinkDark = '#f8f8ff'
-  SVGLogo = false
+  logoFormat = 'png'
   // map settings for district-specific page
   initialMapCenterLat = 35.943068
   initialMapCenterLng = -79.097216
@@ -468,7 +468,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
 export const districtData = {
   districtAbbr: districtAbbr,
   districtName: districtName,
-  SVGLogo: SVGLogo,
+  logoFormat: logoFormat,
   colors: {
     primaryColor: primaryColor,
     bannerColor: bannerColor,
