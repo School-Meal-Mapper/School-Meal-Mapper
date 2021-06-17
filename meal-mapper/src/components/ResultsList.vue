@@ -207,11 +207,11 @@ export default {
   --nav-link-dark: '#F8F8F8';
 }
 .btn {
-  color: var(--nav-link-light) !important;
-  background-color: var(--banner-light) !important;
+  color: $button-text !important;
+  background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: dark) {
-    color: var(--nav-link-dark) !important;
-    background-color: var(--banner-dark) !important;
+    color: $button-text !important;
+    background-color: var(--accentColor) !important;
   }
 }
 .btn:hover {

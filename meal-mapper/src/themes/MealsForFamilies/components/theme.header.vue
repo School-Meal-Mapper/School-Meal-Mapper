@@ -1,15 +1,23 @@
 <template>
   <span class="pagetitle">
     <picture>
-      <source :srcset="require(`@/districtLogos/${districtAbbr}-logo-dark.png`)" media="(prefers-color-scheme: dark)" />
-      <img :src="require(`@/districtLogos/${districtAbbr}-logo.png`)" height="80" alt="District Logo" class="image" />
+      <source :srcset="require(`@/districtLogos/${districtAbbr}-logo-dark.${logoFormat}`)" media="(prefers-color-scheme: dark)" />
+      <img :src="require(`@/districtLogos/${districtAbbr}-logo.${logoFormat}`)" height="80" alt="District Logo" class="image" />
     </picture>
   </span>
 </template>
 <script>
 export default {
   name: 'theme-header',
-  props: ['districtAbbr']
+  props: {
+    districtAbbr: {
+      type: String
+    },
+    logoFormat: {
+      default: 'png',
+      type: String
+    }
+  }
 }
 </script>
 <style lang="scss">

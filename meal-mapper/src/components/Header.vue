@@ -117,7 +117,8 @@ export default {
         width: 0,
         height: 0
       },
-      districtAbbr: districtData.districtAbbr
+      districtAbbr: districtData.districtAbbr,
+      logoFormat: districtData.logoFormat
     }
   },
   computed: {
@@ -226,16 +227,16 @@ export default {
 }
 
 .navbar-nav > li > .dropdown-menu a {
-  color: $nav-dropdown;
+  color: var(--nav-link-light);
   @media (prefers-color-scheme: dark) {
-    color: $nav-dropdown-dark;
+    color: var(--nav-link-dark);
   }
 }
 
 .btn-buttons {
   background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: light) {
-    color: $button-text !important;
+    color: var(--navLink) !important;
   }
 }
 

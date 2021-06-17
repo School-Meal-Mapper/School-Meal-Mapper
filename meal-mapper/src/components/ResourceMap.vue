@@ -122,6 +122,7 @@ import { eventManager } from '../main'
 
 document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
 document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
+document.documentElement.style.setProperty('--accentColor', districtData.colors.accentColor)
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
 console.log('Resource Map ran')
@@ -395,9 +396,11 @@ export default {
   background-color: #808080 !important;
 }
 .marker-cluster div {
-  background-color: var(--banner-light) !important;
+  background-color: var(--accentColor) !important;
+  color: $button-text;
   @media (prefers-color-scheme: dark) {
-    background-color: var(--banner-dark) !important;
+    background-color: var(--accentColor) !important;
+    color: $button-text;
   }
 }
 
