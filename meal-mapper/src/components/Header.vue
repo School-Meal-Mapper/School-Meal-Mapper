@@ -178,8 +178,8 @@ export default {
 :root {
   --banner-light: '#E9ECEF';
   --banner-dark: '#212529';
-  --nav-link-light: '#F8F8F8';
-  --nav-link-dark: '#F8F8F8';
+  --nav-link-light: '#000000';
+  --nav-link-dark: '#ffffff';
 }
 
 #topnav {
@@ -236,7 +236,7 @@ export default {
 .btn-buttons {
   background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: light) {
-    color: var(--navLink) !important;
+    color: var(--nav-link-light);
   }
 }
 
