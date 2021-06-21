@@ -32,12 +32,12 @@ export default {
     return {
       selected: [],
       options: [
-        { text: this.$t('suggestEdit.siteName') },
-        { text: this.$t('suggestEdit.address') },
+        { text: this.$t('suggestEdit.siteName'), value: 'suggestEdit.siteName' },
+        { text: this.$t('suggestEdit.address'), value: 'suggestEdit.address' },
         /*
         { text: this.$tc('suggest-edit.contact'), value: 'contact' },
         { text: this.$tc('suggestedit.social'), value: 'social' },*/
-        { text: this.$t('suggestEdit.hours') }
+        { text: this.$t('suggestEdit.hours'), value: 'suggestEdit.hours' }
       ],
       text: ''
     }
