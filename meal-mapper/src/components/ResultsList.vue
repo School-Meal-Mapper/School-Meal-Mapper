@@ -38,7 +38,8 @@
 
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
-        <strong>{{ this.$t('mapPrompts.youCanNotZoomOutMore') + ' ' + 'Zoom out for more results.' }}</strong>
+        <!-- Zoom in prompt instead: <strong>{{ this.$t('mapPrompts.youCanNotZoomOutMore') + ' ' + 'Zoom out for more results.' }}</strong> -->
+        <strong>{{ this.$t('mapPrompts.zoomOut') }}</strong>
       </b-alert>
       <b-list-group-item
         action
