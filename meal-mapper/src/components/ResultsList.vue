@@ -3,7 +3,16 @@
     <b-list-group style="padding-top: 50px;" v-if="location.currentBusiness == null && showRes">
       <b-list-group-item variant="sideNav">
         <form>
-          <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
+          <p style="font-size: 0.9rem; text-align: center; margin-bottom: 1px;">
+            <label for="searchBar.searchPrompt"> Enter Location Below </label>
+          </p>
+          <b-form-input
+            v-model="text"
+            type="search"
+            @keydown.native="search"
+            id="searchBar.searchPrompt"
+            :placeholder="$t('searchBar.searchPrompt')"
+          ></b-form-input>
           <p style="font-size: 0.9rem; text-align: center; margin-top: 5px;">
             {{ $t('searchBar.cantFindCloseSite') }}
             <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
