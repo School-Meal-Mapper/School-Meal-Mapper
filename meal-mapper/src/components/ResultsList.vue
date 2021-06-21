@@ -3,6 +3,9 @@
     <b-list-group style="padding-top: 50px;" v-if="location.currentBusiness == null && showRes">
       <b-list-group-item variant="sideNav" class="search-group">
         <form>
+          <p style="font-size: 0.9rem; text-align: center; margin-bottom: 1px;">
+            <label for="searchBar.searchPrompt">Enter Location Below</label>
+          </p>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
           <p style="font-size: 0.9rem; margin-top: 5px;" v-if="showOpt">
             {{ $t('searchBar.cantFindCloseSite') }}
