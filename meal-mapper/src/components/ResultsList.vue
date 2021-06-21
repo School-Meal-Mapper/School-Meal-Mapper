@@ -1,10 +1,10 @@
 <template>
   <div class="resultWrapper" id="search-filter-wrapper">
     <b-list-group style="padding-top: 50px;" v-if="location.currentBusiness == null && showRes">
-      <b-list-group-item variant="sideNav">
+      <b-list-group-item variant="sideNav" class="search-group">
         <form>
           <b-form-input v-model="text" type="search" @keydown.native="search" :placeholder="$t('searchBar.searchPrompt')"></b-form-input>
-          <p style="font-size: 0.9rem; text-align: center; margin-top: 5px;">
+          <p style="font-size: 0.9rem; margin-top: 5px;" v-if="showOpt">
             {{ $t('searchBar.cantFindCloseSite') }}
             <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{
               $t('searchBar.trySearchingOtherProviders')
@@ -12,6 +12,8 @@
             OR
             <b-button class="btn btn-sm btn-block" href="/" style="font-size: 0.8rem;">{{ $t('searchBar.findDeliveryOptions') }}</b-button>
           </p>
+          <i v-if="!showOpt" class="fas fa-caret-down option-button" @click="toggleOptions"></i>
+          <i v-if="showOpt" class="fas fa-caret-down inverted option-button" @click="toggleOptions"></i>
         </form>
       </b-list-group-item>
     </b-list-group>
@@ -120,7 +122,8 @@ export default {
       showListing: this.showList,
       zoom: districtData.settings.initialMapZoom,
       minZoom: districtData.settings.minZoom,
-      showRes: this.showResults
+      showRes: this.showResults,
+      showOpt: this.showOptions
     }
   },
   components: {
@@ -136,6 +139,10 @@ export default {
       currentBusiness: Object
     },
     showResults: Boolean,
+    showOptions: {
+      type: Boolean,
+      default: true
+    },
     selectedDay: Number,
     hasFaqs: Boolean
   },
@@ -194,6 +201,9 @@ export default {
     },
     setZoom: function () {
       eventManager.$emit('zoomOut', 3.0)
+    },
+    toggleOptions: function () {
+      this.showOpt = !this.showOpt
     }
   }
 }
@@ -242,6 +252,29 @@ export default {
   @media (prefers-color-scheme: dark) {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }
+}
+
+form p {
+  margin-bottom: 0;
+  @media (min-width: 768px) {
+    margin-bottom: 15px;
+  }
+}
+.search-group {
+  text-align: center;
+  padding-bottom: 0;
+}
+.option-button {
+  font-size: 1.3em;
+  margin: 0 auto;
+  padding: 0;
+  color: #ced4da;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.inverted {
+  transform: rotate(180deg);
 }
 
 .tab,

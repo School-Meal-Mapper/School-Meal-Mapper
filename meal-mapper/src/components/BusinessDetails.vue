@@ -175,6 +175,7 @@ export default {
     bottom: 0;
     text-align: auto;
     width: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
     @media (max-height: 550px) {
       max-height: 400px;
     }
