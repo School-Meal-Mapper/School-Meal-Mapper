@@ -76,7 +76,7 @@
 import { districtData } from '../themes/MealsForFamilies/districtData'
 document.documentElement.style.setProperty('--banner-light', districtData.colors.bannerColor)
 document.documentElement.style.setProperty('--banner-dark', districtData.colors.bannerColorDark)
-document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLink)
+document.documentElement.style.setProperty('--nav-link-light', districtData.colors.navLinkLight)
 document.documentElement.style.setProperty('--nav-link-dark', districtData.colors.navLinkDark)
 document.documentElement.style.setProperty('--accentColor', districtData.colors.accentColor)
 
@@ -178,7 +178,7 @@ export default {
 :root {
   --banner-light: '#E9ECEF';
   --banner-dark: '#212529';
-  --nav-link-light: '#F8F8F8';
+  --nav-link-light: '#000000';
   --nav-link-dark: '#F8F8F8';
 }
 
@@ -236,7 +236,7 @@ export default {
 .btn-buttons {
   background-color: var(--accentColor) !important;
   @media (prefers-color-scheme: light) {
-    color: var(--navLink) !important;
+    color: var(--nav-link-light) !important;
   }
 }
 
