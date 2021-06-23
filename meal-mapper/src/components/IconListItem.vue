@@ -5,7 +5,7 @@
         <div class="ilIcon">
           <div class="leafletIcon" v-if="leafletIcon" v-html="generateIcon"></div>
           <i class="fas" v-bind:class="icon" v-if="icon != ''"></i>
-          <img :src="image" v-if="icon == null || icon == ''" />
+          <!-- <img :src="image" v-if="icon == null || icon == ''" /> I am unsure why this is here, WAVE alt text errors occur with it though-->
         </div>
         <div>
           <a :href="link" :target="target" v-if="link != null && link != ''">
@@ -20,7 +20,7 @@
         <div class="ilIcon">
           <div class="leafletIcon" v-if="leafletIcon" v-html="generateIcon"></div>
           <i class="fas" v-bind:class="icon" v-if="icon != ''"></i>
-          <img :src="image" v-if="icon == null || icon == ''" />
+          <!-- <img :src="image" v-if="icon == null || icon == ''" /> I am unsure why this is here, WAVE alt text errors occur with it though-->
         </div>
         <div class="ilTitle">
           <span class="title">{{ title }}</span>
