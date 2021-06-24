@@ -192,7 +192,8 @@ export default {
         maxClusterRadius: 40,
         disableClusteringAtZoom: districtData.settings.clusterZoom
       },
-      showKey: true
+      showKey: true,
+      wasMobile: false
     }
   },
   mounted() {
@@ -200,6 +201,7 @@ export default {
     this.$nextTick(() => {
       this.$emit('bounds', this.$refs.covidMap.mapObject.getBounds())
     })
+    this.wasMobile = window.matchMedia('(max-width: 768px)').matches
   },
   computed: {
     mapKey() {
@@ -309,7 +311,12 @@ export default {
       map.setView(districtData.settings.initialMapCenter, districtData.settings.initialMapZoom)
     },
     handleResize() {
-      location.reload()
+      const isMobile = window.matchMedia('(max-width: 768px)').matches
+      if (this.wasMobile != isMobile) {
+        console.log(this.wasMobile, isMobile)
+        this.wasMobile = !isMobile
+        location.reload()
+      }
     },
     editZoomControl() {
       const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
