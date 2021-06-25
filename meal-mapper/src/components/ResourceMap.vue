@@ -16,7 +16,7 @@
         @update:bounds="boundsUpdated"
       >
         <l-control position="topright" class="hideMobile">
-          <div class="mapkey" :class="{ 'show-key': showKey }">
+          <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
               <i @click="showKey = !showKey" class="fas fa-map-marked-alt" v-if="!showKey" />
@@ -28,7 +28,7 @@
           </div>
         </l-control>
         <l-control position="bottomright" class="showMobile">
-          <div class="mapkey" :class="{ 'show-key': showKey }">
+          <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
               <i @click="showKey = !showKey" class="fas fa-key" v-if="!showKey" />
@@ -88,22 +88,22 @@
           based on a class selector.
         -->
         <l-control position="bottomright" class="hideMobile user-location-button default-location-button">
-          <a href="#" @click="setDefaultMapView" class="user-location-link">
+          <a href="#" @click="setDefaultMapView" class="user-location-link" aria-label="Return to Home Page">
             <i class="fas fa-home"></i>
           </a>
         </l-control>
         <l-control position="bottomleft" class="showMobile user-location-button default-location-button">
-          <a href="#" @click="setDefaultMapView" class="user-location-link">
+          <a href="#" @click="setDefaultMapView" class="user-location-link" aria-label="Return to Home Page">
             <i class="fas fa-home"></i>
           </a>
         </l-control>
         <l-control position="bottomright" class="hideMobile user-location-button">
-          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="User Location">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
         <l-control position="bottomleft" class="showMobile user-location-button">
-          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="User Location">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
