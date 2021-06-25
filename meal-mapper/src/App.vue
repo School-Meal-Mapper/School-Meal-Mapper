@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <a class="skip-to-main" href="#search-filter-wrapper" v-if="!checkParam">
-      Skip to main content.
+      Skip to results.
+    </a>
+    <!-- Above: meal site skipper; Below: landing page skipper -->
+    <a class="skip-to-main" href="#mealsite-selector" v-if="checkParam">
+      Skip to main.
     </a>
     <app-header
       :logoLink="logoLink"
@@ -17,7 +21,7 @@
     <!-- <covid-pop-up /> -->
     <div class="d-flex" v-if="checkParam">
       <div class="district-buttons">
-        <p class="intro">{{ this.$t('landingPage.welcomeStatement') }}</p>
+        <p class="intro" id="mealsite-selector">{{ this.$t('landingPage.welcomeStatement') }}</p>
         <p>
           <b-form-select v-model="selectedState" :options="states">{{ this.$t('landingPage.pleaseSelectState') }}</b-form-select>
           <br />
