@@ -67,6 +67,7 @@
           <template v-slot:button-content>
             <i class="fas fa-language fa-xlg" aria-hidden="true" />
             <span v-if="window.width < 991" v-html="language" class="language" />
+            <span class="sr-only"> Toggle Language Menu Dropdown</span>
           </template>
           <b-dropdown-item href="#" v-for="item in selectLangs" v-bind:key="item.iso">
             <span :title="$t('languages.' + item.iso)">
@@ -75,7 +76,12 @@
             </span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item right href="/"><i class="fas fa-home fa-lg" aria-hidden="true" /></b-nav-item>
+        <b-nav-item right href="/">
+          <template>
+            <i class="fas fa-home fa-lg" aria-hidden="true" />
+            <span class="sr-only"> Home Button </span>
+          </template>
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -127,7 +133,8 @@ export default {
         height: 0
       },
       districtAbbr: districtData.districtAbbr,
-      logoFormat: districtData.logoFormat
+      logoFormat: districtData.logoFormat,
+      districtName: districtData.districtName
     }
   },
   computed: {

@@ -15,7 +15,7 @@
       :socialMedia="socialMediaico"
       :hasFaqs="faqUrl != null"
     >
-      <theme-header :districtAbbr="districtAbbr" :logoFormat="logoFormat"></theme-header>
+      <theme-header :districtAbbr="districtAbbr" :logoFormat="logoFormat" :districtName="districtName"></theme-header>
     </app-header>
     <!--<faq :questions="faqs" :info="info" /> -->
     <!-- <covid-pop-up /> -->
@@ -181,6 +181,7 @@ export default {
       hoverItem: null,
       districtAbbr: districtData.districtAbbr,
       logoFormat: districtData.logoFormat,
+      districtName: districtData.districtName,
       zip: '',
       logoLink: null
     }

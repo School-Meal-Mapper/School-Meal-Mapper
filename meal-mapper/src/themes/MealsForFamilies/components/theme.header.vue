@@ -2,12 +2,7 @@
   <span class="pagetitle">
     <picture>
       <source :srcset="require(`@/districtLogos/${districtAbbr}-logo-dark.${logoFormat}`)" media="(prefers-color-scheme: dark)" />
-      <img
-        :src="require(`@/districtLogos/${districtAbbr}-logo.${logoFormat}`)"
-        height="80"
-        :alt="`Meal Sites from ${districtAbbr.toUpperCase()}`"
-        class="image"
-      />
+      <img :src="require(`@/districtLogos/${districtAbbr}-logo.${logoFormat}`)" height="80" :alt="`${districtName} Logo`" class="image" />
     </picture>
   </span>
 </template>
@@ -20,6 +15,9 @@ export default {
     },
     logoFormat: {
       default: 'png',
+      type: String
+    },
+    districtName: {
       type: String
     }
   }
