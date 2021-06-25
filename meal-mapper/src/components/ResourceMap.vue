@@ -98,12 +98,12 @@
           </a>
         </l-control>
         <l-control position="bottomright" class="hideMobile user-location-button">
-          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="User Location">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="Go to My Location">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
         <l-control position="bottomleft" class="showMobile user-location-button">
-          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="User Location">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="Go to My Location">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
