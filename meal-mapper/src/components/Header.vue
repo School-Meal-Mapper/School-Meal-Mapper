@@ -16,7 +16,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item right v-if="hasFaqs && !onFaqPage()">
+        <b-nav-text right v-if="hasFaqs && !onFaqPage()">
           <div class="heading">
             <h1>Meal Site Locations For District</h1>
             <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateFaqUrl()">
@@ -24,8 +24,8 @@
               <b>{{ $t('FAQs.hyperlinkText') }}</b>
             </b-button>
           </div>
-        </b-nav-item>
-        <b-nav-item right v-if="hasFaqs && onFaqPage()">
+        </b-nav-text>
+        <b-nav-text right v-if="hasFaqs && onFaqPage()">
           <div class="heading">
             <h1>FAQ Page</h1>
             <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateMapUrl()">
@@ -33,11 +33,11 @@
               <b>{{ $t('FAQs.backToMap') }}</b>
             </b-button>
           </div>
-        </b-nav-item>
+        </b-nav-text>
         <b-nav-item right v-if="districtAbbr == 'mff'" href="https://meals4families.community/" target="_blank">
           <div class="heading">
             <h1>Meals For Families Home Page</h1>
-            <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button">
+            <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" tabindex="-1">
               <i class="fas info-plus-circle" aria-hidden="true"></i>
               <b>{{ $t('landingPage.aboutUs') }}</b>
             </b-button>
