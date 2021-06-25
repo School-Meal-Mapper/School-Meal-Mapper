@@ -28,14 +28,7 @@
         <b-nav-item right v-if="hasFaqs && onFaqPage()">
           <div class="heading">
             <h1>FAQ Page</h1>
-            <b-button
-              size="sm"
-              class="my-2 my-sm-0"
-              variant="buttons"
-              type="link"
-              @click="generateMapUrl()"
-              aria-label="Return to Map Page"
-            >
+            <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateMapUrl()" aria-label="Return to Map Page">
               <i class="fas info-plus-circle" aria-hidden="true"></i>
               <b>{{ $t('FAQs.backToMap') }}</b>
             </b-button>
@@ -44,7 +37,7 @@
         <b-nav-item right v-if="districtAbbr == 'mff'" href="https://meals4families.community/" target="_blank">
           <div class="heading">
             <h1>Meals For Families Home Page</h1>
-            <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" aria-label="About Us">
+            <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="button" tabindex="-1" aria-label="About Us">
               <i class="fas info-plus-circle" aria-hidden="true"></i>
               <b>{{ $t('landingPage.aboutUs') }}</b>
             </b-button>
