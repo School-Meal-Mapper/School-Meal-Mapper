@@ -9,31 +9,32 @@
         :options="mapOptions"
         :maxZoom="max"
         :minZoom="min"
+        aria-hidden="true"
         style="height: 100%; width: 100%;"
         @update:center="centerUpdated"
         @update:zoom="zoomUpdated"
         @update:bounds="boundsUpdated"
       >
         <l-control position="topright" class="hideMobile">
-          <div class="mapkey" :class="{ 'show-key': showKey }">
+          <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
-              <i @click="showKey = !showKey" class="fas fa-info-circle" v-if="!showKey" />
+              <i @click="showKey = !showKey" class="fas fa-map-marked-alt" v-if="!showKey" />
               <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
-            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
+            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title" tabindex="0">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
             </div>
           </div>
         </l-control>
         <l-control position="bottomright" class="showMobile">
-          <div class="mapkey" :class="{ 'show-key': showKey }">
+          <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
-              <i @click="showKey = !showKey" class="fas fa-info-circle" v-if="!showKey" />
+              <i @click="showKey = !showKey" class="fas fa-key" v-if="!showKey" />
               <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
-            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
+            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title" tabindex="0">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
             </div>
           </div>
@@ -67,6 +68,7 @@
                 item
               )
             "
+            :options="{ title: item.marker.gsx$mealsitename.$t }"
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
             @mouseover="$emit('hover-over', item)"
@@ -80,25 +82,28 @@
             "
           ></l-marker>
         </v-marker-cluster>
-        <!-- below -->
+        <!-- 
+          These are the button controls for reseting to default location and for getting user current location. 
+          There are essentially two copies of each button, one for mobile and one for desktop which gets shown
+          based on a class selector.
+        -->
         <l-control position="bottomright" class="hideMobile user-location-button default-location-button">
-          <a href="#" @click="setDefaultMapView" class="user-location-link">
+          <a href="#" @click="setDefaultMapView" class="user-location-link" aria-label="Return to Home Page">
             <i class="fas fa-home"></i>
           </a>
         </l-control>
         <l-control position="bottomleft" class="showMobile user-location-button default-location-button">
-          <a href="#" @click="setDefaultMapView" class="user-location-link">
+          <a href="#" @click="setDefaultMapView" class="user-location-link" aria-label="Return to Home Page">
             <i class="fas fa-home"></i>
           </a>
         </l-control>
-        <!-- above -->
         <l-control position="bottomright" class="hideMobile user-location-button">
-          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="User Location">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
         <l-control position="bottomleft" class="showMobile user-location-button">
-          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
+          <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation" aria-label="User Location">
             <i class="fas fa-location-arrow"></i>
           </a>
         </l-control>
@@ -192,7 +197,8 @@ export default {
         maxClusterRadius: 40,
         disableClusteringAtZoom: districtData.settings.clusterZoom
       },
-      showKey: true
+      showKey: true,
+      wasMobile: false
     }
   },
   mounted() {
@@ -200,6 +206,7 @@ export default {
     this.$nextTick(() => {
       this.$emit('bounds', this.$refs.covidMap.mapObject.getBounds())
     })
+    this.wasMobile = window.matchMedia('(max-width: 768px)').matches
   },
   computed: {
     mapKey() {
@@ -309,7 +316,12 @@ export default {
       map.setView(districtData.settings.initialMapCenter, districtData.settings.initialMapZoom)
     },
     handleResize() {
-      location.reload()
+      const isMobile = window.matchMedia('(max-width: 768px)').matches
+      if (this.wasMobile != isMobile) {
+        console.log(this.wasMobile, isMobile)
+        this.wasMobile = !isMobile
+        location.reload()
+      }
     },
     editZoomControl() {
       const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
@@ -347,7 +359,7 @@ export default {
         prefix: 'fa',
         svg: true
         // ,
-        // name: item.marker.gsx$providername.$t,
+        // name: item.marker.gsx$mealsitename.$t
         // nameClasses: 'markerName'
       })
 
