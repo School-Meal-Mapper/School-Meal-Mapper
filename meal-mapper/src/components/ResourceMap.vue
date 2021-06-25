@@ -21,7 +21,7 @@
               <i @click="showKey = !showKey" class="fas fa-map-marked-alt" v-if="!showKey" />
               <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
-            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
+            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title" tabindex="0">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
             </div>
           </div>
@@ -33,7 +33,7 @@
               <i @click="showKey = !showKey" class="fas fa-key" v-if="!showKey" />
               <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
             </div>
-            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title">
+            <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title" tabindex="0">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
             </div>
           </div>

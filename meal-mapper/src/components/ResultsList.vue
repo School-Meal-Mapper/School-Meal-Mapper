@@ -51,6 +51,7 @@
         variant="sideNav"
         v-for="(item, index) in filteredMarkers"
         v-bind:key="index"
+        tabindex="0"
         class="resultItem"
         :class="{
           selected: index == location.locValue,
