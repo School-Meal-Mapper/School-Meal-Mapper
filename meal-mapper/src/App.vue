@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <a class="skip-to-main" href="#search-filter-wrapper" v-if="!checkParam">
+      Skip to main content.
+    </a>
     <app-header
       :logoLink="logoLink"
       :language="language.name"
@@ -358,6 +361,10 @@ export default {
         return [{ value: null, text: this.$t('landingPage.youMustSelectState') }]
       }
     },
+    /**
+     * Checks to see if the URL is for the landing page or for a meal site.
+     * @returns {Boolean} True --> landing page; False --> meal site
+     */
     checkParam() {
       //var urlString = window.location.href
       //var url = new URL(urlString)
@@ -456,5 +463,21 @@ body {
   select:disabled {
     color: #000000 !important;
   }
+}
+
+.skip-to-main {
+  background: #ffec60;
+  color: black;
+  left: 50%;
+  padding: 7px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  z-index: 1000000000;
+  border-radius: 50px;
+}
+.skip-to-main:focus {
+  transform: translateY(0%);
 }
 </style>
