@@ -9,6 +9,7 @@
         :options="mapOptions"
         :maxZoom="max"
         :minZoom="min"
+        aria-hidden="true"
         style="height: 100%; width: 100%;"
         @update:center="centerUpdated"
         @update:zoom="zoomUpdated"
@@ -67,6 +68,7 @@
                 item
               )
             "
+            :options="{ title: item.marker.gsx$mealsitename.$t }"
             v-for="(item, index) in filteredMarkers"
             v-bind:key="index"
             @mouseover="$emit('hover-over', item)"
@@ -80,7 +82,11 @@
             "
           ></l-marker>
         </v-marker-cluster>
-        <!-- below -->
+        <!-- 
+          These are the button controls for reseting to default location and for getting user current location. 
+          There are essentially two copies of each button, one for mobile and one for desktop which gets shown
+          based on a class selector.
+        -->
         <l-control position="bottomright" class="hideMobile user-location-button default-location-button">
           <a href="#" @click="setDefaultMapView" class="user-location-link">
             <i class="fas fa-home"></i>
@@ -91,7 +97,6 @@
             <i class="fas fa-home"></i>
           </a>
         </l-control>
-        <!-- above -->
         <l-control position="bottomright" class="hideMobile user-location-button">
           <a href="#" @click="getUserLocation" class="user-location-link" ref="useLocation">
             <i class="fas fa-location-arrow"></i>
@@ -354,7 +359,7 @@ export default {
         prefix: 'fa',
         svg: true
         // ,
-        // name: item.marker.gsx$providername.$t,
+        // name: item.marker.gsx$mealsitename.$t
         // nameClasses: 'markerName'
       })
 
