@@ -28,7 +28,14 @@
         <b-nav-item right v-if="hasFaqs && onFaqPage()">
           <div class="heading">
             <h1>FAQ Page</h1>
-            <b-button size="sm" class="my-2 my-sm-0" variant="buttons" type="link" @click="generateMapUrl()" aria-label="Return to Map Page">
+            <b-button
+              size="sm"
+              class="my-2 my-sm-0"
+              variant="buttons"
+              type="link"
+              @click="generateMapUrl()"
+              aria-label="Return to Map Page"
+            >
               <i class="fas info-plus-circle" aria-hidden="true"></i>
               <b>{{ $t('FAQs.backToMap') }}</b>
             </b-button>
