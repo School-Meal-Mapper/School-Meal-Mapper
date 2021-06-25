@@ -19,8 +19,8 @@
           <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
-              <i @click="showKey = !showKey" class="fas fa-map-marked-alt" v-if="!showKey" />
-              <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
+              <i aria-hidden="true" @click="showKey = !showKey" class="fas fa-map-marked-alt" v-if="!showKey" tabindex="0" />
+              <i aria-hidden="true" @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" tabindex="0" />
             </div>
             <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title" tabindex="0">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
@@ -31,8 +31,8 @@
           <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
               <h6 class="title">{{ $t('mapKey.mapKeyTitle') }}</h6>
-              <i @click="showKey = !showKey" class="fas fa-key" v-if="!showKey" />
-              <i @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" />
+              <i aria-hidden="true" @click="showKey = !showKey" class="fas fa-map-marked-alt" v-if="!showKey" tabindex="0" />
+              <i aria-hidden="true" @click="showKey = !showKey" class="fas fa-times-circle" v-if="showKey" tabindex="0" />
             </div>
             <div class="keys" :class="{ 'show-key': showKey }" v-for="item in mapKey" v-bind:key="item.title" tabindex="0">
               <icon-list-item :leaflet-icon="item.icon" :title="item.title" link />
