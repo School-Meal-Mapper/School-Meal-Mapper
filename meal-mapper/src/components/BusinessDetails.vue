@@ -53,7 +53,27 @@
             />
           </p>
           <opening-hours :business="business.marker" :title="$t('mealSiteCard.Hours')" v-if="showFullDetails()"></opening-hours>
-
+          <tag-details :business="business.marker" :title="$t('mealSiteCard.KeyDetails')"></tag-details>
+          <h6>{{ $t('mealSiteCard.KeyDetails') }}</h6>
+          <template v-if="business.marker.gsx$hotmealsavailable.$t.toString().trim() === 'TRUE'">
+            <p><strong>Hot meals available?</strong> <span style="color: #00c735;">YES</span></p>
+          </template>
+          <template v-else>
+            <p><strong>Hot meals available?</strong> <span style="color: red;">NO</span></p>
+          </template>
+          <template v-if="business.marker.gsx$prepackagedmealsavailable.$t.toString().trim() === 'TRUE'">
+            <p><strong>Prepackaged meals available?</strong> <span style="color: #00c735;">YES</span></p>
+          </template>
+          <template v-else>
+            <p><strong>Prepackaged meals available?</strong> <span style="color: red;">NO</span></p>
+          </template>
+          <template v-if="business.marker.gsx$foodpantry.$t.toString().trim() === 'TRUE'">
+            <p><strong>Has food pantry?</strong> <span style="color: #00c735;">YES</span></p>
+          </template>
+          <template v-else>
+            <p><strong>Has food pantry?</strong> <span style="color: red;">NO</span></p>
+          </template>
+          <p><strong>Special dietary options offered:</strong> {{ business.marker.gsx$dietaryoptionsoffered.$t }}</p>
           <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t && showFullDetails()">
             <p>
               <b>{{ $t('mealSiteCard.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
