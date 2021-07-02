@@ -46,7 +46,6 @@
       v-if="location.currentBusiness != null && showRes != true"
       @close-details="closeDetails"
     ></BusinessDetailsMobile>-->
-
     <b-list-group ref="results" class="resultList list-group-flush" v-if="showRes" id="results-list-nav">
       <b-alert v-if="!filteredMarkers.length" show class="noresults">
         <!-- Zoom in prompt instead: <strong>{{ this.$t('mapPrompts.youCanNotZoomOutMore') + ' ' + 'Zoom out for more results.' }}</strong> -->
