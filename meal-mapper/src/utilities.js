@@ -10,6 +10,19 @@ export function getAddress(marker) {
   return address + (marker.gsx$zip !== undefined && marker.gsx$zip.$t !== '' ? marker.gsx$zip.$t : '')
 }
 
+export function checkForDiet(marker, diet) {
+  var optionOffered = false
+  var optionsString = marker.gsx$dietaryoptionsoffered.$t
+  var optionsArray = optionsString.split(',')
+  var arrayLength = optionsArray.length
+  for (let i = 0; i < arrayLength; i++) {
+    if (optionsArray[i].trim() === diet) {
+      optionOffered = true
+    }
+  }
+  return optionOffered
+}
+
 // See: https://stackoverflow.com/questions/14560999/using-the-haversine-formula-in-javascript
 
 /**

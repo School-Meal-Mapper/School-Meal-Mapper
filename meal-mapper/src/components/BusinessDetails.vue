@@ -56,30 +56,37 @@
           <tag-details :business="business.marker" :title="$t('mealSiteCard.KeyDetails')"></tag-details>
           <h6>{{ $t('mealSiteCard.KeyDetails') }}</h6>
           <template v-if="business.marker.gsx$hotmealsavailable.$t.toString().trim() === 'TRUE'">
-            <p><strong>Hot meals available?</strong> <span style="color: #00c735;">YES</span></p>
-          </template>
-          <template v-else>
-            <p><strong>Hot meals available?</strong> <span style="color: red;">NO</span></p>
+            <span class="hot-meals-badge">Hot Meals Available</span>
           </template>
           <template v-if="business.marker.gsx$prepackagedmealsavailable.$t.toString().trim() === 'TRUE'">
-            <p><strong>Prepackaged meals available?</strong> <span style="color: #00c735;">YES</span></p>
-          </template>
-          <template v-else>
-            <p><strong>Prepackaged meals available?</strong> <span style="color: red;">NO</span></p>
+            <span class="pre-meals-badge">Prepackaged Meals Available</span>
           </template>
           <template v-if="business.marker.gsx$foodpantry.$t.toString().trim() === 'TRUE'">
-            <p><strong>Has food pantry?</strong> <span style="color: #00c735;">YES</span></p>
+            <span class="food-pantry-badge">Food Pantry</span>
           </template>
-          <template v-else>
-            <p><strong>Has food pantry?</strong> <span style="color: red;">NO</span></p>
+          <br /><br />
+          <p><strong>Special dietary options offered:</strong></p>
+          <template v-if="checkForDiet(business.marker, 'Vegetarian')">
+            <span class="veg-badge"> Vegetarian </span>
           </template>
-          <p><strong>Special dietary options offered:</strong> {{ business.marker.gsx$dietaryoptionsoffered.$t }}</p>
-          <template v-if="business.marker.gsx$notes !== undefined && !!business.marker.gsx$notes.$t && showFullDetails()">
-            <p>
-              <b>{{ $t('mealSiteCard.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
-            </p>
+          <template v-if="checkForDiet(business.marker, 'Kosher')">
+            <span class="kosher-badge"> Kosher </span>
           </template>
-
+          <template v-if="checkForDiet(business.marker, 'Halal')">
+            <span class="halal-badge"> Halal </span>
+          </template>
+          <template v-if="checkForDiet(business.marker, 'Dairy-Free')">
+            <span class="dairy-free-badge"> Dairy-Free </span>
+          </template>
+          <template v-if="checkForDiet(business.marker, 'Gluten-Free')">
+            <span class="gluten-free-badge"> Gluten-Free </span>
+          </template>
+          <template v-if="checkForDiet(business.marker, 'Nut-Free')">
+            <span class="nut-free-badge"> Nut-Free </span>
+          </template>
+          <p>
+            <b>{{ $t('mealSiteCard.notes') }}:</b><br />{{ business.marker.gsx$notes.$t }}
+          </p>
           <p class="updated" v-if="getLastUpdatedDate != 'Invalid Date' && showFullDetails()">
             {{ $t('mealSiteCard.detailsLastUpdated') }} {{ getLastUpdatedDate }}
           </p>
@@ -107,6 +114,7 @@
 import OpeningHours from './OpeningHours.vue'
 import IconListItem from './IconListItem.vue'
 import { getAddress } from '../utilities'
+import { checkForDiet } from '../utilities'
 import { districtData } from '../themes/MealsForFamilies/districtData'
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
@@ -166,7 +174,8 @@ export default {
     showMinimizeDetails: function () {
       this.maxDetails = false
     },
-    getAddress: getAddress
+    getAddress: getAddress,
+    checkForDiet: checkForDiet
   },
   computed: {
     getLastUpdatedDate: function () {
@@ -290,6 +299,106 @@ export default {
   }
 }
 
+.hot-meals-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #ff8400;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+
+.pre-meals-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #ff78fb;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.food-pantry-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #00e000;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.veg-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #00b015;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.kosher-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #26b0ff;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.halal-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #e300c1;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.dairy-free-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #e30053;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.nut-free-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #e39f00;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+.gluten-free-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #1db3a9;
+  border: 1px solid #adb5bd;
+  color: #3b3b3b;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
 .share-button {
   font-size: 0.8rem;
   color: #007bff;
