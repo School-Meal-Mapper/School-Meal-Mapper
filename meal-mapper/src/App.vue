@@ -36,6 +36,9 @@
       </div>
     </div>
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
+      <div class="tag-test">
+        <results-filter @select="setTagsSelected" />
+      </div>
       <results-list
         :filteredMarkers="highlightFilteredMarkers"
         :location="locationData"
@@ -87,7 +90,7 @@ import SuggestEditModal from './components/EditForm.vue'
 //import Faq from './components/FAQ.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
 import ResultsList from './components/ResultsList.vue'
-
+import ResultsFilter from './components/ResultsFilter.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
@@ -128,10 +131,10 @@ export default {
   created() {
     this.fetchData()
     this.states.unshift({ value: null, text: this.$t('landingPage.pleaseSelectState') })
-    var urlString = window.location.href
-    //var url = new URL(urlString)
-    console.log('testing')
-    console.log(urlString)
+    // var urlString = window.location.href
+    // var url = new URL(urlString)
+    // console.log('testing')
+    // console.log(urlString)
   },
   components: {
     ShareModal,
@@ -141,7 +144,8 @@ export default {
     //CovidPopUp,
     ResourceMap,
     ThemeHeader,
-    ResultsList
+    ResultsList,
+    ResultsFilter
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -152,6 +156,7 @@ export default {
       need: 'none',
       day: dayAny,
       isFilterOpen: true,
+      tagsSelected: [],
       language: { name: 'English', iso: 'en' },
       locationData: {
         locValue: null,
@@ -234,13 +239,18 @@ export default {
       this.day = val
       this.highlightFilters = []
     },
+    setTagsSelected: function (tags) {
+      // console.log('filteredMarkers', this.filteredMarkers)
+      // console.log('highlightFilteredMarkers', this.highlightFilteredMarkers)
+      this.tagsSelected = tags
+    },
     changeLanguage: function (item) {
       this.language = item
       this.$root.updateLang(item.iso)
     },
     async fetchData() {
       const res = await fetch(districtData.data.spreadsheetUrl)
-      console.log(res)
+      // console.log(res)
       if (districtData.data.faqUrl != null) {
         this.faqUrl = districtData.data.faqUrl
         /*const res2 = await fetch(districtData.data.faqUrl)
@@ -262,7 +272,7 @@ export default {
       // }
 
       this.entries = entries.feed.entry
-      this.logoLink = this.entries[0]['gsx$redirectlink'].$t
+      this.logoLink = this.entries[0]['gsx$redirectlink'].$t // should be changed to take providerInfo's redirect-link
     },
     latLng,
     passLocation: function (val) {
@@ -323,10 +333,9 @@ export default {
             return
           }
           this.searchLocData = latLng(location.lat, location.lon)
-          var distances = []
-          this.filteredMarkers.forEach((entry) => {
-            distances.push(haversineDistance([location.lat, location.lon], [entry.marker.gsx$lat.$t, entry.marker.gsx$lon.$t], true))
-          })
+          const distances = this.filteredMarkers.map((entry) =>
+            haversineDistance([location.lat, location.lon], [entry.marker.gsx$lat.$t, entry.marker.gsx$lon.$t], true)
+          )
           const index = distances.indexOf(Math.min(...distances))
           const val = {
             locValue: index,
@@ -384,7 +393,7 @@ export default {
     filteredMarkers() {
       if (this.entries == null) return null
 
-      var markers
+      let markers
       markers = this.entries
       // Only show markers whose meal site status is open
       markers = markers.filter((m) => m['gsx$mealsitestatus'].$t.toLowerCase() == 'open')
@@ -398,7 +407,7 @@ export default {
         }
       })
 
-      var today = new Date().getDay()
+      var today = new Date().getDay() // filter by day functionality? Not apparent from the UI
       var selectedDay = today
       if (!this.isAnyDaySelected(this.day)) {
         selectedDay = this.day
@@ -407,6 +416,13 @@ export default {
       const dayFilter = dayFilters[this.getDay(selectedDay)]
       var open = markers.filter((c) => c[dayFilter].$t !== '0')
       var closed = markers.filter((c) => c[dayFilter].$t == '0')
+
+      // // Tag Filtering:
+      // console.log(this.tagsSelected)
+      // this.tagsSelected.forEach((tag) => {
+      //   markers = markers.filter((c) => c['gsx$' + tag].$t == 'TRUE')
+      // })
+      // ^ doesn't seem to work, only seems to work at highlightFilteredMarkers()
 
       var retList = extend(
         open.map((marker) => ({
@@ -423,17 +439,43 @@ export default {
       return retList
     },
     highlightFilteredMarkers() {
-      var contained = [] //makers in map boundingbox
-      this.filteredMarkers.forEach((m) => {
-        if (this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))) contained.push(m)
+      // var contained = [] //makers in map boundingbox
+      // this.filteredMarkers.forEach((m) => {
+      //   if (this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))) contained.push(m)
+      // })
+      /*
+        I think the difference between `highlightFilteredMarkers()` and `filteredMarkers()` is that `highlight` only changes what is filtered on the results
+        list. While the regular one is for the map. It also seems like there was an initial attempt at adding some filtering capabilities that no
+        longer exists.
+      */
+      let contained = this.filteredMarkers.filter((m) => this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))) //markers in map boundingbox
+
+      // Filter by tags
+      this.tagsSelected.forEach((tag) => {
+        contained = contained.filter((m) => {
+          try {
+            const splittedTag = tag.split('.')
+            if (splittedTag[0] == 'dietaryoptionsoffered') {
+              return m.marker['gsx$dietaryoptionsoffered'].$t.toLowerCase().includes(splittedTag[1])
+            }
+            return m.marker['gsx$' + tag].$t == 'TRUE'
+          } catch (e) {
+            /* I used try-catch because for some reason if the column doesn't exist, it stops function execution rather 
+               than returning undefined.
+            */
+            console.error("Note! This tag name is not set up right. Check the spreadsheet or the checkbox's value attribute.")
+            return true
+          }
+        })
       })
+
       if (!this.isAnyDaySelected(this.day)) {
         return contained
       }
 
       return contained.map((m) => {
         let obj = Object.assign({}, m)
-        obj.oc = true
+        obj.oc = true // what the heck does this do??? open close? ===> I figured it out. It sets whether the marker color should be grey or not depending if it's open or closed
         return obj
       })
     }
@@ -484,5 +526,14 @@ body {
 }
 .skip-to-main:focus {
   transform: translateY(0%);
+}
+
+.tag-test {
+  z-index: 100000000000;
+  color: black;
+  background-color: white;
+  position: absolute;
+  top: 100px;
+  left: 300px;
 }
 </style>

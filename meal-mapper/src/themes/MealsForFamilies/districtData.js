@@ -160,7 +160,7 @@ if (url.searchParams.has('chccs') || hash == 'chccs') {
   bannerColor = '#000142'
   accentColor = '#5cae53'
   bannerColorDark = '#000142'
-  logoFormat = 'png'
+  logoFormat = 'svg'
   // map settings for district-specific page
   initialMapCenterLat = 35.73597
   initialMapCenterLng = -77.90853
