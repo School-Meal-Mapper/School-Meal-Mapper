@@ -19,11 +19,11 @@ export default {
         { text: 'Food Pantry', value: 'foodpantry' },
         { text: 'Prepackaged Meals Available', value: 'prepackagedmealsavailable' },
         { text: 'Hot Meals', value: 'hotmealsavailable' },
-        { text: 'Vegetarian/Vegan', value: 'dietary-veg' },
-        { text: 'Kosher/Halal', value: 'dietary-kosher' },
-        { text: 'Dairy-Free', value: 'dietary-dairy' },
-        { text: 'Nut-Free', value: 'dietary-nuts' },
-        { text: 'Gluten-Free', value: 'dietary-gluten' }
+        { text: 'Vegetarian/Vegan', value: 'dietaryoptionsoffered.vegetarian' },
+        { text: 'Kosher/Halal', value: 'dietaryoptionsoffered.kosher' },
+        { text: 'Dairy-Free', value: 'dietaryoptionsoffered.dairy-free' },
+        { text: 'Nut-Free', value: 'dietaryoptionsoffered.nut-free' },
+        { text: 'Gluten-Free', value: 'dietaryoptionsoffered.gluten-free' }
       ],
       tagsSelected: []
     }

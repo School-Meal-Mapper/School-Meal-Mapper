@@ -132,7 +132,8 @@ export default {
       zoom: districtData.settings.initialMapZoom,
       minZoom: districtData.settings.minZoom,
       showRes: this.showResults,
-      showOpt: this.showOptions
+      showOpt: this.showOptions,
+      text: undefined // I have added this variable to stop the Vue errors, but I'm not sure what this variable does
     }
   },
   components: {

@@ -132,10 +132,10 @@ export default {
   created() {
     this.fetchData()
     this.states.unshift({ value: null, text: this.$t('landingPage.pleaseSelectState') })
-    var urlString = window.location.href
-    //var url = new URL(urlString)
-    console.log('testing')
-    console.log(urlString)
+    // var urlString = window.location.href
+    // var url = new URL(urlString)
+    // console.log('testing')
+    // console.log(urlString)
   },
   components: {
     ShareModal,
@@ -241,8 +241,8 @@ export default {
       this.highlightFilters = []
     },
     setTagsSelected: function (tags) {
-      console.log('filteredMarkers', this.filteredMarkers)
-      console.log('highlightFilteredMarkers', this.highlightFilteredMarkers)
+      // console.log('filteredMarkers', this.filteredMarkers)
+      // console.log('highlightFilteredMarkers', this.highlightFilteredMarkers)
       this.tagsSelected = tags
     },
     changeLanguage: function (item) {
@@ -251,7 +251,7 @@ export default {
     },
     async fetchData() {
       const res = await fetch(districtData.data.spreadsheetUrl)
-      console.log(res)
+      // console.log(res)
       if (districtData.data.faqUrl != null) {
         this.faqUrl = districtData.data.faqUrl
         /*const res2 = await fetch(districtData.data.faqUrl)
@@ -273,7 +273,7 @@ export default {
       // }
 
       this.entries = entries.feed.entry
-      this.logoLink = this.entries[0]['gsx$redirectlink'].$t
+      this.logoLink = this.entries[0]['gsx$redirectlink'].$t // should be changed to take providerInfo's redirect-link
     },
     latLng,
     passLocation: function (val) {
@@ -455,6 +455,10 @@ export default {
       this.tagsSelected.forEach((tag) => {
         contained = contained.filter((m) => {
           try {
+            const splittedTag = tag.split('.')
+            if (splittedTag[0] == 'dietaryoptionsoffered') {
+              return m.marker['gsx$dietaryoptionsoffered'].$t.toLowerCase().includes(splittedTag[1])
+            }
             return m.marker['gsx$' + tag].$t == 'TRUE'
           } catch (e) {
             /* I used try-catch because for some reason if the column doesn't exist, it stops function execution rather 
