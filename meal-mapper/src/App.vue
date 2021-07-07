@@ -37,7 +37,6 @@
     </div>
     <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
       <div class="tag-test">
-        Hello world can anyone see this?
         <results-filter @select="setTagsSelected" />
       </div>
       <results-list
