@@ -81,11 +81,13 @@
         <i class="fa fa-chevron-right arrow"></i>
         <div>
           <span class="closed-badge" v-if="closed(item)">{{ getClosedMessage() }}</span>
+          <!--
           <span
             class="hours-badge"
             v-if="!closed(item) && (item.marker.gsx$specialsite == null || item.marker.gsx$specialsite.$t != '1')"
             >{{ hours(item) }}</span
-          >
+          > --->
+          <span class="non-b-badge" v-if="nonB(item)">{{ 'Non-Business Hours' }}</span>
           <span
             class="special-badge"
             v-if="!closed(item) && item.marker.gsx$specialsite != null && item.marker.gsx$specialsite.$t == '1'"
@@ -203,11 +205,33 @@ export default {
       if (item.marker[todayDay].$t == 0) {
         return true
       } else return false
-    },
+    } /*
     hours: function (item) {
       var today = new Date().getDay()
       var day = days[today]
       return item.marker[day].$t
+    }, */,
+    nonB: function (item) {
+      // weekdays open after 5
+      for (var dayNum = 1; dayNum < 6; dayNum++) {
+        var weekDay = days[dayNum]
+        if (item.marker[weekDay].$t != 0) {
+          // timeRange holds the open hours range
+          var timeRange = item.marker[weekDay].$t
+          var timeArr = timeRange.split(' - ') // afterFive checks if open after 5
+          var afterFive = timeArr[1].substr(0, 1)
+          if (parseInt(afterFive) > 5) {
+            return true
+          }
+        }
+      }
+      // weekend
+      var sun = days[0]
+      var sat = days[6]
+      if (item.marker[sun].$t != 0 || item.marker[sat].$t != 0) {
+        return true
+      }
+      return false
     },
     setZoom: function () {
       eventManager.$emit('zoomOut', 3.0)
@@ -311,7 +335,7 @@ form p {
   margin-bottom: 8px;
   margin-right: 5px;
   font-size: 0.7rem;
-}
+} /*
 .hours-badge {
   display: inline-block;
   border-radius: 100px;
@@ -322,6 +346,18 @@ form p {
   margin-bottom: 8px;
   margin-right: 5px;
   font-size: 0.7rem;
+} */
+.non-b-badge {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $marker-open;
+  border: 1px solid $gray-400;
+  color: $gray-100;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+  text-align: right;
 }
 .special-badge {
   display: inline-block;
