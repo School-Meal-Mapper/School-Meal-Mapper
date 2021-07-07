@@ -306,7 +306,7 @@ form p {
   border-radius: 100px;
   background-color: $marker-closed;
   border: 1px solid $gray-400;
-  color: $gray-100;
+  color: $gray-400;
   padding: 2px 6px;
   margin-bottom: 8px;
   margin-right: 5px;
