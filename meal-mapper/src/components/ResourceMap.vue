@@ -15,6 +15,7 @@
         @update:zoom="zoomUpdated"
         @update:bounds="boundsUpdated"
       >
+        <!--
         <l-control position="topright" class="hideMobile">
           <div class="mapkey" :class="{ 'show-key': showKey }" tabindex="0">
             <div class="title-block">
@@ -39,6 +40,7 @@
             </div>
           </div>
         </l-control>
+        -->
         <l-tile-layer :url="mapUrl" :attribution="attribution" />
         <l-circle
           name="Accuracy"
@@ -120,7 +122,7 @@ import { BAlert } from 'bootstrap-vue'
 import { LMap, LTileLayer, LMarker, LControl, LCircle, LCircleMarker } from 'vue2-leaflet'
 import { latLng, Icon, ExtraMarkers } from 'leaflet'
 import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
-import IconListItem from './IconListItem.vue'
+//import IconListItem from './IconListItem.vue'
 import { businessIcon } from '../utilities'
 import { districtData } from '../themes/MealsForFamilies/districtData'
 import { eventManager } from '../main'
@@ -149,8 +151,8 @@ export default {
     LControl,
     LCircle,
     LCircleMarker,
-    'v-marker-cluster': Vue2LeafletMarkerCluster,
-    IconListItem
+    'v-marker-cluster': Vue2LeafletMarkerCluster
+    //IconListItem
   },
   props: {
     filteredMarkers: Array,
@@ -493,7 +495,7 @@ div.markeropen svg path {
 .noselection.bv-example-row {
   height: 100%;
 }
-
+/*
 .mapkey {
   padding: 16px;
 
@@ -530,6 +532,7 @@ div.markeropen svg path {
     padding: 8px;
   }
 }
+*/
 
 .title-block {
   width: 100%;
@@ -538,7 +541,7 @@ div.markeropen svg path {
   align-items: center;
   justify-content: space-between;
 }
-
+/*
 .mapkey .title {
   vertical-align: middle;
   margin: 0 8px;
@@ -559,6 +562,7 @@ div.markeropen svg path {
 .mapkey {
   margin-top: 40px;
 }
+*/
 .location-alert {
   position: absolute;
   bottom: 0px;
