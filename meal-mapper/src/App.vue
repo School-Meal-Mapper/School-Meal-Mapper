@@ -37,6 +37,7 @@
         </div>
       </div>
       <div id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
+        <district-landing-page />
         <results-page :results="filteredMarkers" :location="locationData" @select="setTagsSelected" />
         <share-modal :business="locationData.currentBusiness" />
         <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
@@ -66,6 +67,7 @@ import { dayFilters, booleanFilters, dayAny, nc, districts } from './constants'
 
 import { districtData } from './themes/MealsForFamilies/districtData'
 import ThemeHeader from './themes/MealsForFamilies/components/theme.header'
+import DistrictLandingPage from './components/DistrictLandingPage.vue'
 
 function extend(obj, src) {
   for (var key in src) {
@@ -111,7 +113,8 @@ export default {
     //Faq,
     //CovidPopUp,
     ThemeHeader,
-    ResultsPage
+    ResultsPage,
+    DistrictLandingPage
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
