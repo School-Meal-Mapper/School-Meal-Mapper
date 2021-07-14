@@ -84,6 +84,8 @@
 <script>
 import AppHeader from './components/Header.vue'
 
+import { mapLink } from './components/DistrictLandingPage.vue'
+
 import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
@@ -202,6 +204,13 @@ export default {
     districtLink() {
       if (this.selectedDistrict != null) {
         location.href = '/?' + this.selectedDistrict
+      }
+    },
+    checkMapLink() {
+      if (mapLink()) {
+        console.log('read map')
+        location.href = 'map'
+        console.log('changed map link')
       }
     },
     setDarkMode(darkMode) {
@@ -388,7 +397,7 @@ export default {
     },
     showMap() {
       var urlString = window.location.href
-      return urlString.includes('?')
+      return urlString.includes('map')
     },
     filteredMarkers() {
       if (this.entries == null) return null
