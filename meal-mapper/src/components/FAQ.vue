@@ -44,6 +44,9 @@
       />
     </p>
 
+    <f-a-q-search :sheetsQnA="questions" :translateQuestion="translatedQuestion" :translateAnswer="translateAnswer"></f-a-q-search>
+    <b-button @click="logQuestions"></b-button>
+
     <div class="accordion" role="tablist" v-if="questions != null">
       <b-card no-body class="mb-1" v-for="(question, index) in questions" v-bind:key="index">
         <b-card-header header-tag="header" class="p-1" role="tab">
@@ -63,6 +66,7 @@
 
 <script>
 import { districtData } from '../themes/MealsForFamilies/districtData'
+import FAQSearch from './FAQSearch.vue'
 import IconListItem from './IconListItem.vue'
 
 document.documentElement.style.setProperty('--primary-color', districtData.colors.primaryColor)
@@ -74,7 +78,8 @@ document.documentElement.style.setProperty('--nav-link-dark', districtData.color
 export default {
   name: 'faq',
   components: {
-    IconListItem
+    IconListItem,
+    FAQSearch
   },
   data() {
     return {
@@ -110,6 +115,10 @@ export default {
       if (question['gsx$' + locale + 'answer'] !== undefined && question['gsx$' + locale + 'answer'].$t !== '') {
         return question['gsx$' + locale + 'answer'].$t
       } else return question.gsx$enanswer.$t
+    },
+    logQuestions: function () {
+      // console.log(this.translatedAnswer(this.questions[0], 'en'))
+      console.log(this.questions)
     }
   }
 }

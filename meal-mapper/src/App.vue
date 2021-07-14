@@ -7,69 +7,39 @@
     <a class="skip-to-main" href="#mealsite-selector" v-if="checkParam">
       Skip to main.
     </a>
-    <app-header
-      :logoLink="logoLink"
-      :language="language.name"
-      @search="searchLoc"
-      @language-selected="changeLanguage"
-      :socialMedia="socialMediaico"
-      :hasFaqs="faqUrl != null"
-    >
-      <theme-header :districtAbbr="districtAbbr" :logoFormat="logoFormat" :districtName="districtName"></theme-header>
-    </app-header>
-    <!--<faq :questions="faqs" :info="info" /> -->
-    <!-- <covid-pop-up /> -->
-    <div class="d-flex" v-if="checkParam">
-      <div class="district-buttons">
-        <p class="intro" id="mealsite-selector">{{ this.$t('landingPage.welcomeStatement') }}</p>
-        <p>
-          <b-form-select v-model="selectedState" :options="states">{{ this.$t('landingPage.pleaseSelectState') }}</b-form-select>
-          <br />
-          <br />
-          <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
-            this.$t('landingPage.findYourCountyAndSelectProvider')
-          }}</b-form-select>
-        </p>
-        <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{
-          this.$t('landingPage.findFreeMealsNearMe')
-        }}</b-button>
-      </div>
-    </div>
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
-      <div class="tag-test">
-        <results-filter @select="setTagsSelected" />
-      </div>
-      <results-list
-        :filteredMarkers="highlightFilteredMarkers"
-        :location="locationData"
-        @location-selected="passLocation"
-        @hover-over="passHover"
-        @hover-leave="passNoHover"
+    <div class="content">
+      <app-header
+        :logoLink="logoLink"
+        :language="language.name"
         @search="searchLoc"
-        :info="info"
-        v-if="showList"
-        :showResults="showResults"
-        :selected-day="day"
+        @language-selected="changeLanguage"
+        :socialMedia="socialMediaico"
         :hasFaqs="faqUrl != null"
-      />
-      <share-modal :business="locationData.currentBusiness" />
-      <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
-      <div id="page-content-wrapper">
-        <resource-map
-          :filteredMarkers="filteredMarkers"
-          :class="{ noselection: need == 'none' }"
-          :location="locationData"
-          :attribution="attribution"
-          :hoverIt="hoverItem"
-          :searchLocationData="searchLocData"
-          @hover-over="passHover"
-          @hover-leave="passNoHover"
-          @location-selected="passLocation"
-          @bounds="boundsUpdated"
-          @center="centerUpdated"
-          :mapUrl="mapUrl"
-          :centroid="centroid"
-        />
+      >
+        <theme-header :districtAbbr="districtAbbr" :logoFormat="logoFormat" :districtName="districtName"></theme-header>
+      </app-header>
+      <!--<faq :questions="faqs" :info="info" /> -->
+      <!-- <covid-pop-up /> -->
+      <div class="d-flex" v-if="checkParam">
+        <div class="district-buttons">
+          <p class="intro" id="mealsite-selector">{{ this.$t('landingPage.welcomeStatement') }}</p>
+          <p>
+            <b-form-select v-model="selectedState" :options="states">{{ this.$t('landingPage.pleaseSelectState') }}</b-form-select>
+            <br />
+            <br />
+            <b-form-select v-model="selectedDistrict" :options="districtOptions" :disabled="this.selectedState !== 'nc'">{{
+              this.$t('landingPage.findYourCountyAndSelectProvider')
+            }}</b-form-select>
+          </p>
+          <b-button :disabled="this.selectedDistrict === null" v-on:click="districtLink">{{
+            this.$t('landingPage.findFreeMealsNearMe')
+          }}</b-button>
+        </div>
+      </div>
+      <div id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries && showMap">
+        <results-page :results="filteredMarkers" :location="locationData" @select="setTagsSelected" />
+        <share-modal :business="locationData.currentBusiness" />
+        <suggest-edit-modal :currentBusiness="locationData.currentBusiness" />
       </div>
     </div>
     <router-view />
@@ -84,13 +54,11 @@
 <script>
 import AppHeader from './components/Header.vue'
 
-import ResourceMap from './components/ResourceMap.vue'
 import ShareModal from './components/ShareModal.vue'
 import SuggestEditModal from './components/EditForm.vue'
 //import Faq from './components/FAQ.vue'
 //import CovidPopUp from './components/CovidPopUp.vue'
-import ResultsList from './components/ResultsList.vue'
-import ResultsFilter from './components/ResultsFilter.vue'
+import ResultsPage from './components/ResultsPage.vue'
 import { latLng } from 'leaflet'
 import { haversineDistance, sortByDistance } from './utilities'
 
@@ -142,10 +110,8 @@ export default {
     AppHeader,
     //Faq,
     //CovidPopUp,
-    ResourceMap,
     ThemeHeader,
-    ResultsList,
-    ResultsFilter
+    ResultsPage
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -463,7 +429,7 @@ export default {
             /* I used try-catch because for some reason if the column doesn't exist, it stops function execution rather 
                than returning undefined.
             */
-            console.error("Note! This tag name is not set up right. Check the spreadsheet or the checkbox's value attribute.")
+            console.error(`Note! The tag name (${tag}) is not set up right. Check the spreadsheet or the checkbox's value attribute.`)
             return true
           }
         })
@@ -487,6 +453,7 @@ export default {
 body {
   color: #808080 !important;
   background-color: #ffffff !important;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
 }
 .district-buttons {
   margin: 20vh auto;
@@ -529,11 +496,27 @@ body {
 }
 
 .tag-test {
-  z-index: 100000000000;
+  z-index: 1000;
   color: black;
   background-color: white;
   position: absolute;
   top: 100px;
   left: 300px;
+}
+
+body,
+.home {
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#wrapper {
+  height: inherit;
+  overflow: auto;
 }
 </style>
